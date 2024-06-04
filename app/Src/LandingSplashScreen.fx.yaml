@@ -1,5 +1,6 @@
 LandingSplashScreen As screen:
     Fill: =RGBA(0, 0, 0, 1)
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
         =UpdateContext({varXpos:5});
         UpdateContext({OptionVal:1});
@@ -38,6 +39,9 @@ LandingSplashScreen As screen:
         ZIndex: =2
 
     Image12_3 As image:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =760
         Image: =w7jv0ryr
         ImagePosition: =ImagePosition.Stretch
@@ -220,7 +224,10 @@ LandingSplashScreen As screen:
             ZIndex: =6
 
         Icon4 As icon.View:
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =45
             HoverColor: =RGBA(0, 121, 187, 1)
             Icon: =Icon.View
@@ -233,9 +240,15 @@ LandingSplashScreen As screen:
             ZIndex: =7
 
         Button2 As button:
+            BorderColor: =App.Theme.Colors.Primary
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(0, 94, 146, 1)
             Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Normal
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =App.Theme.Colors.Darker10
             OnSelect: |
                 =Set(varWelcomeScreen,If(IsBlank(varCrrUser.TeamID),true,false));
                 
@@ -245,10 +258,14 @@ LandingSplashScreen As screen:
                 
                 //Refresh(Registrations_Dvs);
                 Navigate(Registration,ScreenTransition.Fade)
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =App.Theme.Colors.Darker40
             RadiusBottomLeft: =30
             RadiusBottomRight: =30
             RadiusTopLeft: =30
             RadiusTopRight: =30
+            Size: =15
             Text: ="Skip to main page"
             Width: =210
             X: =439
@@ -256,7 +273,10 @@ LandingSplashScreen As screen:
             ZIndex: =8
 
         Icon4_3 As icon.View:
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =45
             HoverColor: =RGBA(0, 121, 187, 1)
             Icon: =Icon.Information
@@ -269,7 +289,10 @@ LandingSplashScreen As screen:
             ZIndex: =9
 
         Icon4_4 As icon.View:
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =45
             HoverColor: =RGBA(0, 121, 187, 1)
             Icon: =Icon.Trending
@@ -456,7 +479,10 @@ LandingSplashScreen As screen:
         ZIndex: =13
 
     Icon9 As icon.Bell:
+        BorderColor: =App.Theme.Colors.Darker40
         Color: =RGBA(9, 33, 98, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =35
         Icon: =Icon.Bell
         OnSelect: |-
@@ -468,6 +494,10 @@ LandingSplashScreen As screen:
         ZIndex: =14
 
     Label1 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
         FontWeight: =FontWeight.Semibold
         Height: =23
         Size: =8
@@ -479,6 +509,7 @@ LandingSplashScreen As screen:
 
     "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         '#CopilotOverlayLabel': ="Filtered"
+        BorderColor: =App.Theme.Colors.Darker40
         BorderThickness: =1
         DelayItemLoading: =true
         Fill: =RGBA(237, 237, 237, 1)
@@ -495,15 +526,28 @@ LandingSplashScreen As screen:
         ZIndex: =16
 
         Button5 As button:
+            BorderColor: =App.Theme.Colors.Primary
             BorderThickness: =0
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             DisplayMode: =DisplayMode.View
             Fill: =If(ThisItem.IsRead="NA",RGBA(204, 231, 246, 1),  RGBA(255, 255, 255, 1))
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
             Height: =68
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =App.Theme.Colors.Darker10
             OnSelect: =Select(Parent)
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =App.Theme.Colors.Darker40
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
+            Size: =15
             Text: =""
             Width: =305
             X: =6
@@ -511,8 +555,9 @@ LandingSplashScreen As screen:
             ZIndex: =1
 
         Title4 As label:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(186, 186, 186, 1)
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             Height: =20
             LineHeight: =2.2
@@ -530,8 +575,10 @@ LandingSplashScreen As screen:
             ZIndex: =2
 
         Subtitle2 As label:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(186, 186, 186, 1)
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
             Height: =42
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -547,6 +594,10 @@ LandingSplashScreen As screen:
             ZIndex: =3
 
         Icon10 As icon.Cancel:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =App.Theme.Colors.Darker30
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =15
             Icon: =Icon.Cancel
             OnSelect: |-

@@ -2,6 +2,7 @@ LandingPage As screen:
     BackgroundImage: =work_place_outdoor_1
     Fill: =RGBA(255,255,255,1)
     ImagePosition: =ImagePosition.Stretch
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
         =Reset(TextInput4);
         Reset(TextInput4_1);
@@ -92,7 +93,9 @@ LandingPage As screen:
         Label_SubHeading2 As label:
             Align: =LayoutAlignItems.Center
             AutoHeight: =true
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Dancing Script'
             FontWeight: =FontWeight.Bold
             Height: =54
@@ -104,7 +107,10 @@ LandingPage As screen:
             ZIndex: =2
 
     Label5 As label:
+        BorderColor: =App.Theme.Colors.Darker40
         Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
         Height: =15
         Size: =8
         Text: ="Version 20.0"
@@ -136,10 +142,11 @@ LandingPage As screen:
             ZIndex: =7
 
         Label12 As label:
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =14
             Text: |-
                 ="Password:"
             Visible: =varLoginWindow && !varspinner
@@ -148,10 +155,11 @@ LandingPage As screen:
             ZIndex: =8
 
         Label12_1 As label:
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =14
             Text: |-
                 ="User Name:"
             Visible: =varLoginWindow && !varspinner
@@ -163,15 +171,23 @@ LandingPage As screen:
             BorderColor: =_theme.ColorPrimary
             BorderThickness: =1
             Color: =RGBA(50, 86, 160, 1)
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
             OnSelect: |-
                 =UpdateContext({varRegScreenHide:true});
                 UpdateContext({ResetImage:true});
                 Reset(AddMediaButton1);
                 UpdateContext({varLoginWindow:false})
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
             PressedFill: =RGBA(0, 134, 208, 1)
             Size: =14
             Text: ="REGISTER"
@@ -186,9 +202,15 @@ LandingPage As screen:
             BorderColor: =_theme.ColorPrimary
             BorderThickness: =1
             Color: =RGBA(50, 86, 160, 1)
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
             OnSelect: |-
                 =//UpdateContext({varLoadingSpinner:true});
@@ -253,6 +275,8 @@ LandingPage As screen:
                 );
                 
                 */
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
             PressedFill: =RGBA(0, 134, 208, 1)
             Size: =14
             Text: ="LOGIN"
@@ -262,8 +286,20 @@ LandingPage As screen:
             ZIndex: =11
 
         TextInput4 As text:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
             Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =App.Theme.Font
             HintText: ="User Name"
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
+            Size: =13
             Tooltip: ="User Name (Do not use your Microsoft alias or Id)"
             Visible: =varLoginWindow && !varspinner
             Width: =351
@@ -272,12 +308,24 @@ LandingPage As screen:
             ZIndex: =12
 
         TextInput4_1 As text:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
             Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =App.Theme.Font
             Format: =TextFormat.Number
             Height: =44
             HintText: ="Enter your Pin"
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
             MaxLength: =6
             Mode: =TextMode.Password
+            Size: =13
             Tooltip: ="Numeric -maximum 6 digits. "
             Visible: =varLoginWindow && !varspinner
             Width: =351
@@ -289,6 +337,8 @@ LandingPage As screen:
             BorderColor: =RGBA(255, 255, 255, 1)
             BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
             DisplayMode: =DisplayMode.View
             Height: =40
             Icon: =Icon.Person
@@ -303,6 +353,8 @@ LandingPage As screen:
             BorderColor: =RGBA(255, 255, 255, 1)
             BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
             DisplayMode: =DisplayMode.View
             Height: =40
             Icon: =Icon.Lock
@@ -329,6 +381,7 @@ LandingPage As screen:
         ZIndex: =33
 
         Rectangle8 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
             Fill: =RGBA(50, 86, 160, 95%)
             Height: =334
             Visible: =varRegScreenHide && false
@@ -363,10 +416,11 @@ LandingPage As screen:
 
         Label12_5 As label:
             Align: =LayoutAlignItems.Center
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =14
             Text: |-
                 ="Password:"
             Visible: =varRegScreenHide
@@ -377,10 +431,11 @@ LandingPage As screen:
 
         Label12_4 As label:
             Align: =LayoutAlignItems.Center
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =14
             Text: |-
                 ="User Name:"
             Visible: =varRegScreenHide
@@ -393,9 +448,15 @@ LandingPage As screen:
             BorderColor: =_theme.ColorPrimary
             BorderThickness: =1
             Color: =RGBA(50, 86, 160, 1)
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
             OnSelect: |
                 =//UpdateContext({varLoadingSpinner:true});
@@ -420,6 +481,8 @@ LandingPage As screen:
                 
                 UpdateContext({varspinner:false});
                 //UpdateContext({varLoadingSpinner:false});
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
             PressedFill: =RGBA(0, 134, 208, 1)
             Size: =14
             Text: ="REGISTER"
@@ -434,15 +497,23 @@ LandingPage As screen:
             BorderColor: =_theme.ColorPrimary
             BorderThickness: =1
             Color: =RGBA(50, 86, 160, 1)
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
             OnSelect: |
                 =UpdateContext({varLoadingSpinner:true});
                 Refresh(Registrations_Dvs);
                 If(!IsBlank(First(Filter(Registrations_Dvs,LoginName=TextInput4_2.Text)).Name),Notify("Username not available ! try a different user name",NotificationType.Error),Notify("Username available !",NotificationType.Success));
                 UpdateContext({varLoadingSpinner:false})
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
             PressedFill: =RGBA(0, 134, 208, 1)
             Size: =14
             TabIndex: =-1
@@ -454,9 +525,21 @@ LandingPage As screen:
             ZIndex: =21
 
         TextInput4_2 As text:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
             Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =App.Theme.Font
             HintText: ="Do not use your Microsoft alias or Id"
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
             MaxLength: =10
+            Size: =13
             Tooltip: ="Do not use your Microsoft alias or Id (Max 10 letter)"
             Visible: =varRegScreenHide
             X: =579
@@ -464,11 +547,23 @@ LandingPage As screen:
             ZIndex: =22
 
         TextInput4_3 As text:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
             Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =App.Theme.Font
             Format: =TextFormat.Number
             HintText: ="Enter a six digit pin"
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
             MaxLength: =6
             Mode: =TextMode.Password
+            Size: =13
             Tooltip: ="Use only Numbers"
             Visible: =varRegScreenHide
             X: =579
@@ -476,8 +571,12 @@ LandingPage As screen:
             ZIndex: =23
 
         Label18 As label:
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
             Height: =33
+            Size: =13
             Text: |-
                 ="Email : " & _myProfileUPN_V.Mail
             Visible: =varRegScreenHide && false
@@ -490,9 +589,15 @@ LandingPage As screen:
             BorderColor: =_theme.ColorPrimary
             BorderThickness: =1
             Color: =RGBA(50, 86, 160, 1)
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
             OnSelect: |-
                 =Set(varRecordD,Blank());
@@ -500,6 +605,8 @@ LandingPage As screen:
                 Reset(TextInput4_2);
                 Reset(TextInput4_3);
                 UpdateContext({varLoginWindow:true})
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
             PressedFill: =RGBA(0, 134, 208, 1)
             Size: =14
             Text: ="CANCEL"
@@ -512,10 +619,11 @@ LandingPage As screen:
 
         Label12_6 As label:
             Align: =LayoutAlignItems.Center
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =14
             Text: |-
                 ="Select your Avtar:"
             Visible: =varRegScreenHide
@@ -525,6 +633,9 @@ LandingPage As screen:
             ZIndex: =26
 
         UploadedImage1 As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
             ImagePosition: =ImagePosition.Fill
             RadiusBottomLeft: =50
@@ -538,6 +649,7 @@ LandingPage As screen:
             ZIndex: =27
 
         AddMediaButton1 As addMedia:
+            BorderColor: =App.Theme.Colors.Darker40
             ChangePictureText: ="Change Avtar"
             Color: =RGBA(116, 116, 116, 1)
             Fill: =RGBA(230, 230, 230, 1)
@@ -552,12 +664,23 @@ LandingPage As screen:
             ZIndex: =28
 
         Button1 As button:
+            BorderColor: =App.Theme.Colors.Primary
             Color: =RGBA(39, 67, 125, 1)
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(255, 255, 255, 1)
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
             Height: =24
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =App.Theme.Colors.Darker10
             OnSelect: |-
                 =UpdateContext({varGalVis:true})
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =App.Theme.Colors.Darker40
             RadiusBottomLeft: =20
             RadiusBottomRight: =20
             RadiusTopLeft: =20
@@ -572,6 +695,7 @@ LandingPage As screen:
 
         "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             '#CopilotOverlayLabel': ="Filtered"
+            BorderColor: =App.Theme.Colors.Darker40
             BorderStyle: =BorderStyle.Dotted
             BorderThickness: =1
             DelayItemLoading: =true
@@ -590,6 +714,9 @@ LandingPage As screen:
             ZIndex: =30
 
             Image2 As image:
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =72
                 Image: =ThisItem.Pic
                 OnSelect: =Select(Parent)
@@ -604,10 +731,10 @@ LandingPage As screen:
 
             NextArrow2 As icon.ChevronRight:
                 AccessibleLabel: =Self.Tooltip
-                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(166, 166, 166, 1)
-                DisabledBorderColor: =RGBA(56, 56, 56, 1)
-                DisabledColor: =RGBA(119, 119, 119, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =50
                 Icon: =Icon.ChevronRight
                 OnSelect: |-
@@ -624,7 +751,7 @@ LandingPage As screen:
                 ZIndex: =4
 
             Separator2 As rectangle:
-                BorderColor: =RGBA(0, 0, 255, 1)
+                BorderColor: =App.Theme.Colors.Darker40
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =2
                 OnSelect: =Select(Parent)
@@ -633,6 +760,8 @@ LandingPage As screen:
                 ZIndex: =5
 
             Rectangle2 As rectangle:
+                BorderColor: =App.Theme.Colors.Darker40
+                Fill: =App.Theme.Colors.Darker30
                 Height: =Parent.TemplateHeight - Separator2.Height
                 OnSelect: =Select(Parent)
                 Visible: =ThisItem.IsSelected
@@ -641,7 +770,9 @@ LandingPage As screen:
 
         Label12_7 As label:
             Align: =LayoutAlignItems.Center
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Size: =12
@@ -653,6 +784,9 @@ LandingPage As screen:
             ZIndex: =33
 
     Image9_3 As image:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =150
         Image: |-
             ="data:image/svg+xml;utf8, " & EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; background: none; display: block; shape-rendering: auto;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'>
@@ -685,16 +819,29 @@ LandingPage As screen:
 
         Timer1 As timer:
             AutoStart: =true
+            BorderColor: =App.Theme.Colors.Primary
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Duration: =1500
+            Fill: =App.Theme.Colors.Primary
+            Font: =App.Theme.Font
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =App.Theme.Colors.Darker10
             OnTimerEnd: |-
                 =UpdateContext({varspinner:false});
                 //UpdateContext({varResetWindow:false});
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =App.Theme.Colors.Darker40
             Visible: =false
             X: =78
             Y: =659
             ZIndex: =42
 
         Shadowed_Bck As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
             Fill: =RGBA(0, 0, 0, 0.6)
             Height: =768
             Visible: =varspinner
@@ -702,6 +849,9 @@ LandingPage As screen:
             ZIndex: =43
 
         Spinner As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Image: |
                 ="data:image/svg+xml;utf8, " & EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; background: none; display: block; shape-rendering: auto;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'>
                 <circle cx='50' cy='50' r='32' stroke-width='8' stroke='#00aab4' stroke-dasharray='50.26548245743669 50.26548245743669' fill='none' stroke-linecap='round'>
@@ -753,10 +903,11 @@ LandingPage As screen:
 
         Label12_3 As label:
             Align: =Align.Center
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =14
             Text: =varpasstext
             Visible: =varResetWindow && !varspinner
             Width: =270
@@ -765,10 +916,11 @@ LandingPage As screen:
             ZIndex: =37
 
         Label12_2 As label:
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =14
             Text: |-
                 ="User Name:"
             Visible: =varResetWindow && !varspinner
@@ -780,9 +932,15 @@ LandingPage As screen:
             BorderColor: =_theme.ColorPrimary
             BorderThickness: =1
             Color: =RGBA(50, 86, 160, 1)
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
             OnSelect: |-
                 =//UpdateContext({varLoadingSpinner:true});
@@ -841,6 +999,8 @@ LandingPage As screen:
                 );
                 
                 */
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
             PressedFill: =RGBA(0, 134, 208, 1)
             Size: =14
             Text: ="RETRIEVE PASSWORD"
@@ -851,8 +1011,20 @@ LandingPage As screen:
             ZIndex: =39
 
         TextInput4_4 As text:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
             Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =App.Theme.Font
             HintText: ="User Name"
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
+            Size: =13
             Tooltip: ="User Name (Do not use your Microsoft alias or Id)"
             Visible: =varResetWindow && !varspinner
             Width: =351
@@ -863,6 +1035,8 @@ LandingPage As screen:
         Icon11_2 As icon.AddUser:
             BorderColor: =RGBA(255, 255, 255, 1)
             Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =40
             Icon: =Icon.CancelBadge
             OnSelect: |-
@@ -875,4 +1049,19 @@ LandingPage As screen:
             X: =946
             Y: =314
             ZIndex: =41
+
+    ButtonCanvas2 As Button:
+        Appearance: ='ButtonCanvas.Appearance'.Primary
+        BasePaletteColor: =RGBA(141, 229, 250, 1)
+        DisplayMode: =DisplayMode.Edit
+        Height: =35
+        Icon: =Icon.EmojiSmile
+        IconStyle: ='ButtonCanvas.IconStyle'.Filled
+        Layout: ='ButtonCanvas.Layout'.IconBefore
+        OnSelect: =Copy(TextInput4.Text);
+        VerticalAlign: =VerticalAlign.Top
+        Width: =196
+        X: =142
+        Y: =72
+        ZIndex: =45
 

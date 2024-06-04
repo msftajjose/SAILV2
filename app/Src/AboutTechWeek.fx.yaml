@@ -1,4 +1,6 @@
 AboutTechWeek As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |
         =Reset(Gallery1_3);
         UpdateContext({OptionXaxis: 169});
@@ -51,15 +53,21 @@ AboutTechWeek As screen:
         BorderColor: =_theme.ColorPrimary
         BorderStyle: =BorderStyle.None
         BorderThickness: =1
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(242,166,29,1) //RGBA(155,128,221,1) //RGBA(221, 79, 14, 1)
         FocusedBorderThickness: =2
         Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Normal
         Height: =55
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(70,92,193,1)//RGBA(167, 182, 203, 1)
         OnSelect: |-
             =UpdateContext({varTipsScreen:true});
             //UpdateContext({varAllpopUpsTips:false});
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
         PressedFill: =RGBA(33,174,197,1)//RGBA(0, 134, 208, 1)
         RadiusBottomLeft: =30
         RadiusBottomRight: =0
@@ -78,15 +86,21 @@ AboutTechWeek As screen:
         BorderColor: =_theme.ColorPrimary
         BorderStyle: =BorderStyle.None
         BorderThickness: =1
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(0,168,240,1) //RGBA(155,128,221,1)//RGBA(0, 121, 187, 1)
         FocusedBorderThickness: =2
         Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Normal
         Height: =55
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(70,92,193,1)//RGBA(167, 182, 203, 1)
         OnSelect: |-
             =UpdateContext({varHumanScreen:true});
             UpdateContext({varAllpopUpsTips:false});
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
         PressedFill: =RGBA(33,174,197,1)//RGBA(0, 134, 208, 1)
         RadiusBottomLeft: =30
         RadiusBottomRight: =0
@@ -121,17 +135,27 @@ AboutTechWeek As screen:
             ZIndex: =3
 
         Button9_2 As button:
+            BorderColor: =App.Theme.Colors.Primary
             BorderThickness: =0
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(248,248,254, 1)
             Fill: =RGBA(248,248,254, 1)
             FocusedBorderThickness: =0
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
             Height: =116
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(248,248,254, 1)
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
             PressedFill: =RGBA(248,248,254, 1)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =30
             RadiusTopRight: =30
+            Size: =15
             Text: =""
             Width: =90
             X: =45
@@ -139,6 +163,10 @@ AboutTechWeek As screen:
             ZIndex: =5
 
         Icon2_2 As icon.Settings:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =App.Theme.Colors.Darker30
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =35
             Icon: =Icon.Settings
             OnSelect: |-
@@ -152,6 +180,7 @@ AboutTechWeek As screen:
 
         Gallery1_3 As gallery.galleryVertical:
             '#CopilotOverlayLabel': ="Filtered"
+            BorderColor: =App.Theme.Colors.Darker40
             Default: |-
                 ={Name:"Resources", icon:Icon.Compose,onSelect:"About"}
             Height: =629
@@ -188,16 +217,28 @@ AboutTechWeek As screen:
             ZIndex: =7
 
             Button1_11 As button:
+                BorderColor: =App.Theme.Colors.Primary
                 BorderThickness: =0
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: =If(ThisItem.IsSelected,RGBA(81,152,172,1),RGBA(RL,GL,BL,1))
                 FocusedBorderThickness: =0
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
                 Height: =113
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =Button1_11.Fill
                 OnSelect: =Select(Parent)
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
                 RadiusBottomLeft: =40
                 RadiusBottomRight: =40
                 RadiusTopLeft: =40
                 RadiusTopRight: =40
+                Size: =15
                 Text: =""
                 Width: =100
                 X: =20
@@ -205,7 +246,9 @@ AboutTechWeek As screen:
 
             Label1_11 As label:
                 Align: =LayoutAlignItems.Center
+                BorderColor: =App.Theme.Colors.Darker40
                 Color: =If(ThisItem.IsSelected,RGBA(RT, GT, BT, 1),RGBA(RTF, GTF, BTF, 1))
+                DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
                 OnSelect: =Select(Parent)
                 Size: =11.5
@@ -216,7 +259,10 @@ AboutTechWeek As screen:
                 ZIndex: =2
 
             Icon1_11 As icon.Add:
+                BorderColor: =App.Theme.Colors.Darker40
                 Color: =If(ThisItem.IsSelected,RGBA(RT, GT, BT, 1),RGBA(RTF, GTF, BTF, 1))
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =25
                 Icon: =ThisItem.icon
                 OnSelect: =Select(Parent)
@@ -362,7 +408,10 @@ AboutTechWeek As screen:
         ZIndex: =19
 
     Icon2 As icon.View:
+        BorderColor: =App.Theme.Colors.Darker40
         Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =39
         Icon: =Icon.View
         OnSelect: |-
@@ -374,7 +423,10 @@ AboutTechWeek As screen:
         ZIndex: =20
 
     Icon2_5 As icon.View:
+        BorderColor: =App.Theme.Colors.Darker40
         Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =39
         Icon: =Icon.Document
         OnSelect: |-
@@ -395,6 +447,7 @@ AboutTechWeek As screen:
         ZIndex: =21
 
         Rectangle1_19 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
             Fill: =RGBA(33, 57, 145, .50)
             Height: =768
             Visible: =_varAppFeedbackReg
@@ -402,6 +455,7 @@ AboutTechWeek As screen:
             ZIndex: =24
 
         Rectangle3_14 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
             Fill: =RGBA(255, 255, 255, 1)
             Height: =412
             Visible: =_varAppFeedbackReg
@@ -411,16 +465,29 @@ AboutTechWeek As screen:
             ZIndex: =25
 
         Button8_25 As button:
+            BorderColor: =App.Theme.Colors.Primary
             BorderThickness: =0
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =_theme.ColorPrimary
             FocusedBorderThickness: =1
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =App.Theme.Colors.Darker10
             OnSelect: |-
                 =UpdateContext({_varAppFeedbackReg:false});
                 Reset(Gallery1_3);
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =App.Theme.Colors.Darker40
             RadiusBottomLeft: =20
             RadiusBottomRight: =20
             RadiusTopLeft: =0
             RadiusTopRight: =20
+            Size: =15
             Text: ="Cancel"
             Visible: =_varAppFeedbackReg
             X: =471
@@ -428,9 +495,18 @@ AboutTechWeek As screen:
             ZIndex: =26
 
         Button8_24 As button:
+            BorderColor: =App.Theme.Colors.Primary
             BorderThickness: =0
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =_theme.ColorPrimary
             FocusedBorderThickness: =1
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =App.Theme.Colors.Darker10
             OnSelect: |-
                 =Patch(AppFeedbacks_Dvs,Defaults(AppFeedbacks_Dvs),{Name:_myProfileUPN_V.UserPrincipalName,Comments:TextInput1_4.Text,Rating:Text(Rating1_5.Value),UserName:varCrrUser.LoginName,Category:First(ComboBox1_3.SelectedItems).Value});
                 If(IsBlank(varCrrUser.ErD), Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{ErD:"Yes",NotificationST:"Yes"}));
@@ -441,10 +517,14 @@ AboutTechWeek As screen:
                 Reset(TextInput1_4);
                 Reset(Rating1_5);
                 UpdateContext({_varAppFeedbackReg:false});
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =App.Theme.Colors.Darker40
             RadiusBottomLeft: =20
             RadiusBottomRight: =20
             RadiusTopLeft: =0
             RadiusTopRight: =20
+            Size: =15
             Text: ="Submit"
             Visible: =_varAppFeedbackReg
             X: =709
@@ -452,8 +532,12 @@ AboutTechWeek As screen:
             ZIndex: =27
 
         Label8_10 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Size: =13
             Text: |-
                 ="Rate the App:"
             Visible: =_varAppFeedbackReg && If(First(ComboBox1_3.SelectedItems).ID=1,true,false)
@@ -463,8 +547,12 @@ AboutTechWeek As screen:
             ZIndex: =28
 
         Label8_15 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Size: =13
             Text: |-
                 ="Comments :"
             Visible: =_varAppFeedbackReg
@@ -474,15 +562,21 @@ AboutTechWeek As screen:
             ZIndex: =29
 
         Rating1_5 As rating:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
             ContentLanguage: =""
             Default: =0
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =Self.Fill
             DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
             FocusedBorderColor: =Self.BorderColor
             FocusedBorderThickness: =0
             Height: =40
             HoverFill: =Self.Fill
             PressedFill: =Self.Fill
+            RatingFill: =App.Theme.Colors.Darker30
             Visible: =_varAppFeedbackReg && If(First(ComboBox1_3.SelectedItems).ID=1,true,false)
             Width: =200
             X: =548
@@ -490,12 +584,20 @@ AboutTechWeek As screen:
             ZIndex: =30
 
         TextInput1_4 As text:
-            BorderThickness: =1
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
             Default: =
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =1
             Font: =Font.'Segoe UI'
             Height: =187
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
             Mode: =TextMode.MultiLine
+            Size: =13
             Visible: =_varAppFeedbackReg
             Width: =419
             X: =552
@@ -503,8 +605,12 @@ AboutTechWeek As screen:
             ZIndex: =31
 
         Label8_9 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Size: =13
             Text: |-
                 ="Feedback Category:"
             Visible: =_varAppFeedbackReg
@@ -514,16 +620,32 @@ AboutTechWeek As screen:
             ZIndex: =32
 
         ComboBox1_3 As combobox:
+            BorderColor: =App.Theme.Colors.Darker40
+            ChevronBackground: =App.Theme.Colors.Primary
+            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+            ChevronHoverBackground: =App.Theme.Colors.Darker10
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
             DefaultSelectedItems: |-
                 ={ID:1,Value:"App Feedback"}
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             DisplayFields: =["Value"]
+            Font: =App.Theme.Font
             Height: =35
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
             IsSearchable: =false
             Items: |-
                 =Table({ID:1,Value:"App Feedback"},{ID:2,Value:"Notify errors to the Apps team"},{ID:3,Value:"Submit a game Idea"})
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =App.Theme.Colors.Darker30
             SearchFields: =["Value"]
             SearchItems: =[]
+            SelectionFill: =App.Theme.Colors.Primary
             SelectMultiple: =false
+            Size: =13
             Visible: =_varAppFeedbackReg
             X: =550
             Y: =184
@@ -605,8 +727,9 @@ AboutTechWeek As screen:
             ZIndex: =12
 
             Image1_2 As image:
-                BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =1
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =35
                 Image: =ThisItem.Img
                 OnSelect: =Select(Parent)
@@ -622,7 +745,10 @@ AboutTechWeek As screen:
                 ZIndex: =1
 
             Icon1_1 As icon.Add:
+                BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =30
                 Icon: =ThisItem.Img
                 OnSelect: =Select(Parent)
@@ -635,6 +761,8 @@ AboutTechWeek As screen:
         Icon5_7 As icon.CancelBadge:
             BorderColor: =RGBA(255, 255, 255, 1)
             Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =40
             Icon: =Icon.BackArrow
             OnSelect: |-
@@ -649,9 +777,14 @@ AboutTechWeek As screen:
             ZIndex: =13
 
         TipScreen_1 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
             Height: =635
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
             Visible: =varTipsScreen
             Width: =768
             X: =561
@@ -678,12 +811,17 @@ AboutTechWeek As screen:
                 ZIndex: =1
 
                 Button6_6 As button:
+                    BorderColor: =App.Theme.Colors.Primary
                     BorderThickness: =0
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
                     Fill: =If(ThisItem.IsSelected,RGBA(255, 255, 255, 1),RGBA(255,255, 255, 1))
                     Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
                     Height: =100
                     HoverBorderColor: =
+                    HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     OnSelect: =Select(Parent)
                     PaddingBottom: =0
@@ -691,18 +829,24 @@ AboutTechWeek As screen:
                     PaddingRight: =0
                     PaddingTop: =0
                     PressedBorderColor: =
+                    PressedColor: =Self.Color
+                    PressedFill: =App.Theme.Colors.Darker40
                     RadiusBottomLeft: =15
                     RadiusBottomRight: =15
                     RadiusTopLeft: =15
                     RadiusTopRight: =15
+                    Size: =15
                     Text: =""
                     Width: =745
                     ZIndex: =1
 
                 Icon20_1 As icon.Edit:
+                    BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
                     Color: =RGBA(39, 67, 125, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
                     FocusedBorderThickness: =1
                     Height: =20
                     Icon: =Icon.Edit
@@ -717,8 +861,12 @@ AboutTechWeek As screen:
                     ZIndex: =2
 
                 Icon21_1 As icon.Save:
+                    BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
+                    Color: =App.Theme.Colors.Darker30
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
                     FocusedBorderThickness: =1
                     Height: =20
                     Icon: =Icon.Save
@@ -735,26 +883,24 @@ AboutTechWeek As screen:
                 Title2_18 As label:
                     BorderColor: =RGBA(230, 230, 230, 1)
                     Color: =RGBA(0, 13, 75, 1)
-                    DisabledColor: =RGBA(186, 186, 186, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
                     Height: =25
                     OnSelect: =Select(Parent)
                     Overflow: =Overflow.Scroll
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
                     Size: =11
                     Text: =ThisItem.Subject
-                    VerticalAlign: =VerticalAlign.Top
                     Width: =566
                     X: =12
                     Y: =4
                     ZIndex: =4
 
                 Icon24_1 As icon.More:
+                    BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(50, 86, 160, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
                     Height: =25
                     Icon: =Icon.View
                     OnSelect: |-
@@ -766,9 +912,11 @@ AboutTechWeek As screen:
                     ZIndex: =5
 
                 Icon3_3 As icon.LikeDislike:
+                    BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
                     Color: =If(IsBlank(First(Filter(TipsLikes,UserID.Registrations_Dv=varCrrUser.Registrations_Dv && ListItemID.TipsandTricksCollaboration=ThisItem.TipsandTricksCollaboration)).Likes), RGBA(39, 67, 125, 1),RGBA(39, 67, 125, .5))
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(202, 202, 202, 1)
                     DisplayMode: = DisplayMode.Edit
                     FocusedBorderThickness: =1
@@ -802,19 +950,13 @@ AboutTechWeek As screen:
                 Title2_19 As label:
                     BorderColor: =RGBA(230, 230, 230, 1)
                     Color: =RGBA(39, 67, 125, 1)
-                    DisabledColor: =RGBA(186, 186, 186, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
                     Font: =Font.'Segoe UI'
-                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =25
                     OnSelect: =Select(Parent)
                     Overflow: =Overflow.Scroll
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
                     Size: =10
                     Text: =ThisItem.NoOfLikes
-                    VerticalAlign: =VerticalAlign.Top
                     Width: =25
                     X: =710
                     Y: =75
@@ -822,7 +964,10 @@ AboutTechWeek As screen:
 
                 Label4_3 As label:
                     Align: =Align.Right
+                    BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(39, 67, 125, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
                     Height: =25
                     Italic: =true
                     OnSelect: =Select(Parent)
@@ -851,7 +996,7 @@ AboutTechWeek As screen:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderThickness: =1
                     Color: =RGBA(116, 116, 116, 1)
-                    DisabledColor: =RGBA(186, 186, 186, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
                     Font: =Font.'Segoe UI'
                     FontWeight: = FontWeight.Normal
                     Height: =43
@@ -859,13 +1004,8 @@ AboutTechWeek As screen:
                         =Select(Parent);
                         UpdateContext({varShowMore:true});
                     Overflow: =Overflow.Scroll
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
                     Size: =11
                     Text: =If( Len(ThisItem.TipsTricks)>100, Left(ThisItem.TipsTricks,120) & ".....",ThisItem.TipsTricks)
-                    VerticalAlign: =VerticalAlign.Top
                     Width: =723
                     X: =12
                     Y: =31
@@ -877,7 +1017,7 @@ AboutTechWeek As screen:
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
                     Color: =RGBA(116, 116, 116, 1)
-                    DisabledColor: =RGBA(186, 186, 186, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
                     Fill: =RGBA(255, 255, 255, 1)
                     FocusedBorderThickness: =1
                     Font: =Font.'Segoe UI'
@@ -886,13 +1026,8 @@ AboutTechWeek As screen:
                     OnSelect: |-
                         =UpdateContext({varShowMore:false});
                     Overflow: =Overflow.Scroll
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
                     Size: =11
                     Text: =ThisItem.TipsTricks
-                    VerticalAlign: =VerticalAlign.Top
                     Visible: =If(ThisItem.IsSelected && varShowMore, true , false)
                     Width: =723
                     X: =11
@@ -900,8 +1035,19 @@ AboutTechWeek As screen:
                     ZIndex: =12
 
                 TextInput8_1 As text:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderThickness: =2
+                    Color: =RGBA(0, 0, 0, 1)
                     Default: =ThisItem.TipsTricks
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    FocusedBorderThickness: =4
+                    Font: =App.Theme.Font
                     Height: =70
+                    HoverBorderColor: =App.Theme.Colors.Darker40
+                    HoverColor: =RGBA(0, 0, 0, 1)
+                    HoverFill: =App.Theme.Colors.Lighter70
                     Mode: =TextMode.MultiLine
                     OnSelect: =Select(Parent)
                     Size: =11
@@ -912,7 +1058,10 @@ AboutTechWeek As screen:
                     ZIndex: =13
 
     Icon17 As icon.Globe:
+        BorderColor: =App.Theme.Colors.Darker40
         Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =39
         Icon: =Icon.Globe
         OnSelect: |

@@ -1,5 +1,6 @@
 CommnLeaderBoard As screen:
     Fill: =
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |+
         =UpdateContext({varLoadingSpinner:true});
         Reset(Gallery1_4);
@@ -11,6 +12,7 @@ CommnLeaderBoard As screen:
         
 
     Rectangle5_6 As rectangle:
+        BorderColor: =App.Theme.Colors.Darker40
         Fill: =RGBA(56, 96, 178, .10)
         Height: =768
         Visible: =false
@@ -19,7 +21,9 @@ CommnLeaderBoard As screen:
 
     Label23_3 As label:
         Align: =Align.Center
+        BorderColor: =App.Theme.Colors.Darker40
         Color: =RGBA(118, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =36
@@ -38,15 +42,27 @@ CommnLeaderBoard As screen:
         ZIndex: =30
 
         Button7_2 As button:
+            BorderColor: =App.Theme.Colors.Primary
             BorderThickness: =0
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
             DisabledColor: =RGBA(0, 0, 0, 0)
             DisabledFill: =RGBA(255, 255, 255, 1)
             DisplayMode: =DisplayMode.Disabled
+            Fill: =App.Theme.Colors.Primary
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
             Height: =60
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =App.Theme.Colors.Darker10
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =App.Theme.Colors.Darker40
             RadiusBottomLeft: =15
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
+            Size: =15
             Text: =""
             Width: =599
             X: =502
@@ -55,6 +71,7 @@ CommnLeaderBoard As screen:
 
         Gallery9 As gallery.galleryHorizontal:
             '#CopilotOverlayLabel': ="Filtered"
+            BorderColor: =App.Theme.Colors.Darker40
             Default: |-
                 ={ID:11,Name:"W11"}
             DelayItemLoading: =true
@@ -74,12 +91,18 @@ CommnLeaderBoard As screen:
                 BorderThickness: =0
                 Color: =If(ThisItem.IsSelected,RGBA(255, 255, 255, 1), RGBA(39, 67, 125, 1))
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: =If(ThisItem.IsSelected,RGBA(56, 96, 178, 1),  RGBA(237, 237, 237, 1))
-                FontWeight: =FontWeight.Normal
+                Font: =App.Theme.Font
                 Height: =45
                 HoverBorderColor: =
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
                 OnSelect: =Select(Parent)
                 PressedBorderColor: =
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
                 RadiusBottomLeft: =30
                 RadiusBottomRight: =30
                 RadiusTopLeft: =30
@@ -90,6 +113,9 @@ CommnLeaderBoard As screen:
                 ZIndex: =1
 
     Image9_1 As image:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =150
         Image: |-
             ="data:image/svg+xml;utf8, " & EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; background: none; display: block; shape-rendering: auto;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'>
@@ -138,10 +164,13 @@ CommnLeaderBoard As screen:
 
         Label3_22 As label:
             Align: =Align.Center
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =25
+            Size: =13
             Text: |-
                 =Switch(Gallery9.Selected.ID, 0,"Total Score",
                 1,"Week 1 Score",
@@ -165,10 +194,13 @@ CommnLeaderBoard As screen:
 
         Label3_23 As label:
             Align: =Align.Center
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =25
+            Size: =13
             Text: ="Team Owner"
             Width: =125
             X: =1194
@@ -177,10 +209,13 @@ CommnLeaderBoard As screen:
 
         Label3_21 As label:
             Align: =Align.Center
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =24
+            Size: =13
             Text: ="Team Count"
             Width: =119
             X: =958
@@ -189,11 +224,12 @@ CommnLeaderBoard As screen:
 
         Label3_19 As label:
             Align: =Align.Center
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =25
-            Size: =14
             Text: ="Top Teams"
             Tooltip: ="(Scores can take upto 4 hours to update)"
             Width: =125
@@ -235,9 +271,9 @@ CommnLeaderBoard As screen:
             ZIndex: =14
 
             Title3_9 As label:
-                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(255, 255, 255, 1)
-                DisabledColor: =RGBA(186, 186, 186, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =26
@@ -256,9 +292,9 @@ CommnLeaderBoard As screen:
 
             Subtitle3_10 As label:
                 Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(255, 255, 255, 1)
-                DisabledColor: =RGBA(186, 186, 186, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =24
@@ -300,6 +336,8 @@ CommnLeaderBoard As screen:
                 ZIndex: =5
 
             Rectangle7_2 As rectangle:
+                BorderColor: =App.Theme.Colors.Darker40
+                Fill: =App.Theme.Colors.Darker30
                 Height: =Parent.TemplateHeight - Separator3_5.Height
                 OnSelect: =Select(Parent)
                 Visible: =ThisItem.IsSelected
@@ -307,20 +345,14 @@ CommnLeaderBoard As screen:
                 ZIndex: =6
 
             Subtitle3_11 As label:
-                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(255, 255, 255, 1)
-                DisabledColor: =RGBA(186, 186, 186, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
-                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =24
                 OnSelect: =Select(Parent)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
                 Size: =11
                 Text: =First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.OwnerID.Registrations_Dv)).LoginName
-                VerticalAlign: =VerticalAlign.Top
                 Width: =87
                 X: =404
                 Y: =15
@@ -328,26 +360,23 @@ CommnLeaderBoard As screen:
 
             Subtitle3_9 As label:
                 Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(255, 255, 255, 1)
-                DisabledColor: =RGBA(186, 186, 186, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
-                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =24
                 OnSelect: =Select(Parent)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
                 Size: =11
                 Text: =CountRows(Filter(Registrations_Dvs,TeamID.TeamRegistrationssN=ThisItem.TeamRegistrationssN))
-                VerticalAlign: =VerticalAlign.Top
                 Width: =72
                 X: =158
                 Y: =15
                 ZIndex: =9
 
             Image19 As image:
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =35
                 Image: =ThisItem.TeamAvtar
                 OnSelect: =Select(Parent)
@@ -362,10 +391,13 @@ CommnLeaderBoard As screen:
 
         Label3_20 As label:
             Align: =Align.Center
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =25
+            Size: =13
             Text: ="Team Name"
             Width: =125
             X: =822
@@ -397,10 +429,13 @@ CommnLeaderBoard As screen:
 
         Label3_41 As label:
             Align: =Align.Center
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =25
+            Size: =13
             Text: ="User Name"
             Width: =126
             X: =310
@@ -409,10 +444,13 @@ CommnLeaderBoard As screen:
 
         Label3_42 As label:
             Align: =Align.Center
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =25
+            Size: =13
             Text: |-
                 =Switch(Gallery9.Selected.ID, 0,"Total Score",
                 1,"Week 1 Score",
@@ -436,11 +474,12 @@ CommnLeaderBoard As screen:
 
         Label3_40 As label:
             Align: =Align.Center
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =25
-            Size: =14
             Text: ="Top Individuals"
             Tooltip: ="(Scores can take upto 1 hours to update)"
             Width: =312
@@ -481,9 +520,9 @@ CommnLeaderBoard As screen:
             ZIndex: =22
 
             Title3_20 As label:
-                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(255, 255, 255, 1)
-                DisabledColor: =RGBA(186, 186, 186, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =26
@@ -511,6 +550,8 @@ CommnLeaderBoard As screen:
                 ZIndex: =5
 
             Rectangle7_4 As rectangle:
+                BorderColor: =App.Theme.Colors.Darker40
+                Fill: =App.Theme.Colors.Darker30
                 Height: =Parent.TemplateHeight - Separator3_10.Height
                 OnSelect: =Select(Parent)
                 Visible: =ThisItem.IsSelected
@@ -519,17 +560,12 @@ CommnLeaderBoard As screen:
 
             Subtitle3_18 As label:
                 Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(255, 255, 255, 1)
-                DisabledColor: =RGBA(186, 186, 186, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
-                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =28
                 OnSelect: =Select(Parent)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
                 Size: =11
                 Text: |
                     =Switch(Gallery9.Selected.ID, 0,ThisItem.Scores,
@@ -546,13 +582,15 @@ CommnLeaderBoard As screen:
                     11,ThisItem.Week11Score,
                     12,ThisItem.Week12Score
                     )
-                VerticalAlign: =VerticalAlign.Top
                 Width: =87
                 X: =332
                 Y: =12
                 ZIndex: =9
 
             Image7_6 As image:
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =35
                 Image: =ThisItem.UserAvtar
                 OnSelect: =Select(Parent)
@@ -573,6 +611,7 @@ CommnLeaderBoard As screen:
         ZIndex: =42
 
         Rectangle1_20 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
             Fill: =RGBA(33, 57, 145, .50)
             Height: =768
             Visible: =_varAppFeedbackReg
@@ -580,6 +619,7 @@ CommnLeaderBoard As screen:
             ZIndex: =23
 
         Rectangle3_15 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
             Fill: =RGBA(255, 255, 255, 1)
             Height: =412
             Visible: =_varAppFeedbackReg
@@ -589,16 +629,29 @@ CommnLeaderBoard As screen:
             ZIndex: =24
 
         Button8_27 As button:
+            BorderColor: =App.Theme.Colors.Primary
             BorderThickness: =0
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =_theme.ColorPrimary
             FocusedBorderThickness: =1
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =App.Theme.Colors.Darker10
             OnSelect: |-
                 =UpdateContext({_varAppFeedbackReg:false});
                 Reset(Gallery1_4);
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =App.Theme.Colors.Darker40
             RadiusBottomLeft: =20
             RadiusBottomRight: =20
             RadiusTopLeft: =0
             RadiusTopRight: =20
+            Size: =15
             Text: ="Cancel"
             Visible: =_varAppFeedbackReg
             X: =471
@@ -606,9 +659,18 @@ CommnLeaderBoard As screen:
             ZIndex: =25
 
         Button8_26 As button:
+            BorderColor: =App.Theme.Colors.Primary
             BorderThickness: =0
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =_theme.ColorPrimary
             FocusedBorderThickness: =1
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =App.Theme.Colors.Darker10
             OnSelect: |-
                 =Patch(AppFeedbacks_Dvs,Defaults(AppFeedbacks_Dvs),{Name:_myProfileUPN_V.UserPrincipalName,Comments:TextInput1_5.Text,Rating:Text(Rating1_4.Value),UserName:varCrrUser.LoginName,Category:First(ComboBox1_1.SelectedItems).Value});
                 If(IsBlank(varCrrUser.ErD), Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{ErD:"Yes",NotificationST:"Yes"}));
@@ -619,10 +681,14 @@ CommnLeaderBoard As screen:
                 Reset(Rating1_4);
                 UpdateContext({_varAppFeedbackReg:false});
                 Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"You have submited a feedback !",UserID:varCrrUser,IsRead:"No"});
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =App.Theme.Colors.Darker40
             RadiusBottomLeft: =20
             RadiusBottomRight: =20
             RadiusTopLeft: =0
             RadiusTopRight: =20
+            Size: =15
             Text: ="Submit"
             Visible: =_varAppFeedbackReg
             X: =709
@@ -630,8 +696,12 @@ CommnLeaderBoard As screen:
             ZIndex: =26
 
         Label8_12 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Size: =13
             Text: |-
                 ="Rate the App:"
             Visible: =_varAppFeedbackReg && If(First(ComboBox1_1.SelectedItems).ID=1,true,false)
@@ -641,8 +711,12 @@ CommnLeaderBoard As screen:
             ZIndex: =27
 
         Label8_13 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Size: =13
             Text: |-
                 ="Comments :"
             Visible: =_varAppFeedbackReg
@@ -652,15 +726,21 @@ CommnLeaderBoard As screen:
             ZIndex: =28
 
         Rating1_4 As rating:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
             ContentLanguage: =""
             Default: =0
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =Self.Fill
             DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
             FocusedBorderColor: =Self.BorderColor
             FocusedBorderThickness: =0
             Height: =40
             HoverFill: =Self.Fill
             PressedFill: =Self.Fill
+            RatingFill: =App.Theme.Colors.Darker30
             Visible: =_varAppFeedbackReg && If(First(ComboBox1_1.SelectedItems).ID=1,true,false)
             Width: =200
             X: =548
@@ -668,12 +748,20 @@ CommnLeaderBoard As screen:
             ZIndex: =29
 
         TextInput1_5 As text:
-            BorderThickness: =1
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
             Default: =
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =1
             Font: =Font.'Segoe UI'
             Height: =187
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
             Mode: =TextMode.MultiLine
+            Size: =13
             Visible: =_varAppFeedbackReg
             Width: =419
             X: =552
@@ -681,8 +769,12 @@ CommnLeaderBoard As screen:
             ZIndex: =30
 
         Label8_11 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Size: =13
             Text: |-
                 ="Feedback Category:"
             Visible: =_varAppFeedbackReg
@@ -692,16 +784,32 @@ CommnLeaderBoard As screen:
             ZIndex: =31
 
         ComboBox1_1 As combobox:
+            BorderColor: =App.Theme.Colors.Darker40
+            ChevronBackground: =App.Theme.Colors.Primary
+            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+            ChevronHoverBackground: =App.Theme.Colors.Darker10
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
             DefaultSelectedItems: |-
                 ={ID:1,Value:"App Feedback"}
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             DisplayFields: =["Value"]
+            Font: =App.Theme.Font
             Height: =35
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
             IsSearchable: =false
             Items: |-
                 =Table({ID:1,Value:"App Feedback"},{ID:2,Value:"Notify errors to the Apps team"},{ID:3,Value:"Submit a game Idea"})
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =App.Theme.Colors.Darker30
             SearchFields: =["Value"]
             SearchItems: =[]
+            SelectionFill: =App.Theme.Colors.Primary
             SelectMultiple: =false
+            Size: =13
             Visible: =_varAppFeedbackReg
             X: =550
             Y: =184
@@ -728,6 +836,7 @@ CommnLeaderBoard As screen:
             ZIndex: =3
 
         Circle_Search_2 As circle:
+            BorderColor: =App.Theme.Colors.Darker40
             Fill: =RGBA(240,240,247, 1)
             Height: =50
             Visible: =false
@@ -756,17 +865,27 @@ CommnLeaderBoard As screen:
             ZIndex: =2
 
         Button9_3 As button:
+            BorderColor: =App.Theme.Colors.Primary
             BorderThickness: =0
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(248,248,254, 1)
             Fill: =RGBA(248,248,254, 1)
             FocusedBorderThickness: =0
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
             Height: =116
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(248,248,254, 1)
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
             PressedFill: =RGBA(248,248,254, 1)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =30
             RadiusTopRight: =30
+            Size: =15
             Text: =""
             Width: =90
             X: =45
@@ -774,6 +893,10 @@ CommnLeaderBoard As screen:
             ZIndex: =5
 
         Icon2_3 As icon.Settings:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =App.Theme.Colors.Darker30
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =35
             Icon: =Icon.Settings
             OnSelect: |-
@@ -787,6 +910,7 @@ CommnLeaderBoard As screen:
 
         Gallery1_4 As gallery.galleryVertical:
             '#CopilotOverlayLabel': ="Filtered"
+            BorderColor: =App.Theme.Colors.Darker40
             Default: |-
                 ={Name:"PegBoard", icon:Icon.Ribbon,onSelect:"LeaderBoard"}
             Height: =629
@@ -823,16 +947,28 @@ CommnLeaderBoard As screen:
             ZIndex: =7
 
             Button1_10 As button:
+                BorderColor: =App.Theme.Colors.Primary
                 BorderThickness: =0
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: =If(ThisItem.IsSelected,RGBA(81,152,172,1),RGBA(RL,GL,BL,1))
                 FocusedBorderThickness: =0
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
                 Height: =113
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =Button1_10.Fill
                 OnSelect: =Select(Parent)
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
                 RadiusBottomLeft: =40
                 RadiusBottomRight: =40
                 RadiusTopLeft: =40
                 RadiusTopRight: =40
+                Size: =15
                 Text: =""
                 Width: =100
                 X: =20
@@ -840,7 +976,9 @@ CommnLeaderBoard As screen:
 
             Label1_10 As label:
                 Align: =LayoutAlignItems.Center
+                BorderColor: =App.Theme.Colors.Darker40
                 Color: =If(ThisItem.IsSelected,RGBA(RT, GT, BT, 1),RGBA(RTF, GTF, BTF, 1))
+                DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
                 OnSelect: =Select(Parent)
                 Size: =11.5
@@ -851,7 +989,10 @@ CommnLeaderBoard As screen:
                 ZIndex: =2
 
             Icon1_10 As icon.Add:
+                BorderColor: =App.Theme.Colors.Darker40
                 Color: =If(ThisItem.IsSelected,RGBA(RT, GT, BT, 1),RGBA(RTF, GTF, BTF, 1))
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =25
                 Icon: =ThisItem.icon
                 OnSelect: =Select(Parent)

@@ -1,11 +1,14 @@
 SettingsPage As screen:
     BackgroundImage: =work_place_outdoor_1
+    Fill: =Color.White
     ImagePosition: =ImagePosition.Stretch
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
         =UpdateContext({varxpos:89});UpdateContext({varapprovalScreenVisible:false});
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         '#CopilotOverlayLabel': ="Filtered"
+        BorderColor: =App.Theme.Colors.Darker40
         DelayItemLoading: =true
         Items: =TipsandTricksCollaborations
         Layout: =Layout.Vertical
@@ -19,9 +22,10 @@ SettingsPage As screen:
         ZIndex: =1
 
         Title5 As label:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Color: =RGBA(71, 69, 64, 1)
-            DisabledColor: =RGBA(186, 186, 186, 1)
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
@@ -29,7 +33,6 @@ SettingsPage As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Size: =14
             Text: =ThisItem.Name
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 86
@@ -38,9 +41,10 @@ SettingsPage As screen:
             ZIndex: =1
 
         Subtitle4 As label:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Color: =RGBA(71, 69, 64, 1)
-            DisabledColor: =RGBA(186, 186, 186, 1)
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
@@ -48,6 +52,7 @@ SettingsPage As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =13
             Text: =ThisItem.'Created On'
             VerticalAlign: =VerticalAlign.Top
             Width: =Title5.Width
@@ -56,9 +61,10 @@ SettingsPage As screen:
             ZIndex: =2
 
         Body1 As label:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Color: =RGBA(71, 69, 64, 1)
-            DisabledColor: =RGBA(186, 186, 186, 1)
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
@@ -66,6 +72,7 @@ SettingsPage As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =13
             Text: =ThisItem.IsApproved
             VerticalAlign: =VerticalAlign.Top
             Width: =Title5.Width
@@ -75,7 +82,10 @@ SettingsPage As screen:
 
         NextArrow3 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =50
             Icon: =Icon.ChevronRight
             OnSelect: =Select(Parent)
@@ -90,7 +100,7 @@ SettingsPage As screen:
             ZIndex: =4
 
         Separator3 As rectangle:
-            BorderColor: =RGBA(0, 0, 255, 1)
+            BorderColor: =App.Theme.Colors.Darker40
             Fill: =RGBA(255, 255, 255, 1)
             Height: =8
             OnSelect: =Select(Parent)
@@ -99,6 +109,8 @@ SettingsPage As screen:
             ZIndex: =5
 
         Rectangle4 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =App.Theme.Colors.Darker30
             Height: =Parent.TemplateHeight - Separator3.Height
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
@@ -106,11 +118,18 @@ SettingsPage As screen:
             ZIndex: =6
 
     Button13_3 As button:
+        BorderColor: =App.Theme.Colors.Primary
         BorderThickness: =0
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(141, 198, 63, 1)
         FocusedBorderThickness: =1
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
         Height: =80
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(Self.Fill, -20%)
         OnSelect: |-
             =Concurrent(
@@ -125,6 +144,9 @@ SettingsPage As screen:
             );
             
             Navigate(Registration)
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
         RadiusTopLeft: =0
@@ -138,15 +160,25 @@ SettingsPage As screen:
         ZIndex: =1
 
     Button13_4 As button:
+        BorderColor: =App.Theme.Colors.Primary
         BorderThickness: =0
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =If(!IsBlank(First(Filter(TeamRegistrationss,OwnerID.Registrations_Dv=varCrrUser.Registrations_Dv))),DisplayMode.Edit,DisplayMode.Disabled)
         Fill: =RGBA(221, 79, 14, 1)
         FocusedBorderThickness: =1
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
         Height: =80
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(Self.Fill, -20%)
         OnSelect: |-
             =If(!IsBlank(First(Filter(TeamRegistrationss,OwnerID.Registrations_Dv=varCrrUser.Registrations_Dv))),EditForm(Form4_1) && UpdateContext({varEditTeamPic:true}))
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
         RadiusTopLeft: =0
@@ -160,15 +192,25 @@ SettingsPage As screen:
         ZIndex: =2
 
     Button13_5 As button:
+        BorderColor: =App.Theme.Colors.Primary
         BorderThickness: =0
         ContentLanguage: ="Change your Profile picture"
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(0, 94, 146, 1)
         FocusedBorderThickness: =1
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
         Height: =80
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(Self.Fill, -20%)
         OnSelect: |-
             =UpdateContext({varEditScren:true})
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
         RadiusTopLeft: =0
@@ -204,6 +246,7 @@ SettingsPage As screen:
             ZIndex: =6
 
         Form4 As form:
+            BorderColor: =App.Theme.Colors.Darker40
             DataSource: =Registrations_Dvs
             Height: =262
             Item: =varCrrUser
@@ -215,6 +258,7 @@ SettingsPage As screen:
             ZIndex: =7
 
             UserAvtar_DataCard1 As typedDataCard.addLargePictureCard:
+                BorderColor: =App.Theme.Colors.Darker40
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="crc74_useravtar"
                 Default: =ThisItem.UserAvtar
@@ -232,8 +276,11 @@ SettingsPage As screen:
                 DataCardKey7 As label:
                     AutoHeight: =true
                     Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
                     FontWeight: =FontWeight.Semibold
                     Height: =34
+                    Size: =13
                     Text: =Parent.DisplayName
                     Width: =(Parent.Width - 60) * 0.4
                     Wrap: =false
@@ -243,6 +290,8 @@ SettingsPage As screen:
 
                 Image12 As image:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
                     DisplayMode: =Parent.DisplayMode
                     Height: =AddPicture2.Height
                     Image: =If(IsBlank(AddPicture2.Media), Parent.Default, AddPicture2.Media)
@@ -253,6 +302,9 @@ SettingsPage As screen:
                     ZIndex: =2
 
                 AddPicture2 As addMedia:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    Fill: =RGBA(255, 255, 255, 1)
                     Height: =150
                     Width: =(Parent.Width - 60) * 0.6
                     X: =DataCardKey7.X + DataCardKey7.Width
@@ -261,6 +313,10 @@ SettingsPage As screen:
 
                 ErrorMessage5 As label:
                     AutoHeight: =true
+                    Color: =RGBA(168, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Semibold
                     Height: =10
                     Live: =Live.Assertive
                     PaddingBottom: =0
@@ -276,7 +332,11 @@ SettingsPage As screen:
 
                 StarVisible5 As label:
                     Align: =Align.Center
+                    Color: =App.Theme.Colors.Darker30
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
                     Height: =DataCardKey7.Height
+                    Size: =13
                     Text: ="*"
                     Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                     Width: =30
@@ -288,13 +348,21 @@ SettingsPage As screen:
             BorderColor: =_theme.ColorPrimary
             BorderThickness: =1
             Color: =RGBA(50, 86, 160, 1)
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
             OnSelect: |
                 =UpdateContext({varEditScren:false});
                 UpdateContext({varchangeAv:false});
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
             PressedFill: =RGBA(0, 134, 208, 1)
             Size: =14
             Text: ="CANCEL"
@@ -308,9 +376,15 @@ SettingsPage As screen:
             BorderColor: =_theme.ColorPrimary
             BorderThickness: =1
             Color: =RGBA(50, 86, 160, 1)
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
             OnSelect: |-
                 =SubmitForm(Form4);
@@ -318,6 +392,8 @@ SettingsPage As screen:
                 UpdateContext({varlgname:varCrrUser.LoginName});
                 Set(varCrrUser,First(Filter(Registrations_Dvs,LoginName=varlgname)));
                 UpdateContext({varEditScren:false});
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
             PressedFill: =RGBA(0, 134, 208, 1)
             Size: =14
             Text: ="CHANGE AVTAR"
@@ -328,6 +404,7 @@ SettingsPage As screen:
 
         "Gallery2_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             '#CopilotOverlayLabel': ="Filtered"
+            BorderColor: =App.Theme.Colors.Darker40
             DelayItemLoading: =true
             Fill: =RGBA(39, 67, 125, .7)
             Items: =Filter(Avtars,TeamsImg=0)
@@ -344,6 +421,9 @@ SettingsPage As screen:
             ZIndex: =10
 
             Image2_1 As image:
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =72
                 Image: =ThisItem.Pic
                 OnSelect: =Select(Parent)
@@ -358,10 +438,10 @@ SettingsPage As screen:
 
             NextArrow2_1 As icon.ChevronRight:
                 AccessibleLabel: =Self.Tooltip
-                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(166, 166, 166, 1)
-                DisabledBorderColor: =RGBA(56, 56, 56, 1)
-                DisabledColor: =RGBA(119, 119, 119, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =50
                 Icon: =Icon.ChevronRight
                 OnSelect: |-
@@ -378,7 +458,7 @@ SettingsPage As screen:
                 ZIndex: =4
 
             Separator2_1 As rectangle:
-                BorderColor: =RGBA(0, 0, 255, 1)
+                BorderColor: =App.Theme.Colors.Darker40
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =8
                 OnSelect: =Select(Parent)
@@ -387,6 +467,8 @@ SettingsPage As screen:
                 ZIndex: =5
 
             Rectangle2_2 As rectangle:
+                BorderColor: =App.Theme.Colors.Darker40
+                Fill: =App.Theme.Colors.Darker30
                 Height: =Parent.TemplateHeight - Separator2_1.Height
                 OnSelect: =Select(Parent)
                 Visible: =ThisItem.IsSelected
@@ -394,11 +476,18 @@ SettingsPage As screen:
                 ZIndex: =6
 
     Button13_6 As button:
+        BorderColor: =App.Theme.Colors.Primary
         BorderThickness: =0
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(130, 141, 158, 1)
         FocusedBorderThickness: =1
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
         Height: =80
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(Self.Fill, -20%)
         OnSelect: |-
             =Concurrent(
@@ -413,6 +502,9 @@ SettingsPage As screen:
             //);
             
             Navigate(LandingSplashScreen)
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
         RadiusTopLeft: =0
@@ -449,6 +541,7 @@ SettingsPage As screen:
             ZIndex: =12
 
         Form4_1 As form:
+            BorderColor: =App.Theme.Colors.Darker40
             DataSource: =TeamRegistrationss
             Height: =250
             Item: =First(Filter(TeamRegistrationss,OwnerID.Registrations_Dv=varCrrUser.Registrations_Dv))
@@ -460,6 +553,7 @@ SettingsPage As screen:
             ZIndex: =13
 
             TeamAvtar_DataCard1 As typedDataCard.addLargePictureCard:
+                BorderColor: =App.Theme.Colors.Darker40
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="crc74_teamavtar"
                 Default: =ThisItem.TeamAvtar
@@ -477,7 +571,10 @@ SettingsPage As screen:
                 DataCardKey4 As label:
                     AutoHeight: =true
                     Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
                     Height: =34
+                    Size: =13
                     Text: =Parent.DisplayName
                     Width: =(Parent.Width - 60) * 0.4
                     Wrap: =false
@@ -487,6 +584,8 @@ SettingsPage As screen:
 
                 Image10 As image:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
                     DisplayMode: =Parent.DisplayMode
                     Height: =AddPicture1.Height
                     Image: =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
@@ -497,6 +596,9 @@ SettingsPage As screen:
                     ZIndex: =2
 
                 AddPicture1 As addMedia:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    Fill: =RGBA(255, 255, 255, 1)
                     Height: =150
                     Width: =(Parent.Width - 60) * 0.6
                     X: =DataCardKey4.X + DataCardKey4.Width
@@ -505,6 +607,10 @@ SettingsPage As screen:
 
                 ErrorMessage3 As label:
                     AutoHeight: =true
+                    Color: =RGBA(168, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Semibold
                     Height: =10
                     Live: =Live.Assertive
                     PaddingBottom: =0
@@ -520,7 +626,11 @@ SettingsPage As screen:
 
                 StarVisible3 As label:
                     Align: =Align.Center
+                    Color: =App.Theme.Colors.Darker30
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
                     Height: =DataCardKey4.Height
+                    Size: =13
                     Text: ="*"
                     Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                     Width: =30
@@ -532,15 +642,22 @@ SettingsPage As screen:
             BorderColor: =_theme.ColorPrimary
             BorderThickness: =1
             Color: =RGBA(50, 86, 160, 1)
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
             OnSelect: |
                 =UpdateContext({varEditTeamPic:false});
                 UpdateContext({varchangeTeamAv:false});
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
             PressedFill: =RGBA(0, 134, 208, 1)
-            Size: =13
             Text: ="CANCEL"
             Tooltip: ="New users click to Register"
             Visible: =varEditTeamPic
@@ -552,9 +669,15 @@ SettingsPage As screen:
             BorderColor: =_theme.ColorPrimary
             BorderThickness: =1
             Color: =RGBA(50, 86, 160, 1)
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
             OnSelect: |-
                 =SubmitForm(Form4_1);
@@ -562,8 +685,9 @@ SettingsPage As screen:
                 //Set(varCrrUser,First(Filter(Registrations_Dvs,LoginName=varlgname)));
                 UpdateContext({varEditTeamPic:false});
                 UpdateContext({varchangeTeamAv:false});
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
             PressedFill: =RGBA(0, 134, 208, 1)
-            Size: =13
             Text: ="CHANGE PICTURE"
             Visible: =varEditTeamPic
             X: =513
@@ -572,6 +696,7 @@ SettingsPage As screen:
 
         "Gallery2_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             '#CopilotOverlayLabel': ="Filtered"
+            BorderColor: =App.Theme.Colors.Darker40
             DelayItemLoading: =true
             Fill: =RGBA(39, 67, 125, .7)
             Items: =Filter(Avtars,TeamsImg=1)
@@ -588,6 +713,9 @@ SettingsPage As screen:
             ZIndex: =16
 
             Image2_3 As image:
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =72
                 Image: =ThisItem.Pic
                 OnSelect: =Select(Parent)
@@ -602,10 +730,10 @@ SettingsPage As screen:
 
             NextArrow2_3 As icon.ChevronRight:
                 AccessibleLabel: =Self.Tooltip
-                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(166, 166, 166, 1)
-                DisabledBorderColor: =RGBA(56, 56, 56, 1)
-                DisabledColor: =RGBA(119, 119, 119, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =50
                 Icon: =Icon.ChevronRight
                 OnSelect: |-
@@ -622,7 +750,7 @@ SettingsPage As screen:
                 ZIndex: =4
 
             Separator2_3 As rectangle:
-                BorderColor: =RGBA(0, 0, 255, 1)
+                BorderColor: =App.Theme.Colors.Darker40
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =8
                 OnSelect: =Select(Parent)
@@ -631,6 +759,8 @@ SettingsPage As screen:
                 ZIndex: =5
 
             Rectangle2_3 As rectangle:
+                BorderColor: =App.Theme.Colors.Darker40
+                Fill: =App.Theme.Colors.Darker30
                 Height: =Parent.TemplateHeight - Separator2_3.Height
                 OnSelect: =Select(Parent)
                 Visible: =ThisItem.IsSelected
