@@ -1,0 +1,107 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crc74_tipslikes",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crc74_tipslike",
+    "MaxGetRowsCount": 2000,
+    "Name": "TipsLikes",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crc74_AILikes": "AILikes",
+      "crc74_BadgeLike": "BadgeLike",
+      "crc74_favs": "Favs",
+      "crc74_HallLikes": "HallLikes",
+      "crc74_HalluLikes": "HalluLikes",
+      "crc74_likes": "Likes",
+      "crc74_ListItemID": "ListItemID",
+      "crc74_name": "Name",
+      "crc74_tipslike_AsyncOperations": "System Jobs",
+      "crc74_tipslike_BulkDeleteFailures": "Bulk Delete Failures",
+      "crc74_tipslike_DuplicateBaseRecord": "Duplicate Records (crc74_tipslike_DuplicateBaseRecord)",
+      "crc74_tipslike_DuplicateMatchingRecord": "Duplicate Records (crc74_tipslike_DuplicateMatchingRecord)",
+      "crc74_tipslike_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crc74_tipslike_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crc74_tipslike_ProcessSession": "Process Sessions",
+      "crc74_tipslike_SyncErrors": "Sync Errors",
+      "crc74_tipslikeid": "TipsLike",
+      "crc74_UserID": "UserID",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "sail23_LRLikes": "LRLikes",
+      "sail23_WishLike": "WishLike",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "TipsLikes",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "TipsLikes (Views)",
+    "Name": "_crc74_tipslike_views",
+    "RelatedEntityName": "TipsLikes",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "122b2653-cb7c-40eb-94dd-b9f3e85fe289": "Active TipsLikes",
+      "45f9d890-7fc9-45e7-91d7-2e7d69991afb": "Inactive TipsLikes",
+      "9c768d8a-b98a-4006-83a2-b4dcd50753d8": "TipsLike Advanced Find View",
+      "da702c7a-504a-472f-8618-87ecc1d1a902": "TipsLike Associated View",
+      "ed2ecb87-5b85-4e83-9b08-eadbddb852d3": "TipsLike Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (TipsLikes)",
+    "Name": "crc74_tipslike_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "TipsLikes"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "TipsLikes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (TipsLikes)",
+    "Name": "crc74_tipslike_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "TipsLikes"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "TipsLikes",
+    "Type": "OptionSetInfo"
+  }
+]

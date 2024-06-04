@@ -1,0 +1,103 @@
+[
+  {
+    "DisplayName": "tblAIWishes (Views)",
+    "Name": "_sail23_tblaiwishes_views",
+    "RelatedEntityName": "tblAIWishes",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "041bafc1-d02b-4cf1-b2da-13e39592bc6b": "tblAIWishes Advanced Find View",
+      "27d69740-aa7c-4edc-abb2-b2c0d63297dc": "Inactive tblAIWishes",
+      "2fdeead5-b97b-44f5-a237-72a2423e5ec4": "tblAIWishes Lookup View",
+      "ac5110de-0183-4d48-95a7-1e4b74a669c5": "tblAIWishes Associated View",
+      "ad55d612-daeb-4fa9-b8d5-9325b44338f5": "Active tblAIWishes"
+    }
+  },
+  {
+    "DisplayName": "Status (tblAIWishes)",
+    "Name": "sail23_tblaiwishes_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "tblAIWishes"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "tblAIWishes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (tblAIWishes)",
+    "Name": "sail23_tblaiwishes_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "tblAIWishes"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "tblAIWishes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "sail23_tblaiwisheses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "sail23_tblaiwishes",
+    "MaxGetRowsCount": 2000,
+    "Name": "tblAIWishes",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "sail23_crc74_tipslike_WishLike_sail23_tblaiwishe": "TipsLikes",
+      "sail23_imagewish": "ImageWish",
+      "sail23_imagewishid": "sail23_ImageWishId",
+      "sail23_name": "Name",
+      "sail23_nolikes": "NoLikes",
+      "sail23_tblaiwishes_AsyncOperations": "System Jobs",
+      "sail23_tblaiwishes_BulkDeleteFailures": "Bulk Delete Failures",
+      "sail23_tblaiwishes_DuplicateBaseRecord": "Duplicate Records (sail23_tblaiwishes_DuplicateBaseRecord)",
+      "sail23_tblaiwishes_DuplicateMatchingRecord": "Duplicate Records (sail23_tblaiwishes_DuplicateMatchingRecord)",
+      "sail23_tblaiwishes_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "sail23_tblaiwishes_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "sail23_tblaiwishes_ProcessSession": "Process Sessions",
+      "sail23_tblaiwishes_SyncErrors": "Sync Errors",
+      "sail23_tblaiwishesid": "tblAIWishes",
+      "sail23_UserID": "UserID",
+      "sail23_wishestext": "wishestext",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "tblAIWishes",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]

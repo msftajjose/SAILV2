@@ -1,0 +1,101 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crc74_appfeedbacks_dvs",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crc74_appfeedbacks_dv",
+    "MaxGetRowsCount": 2000,
+    "Name": "AppFeedbacks_Dvs",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crc74_appfeedbacks_dv_AsyncOperations": "System Jobs",
+      "crc74_appfeedbacks_dv_BulkDeleteFailures": "Bulk Delete Failures",
+      "crc74_appfeedbacks_dv_DuplicateBaseRecord": "Duplicate Records (crc74_appfeedbacks_dv_DuplicateBaseRecord)",
+      "crc74_appfeedbacks_dv_DuplicateMatchingRecord": "Duplicate Records (crc74_appfeedbacks_dv_DuplicateMatchingRecord)",
+      "crc74_appfeedbacks_dv_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crc74_appfeedbacks_dv_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crc74_appfeedbacks_dv_ProcessSession": "Process Sessions",
+      "crc74_appfeedbacks_dv_SyncErrors": "Sync Errors",
+      "crc74_appfeedbacks_dvid": "AppFeedbacks_Dv",
+      "crc74_category": "Category",
+      "crc74_comments": "Comments",
+      "crc74_name": "Name",
+      "crc74_rating": "Rating",
+      "crc74_username": "UserName",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "AppFeedbacks_Dvs",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "AppFeedbacks_Dvs (Views)",
+    "Name": "_crc74_appfeedbacks_dv_views",
+    "RelatedEntityName": "AppFeedbacks_Dvs",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "07292a80-7a89-44c0-8138-3bda2eec7695": "AppFeedbacks_Dv Associated View",
+      "0840ffb9-0767-4f20-bb38-a9c444282b36": "AppFeedbacks_Dv Advanced Find View",
+      "68c26b4d-b730-46a4-93e9-eb2e5bc87b0e": "AppFeedbacks_Dv Lookup View",
+      "d5614947-5fdb-447a-9629-5586bf5c0be7": "Inactive AppFeedbacks_Dvs",
+      "fe73f357-639b-4a95-bac1-51872a3931d5": "Active AppFeedbacks_Dvs"
+    }
+  },
+  {
+    "DisplayName": "Status (AppFeedbacks_Dvs)",
+    "Name": "crc74_appfeedbacks_dv_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "AppFeedbacks_Dvs"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "AppFeedbacks_Dvs",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (AppFeedbacks_Dvs)",
+    "Name": "crc74_appfeedbacks_dv_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "AppFeedbacks_Dvs"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "AppFeedbacks_Dvs",
+    "Type": "OptionSetInfo"
+  }
+]

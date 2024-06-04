@@ -1,0 +1,98 @@
+[
+  {
+    "DisplayName": "tblDisabledUsers (Views)",
+    "Name": "_sail23_tblapprovers_views",
+    "RelatedEntityName": "tblDisabledUsers",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0d9f956d-bbf8-4766-9d23-3e19fc6b2750": "Inactive tblApprovers",
+      "3f0a3264-1c76-4749-9c95-ee363cd6fff1": "tblApprovers Associated View",
+      "8add84a6-fc11-42b3-9250-29bab6a7ccf7": "Active tblApprovers",
+      "de6d0417-b0b7-4c5f-ab05-821ad2c400d2": "tblApprovers Lookup View",
+      "df4f3276-8334-4347-9724-f045035225a7": "tblApprovers Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (tblDisabledUsers)",
+    "Name": "sail23_tblapprovers_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "tblDisabledUsers"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "tblDisabledUsers",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (tblDisabledUsers)",
+    "Name": "sail23_tblapprovers_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "tblDisabledUsers"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "tblDisabledUsers",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "sail23_tblapproverses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "sail23_tblapprovers",
+    "MaxGetRowsCount": 2000,
+    "Name": "tblDisabledUsers",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "sail23_name": "Name",
+      "sail23_tblapprovers_AsyncOperations": "System Jobs",
+      "sail23_tblapprovers_BulkDeleteFailures": "Bulk Delete Failures",
+      "sail23_tblapprovers_DuplicateBaseRecord": "Duplicate Records (sail23_tblapprovers_DuplicateBaseRecord)",
+      "sail23_tblapprovers_DuplicateMatchingRecord": "Duplicate Records (sail23_tblapprovers_DuplicateMatchingRecord)",
+      "sail23_tblapprovers_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "sail23_tblapprovers_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "sail23_tblapprovers_ProcessSession": "Process Sessions",
+      "sail23_tblapprovers_SyncErrors": "Sync Errors",
+      "sail23_tblapproversid": "tblApprovers",
+      "sail23_UserID": "UserID",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "tblDisabledUsers",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]

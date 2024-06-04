@@ -1,0 +1,101 @@
+[
+  {
+    "DisplayName": "tblWeekTrans (Views)",
+    "Name": "_sail23_tblweektrans_views",
+    "RelatedEntityName": "tblWeekTrans",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0450e055-2d64-458f-b8c1-87758640c1ec": "Inactive tblWeekTrans",
+      "1ec3c7fb-464b-4d15-bef0-0abdd85697c2": "tblWeekTrans Advanced Find View",
+      "9803eae8-e143-4073-b531-b0cea7943d91": "Active tblWeekTrans",
+      "d53ea892-d88f-4ab9-a175-3b5ffb133dc9": "tblWeekTrans Lookup View",
+      "e25eef7c-d186-4834-ba96-9fd4a4070dbb": "tblWeekTrans Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (tblWeekTrans)",
+    "Name": "sail23_tblweektrans_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "tblWeekTrans"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "tblWeekTrans",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (tblWeekTrans)",
+    "Name": "sail23_tblweektrans_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "tblWeekTrans"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "tblWeekTrans",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "sail23_tblweektranses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "sail23_tblweektrans",
+    "MaxGetRowsCount": 2000,
+    "Name": "tblWeekTrans",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "sail23_Challenge": "Challenge",
+      "sail23_comments": "Comments",
+      "sail23_iscompleted": "IsCompleted",
+      "sail23_name": "Name",
+      "sail23_tblweektrans_AsyncOperations": "System Jobs",
+      "sail23_tblweektrans_BulkDeleteFailures": "Bulk Delete Failures",
+      "sail23_tblweektrans_DuplicateBaseRecord": "Duplicate Records (sail23_tblweektrans_DuplicateBaseRecord)",
+      "sail23_tblweektrans_DuplicateMatchingRecord": "Duplicate Records (sail23_tblweektrans_DuplicateMatchingRecord)",
+      "sail23_tblweektrans_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "sail23_tblweektrans_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "sail23_tblweektrans_ProcessSession": "Process Sessions",
+      "sail23_tblweektrans_SyncErrors": "Sync Errors",
+      "sail23_tblweektransid": "tblWeekTrans",
+      "sail23_UserID": "UserID",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "tblWeekTrans",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]

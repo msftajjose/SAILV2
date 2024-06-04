@@ -1,0 +1,199 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |+
+        =// Creating CSS Style Sheet
+        /*
+        Set(R,223);
+        Set(G,114);
+        Set(B,36);
+        Set(A,1);
+        Set(M,.30);
+        
+        Set(RS,255);
+        Set(GS,255);
+        Set(BS,255);
+        Set(AS,1);
+        Set(AM,.3);
+        
+        */
+        
+        //Background
+        /*
+        Set(R,246);
+        Set(G,222);
+        Set(B,188);
+        Set(A,1);
+        Set(M,.30);
+        */
+        
+        Set(R,90);
+        Set(G,135);
+        Set(B,91);
+        Set(A,1);
+        Set(M,.30);
+        
+        
+        Set(RS,255);
+        Set(GS,255);
+        Set(BS,255);
+        Set(AS,1);
+        Set(AM,.3);
+        
+        //Text color RGB
+        
+        
+        Set(RT,0);
+        Set(GT,18);
+        Set(BT,107);
+        
+        //Set(RT,0);
+        //Set(GT,18);
+        //Set(BT,107);
+        
+        Set(RTF,0);
+        Set(GTF,0);
+        Set(BTF,0);
+        
+        //Set(RTF,20);
+        //Set(GTF,55);
+        //Set(BTF,77);
+        
+        //Left MenuRGB
+        
+        Set(RL,233);
+        Set(GL,190);
+        Set(BL,99);
+        
+        Set(RLF,254);
+        Set(GLF,244);
+        Set(BLF,240);
+        
+        /*
+        
+        Set(RL,37);
+        Set(GL,150);
+        Set(BL,190);
+        
+        Set(RLF,37);
+        Set(GLF,150);
+        Set(BLF,190);
+        
+        */
+        
+        
+        
+        
+        /*
+        
+        rgba(249,170,140,)      Or     rgba(16,110,135)   or   rgba(90,135,91)
+        
+        Orange 
+        
+        Set(R,223);
+        Set(G,114);
+        Set(B,36);
+        Set(A,1);
+        Set(M,.30);
+        
+        Set(RS,255);
+        Set(GS,255);
+        Set(BS,255);
+        Set(AS,1);
+        Set(AM,.3);
+        
+        
+        
+        
+        Set(R,229);
+        Set(G,139);
+        Set(B,18);
+        Set(A,1);
+        Set(M,.30);
+        
+        Set(RS,255);
+        Set(GS,255);
+        Set(BS,255);
+        Set(AS,1);
+        Set(AM,.3);
+        
+        */
+        
+        
+        
+        /* friday
+        
+        Set(R,237);
+        Set(G,126);
+        Set(B,83);
+        Set(A,1);
+        Set(M,.30);
+        
+        Set(RS,255);
+        Set(GS,255);
+        Set(BS,255);
+        Set(AS,1);
+        Set(AM,.3);
+        */
+        
+        /*
+        Set(R,33);
+        Set(G,57);
+        Set(B,145);
+        Set(A,1);
+        Set(M,.30);
+        
+        Set(RS,139);
+        Set(GS,147);
+        Set(BS,232);
+        Set(AS,1);
+        Set(AM,.3);
+        
+        
+        
+        
+        */
+        
+        Set(
+            _theme,
+            {
+                ColorPrimary: RGBA(
+                    33,
+                    57,
+                    145,
+                    1
+                ),
+                ColorSecondary: RGBA(
+                    153,
+                    207,
+                    236,
+                    1
+                ),
+                LeftHandColor: RGBA(33,57,145,1)
+            }
+        );
+        
+        
+        
+        //Setting my profile
+        Set(
+            _myProfileUPN_V,
+            Office365Users.MyProfile()
+        );
+        Set(
+            _myManagerV,
+            Office365Users.Manager(_myProfileUPN_V.Id)
+        );
+        
+        
+        
+        
+    StartScreen: =
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

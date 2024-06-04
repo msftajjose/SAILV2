@@ -1,0 +1,100 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crc74_teamchats",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crc74_teamchat",
+    "MaxGetRowsCount": 2000,
+    "Name": "TeamChats",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crc74_msg": "Msg",
+      "crc74_name": "Name",
+      "crc74_teamchat_AsyncOperations": "System Jobs",
+      "crc74_teamchat_BulkDeleteFailures": "Bulk Delete Failures",
+      "crc74_teamchat_DuplicateBaseRecord": "Duplicate Records (crc74_teamchat_DuplicateBaseRecord)",
+      "crc74_teamchat_DuplicateMatchingRecord": "Duplicate Records (crc74_teamchat_DuplicateMatchingRecord)",
+      "crc74_teamchat_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crc74_teamchat_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crc74_teamchat_ProcessSession": "Process Sessions",
+      "crc74_teamchat_SyncErrors": "Sync Errors",
+      "crc74_teamchatid": "TeamChat",
+      "crc74_TeamID": "TeamID",
+      "crc74_UserID": "UserID",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "TeamChats",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "TeamChats (Views)",
+    "Name": "_crc74_teamchat_views",
+    "RelatedEntityName": "TeamChats",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0787d9db-8724-4a1d-ae77-598092fd0d5a": "Active TeamChats",
+      "348cd97c-682f-4d57-8533-67c9292224ee": "TeamChat Lookup View",
+      "8a9c936e-010a-4d95-8cb8-56db0b2a268b": "TeamChat Associated View",
+      "a134e84d-6f1e-4ba8-b01a-71502918ec1f": "TeamChat Advanced Find View",
+      "f75182e3-c6b6-40a5-8820-631cd6056b3f": "Inactive TeamChats"
+    }
+  },
+  {
+    "DisplayName": "Status (TeamChats)",
+    "Name": "crc74_teamchat_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "TeamChats"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "TeamChats",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (TeamChats)",
+    "Name": "crc74_teamchat_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "TeamChats"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "TeamChats",
+    "Type": "OptionSetInfo"
+  }
+]

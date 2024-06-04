@@ -1,0 +1,118 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crc74_teamregistrationses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crc74_teamregistrations",
+    "MaxGetRowsCount": 2000,
+    "Name": "TeamRegistrationss",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crc74_crc74_aiuserscores_TeamID_crc74_teamregis": "AIUserScores",
+      "crc74_crc74_registrations_dv_TeamID_crc74_teamr": "Registrations_Dvs",
+      "crc74_crc74_teamchat_TeamID_crc74_teamregistrat": "TeamChats",
+      "crc74_membercount": "MemberCount",
+      "crc74_name": "Name",
+      "crc74_OwnerID": "OwnerID",
+      "crc74_points": "Points",
+      "crc74_teamavtar": "TeamAvtar",
+      "crc74_teamavtarid": "crc74_TeamAvtarId",
+      "crc74_teamregistrations_AsyncOperations": "System Jobs",
+      "crc74_teamregistrations_BulkDeleteFailures": "Bulk Delete Failures",
+      "crc74_teamregistrations_DuplicateBaseRecord": "Duplicate Records (crc74_teamregistrations_DuplicateBaseRecord)",
+      "crc74_teamregistrations_DuplicateMatchingRecord": "Duplicate Records (crc74_teamregistrations_DuplicateMatchingRecord)",
+      "crc74_teamregistrations_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crc74_teamregistrations_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crc74_teamregistrations_ProcessSession": "Process Sessions",
+      "crc74_teamregistrations_SyncErrors": "Sync Errors",
+      "crc74_teamregistrationsid": "TeamRegistrationssN",
+      "crc74_w10points": "W10Points",
+      "crc74_w11points": "W11Points",
+      "crc74_w12points": "W12Points",
+      "crc74_w1points": "W1Points",
+      "crc74_w2points": "W2Points",
+      "crc74_w3points": "W3Points",
+      "crc74_w4points": "W4Points",
+      "crc74_w5points": "W5Points",
+      "crc74_w6points": "W6Points",
+      "crc74_w7points": "W7Points",
+      "crc74_w8points": "W8Points",
+      "crc74_w9poi": "W9Poi",
+      "crc74_w9points": "W9Points",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "TeamRegistrationss",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "TeamRegistrationss (Views)",
+    "Name": "_crc74_teamregistrations_views",
+    "RelatedEntityName": "TeamRegistrationss",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "26a75ad5-452c-4ea0-bacb-93608dc85f48": "TeamRegistrations Lookup View",
+      "6540dc98-e8ad-4e1d-a30d-e395ba97f864": "Inactive TeamRegistrations",
+      "8b8aad7f-c1d4-4235-9a90-7474ba4445f6": "TeamRegistrations Associated View",
+      "9bf90b5d-8681-4647-8f9b-b834e9d74750": "Active TeamRegistrations",
+      "cdf46996-1f3b-48c1-9620-e8c827ac3d17": "TeamRegistrations Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (TeamRegistrationss)",
+    "Name": "crc74_teamregistrations_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "TeamRegistrationss"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "TeamRegistrationss",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (TeamRegistrationss)",
+    "Name": "crc74_teamregistrations_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "TeamRegistrationss"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "TeamRegistrationss",
+    "Type": "OptionSetInfo"
+  }
+]

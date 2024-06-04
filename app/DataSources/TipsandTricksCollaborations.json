@@ -1,0 +1,104 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crc74_tipsandtrickscollaborations",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crc74_tipsandtrickscollaboration",
+    "MaxGetRowsCount": 2000,
+    "Name": "TipsandTricksCollaborations",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crc74_crc74_tipslike_ListItemID_crc74_tipsandtr": "TipsLikes",
+      "crc74_crc74_tipsmessage_ItemID_crc74_tipsandtri": "TipsMessages",
+      "crc74_isapproved": "IsApproved",
+      "crc74_name": "Name",
+      "crc74_nooflikes": "NoOfLikes",
+      "crc74_subject": "Subject",
+      "crc74_tipsandtrickscollaboration_AsyncOperations": "System Jobs",
+      "crc74_tipsandtrickscollaboration_BulkDeleteFailures": "Bulk Delete Failures",
+      "crc74_tipsandtrickscollaboration_DuplicateBaseRecord": "Duplicate Records (crc74_tipsandtrickscollaboration_DuplicateBaseRecord)",
+      "crc74_tipsandtrickscollaboration_DuplicateMatchingRecord": "Duplicate Records (crc74_tipsandtrickscollaboration_DuplicateMatchingRecord)",
+      "crc74_tipsandtrickscollaboration_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crc74_tipsandtrickscollaboration_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crc74_tipsandtrickscollaboration_ProcessSession": "Process Sessions",
+      "crc74_tipsandtrickscollaboration_SyncErrors": "Sync Errors",
+      "crc74_tipsandtrickscollaborationid": "TipsandTricksCollaboration",
+      "crc74_tipstricks": "TipsTricks",
+      "crc74_UserID": "UserID",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "TipsandTricksCollaborations",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "TipsandTricksCollaborations (Views)",
+    "Name": "_crc74_tipsandtrickscollaboration_views",
+    "RelatedEntityName": "TipsandTricksCollaborations",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "5e6db380-e541-4046-8add-71d0adb19e5a": "TipsandTricksCollaboration Lookup View",
+      "a0cfca45-4f7b-4714-9296-4b18b09bae37": "Inactive TipsandTricksCollaborations",
+      "b2d67af1-7db0-499d-ac96-7919c4fe89b8": "TipsandTricksCollaboration Associated View",
+      "eead0476-faa4-45d5-a3dd-83bd4134e08b": "Active TipsandTricksCollaborations",
+      "fbbedc3a-9994-4edf-9685-29ed46bf24e0": "TipsandTricksCollaboration Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (TipsandTricksCollaborations)",
+    "Name": "crc74_tipsandtrickscollaboration_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "TipsandTricksCollaborations"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "TipsandTricksCollaborations",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (TipsandTricksCollaborations)",
+    "Name": "crc74_tipsandtrickscollaboration_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "TipsandTricksCollaborations"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "TipsandTricksCollaborations",
+    "Type": "OptionSetInfo"
+  }
+]

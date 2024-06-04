@@ -1,0 +1,103 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crc74_humanais",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crc74_humanai",
+    "MaxGetRowsCount": 2000,
+    "Name": "HumanAIS",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crc74_crc74_tipslike_AILikes_crc74_humanai": "TipsLikes",
+      "crc74_description": "Description",
+      "crc74_humanai_AsyncOperations": "System Jobs",
+      "crc74_humanai_BulkDeleteFailures": "Bulk Delete Failures",
+      "crc74_humanai_DuplicateBaseRecord": "Duplicate Records (crc74_humanai_DuplicateBaseRecord)",
+      "crc74_humanai_DuplicateMatchingRecord": "Duplicate Records (crc74_humanai_DuplicateMatchingRecord)",
+      "crc74_humanai_FileAttachments": "FileAttachments",
+      "crc74_humanai_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crc74_humanai_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crc74_humanai_ProcessSession": "Process Sessions",
+      "crc74_humanai_SyncErrors": "Sync Errors",
+      "crc74_humanaiid": "HumanAI",
+      "crc74_lyrics": "Lyrics",
+      "crc74_name": "Name",
+      "crc74_nooflikes": "NoOfLikes",
+      "crc74_UserID": "UserID",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "HumanAIS",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "HumanAIS (Views)",
+    "Name": "_crc74_humanai_views",
+    "RelatedEntityName": "HumanAIS",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0a7ad7e8-c597-4b1c-adc5-698fc832b598": "Active HumanAIS",
+      "38296df5-d038-40f0-94f8-527119be07da": "HumanAI Associated View",
+      "781c460b-8edb-491c-896b-27f1d00e1431": "HumanAI Advanced Find View",
+      "9ef2a02e-2765-480d-ae6c-9e48dc0c15b4": "HumanAI Lookup View",
+      "d3e63ec3-1dcd-4f68-891d-64a2ff6ec1b2": "Inactive HumanAIS"
+    }
+  },
+  {
+    "DisplayName": "Status (HumanAIS)",
+    "Name": "crc74_humanai_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "HumanAIS"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "HumanAIS",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (HumanAIS)",
+    "Name": "crc74_humanai_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "HumanAIS"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "HumanAIS",
+    "Type": "OptionSetInfo"
+  }
+]

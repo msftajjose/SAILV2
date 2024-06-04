@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "ed4103fd-66f3-4d84-88d2-69729d4bb8af",
+    "Name": "AISummerRetrieve",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "57bbb561-7246-ee11-be6f-000d3af25dbc"
+  }
+]

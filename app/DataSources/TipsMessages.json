@@ -1,0 +1,104 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crc74_tipsmessages",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crc74_tipsmessage",
+    "MaxGetRowsCount": 2000,
+    "Name": "TipsMessages",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crc74_customstatus": "CustomStatus",
+      "crc74_ItemID": "ItemID",
+      "crc74_name": "Name",
+      "crc74_PostedUserID": "PostedUserID",
+      "crc74_PostOwnerID": "PostOwnerID",
+      "crc74_query": "Query",
+      "crc74_replymessage": "ReplyMessage",
+      "crc74_status": "Status (crc74_status)",
+      "crc74_tipsmessage_AsyncOperations": "System Jobs",
+      "crc74_tipsmessage_BulkDeleteFailures": "Bulk Delete Failures",
+      "crc74_tipsmessage_DuplicateBaseRecord": "Duplicate Records (crc74_tipsmessage_DuplicateBaseRecord)",
+      "crc74_tipsmessage_DuplicateMatchingRecord": "Duplicate Records (crc74_tipsmessage_DuplicateMatchingRecord)",
+      "crc74_tipsmessage_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crc74_tipsmessage_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crc74_tipsmessage_ProcessSession": "Process Sessions",
+      "crc74_tipsmessage_SyncErrors": "Sync Errors",
+      "crc74_tipsmessageid": "TipsMessage",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status (statecode)",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "TipsMessages",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "TipsMessages (Views)",
+    "Name": "_crc74_tipsmessage_views",
+    "RelatedEntityName": "TipsMessages",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "361c783d-41ab-49d4-a8b2-ae3040658640": "TipsMessage Associated View",
+      "5bc6f326-8007-404e-b589-30dda435e5ec": "TipsMessage Advanced Find View",
+      "80db9091-dcd6-4859-88b6-2c7cfd9783ed": "Inactive TipsMessages",
+      "a9ff5302-240c-43a6-b10a-c843c4d6ac6f": "Active TipsMessages",
+      "f81bd206-ba13-4353-bd8f-10ef39699c25": "TipsMessage Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (TipsMessages)",
+    "Name": "crc74_tipsmessage_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "TipsMessages"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "TipsMessages",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (TipsMessages)",
+    "Name": "crc74_tipsmessage_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "TipsMessages"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "TipsMessages",
+    "Type": "OptionSetInfo"
+  }
+]

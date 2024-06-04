@@ -1,0 +1,104 @@
+[
+  {
+    "DisplayName": "tblBadges (Views)",
+    "Name": "_sail23_tblbadges_views",
+    "RelatedEntityName": "tblBadges",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "404f1c01-34b2-4740-a6c5-77453d04bbdd": "tblBadges Associated View",
+      "67adc2d3-a20a-48c2-9f10-fe4433fbd570": "tblBadges Lookup View",
+      "bb0bb868-4e9a-4c43-8b34-79661760b555": "Inactive tblBadges",
+      "d5d331f9-a007-4843-a9a3-d081ea67a86f": "tblBadges Advanced Find View",
+      "e1bfe242-cd83-4f70-9ca9-afb79d227467": "Active tblBadges"
+    }
+  },
+  {
+    "DisplayName": "Status (tblBadges)",
+    "Name": "sail23_tblbadges_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "tblBadges"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "tblBadges",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (tblBadges)",
+    "Name": "sail23_tblbadges_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "tblBadges"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "tblBadges",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "sail23_tblbadgeses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "sail23_tblbadges",
+    "MaxGetRowsCount": 2000,
+    "Name": "tblBadges",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crc74_crc74_tipslike_BadgeLike_sail23_tblbadges": "TipsLikes",
+      "crc74_pptfile": "PPTFile",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "sail23_badgepic": "BadgePic",
+      "sail23_badgepicid": "sail23_BadgePicId",
+      "sail23_name": "Name",
+      "sail23_nooflikes": "NoOfLikes",
+      "sail23_tblbadges_AsyncOperations": "System Jobs",
+      "sail23_tblbadges_BulkDeleteFailures": "Bulk Delete Failures",
+      "sail23_tblbadges_DuplicateBaseRecord": "Duplicate Records (sail23_tblbadges_DuplicateBaseRecord)",
+      "sail23_tblbadges_DuplicateMatchingRecord": "Duplicate Records (sail23_tblbadges_DuplicateMatchingRecord)",
+      "sail23_tblbadges_FileAttachments": "FileAttachments",
+      "sail23_tblbadges_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "sail23_tblbadges_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "sail23_tblbadges_ProcessSession": "Process Sessions",
+      "sail23_tblbadges_SyncErrors": "Sync Errors",
+      "sail23_tblbadgesid": "tblBadges",
+      "sail23_UserID": "UserID",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "tblBadges",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]

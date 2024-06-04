@@ -1,0 +1,101 @@
+[
+  {
+    "DisplayName": "tblWeeklyChallengeNotifies (Views)",
+    "Name": "_sail23_tblweeklychallengenotify_views",
+    "RelatedEntityName": "tblWeeklyChallengeNotifies",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "228d774b-d1d2-411e-afc0-a21bcd9a6f50": "tblWeeklyChallengeNotify Lookup View",
+      "3673012e-74da-4e56-82ff-8ae5a47ca23f": "tblWeeklyChallengeNotify Advanced Find View",
+      "5029dbb4-030b-49d2-85ae-2d914ad8d745": "tblWeeklyChallengeNotify Associated View",
+      "6688e5ef-a170-4383-b546-8f5acd570a0c": "Inactive tblWeeklyChallengeNotifies",
+      "82eb7b07-5c70-401c-bf62-e942fa777c22": "Active tblWeeklyChallengeNotifies"
+    }
+  },
+  {
+    "DisplayName": "Status (tblWeeklyChallengeNotifies)",
+    "Name": "sail23_tblweeklychallengenotify_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "tblWeeklyChallengeNotifies"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "tblWeeklyChallengeNotifies",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (tblWeeklyChallengeNotifies)",
+    "Name": "sail23_tblweeklychallengenotify_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "tblWeeklyChallengeNotifies"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "tblWeeklyChallengeNotifies",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "sail23_tblweeklychallengenotifies",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "sail23_tblweeklychallengenotify",
+    "MaxGetRowsCount": 2000,
+    "Name": "tblWeeklyChallengeNotifies",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crc74_challenge": "Challenge",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "sail23_isenabled": "IsEnabled",
+      "sail23_name": "Name",
+      "sail23_sail23_tblweektrans_Challenge_sail23_tblw": "tblWeekTrans",
+      "sail23_tblweeklychallengenotify_AsyncOperations": "System Jobs",
+      "sail23_tblweeklychallengenotify_BulkDeleteFailures": "Bulk Delete Failures",
+      "sail23_tblweeklychallengenotify_DuplicateBaseRecord": "Duplicate Records (sail23_tblweeklychallengenotify_DuplicateBaseRecord)",
+      "sail23_tblweeklychallengenotify_DuplicateMatchingRecord": "Duplicate Records (sail23_tblweeklychallengenotify_DuplicateMatchingRecord)",
+      "sail23_tblweeklychallengenotify_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "sail23_tblweeklychallengenotify_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "sail23_tblweeklychallengenotify_ProcessSession": "Process Sessions",
+      "sail23_tblweeklychallengenotify_SyncErrors": "Sync Errors",
+      "sail23_tblweeklychallengenotifyid": "tblWeeklyChallengeNotify",
+      "sail23_weekno": "WeekNo",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "tblWeeklyChallengeNotifies",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]

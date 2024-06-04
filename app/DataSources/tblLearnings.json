@@ -1,0 +1,104 @@
+[
+  {
+    "DisplayName": "tblLearnings (Views)",
+    "Name": "_sail23_tbllearnings_views",
+    "RelatedEntityName": "tblLearnings",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "16aa0d63-cc98-4db5-b1b2-d29e1551cb70": "tblLearnings Lookup View",
+      "1b00d53e-59b9-412e-85f4-174f7b955140": "Inactive tblLearnings",
+      "405ea997-a8bf-4043-a3b4-c013500179e8": "tblLearnings Advanced Find View",
+      "44a6d646-a4f3-439c-bba7-df619ea04a89": "tblLearnings Associated View",
+      "94ae255f-0441-47dd-8b58-724de999281f": "Active tblLearnings"
+    }
+  },
+  {
+    "DisplayName": "Status (tblLearnings)",
+    "Name": "sail23_tbllearnings_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "tblLearnings"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "tblLearnings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (tblLearnings)",
+    "Name": "sail23_tbllearnings_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "tblLearnings"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "tblLearnings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "sail23_tbllearningses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "sail23_tbllearnings",
+    "MaxGetRowsCount": 2000,
+    "Name": "tblLearnings",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crc74_lrcategory": "LrCategory",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "sail23_crc74_tipslike_LRLikes_sail23_tbllearning": "TipsLikes",
+      "sail23_lrdetails": "lrDetails",
+      "sail23_lrsubject": "LrSubject",
+      "sail23_lrurl": "LrURL",
+      "sail23_name": "Name",
+      "sail23_nooflikes": "NoOfLikes",
+      "sail23_tbllearnings_AsyncOperations": "System Jobs",
+      "sail23_tbllearnings_BulkDeleteFailures": "Bulk Delete Failures",
+      "sail23_tbllearnings_DuplicateBaseRecord": "Duplicate Records (sail23_tbllearnings_DuplicateBaseRecord)",
+      "sail23_tbllearnings_DuplicateMatchingRecord": "Duplicate Records (sail23_tbllearnings_DuplicateMatchingRecord)",
+      "sail23_tbllearnings_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "sail23_tbllearnings_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "sail23_tbllearnings_ProcessSession": "Process Sessions",
+      "sail23_tbllearnings_SyncErrors": "Sync Errors",
+      "sail23_tbllearningsid": "tblLearnings",
+      "sail23_UserID": "UserID",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "tblLearnings",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]

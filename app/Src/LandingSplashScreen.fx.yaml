@@ -1,0 +1,560 @@
+LandingSplashScreen As screen:
+    Fill: =RGBA(0, 0, 0, 1)
+    OnVisible: |-
+        =UpdateContext({varXpos:5});
+        UpdateContext({OptionVal:1});
+        
+        If(CountRows(Filter(tblUserNotifications,(UserID.Registrations_Dv=varCrrUser.Registrations_Dv && IsRead="No") || IsRead="NA"))>0,UpdateContext({varUserNotifyVisible:true}),UpdateContext({varUserNotifyVisible:false}))
+
+    HtmlText2_11 As htmlViewer:
+        Fill: =RGBA(251, 188, 159, 1)
+        Height: =768
+        HtmlText: |-
+            ="<div style=""
+            
+                background-color:" & "#F8F8FE" & ";
+                  height:757px;
+            border-radius: 60px 60px 60px 60px;"">
+            
+            
+            </div>"
+        Width: =680
+        ZIndex: =1
+
+    HtmlText2_12 As htmlViewer:
+        Fill: =RGBA(251, 188, 159, 1)
+        Height: =768
+        HtmlText: |-
+            ="<div style=""
+            
+                background-color:" & "#F8F8FE" & ";
+                  height:757px;
+            border-radius: 60px 60px 60px 60px;"">
+            
+            
+            </div>"
+        Width: =686
+        X: =680
+        ZIndex: =2
+
+    Image12_3 As image:
+        Height: =760
+        Image: =w7jv0ryr
+        ImagePosition: =ImagePosition.Stretch
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Width: =679
+        X: =682
+        Y: =5
+        ZIndex: =3
+
+    HtmlText4_1 As htmlViewer:
+        Color: =RGBA(0, 18, 107, 1)
+        Font: =Font.'Segoe UI'
+        Height: =645
+        HtmlText: |-
+            ="<div style='background-color:rgba(" & R & "," & G & "," & B &"," & M & ");
+            
+                background-color:" & "#F8F8FE" & ";
+                  height:610px;
+            border-radius: 30px 30px 30px 30px; padding-left:10px;padding-right:10px;padding-top:10px;'>
+            
+            <div style='
+              border: 3px solid #e9be63;
+              padding: 10px;border-radius: 30px 30px 30px 30px;'>
+            <div style='content: "";
+              clear: both;
+              display: table;'>
+              <br>
+            <b>Welcome to “Season of AI Love”! </b>
+            <br>
+            <br>
+            Introducing our groundbreaking new game app designed to make your AI discovery journey an exciting and educational adventure! Get ready to embark on a captivating experience that combines learning with weekly challenges and endless fun.
+            <br><br>      Our app is your gateway to understanding artificial intelligence in an interactive and engaging way. As you progress through the game, you'll unlock valuable insights about AI, tackle fascinating challenges, and accumulate points along the way. But it's not just about the points; it's about falling in love with AI and its limitless possibilities.
+            
+            <br>
+            <br>
+            Join us on this thrilling quest to demystify AI and have a blast while doing it. Let's play, learn, and grow together with the power of AI at your fingertips!
+            <br>
+            <br>
+            
+            For more details, visit the <a href='https://microsoft.sharepoint.com/teams/Mw/SitePages/MW-SAIL.aspx'>Season of AI Love</a> site.
+            <br><br>
+            
+            
+            <br>
+            
+            
+            
+            </div>
+            
+            </div>
+            
+            </div>"
+        Size: =12
+        Visible: =If(OptionVal=1,true,false)
+        Width: =620
+        X: =29
+        Y: =26
+        ZIndex: =11
+
+    HtmlText4_2 As htmlViewer:
+        Color: =RGBA(0, 18, 107, 1)
+        Font: =Font.'Segoe UI'
+        Height: =645
+        HtmlText: |-
+            ="<div style='background-color:rgba("&R&","&G&","&B&","&M&");
+            
+                background-color:"&"#F8F8FE"&";
+                  height:610px;
+            border-radius: 30px 30px 30px 30px; padding-left:10px;padding-right:10px;padding-top:10px;'>
+            
+             
+            <div style='
+              border: 3px solid #e9be63;
+              padding: 10px;border-radius: 30px 30px 30px 30px;'>
+            <div style='content: "";
+              clear: both;
+              display: table;'>
+            
+             
+            
+            <h3> Additional Information </h3>
+            
+            
+            We encourage you to try any chatbot or AI program that you have free access to. If you have access to multiple chatbots, try them all. Explore by using the same or different queries and see what it returns. If it doesn’t return what you expect, try to prompt it in different ways.
+            
+            <br>
+            
+            <h3> Which AI program should I use ?</h3>
+            
+            1. DFM Copilot Preview in  <a href='https://aka.ms/dfm'>Global DFM</a>
+            <br><br>
+            2.  Try Bing Chat <a href='https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx'>(Bing AI - Search)</a>, let's select 'More Creative' conversation style to complete the AI Lyrics Challenge     <br><br>  
+            3. <a href='https://zebra-ai-webapp-prd.azurewebsites.net/chatexp'>AI Chat (Zebra AI)<a> <br><br>
+            
+            4. <a href='https://foundrytoolkit.azurewebsites.net/playgroundv2'>FoundryToolkit<a> [Foundry Toolkit , Azure]
+            <br><br>
+             5. Use <a href='https://chat.openai.com/auth/login'>ChatGPT</a> (openai.com) too
+            <br><br>
+            <a href='https://aka.ms/SAIL23FAQ'>SAIL23 FAQ</a> :: For the frequently asked questions.
+             <br>
+             <a href='https://aka.ms/sail23howto'>Demo video</a> :: View how to play each games/tasks
+            <br>
+            <br>
+            
+             
+            
+                 
+            
+            </div>
+            
+            </div>
+            
+            </div>"
+        Size: =12
+        Visible: =If(OptionVal=2,true,false)
+        Width: =620
+        X: =29
+        Y: =26
+        ZIndex: =12
+
+    Tabs As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =12
+
+        HtmlText11_2 As htmlViewer:
+            Height: =768
+            HtmlText: |-
+                ="<div style='background-color:rgba(" & R & "," & G & "," & B &"," & A & ");
+                //border: 1px solid #BFBFBF;
+                //box-shadow: 1px 2px 22px 0px rgba(139,147,232,1);
+                margin: 20px; 
+                width: 620px; 
+                height: 645px; 
+                border-radius: 30px'>
+                </div>"
+            Width: =680
+            X: =5
+            ZIndex: =4
+
+        HtmlText10_2 As htmlViewer:
+            Height: =724
+            HtmlText: |-
+                ="<div style='background-color:rgba(" & R & "," & G & "," & B &"," & 1 & ");
+                //border: 1px solid #BFBFBF;
+                //box-shadow: 1px 2px 22px 0px rgba(139,147,232,1);
+                margin-top:20px;
+                margin-left: 20px; 
+                width: 100px;
+                
+                
+                
+                height: 680px; 
+                border-radius: 30px'>
+                </div>"
+            Width: =215
+            X: =varXpos
+            Y: =30
+            ZIndex: =5
+
+        HtmlText9_2 As htmlViewer:
+            Height: =171
+            HtmlText: |-
+                ="<div style='background-color:rgba("&R&","&G&","&B&","&0.8&");
+                border:0px solid #BFBFBF;
+                //box-shadow: 1px 2px 22px 0px rgba(139,147,232,1);
+                margin: 20px; 
+                
+                height: 116px; 
+                border-radius: 30px'>
+                </div>"
+            Width: =428
+            X: =5
+            Y: =594
+            ZIndex: =6
+
+        Icon4 As icon.View:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =45
+            HoverColor: =RGBA(0, 121, 187, 1)
+            Icon: =Icon.View
+            OnSelect: |-
+                =UpdateContext({varXpos:5});
+                UpdateContext({OptionVal:1});
+            Width: =45
+            X: =60
+            Y: =685
+            ZIndex: =7
+
+        Button2 As button:
+            Fill: =RGBA(0, 94, 146, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Normal
+            OnSelect: |
+                =Set(varWelcomeScreen,If(IsBlank(varCrrUser.TeamID),true,false));
+                
+                
+                
+                If(varCrrUser.NotificationST="OFF",Set(varWeeklyChallengeNotify,false),Set(varWeeklyChallengeNotify,true));
+                
+                //Refresh(Registrations_Dvs);
+                Navigate(Registration,ScreenTransition.Fade)
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Text: ="Skip to main page"
+            Width: =210
+            X: =439
+            Y: =690
+            ZIndex: =8
+
+        Icon4_3 As icon.View:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =45
+            HoverColor: =RGBA(0, 121, 187, 1)
+            Icon: =Icon.Information
+            OnSelect: |-
+                =UpdateContext({varXpos:90});
+                UpdateContext({OptionVal:2});
+            Width: =45
+            X: =145
+            Y: =685
+            ZIndex: =9
+
+        Icon4_4 As icon.View:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =45
+            HoverColor: =RGBA(0, 121, 187, 1)
+            Icon: =Icon.Trending
+            OnSelect: |-
+                =UpdateContext({varXpos:175});
+                UpdateContext({OptionVal:3});
+            Width: =45
+            X: =230
+            Y: =685
+            ZIndex: =10
+
+    HtmlText4_3 As htmlViewer:
+        Color: =RGBA(0, 18, 107, 1)
+        Font: =Font.'Segoe UI'
+        Height: =645
+        HtmlText: |-
+            ="<div style='background-color:rgba(" & R & "," & G & "," & B &"," & M & ");
+            
+                background-color:" & "#F8F8FE" & ";
+                  height:610px;
+            border-radius: 30px 30px 30px 30px; padding-left:10px;padding-right:10px;padding-top:1px;'>
+            
+            <div style='
+              border: 3px solid #e9be63;
+              padding: 3px;border-radius: 30px 30px 30px 30px;'>
+            <div style='content: "";
+              clear: both;
+              display: table;'>
+            <h3>User actions that gains points and unlocks letter as follows</h3>
+            
+            <table style='width:100%;border:1px solid black;'>
+            
+              <tr>
+            
+                <th style='border:1px solid black;'>User Action</th>
+            
+                <th style='border:1px solid black;'>Letter</th>
+            
+                <th style='border:1px solid black;'>Points</th>
+            
+               <th style='border:1px solid black;'>Letter Unlock by Points</th>
+            
+              </tr>
+            
+              <tr>
+            
+                <td style='border:1px solid black;'>Join/Create a Team</td>
+            
+                <td style='border:1px solid black;'>1st Letter</td>
+            
+                <td style='border:1px solid black;'>1000</td>
+            
+                <td style='border:1px solid black;'>5000</td>
+            
+              </tr>
+            
+              <tr>
+            
+                <td style='border:1px solid black;'>Post Tips and Tricks</td>
+            
+                <td style='border:1px solid black;'>2nd letter</td>
+            
+                <td style='border:1px solid black;'>500</td>
+            
+                <td style='border:1px solid black;'>2000</td>
+            
+              </tr>
+            
+            <tr>
+            
+                <td style='border:1px solid black;'>Submitting feedback/game idea</td>
+            
+                <td style='border:1px solid black;'>3rd letter</td>
+            
+                <td style='border:1px solid black;'>0</td>
+            
+                <td style='border:1px solid black;'>4000</td>
+            
+              </tr>
+            
+            <tr>
+            
+                <td style='border:1px solid black;'>using “team conversation”</td>
+            
+                <td style='border:1px solid black;'>4th letter</td>
+            
+                <td style='border:1px solid black;'>0</td>
+            
+                <td style='border:1px solid black;'>5000</td>
+            
+              </tr>
+            
+            <tr>
+            
+                <td style='border:1px solid black;'>Posting first ‘Hallucination’</td>
+            
+                <td style='border:1px solid black;'>5th letter</td>
+            
+                <td style='border:1px solid black;'>800</td>
+            
+                <td style='border:1px solid black;'>7500</td>
+            
+              </tr>
+            
+             
+            
+            <tr>
+            
+                <td style='border:1px solid black;'>First ‘AI Lyrics/Give’ or 'AI Badge'</td>
+            
+                <td style='border:1px solid black;'>6th letter</td>
+            
+                <td style='border:1px solid black;'>500</td>
+            
+                <td style='border:1px solid black;'>7500</td>
+            
+              </tr>
+            
+            <tr>
+            
+                <td style='border:1px solid black;'>Complete the Quiz</td>
+            
+                <td style='border:1px solid black;'>7th letter</td>
+            
+                <td style='border:1px solid black;'>200 for each correct answer</td>
+            
+                <td style='border:1px solid black;'>10000</td>
+            
+              </tr>
+            
+             
+            
+            <tr>
+            
+                <td style='border:1px solid black;'>Submit document suggestion</td>
+            
+                <td style='border:1px solid black;'>8th letter</td>
+            
+                <td style='border:1px solid black;'>1500</td>
+            
+                <td style='border:1px solid black;'>10000</td>
+            
+              </tr>
+            
+            <tr>
+            
+                <td style='border:1px solid black;'>Each Learning Submission</td>
+            
+                <td style='border:1px solid black;'>9th letter</td>
+            
+                <td style='border:1px solid black;'>1000</td>
+            
+                <td style='border:1px solid black;'>20000</td>
+            
+              </tr>
+            
+            <tr>
+            
+                <td style='border:1px solid black;'>Completing a Weekly Challenge</td>
+            
+                <td style='border:1px solid black;'>10th letter</td>
+            
+                <td style='border:1px solid black;'>500</td>
+            
+                <td style='border:1px solid black;'>20000</td>
+            
+              </tr>
+            
+             
+            
+            </table>
+            
+            <br>
+            </div>
+            
+            </div>
+            
+            </div>"
+        Size: =12
+        Visible: =If(OptionVal=3,true,false)
+        Width: =620
+        X: =29
+        Y: =26
+        ZIndex: =13
+
+    Icon9 As icon.Bell:
+        Color: =RGBA(9, 33, 98, 1)
+        Height: =35
+        Icon: =Icon.Bell
+        OnSelect: |-
+            =UpdateContext({varUserNotifyVisible:!varUserNotifyVisible});
+        Tooltip: ="Show or hide Notifications"
+        Width: =35
+        X: =569
+        Y: =594
+        ZIndex: =14
+
+    Label1 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =23
+        Size: =8
+        Text: =CountRows(Filter(tblUserNotifications,UserID.Registrations_Dv=varCrrUser.Registrations_Dv && IsRead="No"))
+        Width: =35
+        X: =594
+        Y: =585
+        ZIndex: =15
+
+    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+        '#CopilotOverlayLabel': ="Filtered"
+        BorderThickness: =1
+        DelayItemLoading: =true
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =430
+        Items: =Sort(Filter(tblUserNotifications,(UserID.Registrations_Dv=varCrrUser.Registrations_Dv && IsRead="No") || IsRead="NA"   ),'Created On',SortOrder.Descending)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =79
+        Visible: =varUserNotifyVisible
+        Width: =317
+        X: =698
+        Y: =313
+        ZIndex: =16
+
+        Button5 As button:
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.View
+            Fill: =If(ThisItem.IsRead="NA",RGBA(204, 231, 246, 1),  RGBA(255, 255, 255, 1))
+            Height: =68
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: =""
+            Width: =305
+            X: =6
+            Y: =6
+            ZIndex: =1
+
+        Title4 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(186, 186, 186, 1)
+            Font: =Font.'Segoe UI'
+            Height: =20
+            LineHeight: =2.2
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =7
+            Text: =ThisItem.'Created On'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 86
+            X: =6
+            Y: =5
+            ZIndex: =2
+
+        Subtitle2 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(186, 186, 186, 1)
+            Height: =42
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =8
+            Text: =ThisItem.Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =288
+            X: =Title4.X
+            Y: =25
+            ZIndex: =3
+
+        Icon10 As icon.Cancel:
+            Height: =15
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =Select(Parent);If(ThisItem.IsRead="No", Patch(tblUserNotifications,ThisItem,{IsRead:"Yes"}); Refresh(tblUserNotifications))
+            Tooltip: ="Dismiss"
+            Visible: =If(ThisItem.IsRead="NA",false,true)
+            Width: =15
+            X: =284
+            Y: =9
+            ZIndex: =4
+

@@ -1,0 +1,104 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crc74_aihallucinations",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crc74_aihallucination",
+    "MaxGetRowsCount": 2000,
+    "Name": "AIhallucinations",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crc74_aihallucination_AsyncOperations": "System Jobs",
+      "crc74_aihallucination_BulkDeleteFailures": "Bulk Delete Failures",
+      "crc74_aihallucination_DuplicateBaseRecord": "Duplicate Records (crc74_aihallucination_DuplicateBaseRecord)",
+      "crc74_aihallucination_DuplicateMatchingRecord": "Duplicate Records (crc74_aihallucination_DuplicateMatchingRecord)",
+      "crc74_aihallucination_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crc74_aihallucination_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crc74_aihallucination_ProcessSession": "Process Sessions",
+      "crc74_aihallucination_SyncErrors": "Sync Errors",
+      "crc74_aihallucinationid": "AIhallucination",
+      "crc74_airesponse": "AIResponse",
+      "crc74_commentsifany": "CommentsIfAny",
+      "crc74_crc74_tipslike_HallLikes_crc74_aihallucin": "TipsLikes (crc74_crc74_tipslike_HallLikes_crc74_aihallucin)",
+      "crc74_crc74_tipslike_HalluLikes_crc74_aihalluci": "TipsLikes (crc74_crc74_tipslike_HalluLikes_crc74_aihalluci)",
+      "crc74_name": "Name",
+      "crc74_nooflikes": "NoOfLikes",
+      "crc74_UserID": "UserID",
+      "crc74_userquery": "UserQuery",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "AIhallucinations",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "AIhallucinations (Views)",
+    "Name": "_crc74_aihallucination_views",
+    "RelatedEntityName": "AIhallucinations",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "03e70990-efe3-49a2-9958-5210519c0b78": "Inactive AIhallucinations",
+      "6fc268b2-6823-472e-b1c8-9caf39ff879a": "AIhallucination Advanced Find View",
+      "856dec07-59fd-4733-9bf6-d7f2eadd5c6e": "Active AIhallucinations",
+      "885cfda5-9c94-4e73-a8b6-e3cb05ef5fb3": "AIhallucination Associated View",
+      "950fc98a-95d7-4462-bb21-5904bdff93bb": "AIhallucination Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (AIhallucinations)",
+    "Name": "crc74_aihallucination_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "AIhallucinations"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "AIhallucinations",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (AIhallucinations)",
+    "Name": "crc74_aihallucination_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "AIhallucinations"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "AIhallucinations",
+    "Type": "OptionSetInfo"
+  }
+]

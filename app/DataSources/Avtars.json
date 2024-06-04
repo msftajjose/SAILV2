@@ -1,0 +1,100 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crc74_avtars",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crc74_avtar",
+    "MaxGetRowsCount": 2000,
+    "Name": "Avtars",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crc74_avtar_AsyncOperations": "System Jobs",
+      "crc74_avtar_BulkDeleteFailures": "Bulk Delete Failures",
+      "crc74_avtar_DuplicateBaseRecord": "Duplicate Records (crc74_avtar_DuplicateBaseRecord)",
+      "crc74_avtar_DuplicateMatchingRecord": "Duplicate Records (crc74_avtar_DuplicateMatchingRecord)",
+      "crc74_avtar_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crc74_avtar_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crc74_avtar_ProcessSession": "Process Sessions",
+      "crc74_avtar_SyncErrors": "Sync Errors",
+      "crc74_avtarid": "Avtar",
+      "crc74_name": "Name",
+      "crc74_pic": "Pic",
+      "crc74_picid": "crc74_PicId",
+      "crc74_teamsimg": "TeamsImg",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Avtars",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Avtars (Views)",
+    "Name": "_crc74_avtar_views",
+    "RelatedEntityName": "Avtars",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0ce67ca6-13c5-496d-b4cd-841df6bb47ea": "Avtar Lookup View",
+      "44edeff6-204f-4380-93d9-d6334bcf8fdc": "Avtar Associated View",
+      "49313f2c-0ba1-481b-8074-fe394a7004a3": "Avtar Advanced Find View",
+      "78dd3104-324b-412d-b57e-62988716153a": "Active Avtars",
+      "e9ace850-d70a-42c4-992e-7842e0fa58b0": "Inactive Avtars"
+    }
+  },
+  {
+    "DisplayName": "Status (Avtars)",
+    "Name": "crc74_avtar_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Avtars"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Avtars",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Avtars)",
+    "Name": "crc74_avtar_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Avtars"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Avtars",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crc74_suggestioncomments",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crc74_suggestioncomment",
+    "MaxGetRowsCount": 2000,
+    "Name": "SuggestionComments",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crc74_commentdetails": "CommentDetails",
+      "crc74_name": "Name",
+      "crc74_rating": "Rating",
+      "crc74_suggestioncomment_AsyncOperations": "System Jobs",
+      "crc74_suggestioncomment_BulkDeleteFailures": "Bulk Delete Failures",
+      "crc74_suggestioncomment_DuplicateBaseRecord": "Duplicate Records (crc74_suggestioncomment_DuplicateBaseRecord)",
+      "crc74_suggestioncomment_DuplicateMatchingRecord": "Duplicate Records (crc74_suggestioncomment_DuplicateMatchingRecord)",
+      "crc74_suggestioncomment_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crc74_suggestioncomment_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crc74_suggestioncomment_ProcessSession": "Process Sessions",
+      "crc74_suggestioncomment_SyncErrors": "Sync Errors",
+      "crc74_suggestioncommentid": "SuggestionComment",
+      "crc74_SugID": "SugID",
+      "crc74_sugresponse": "SugResponse",
+      "crc74_thumpsup": "ThumpsUp",
+      "crc74_thumsdown": "ThumsDown",
+      "crc74_UserID": "UserID",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "SuggestionComments",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "SuggestionComments (Views)",
+    "Name": "_crc74_suggestioncomment_views",
+    "RelatedEntityName": "SuggestionComments",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "071aaf57-e8bb-4db7-a5e1-cda45fa8ef70": "Active SuggestionComments",
+      "abd8fe3f-b10f-43ff-bf70-3490611aeed4": "Inactive SuggestionComments",
+      "c646c6ad-2718-4f6f-bc0e-8a86a4c17382": "SuggestionComment Advanced Find View",
+      "d297709c-7af1-4006-889a-ba236c1aaf54": "SuggestionComment Lookup View",
+      "fa6aab3f-dbfb-4ab8-8e17-1eb83eb39950": "SuggestionComment Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (SuggestionComments)",
+    "Name": "crc74_suggestioncomment_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "SuggestionComments"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "SuggestionComments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (SuggestionComments)",
+    "Name": "crc74_suggestioncomment_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "SuggestionComments"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "SuggestionComments",
+    "Type": "OptionSetInfo"
+  }
+]

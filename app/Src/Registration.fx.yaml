@@ -1,0 +1,3134 @@
+Registration As screen:
+    OnVisible: |+
+        =//UpdateContext({varLoadingSpinner:true});
+        //UpdateContext({varLoadingSpinner:true});
+        UpdateContext({OptionXaxis: 664});
+        Reset(Gallery1_6);
+        Refresh(TeamRegistrationss);
+        Refresh(Registrations_Dvs);
+        //UpdateContext({varLoadingSpinner:false});
+        If(!IsBlank(varCrrUser.TeamID),UpdateContext({varOption:1}),UpdateContext({varOption:0}));
+        
+
+    HtmlText2_16 As htmlViewer:
+        Height: =768
+        HtmlText: |-
+            ="<div style='background-color:rgba(" & R & "," & G & "," & B &"," & M & ");
+            
+                background-color:" & "#F8F8FE" & ";
+                  height:757px;
+            border-radius: 60px 60px 60px 60px; padding-left:10px;padding-right:10px;'>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            <div style='
+              border: 3px solid #e9be63;
+              padding: 10px;border-radius: 60px 60px 60px 60px;'>
+            <div style='content: "";
+              clear: both;
+              display: table;'>
+            
+              <h3 style='clear:right'>Tune In</h3>
+            <p>[User's home] :: Your home to connect with your team, check other's score. Complete the 10 letter word challenge,  help your team gain the extra points to lead among the top 10 teams in PegBoard.</p>
+            
+              <h3 style='clear:right'> AI Games (Dreamscape)</h3>
+            <p> [Action Center] :: Visit here to play the new fun filled games. Share your AI learning, Tips & Tricks or complete ATLAS AI Learning. New games/challenges will be unlocked every week.</p>
+            
+              <h3 style='clear:right'>Resources</h3>
+            <p> [All about AI CoPilot] ::  Various learning resources are made available here to help complete the game and challenges.
+            
+              <h3 style='clear:right'>PegBoard</h3>
+            <p> [The Leader board] ::  Let's check the points earned by other teams and top players.  We can see scores of top 20 team and top 20 individuals too.</p>
+            
+             <h3 style='clear:right'>Impendulo</h3>
+            <p> [The Feedback section] :: Share your impression, feedback and moreover new games ideas! – Our engineering team will implement the one that fits the best and applaud! </p>
+            
+            
+            
+            </div>
+            
+            </div>
+            
+            </div>"
+        Width: =683
+        X: =677
+        ZIndex: =1
+
+    Group_MiddlePanel_1 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =51
+
+        HtmlText2_5 As htmlViewer:
+            Height: =768
+            HtmlText: |-
+                ="<div style='background-color:rgba(" & R & "," & G & "," & B &"," & M & ");
+                
+                    background-color:" & "#F8F8FE" & ";
+                      height:757px;
+                border-radius: 60px 60px 60px 60px;'>
+                </div>"
+            Width: =509
+            X: =162
+            ZIndex: =6
+
+        Circle_Search_1 As circle:
+            Fill: =RGBA(240,240,247, 1)
+            Height: =50
+            Visible: =false
+            Width: =54
+            X: =604
+            Y: =41
+            ZIndex: =7
+
+    ChatScreen_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =58
+
+        "Gallery3_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            '#CopilotOverlayLabel': ="Filtered"
+            DelayItemLoading: =true
+            Height: =437
+            Items: =Sort(Filter(TeamChats,TeamID.TeamRegistrationssN = varCrrUser.TeamID.TeamRegistrationssN),'Created On',SortOrder.Descending)
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            ShowNavigation: =true
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =104
+            Visible: =If(varOption=1, true, false)
+            Width: =626
+            X: =702
+            Y: =277
+            ZIndex: =84
+
+            Button6_11 As button:
+                BorderThickness: =0
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisplayMode: =DisplayMode.Disabled
+                Fill: =If(ThisItem.IsSelected,RGBA(255, 255, 255, 1),RGBA(255,255, 255, .95))
+                Font: =Font.'Segoe UI'
+                Height: =103
+                HoverBorderColor: =
+                HoverFill: =RGBA(255, 255, 255, 1)
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =
+                RadiusBottomLeft: =15
+                RadiusBottomRight: =15
+                RadiusTopLeft: =15
+                RadiusTopRight: =15
+                Text: =""
+                Width: =622
+                ZIndex: =1
+
+            Image5_1 As image:
+                Height: =50
+                Image: =First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)).UserAvtar
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =40
+                RadiusBottomRight: =40
+                RadiusTopLeft: =40
+                RadiusTopRight: =40
+                Width: =50
+                X: =10
+                Y: =33
+                ZIndex: =2
+
+            Title4_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 13, 75, 1)
+                DisabledColor: =RGBA(186, 186, 186, 1)
+                DisplayMode: =DisplayMode.View
+                Height: =20
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =9
+                Text: |-
+                    =First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)).LoginName & " Says:" 
+                VerticalAlign: =VerticalAlign.Top
+                Width: =154
+                X: =14
+                Y: =7
+                ZIndex: =3
+
+            Subtitle2_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(116, 116, 116, 1)
+                DisabledColor: =RGBA(186, 186, 186, 1)
+                Height: =53
+                Italic: =true
+                OnSelect: |
+                    =Select(Parent);
+                    UpdateContext({popupText:ThisItem.Msg});
+                    
+                    UpdateContext({varShowmoreNew:true});
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =10
+                Text: =ThisItem.Msg
+                VerticalAlign: =VerticalAlign.Top
+                Width: =507
+                X: =73
+                Y: =28
+                ZIndex: =4
+
+            HtmlText5_10 As htmlViewer:
+                Height: =26
+                HtmlText: ="<b><font color=blue>Read more...</font>"
+                OnSelect: |-
+                    =Select(Parent);
+                    UpdateContext({popupText:ThisItem.Msg });
+                    //UpdateContext({varAllpopUps:true});
+                    UpdateContext({varShowmoreNew:true});
+                Size: =8
+                Width: =95
+                X: =527
+                Y: =77
+                ZIndex: =5
+
+            Subtitle2_2 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderStyle: =BorderStyle.Dotted
+                BorderThickness: =1
+                Color: =RGBA(116, 116, 116, 1)
+                DisabledColor: =RGBA(186, 186, 186, 1)
+                Fill: =RGBA(244, 244, 244, 1)
+                Height: =17
+                Italic: =true
+                OnSelect: |
+                    =Select(Parent);
+                    UpdateContext({varShowmoreNew:!varShowmoreNew});
+                Overflow: =Overflow.Scroll
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =10
+                Text: =ThisItem.Msg
+                VerticalAlign: =VerticalAlign.Top
+                Visible: =varShowmoreNew && ThisItem.IsSelected
+                Width: =525
+                X: =73
+                Y: =28
+                ZIndex: =6
+
+        TextInput3_1 As text:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
+            Default: =""
+            Height: =91
+            HintText: ="""Type your message"""
+            Italic: =true
+            Mode: =TextMode.MultiLine
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Size: =11
+            Visible: =If(varOption=1, true, false)
+            Width: =578
+            X: =703
+            Y: =174
+            ZIndex: =85
+
+        Icon7_4 As icon.Send:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =32
+            Icon: =Icon.Send
+            OnSelect: |-
+                =UpdateContext({varLoadingSpinner:true});
+                If(!IsBlank(TextInput3_1.Text),Patch(TeamChats,Defaults(TeamChats),{Name:"TeamChat", TeamID:varCrrUser.TeamID,UserID:varCrrUser,Msg:TextInput3_1.Text}));
+                If(!IsBlank(TextInput3_1.Text),If(IsBlank(varCrrUser.ErE), Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{ErE:"Yes"})));
+                Refresh(Registrations_Dvs);
+                Refresh(TeamChats);
+                Reset(TextInput3_1);
+                UpdateContext({varLoadingSpinner:false});
+            Tooltip: ="Send"
+            Visible: =If(varOption=1, true, false)
+            Width: =28
+            X: =1297
+            Y: =228
+            ZIndex: =86
+
+        Icon7_5 As icon.Send:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =27
+            Icon: =Icon.Reload
+            OnSelect: |
+                =Refresh(TeamChats);
+            Tooltip: ="Refresh"
+            Visible: =If(varOption=1, true, false)
+            Width: =23
+            X: =1300
+            Y: =182
+            ZIndex: =87
+
+    Group_LeftPanel_4 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =58
+
+        HtmlText1_8 As htmlViewer:
+            Height: =768
+            HtmlText: |-
+                ="<div style=""
+                background-color:rgba(" & R & "," & G & "," & B &"," & A & ");    
+                    height:757px;
+                     box-shadow: 0px 0px 20px 5px rgba(" & RS & "," & GS & "," & BS &"," & AS & ");
+                    border-radius: 60px 0px 0px 60px;"">
+                </div>"
+            Width: =248
+            ZIndex: =2
+
+        Button9_4 As button:
+            BorderThickness: =0
+            DisabledFill: =RGBA(248,248,254, 1)
+            Fill: =RGBA(248,248,254, 1)
+            FocusedBorderThickness: =0
+            Height: =123
+            HoverFill: =RGBA(248,248,254, 1)
+            PressedFill: =RGBA(248,248,254, 1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Text: =""
+            Width: =90
+            X: =45
+            Y: =645
+            ZIndex: =3
+
+        Icon2_4 As icon.Settings:
+            Height: =35
+            Icon: =Icon.Settings
+            OnSelect: |-
+                =Set(varEditScren,true);
+                EditForm(Form4);
+                Navigate(SettingsPage,ScreenTransition.Fade)
+            Width: =35
+            X: =72
+            Y: =692
+            ZIndex: =4
+
+        Gallery1_6 As gallery.galleryVertical:
+            '#CopilotOverlayLabel': ="Filtered"
+            Default: |-
+                ={Name:"Tune In", icon:Icon.ColorPicker,onSelect:"Registration"}
+            Height: =629
+            Items: |-
+                =Table(
+                    {Name:"Tune In", icon:Icon.ColorPicker,onSelect:"Registration"},
+                    {Name:"AI Games", icon:Icon.Person,onSelect:"My"}, 
+                    {Name:"Resources", icon:Icon.Compose,onSelect:"About"},
+                    {Name:"PegBoard", icon:Icon.Ribbon,onSelect:"LeaderBoard"},
+                    {Name:"Feedback", icon:Icon.EmojiSmile,onSelect:"Feedback"}
+                )
+            Layout: =Layout.Vertical
+            OnSelect: |-
+                =Switch(ThisItem.onSelect,
+                        "My",Navigate(MySessions,ScreenTransition.Fade),
+                        "Registration",Navigate(Registration,ScreenTransition.Fade),  
+                        "LeaderBoard",Navigate(CommnLeaderBoard,ScreenTransition.Fade),
+                         "About",Navigate(AboutTechWeek,ScreenTransition.Fade),
+                        "Feedback",UpdateContext({_varAppFeedbackReg:true});
+                        );
+                       
+            TemplatePadding: =5  
+            TemplateSize: =113
+            Width: =150
+            X: =15
+            Y: =50
+            ZIndex: =5
+
+            Button1_12 As button:
+                BorderThickness: =0
+                Fill: =If(ThisItem.IsSelected,RGBA(81,152,172,1),RGBA(RL,GL,BL,1)) //RGBA(0, 0, 0, 0)) //RGBA(RLF,GLF,BLF,.3)
+                FocusedBorderThickness: =0
+                Height: =113
+                HoverFill: =Button1_12.Fill
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =40
+                RadiusBottomRight: =40
+                RadiusTopLeft: =40
+                RadiusTopRight: =40
+                Text: =""
+                Tooltip: ="Your personal space to connect with your team members, view the progress while unlocking the letters, view team members scores etc."
+                Width: =100
+                X: =20
+                ZIndex: =1
+
+            Label1_12 As label:
+                Align: =LayoutAlignItems.Center
+                Color: =If(ThisItem.IsSelected,RGBA(RT, GT, BT, 1),RGBA(RTF, GTF, BTF, 1)) 
+                Font: =Font.'Segoe UI'
+                OnSelect: =Select(Parent)
+                Size: =11.5
+                Text: =ThisItem.Name
+                Tooltip: ="Your personal space to connect with your team members, view the progress while unlocking the letters, view team members scores etc."
+                Width: =95
+                X: =23
+                Y: =58
+                ZIndex: =2
+
+            Icon1_12 As icon.Add:
+                Color: =If(ThisItem.IsSelected,RGBA(RT, GT, BT, 1),RGBA(RTF, GTF, BTF, 1)) //RGBA(204, 208, 225, 1))
+                Height: =25
+                Icon: =ThisItem.icon
+                OnSelect: =Select(Parent)
+                Tooltip: ="Your personal space to connect with your team members, view the progress while unlocking the letters, view team members scores etc."
+                Width: =25
+                X: =58
+                Y: =22
+                ZIndex: =3
+
+    Image9_4 As image:
+        Height: =150
+        Image: |-
+            ="data:image/svg+xml;utf8, " & EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; background: none; display: block; shape-rendering: auto;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'>
+            
+            <circle cx='50' cy='50' r='32' stroke-width='8' stroke='#00aab4' stroke-dasharray='50.26548245743669 50.26548245743669' fill='none' stroke-linecap='round'>
+            
+             <animateTransform attributeName='transform' type='rotate' dur='1s' repeatCount='indefinite' keyTimes='0;1' values='0 50 50;360 50 50'></animateTransform>
+            
+            </circle>
+            
+            <circle cx='50' cy='50' r='23' stroke-width='8' stroke='#f4f4f4' stroke-dasharray='36.12831551628262 36.12831551628262' stroke-dashoffset='36.12831551628262' fill='none' stroke-linecap='round'>
+            
+             <animateTransform attributeName='transform' type='rotate' dur='1s' repeatCount='indefinite' keyTimes='0;1' values='0 50 50;-360 50 50'></animateTransform>
+            
+            </circle>
+            
+            <!-- [ldio] generated by https://loading.io/ --></svg>")
+        Visible: |-
+            =//varLoadingSpinner
+            false
+        Width: =150
+        X: =622
+        Y: =307
+        ZIndex: =83
+
+    MyTeamScore_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =85
+
+        "Gallery5_7 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            '#CopilotOverlayLabel': ="Filtered"
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
+            DelayItemLoading: =true
+            DisplayMode: =DisplayMode.Disabled
+            Height: =440
+            Items: =Sort(Filter(Registrations_Dvs,Scores>0 && TeamID.TeamRegistrationssN=varCrrUser.TeamID.TeamRegistrationssN),Scores,SortOrder.Descending)
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =49
+            Visible: =If(varOption=2, true, false)
+            Width: =626
+            X: =700
+            Y: =261
+            ZIndex: =39
+
+            Title3_10 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =26
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =11
+                Text: =ThisItem.LoginName
+                VerticalAlign: =VerticalAlign.Top
+                Width: =147
+                X: =126
+                Y: =11
+                ZIndex: =2
+
+            Separator3_7 As rectangle:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =1
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - Self.Height
+                ZIndex: =5
+
+            Subtitle3_15 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =24
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =11
+                Text: =ThisItem.Scores
+                VerticalAlign: =VerticalAlign.Top
+                Width: =87
+                X: =469
+                Y: =11
+                ZIndex: =9
+
+            Image7_3 As image:
+                Height: =35
+                Image: =ThisItem.UserAvtar
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Width: =35
+                X: =82
+                Y: =7
+                ZIndex: =10
+
+        Label3_32 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Text: ="User Name"
+            Visible: =If(varOption=2, true, false)
+            X: =744
+            Y: =225
+            ZIndex: =40
+
+        Label3_31 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Text: ="Score"
+            Visible: =If(varOption=2, true, false)
+            Width: =100
+            X: =1160
+            Y: =223
+            ZIndex: =41
+
+        Label3_25 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =46
+            Size: =14
+            Text: ="My team members Scores"
+            Visible: =If(varOption=2, true, false)
+            Width: =256
+            X: =904
+            Y: =162
+            ZIndex: =42
+
+    CustomTeam_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =89
+
+        "Gallery5_8 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            '#CopilotOverlayLabel': ="Filtered"
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
+            DelayItemLoading: =true
+            Height: =446
+            Items: |-
+                =//Filter(CustomLeaderBoards,UserID.Registrations_Dv=varCrrUser.Registrations_Dv)
+                Sort(Filter(Registrations_Dvs,Registrations_Dv in Filter(CustomLeaderBoards,UserID.Registrations_Dv=varCrrUser.Registrations_Dv).LeaderUID),Scores,SortOrder.Descending)
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =49
+            Visible: =If(varOption=4, true, false)
+            Width: =626
+            X: =707
+            Y: =251
+            ZIndex: =50
+
+            Title3_11 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(186, 186, 186, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =26
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =11
+                Text: =ThisItem.LoginName
+                VerticalAlign: =VerticalAlign.Top
+                Width: =147
+                X: =94
+                Y: =11
+                ZIndex: =2
+
+            Separator3_8 As rectangle:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =1
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - Self.Height
+                ZIndex: =5
+
+            Subtitle3_16 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(186, 186, 186, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =24
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =11
+                Text: =ThisItem.Scores
+                VerticalAlign: =VerticalAlign.Top
+                Width: =87
+                X: =351
+                Y: =11
+                ZIndex: =9
+
+            Image7_4 As image:
+                Height: =35
+                Image: =ThisItem.UserAvtar
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Width: =35
+                X: =50
+                Y: =7
+                ZIndex: =10
+
+            Icon12_1 As icon.Trash:
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =30
+                Icon: =Icon.Trash
+                OnSelect: |-
+                    =UpdateContext({varRemTeam:ThisItem});
+                    RemoveIf(CustomLeaderBoards,UserID.Registrations_Dv=varCrrUser.Registrations_Dv And MyLeaderMember.Registrations_Dv=varRemTeam.Registrations_Dv);
+                    Refresh(CustomLeaderBoards);
+                    Reset(Gallery5_8);
+                Tooltip: ="Delete Member"
+                Width: =30
+                X: =552
+                Y: =7
+                ZIndex: =11
+
+        Label3_33 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Text: ="User Name"
+            Visible: =If(varOption=4, true, false)
+            X: =718
+            Y: =211
+            ZIndex: =51
+
+        Label3_34 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Text: ="Score"
+            Visible: =If(varOption=4, true, false)
+            Width: =100
+            X: =1052
+            Y: =211
+            ZIndex: =52
+
+        Label3_26 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =34
+            Size: =14
+            Text: ="Selected users score"
+            Visible: =If(varOption=4, true, false)
+            Width: =290
+            X: =874
+            Y: =162
+            ZIndex: =53
+
+        Icon9_7 As icon.CancelBadge:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =30
+            Icon: =Icon.AddUser
+            OnSelect: |-
+                =UpdateContext({varUserList:true})
+            Tooltip: ="Add Members"
+            Visible: =If(varOption=4, true, false)
+            Width: =30
+            X: =1295
+            Y: =173
+            ZIndex: =54
+
+    MODGroup_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =92
+
+        Button7_5 As button:
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =135
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: =""
+            Tooltip: ="Complete tasks and games listed in the DreamScape, as you gain more points and attempt new tasks every week, the letters unlock."
+            Width: =490
+            X: =172
+            Y: =185
+            ZIndex: =8
+
+        Label23_6 As label:
+            Color: =RGBA(118, 0, 0, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =46
+            Size: =14
+            Text: |-
+                =" Let's complete tasks using AI Games,  
+                               Be the first to unlock all the 10 letters!"
+            Tooltip: ="Complete tasks and games listed in the DreamScape, as you gain more points and attempt new tasks every week, the letters unlock."
+            Width: =489
+            X: =174
+            Y: =191
+            ZIndex: =9
+
+        Button2_5 As button:
+            AutoDisableOnSelect: =false
+            BorderColor: =RGBA(39, 67, 125, 1)
+            BorderThickness: =5
+            Color: =If(IsBlank(varCrrUser.ErM), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            DisabledBorderColor: =RGBA(39, 67, 125, 1)
+            DisabledColor: =
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =41
+            HoverBorderColor: =RGBA(39, 67, 125, 1)
+            HoverColor: =If(IsBlank(varCrrUser.ErM), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            HoverFill: =
+            PressedBorderColor: =RGBA(39, 67, 125, 1)
+            PressedColor: =If(IsBlank(varCrrUser.ErM), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="S"
+            Tooltip: ="Complete tasks and games listed in the DreamScape, as you gain more points and attempt new tasks every week, the letters unlock."
+            Width: =40
+            X: =176
+            Y: =258
+            ZIndex: =10
+
+        Button2_6 As button:
+            BorderColor: =RGBA(39, 67, 125, 1)
+            BorderThickness: =5
+            Color: =If(IsBlank(varCrrUser.ErO), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            DisabledBorderColor: =RGBA(39, 67, 125, 1)
+            DisabledColor: =If(IsBlank(varCrrUser.ErO), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =41
+            HoverBorderColor: =RGBA(39, 67, 125, 1)
+            HoverColor: =If(IsBlank(varCrrUser.ErO), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            HoverFill: =
+            PressedBorderColor: =RGBA(39, 67, 125, 1)
+            PressedColor: =If(IsBlank(varCrrUser.ErO), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="E"
+            Tooltip: ="Complete tasks and games listed in the DreamScape, as you gain more points and attempt new tasks every week, the letters unlock."
+            Width: =40
+            X: =223
+            Y: =258
+            ZIndex: =11
+
+        Button2_8 As button:
+            BorderColor: =RGBA(39, 67, 125, 1)
+            BorderThickness: =5
+            Color: =If(IsBlank(varCrrUser.ErD), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            DisabledBorderColor: =RGBA(39, 67, 125, 1)
+            DisabledColor: =If(IsBlank(varCrrUser.ErD), RGBA(255, 255, 255,1),RGBA(0, 91, 146,1))
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =41
+            HoverBorderColor: =RGBA(39, 67, 125, 1)
+            HoverColor: =If(IsBlank(varCrrUser.ErD), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            HoverFill: =
+            PressedBorderColor: =RGBA(39, 67, 125, 1)
+            PressedColor: =If(IsBlank(varCrrUser.ErD), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="A"
+            Tooltip: ="Complete tasks and games listed in the DreamScape, as you gain more points and attempt new tasks every week, the letters unlock."
+            Width: =40
+            X: =270
+            Y: =258
+            ZIndex: =12
+
+        Button2_12 As button:
+            BorderColor: =RGBA(39, 67, 125, 1)
+            BorderThickness: =5
+            Color: =If(IsBlank(varCrrUser.ErE), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            DisabledBorderColor: =RGBA(39, 67, 125, 1)
+            DisabledColor: =If(IsBlank(varCrrUser.ErE), RGBA(255, 255, 255,1),RGBA(0, 91, 146,1))
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =41
+            HoverBorderColor: =RGBA(39, 67, 125, 1)
+            HoverColor: =If(IsBlank(varCrrUser.ErE), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            HoverFill: =
+            PressedBorderColor: =RGBA(39, 67, 125, 1)
+            PressedColor: =If(IsBlank(varCrrUser.ErE), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="S"
+            Tooltip: ="Complete tasks and games listed in the DreamScape, as you gain more points and attempt new tasks every week, the letters unlock."
+            Width: =40
+            X: =317
+            Y: =258
+            ZIndex: =13
+
+        Button2_18 As button:
+            BorderColor: =RGBA(39, 67, 125, 1)
+            BorderThickness: =5
+            Color: =If(IsBlank(varCrrUser.ErR), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            DisabledBorderColor: =RGBA(39, 67, 125, 1)
+            DisabledColor: =If(IsBlank(varCrrUser.ErR), RGBA(255, 255, 255,1),RGBA(0, 91, 146,1))
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =41
+            HoverBorderColor: =RGBA(39, 67, 125, 1)
+            HoverColor: =If(IsBlank(varCrrUser.ErR), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            HoverFill: =
+            PressedBorderColor: =RGBA(39, 67, 125, 1)
+            PressedColor: =If(IsBlank(varCrrUser.ErR), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="O"
+            Tooltip: ="Complete tasks and games listed in the DreamScape, as you gain more points and attempt new tasks every week, the letters unlock."
+            Width: =40
+            X: =364
+            Y: =258
+            ZIndex: =14
+
+        Button2_19 As button:
+            BorderColor: =RGBA(39, 67, 125, 1)
+            BorderThickness: =5
+            Color: =If(IsBlank(varCrrUser.ErN), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            DisabledBorderColor: =RGBA(39, 67, 125, 1)
+            DisabledColor: =If(IsBlank(varCrrUser.ErN), RGBA(255, 255, 255,1),RGBA(0, 91, 146,1))
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =41
+            HoverBorderColor: =RGBA(39, 67, 125, 1)
+            HoverColor: =If(IsBlank(varCrrUser.ErN), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            HoverFill: =
+            PressedBorderColor: =RGBA(39, 67, 125, 1)
+            PressedColor: =If(IsBlank(varCrrUser.ErN), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="N"
+            Tooltip: ="Complete tasks and games listed in the DreamScape, as you gain more points and attempt new tasks every week, the letters unlock."
+            Width: =40
+            X: =410
+            Y: =258
+            ZIndex: =15
+
+        Button2_20 As button:
+            BorderColor: =RGBA(39, 67, 125, 1)
+            BorderThickness: =5
+            Color: =If(IsBlank(varCrrUser.ErW), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            DisabledBorderColor: =RGBA(39, 67, 125, 1)
+            DisabledColor: =If(IsBlank(varCrrUser.ErW), RGBA(255, 255, 255,1),RGBA(0, 91, 146,1))
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =41
+            HoverBorderColor: =RGBA(39, 67, 125, 1)
+            HoverColor: =If(IsBlank(varCrrUser.ErW), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            HoverFill: =
+            PressedBorderColor: =RGBA(39, 67, 125, 1)
+            PressedColor: =If(IsBlank(varCrrUser.ErW), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="O"
+            Tooltip: ="Complete tasks and games listed in the DreamScape, as you gain more points and attempt new tasks every week, the letters unlock."
+            Width: =40
+            X: =464
+            Y: =258
+            ZIndex: =16
+
+        Button2_21 As button:
+            BorderColor: =RGBA(39, 67, 125, 1)
+            BorderThickness: =5
+            Color: =If(IsBlank(varCrrUser.ErSO), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            DisabledBorderColor: =RGBA(39, 67, 125, 1)
+            DisabledColor: =If(IsBlank(varCrrUser.ErO), RGBA(255, 255, 255,1),RGBA(0, 91, 146,1))
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =41
+            HoverBorderColor: =RGBA(39, 67, 125, 1)
+            HoverColor: =If(IsBlank(varCrrUser.ErSO), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            HoverFill: =
+            PressedBorderColor: =RGBA(39, 67, 125, 1)
+            PressedColor: =If(IsBlank(varCrrUser.ErSO), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="F"
+            Tooltip: ="Complete tasks and games listed in the DreamScape, as you gain more points and attempt new tasks every week, the letters unlock."
+            Width: =40
+            X: =511
+            Y: =258
+            ZIndex: =17
+
+        Button2_22 As button:
+            BorderColor: =RGBA(39, 67, 125, 1)
+            BorderThickness: =5
+            Color: =If(IsBlank(varCrrUser.ErSR), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            DisabledBorderColor: =RGBA(39, 67, 125, 1)
+            DisabledColor: =If(IsBlank(varCrrUser.ErR), RGBA(255, 255, 255,1),RGBA(0, 91, 146,1))
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =41
+            HoverBorderColor: =RGBA(39, 67, 125, 1)
+            HoverColor: =If(IsBlank(varCrrUser.ErSR), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            HoverFill: =
+            PressedBorderColor: =RGBA(39, 67, 125, 1)
+            PressedColor: =If(IsBlank(varCrrUser.ErSR), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="A"
+            Tooltip: ="Complete tasks and games listed in the DreamScape, as you gain more points and attempt new tasks every week, the letters unlock."
+            Width: =40
+            X: =565
+            Y: =258
+            ZIndex: =18
+
+        Button2_23 As button:
+            BorderColor: =RGBA(39, 67, 125, 1)
+            BorderThickness: =5
+            Color: =If(IsBlank(varCrrUser.ErK), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            DisabledBorderColor: =RGBA(39, 67, 125, 1)
+            DisabledColor: =If(IsBlank(varCrrUser.ErK), RGBA(255, 255, 255,1),RGBA(0, 91, 146,1))
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =41
+            HoverBorderColor: =RGBA(39, 67, 125, 1)
+            HoverColor: =If(IsBlank(varCrrUser.ErK), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            HoverFill: =
+            PressedBorderColor: =RGBA(39, 67, 125, 1)
+            PressedColor: =If(IsBlank(varCrrUser.ErK), RGBA(255, 255, 255,1),RGBA(33,57,145,1))
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="I"
+            Tooltip: ="Complete tasks and games listed in the DreamScape, as you gain more points and attempt new tasks every week, the letters unlock."
+            Width: =40
+            X: =612
+            Y: =258
+            ZIndex: =19
+
+        Image6_1 As image:
+            Height: =39
+            Image: =Leaderb
+            Tooltip: ="Complete tasks and games listed in the DreamScape, as you gain more points and attempt new tasks every week, the letters unlock."
+            Width: =39
+            X: =614
+            Y: =199
+            ZIndex: =21
+
+    TipOftheDay_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =94
+
+        Button7_6 As button:
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =341
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: =""
+            Width: =490
+            X: =174
+            Y: =356
+            ZIndex: =20
+
+        HtmlText2_17 As htmlViewer:
+            Color: =RGBA(39, 67, 125, 1)
+            Font: =Font.'Segoe UI'
+            Height: =336
+            HtmlText: |-
+                ="<body bgcolor=while><br><Center><b>Tip of the Day</b> </Center>
+                <br>
+                "& First(Sort(Filter(Filter(TipsandTricksCollaborations,!(UserID.Name in tblDisabledUsers.Name)),'Created On' >= DateAdd(Today(),-3)),NoOfLikes,SortOrder.Descending)).TipsTricks & "</body>
+                "
+            Size: =13
+            Tooltip: ="The most liked Tips and Tricks from DreamScape are displayed here."
+            Width: =488
+            X: =175
+            Y: =356
+            ZIndex: =22
+
+    Popup_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =97
+
+        HtmlText2_1 As htmlViewer:
+            AutoHeight: =true
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =61
+            HtmlText: |-
+                ="<body style='margin: 80px 200px;
+                  background-color: rgba(33,57,145,1);'>
+                <div  style=clear: both;
+                  position: relative;> 
+                
+                  <div style='float: left;
+                  width: 600px;
+                  height: auto;
+                  border: 1px solid #FFFFFF;
+                  background-color: rgba(" & 116 & "," & 116 & "," & 116 &"," & .9 & ");
+                  border: 1px solid #000000;
+                  padding: 6px 8px;
+                  -webkit-border-radius: 10px;
+                  -moz-border-radius: 10px;
+                  -o-border-radius: 10px;
+                  border-radius: 10px;'>
+                    <p style='margin: 0;'>
+                
+                 
+                    <br>
+                    " &popupText & "
+                
+                <br>
+                  </div>
+                </div>
+                </body>
+                "
+            Size: =10
+            Visible: =varAllpopUps && If(varOption=1, true, false)
+            Width: =628
+            X: =604
+            Y: =299
+            ZIndex: =92
+
+        Icon4_2 As icon.Cancel:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =24
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =UpdateContext({varAllpopUps:false})
+            Visible: =varAllpopUps && If(varOption=1, true, false)
+            Width: =24
+            X: =1183
+            Y: =305
+            ZIndex: =94
+
+    RequestsScreen_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =100
+
+        "Gallery5_14 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            '#CopilotOverlayLabel': ="Filtered"
+            BorderColor: =RGBA(255, 255, 255, 1)
+            DelayItemLoading: =true
+            Height: =481
+            Items: =Filter(TipsMessages,CustomStatus="Open" && PostOwnerID.Registrations_Dv=varCrrUser.Registrations_Dv)
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            ShowNavigation: =true
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =136
+            Visible: =If(varOption=5, true, false)
+            Width: =650
+            X: =693
+            Y: =220
+            ZIndex: =60
+
+            Button6_10 As button:
+                BorderThickness: =0
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                Fill: =If(ThisItem.IsSelected,RGBA(255, 255, 255, 1),RGBA(255,255, 255, .95))
+                Font: =Font.'Segoe UI'
+                Height: =133
+                HoverBorderColor: =
+                HoverFill: =RGBA(255, 255, 255, 1)
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =
+                RadiusBottomLeft: =15
+                RadiusBottomRight: =15
+                RadiusTopLeft: =15
+                RadiusTopRight: =15
+                Text: =""
+                Width: =629
+                X: =5
+                ZIndex: =1
+
+            Title3_25 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =RGBA(128, 128, 128, 1)
+                DisabledColor: =RGBA(186, 186, 186, 1)
+                Font: =Font.'Segoe UI'
+                Height: =43
+                Italic: =true
+                OnSelect: =Select(Parent)
+                Overflow: =Overflow.Scroll
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =8
+                Text: |-
+                    =ThisItem.PostedUserID.LoginName & ": " &ThisItem.Query
+                VerticalAlign: =VerticalAlign.Top
+                Width: =590
+                X: =16
+                Y: =90
+                ZIndex: =2
+
+            Icon12_3 As icon.Trash:
+                Color: =RGBA(39, 67, 125, 1)
+                Height: =30
+                Icon: =Icon.Reset
+                OnSelect: |
+                    =UpdateContext({varReplyToMessage:true});
+                Tooltip: ="Reply"
+                Width: =30
+                X: =586
+                Y: =97
+                ZIndex: =4
+
+            Title3_24 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =RGBA(116, 116, 116, 1)
+                DisabledColor: =RGBA(186, 186, 186, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: = FontWeight.Normal
+                Height: =74
+                OnSelect: =Select(Parent)
+                Overflow: =Overflow.Scroll
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =9
+                Text: =First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=ThisItem.ItemID.TipsandTricksCollaboration)).TipsTricks
+                VerticalAlign: =VerticalAlign.Top
+                Width: =591
+                X: =16
+                Y: =6
+                ZIndex: =5
+
+            TextInput6_1 As text:
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Height: =111
+                HintText: ="Type your Reply"
+                Italic: =true
+                Mode: =TextMode.MultiLine
+                OnSelect: =Select(Parent)
+                Size: =9
+                Visible: =varReplyToMessage && ThisItem.IsSelected && If(varOption=5, true, false)
+                Width: =570
+                X: =12
+                Y: =16
+                ZIndex: =6
+
+            Icon14_1 As icon.Send:
+                Color: =RGBA(39, 67, 125, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =30
+                Icon: =Icon.Send
+                OnSelect: |-
+                    =Select(Parent);
+                    Patch(TipsMessages,First(Filter(TipsMessages,TipsMessage=ThisItem.TipsMessage)),{ReplyMessage:TextInput6_1.Text,CustomStatus:"Closed"});
+                    Refresh(TipsMessages);
+                    Reset(TextInput6_1);
+                    UpdateContext({varReplyToMessage:false});
+                Tooltip: ="Post Reply"
+                Visible: =varReplyToMessage && ThisItem.IsSelected && If(varOption=5, true, false)
+                Width: =30
+                X: =586
+                Y: =97
+                ZIndex: =7
+
+        Label3_44 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =36
+            Size: =14
+            Text: ="Replies received on my posts"
+            Visible: =If(varOption=5, true, false)
+            Width: =392
+            X: =805
+            Y: =150
+            ZIndex: =61
+
+    Loading_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =105
+
+        Shadowed_Bck_1 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Visible: =varLoadingSpinner
+            Width: =1366
+            ZIndex: =105
+
+        Spinner_1 As image:
+            Image: |
+                ="data:image/svg+xml;utf8, " & EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; background: none; display: block; shape-rendering: auto;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'>
+                <circle cx='50' cy='50' r='32' stroke-width='8' stroke='#00aab4' stroke-dasharray='50.26548245743669 50.26548245743669' fill='none' stroke-linecap='round'>
+                  <animateTransform attributeName='transform' type='rotate' dur='1s' repeatCount='indefinite' keyTimes='0;1' values='0 50 50;360 50 50'></animateTransform>
+                </circle>
+                <circle cx='50' cy='50' r='23' stroke-width='8' stroke='#f4f4f4' stroke-dasharray='36.12831551628262 36.12831551628262' stroke-dashoffset='36.12831551628262' fill='none' stroke-linecap='round'>
+                  <animateTransform attributeName='transform' type='rotate' dur='1s' repeatCount='indefinite' keyTimes='0;1' values='0 50 50;-360 50 50'></animateTransform>
+                </circle>
+                <!-- [ldio] generated by https://loading.io/ --></svg>")
+            Visible: =varLoadingSpinner
+            X: =698
+            Y: =398
+            ZIndex: =106
+
+    ResponsesScreen_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =105
+
+        "Gallery5_13 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            '#CopilotOverlayLabel': ="Filtered"
+            BorderColor: =RGBA(255, 255, 255, 1)
+            DelayItemLoading: =true
+            Height: =528
+            Items: =Filter(TipsMessages,PostedUserID.Registrations_Dv=varCrrUser.Registrations_Dv && CustomStatus="Closed")
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =197
+            Visible: =If(varOption=6, true, false)
+            Width: =632
+            X: =704
+            Y: =190
+            ZIndex: =62
+
+            Button6_9 As button:
+                BorderThickness: =0
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                Fill: =If(ThisItem.IsSelected,RGBA(255, 255, 255, 1),RGBA(255,255, 255, .95))
+                Font: =Font.'Segoe UI'
+                Height: =196
+                HoverBorderColor: =
+                HoverFill: =RGBA(255, 255, 255, 1)
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =
+                RadiusBottomLeft: =15
+                RadiusBottomRight: =15
+                RadiusTopLeft: =15
+                RadiusTopRight: =15
+                Text: =""
+                Width: =610
+                ZIndex: =1
+
+            Title3_22 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =RGBA(116, 116, 116, 1)
+                DisabledColor: =RGBA(186, 186, 186, 1)
+                Font: =Font.'Segoe UI'
+                Height: =50
+                OnSelect: =Select(Parent)
+                Overflow: =Overflow.Scroll
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =8
+                Text: |-
+                    =ThisItem.PostedUserID.LoginName & ": " & ThisItem.Query
+                VerticalAlign: =VerticalAlign.Top
+                Width: =577
+                X: =16
+                Y: =56
+                ZIndex: =2
+
+            Title3_21 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(186, 186, 186, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: = FontWeight.Normal
+                Height: =50
+                Italic: =true
+                OnSelect: =Select(Parent)
+                Overflow: =Overflow.Scroll
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =9
+                Text: =First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=ThisItem.ItemID.TipsandTricksCollaboration)).TipsTricks
+                VerticalAlign: =VerticalAlign.Top
+                Width: =577
+                X: =16
+                Y: =6
+                ZIndex: =4
+
+            Title3_23 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =RGBA(116, 116, 116, 1)
+                DisabledColor: =RGBA(186, 186, 186, 1)
+                Font: =Font.'Segoe UI'
+                Height: =50
+                OnSelect: =Select(Parent)
+                Overflow: =Overflow.Scroll
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =8
+                Text: |-
+                    =ThisItem.PostedUserID.LoginName & ": " & ThisItem.ReplyMessage
+                VerticalAlign: =VerticalAlign.Top
+                Width: =573
+                X: =20
+                Y: =113
+                ZIndex: =5
+
+        Label3_43 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Size: =14
+            Text: ="Answers to my queries"
+            Visible: =If(varOption=6, true, false)
+            Width: =392
+            X: =776
+            Y: =150
+            ZIndex: =63
+
+    NewTeam_Reg_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =106
+
+        Rectangle1_5 As rectangle:
+            Fill: |-
+                =//RGBA(56, 96, 178, 20%)
+                RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Visible: =varNewTeamScreen
+            Width: =1366
+            ZIndex: =72
+
+        HtmlText1_30 As htmlViewer:
+            Height: =422
+            HtmlText: |-
+                ="<div style=' background-color:rgba(" & R & "," & G & "," & B &"," & A & "); 
+                box-shadow: 1px 2px 22px 0px rgba(139,147,232,1);
+                margin: 20px; 
+                width: 500px; 
+                height: 330px; 
+                border-radius: 30px'>
+                </div>"
+            Visible: =varNewTeamScreen
+            Width: =560
+            X: =427
+            Y: =210
+            ZIndex: =73
+
+        Form2_2 As form:
+            DataSource: =TeamRegistrationss
+            Height: =172
+            NumberOfColumns: =1
+            Visible: =varNewTeamScreen
+            Width: =478
+            X: =458
+            Y: =313
+            ZIndex: =74
+
+            Name_DataCard1_1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="crc74_name"
+                Default: =ThisItem.Name
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@TeamRegistrationss],DataSourceInfo.DisplayName,crc74_name)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@TeamRegistrationss], DataSourceInfo.MaxLength, crc74_name)
+                Required: =true
+                Update: =DataCardValue12_1.Text
+                Width: =478
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+                DataCardKey15_1 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    Text: |-
+                        =//Parent.DisplayName
+                        "Team Name"
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue12_1.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue12_1 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =12
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey15_1.X + DataCardKey15_1.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage13_1 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue12_1.Y + DataCardValue12_1.Height
+                    ZIndex: =3
+
+                StarVisible13_1 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey15_1.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey15_1.Y
+                    ZIndex: =4
+
+            TeamAvtar_DataCard3_1 As typedDataCard.addLargePictureCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="crc74_teamavtar"
+                Default: =ThisItem.TeamAvtar
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@TeamRegistrationss],DataSourceInfo.DisplayName,crc74_teamavtar)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =Image7_5.Image
+                Width: =478
+                X: =0
+                Y: =1
+                ZIndex: =1
+
+                DataCardKey16_1 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    Text: ="Team Pic"
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (AddPicture5_1.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                Image7_5 As image:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =AddPicture5_1.Height
+                    Image: =If(IsBlank(AddPicture5_1.Media), Parent.Default, AddPicture5_1.Media)
+                    Tooltip: =Parent.DisplayName
+                    Width: =AddPicture5_1.Width
+                    X: =AddPicture5_1.X
+                    Y: =AddPicture5_1.Y
+                    ZIndex: =2
+
+                AddPicture5_1 As addMedia:
+                    Height: =91
+                    Width: =159
+                    X: =197
+                    Y: =10
+                    ZIndex: =3
+
+                ErrorMessage14_1 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =Image7_5.Y + Image7_5.Height
+                    ZIndex: =4
+
+                StarVisible14_1 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey16_1.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey16_1.Y
+                    ZIndex: =5
+
+            OwnerID_DataCard1_1 As typedDataCard.comboBoxEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="crc74_OwnerID"
+                Default: =ThisItem.OwnerID
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@TeamRegistrationss],DataSourceInfo.DisplayName,crc74_OwnerID)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =DataCardValue13_1.Selected
+                Visible: =false
+                Width: =478
+                X: =0
+                Y: =2
+                ZIndex: =1
+
+                DataCardKey17_1 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue13_1.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue13_1 As combobox:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    DefaultSelectedItems: =varCrrUser
+                    DisplayFields: =["crc74_name"]
+                    DisplayMode: =Parent.DisplayMode
+                    Items: =Choices([@TeamRegistrationss].crc74_OwnerID)
+                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                    SearchFields: =["crc74_name"]
+                    SearchItems: =Search(Choices([@TeamRegistrationss].crc74_OwnerID),DataCardValue13_1.SearchText,crc74_name)
+                    SelectMultiple: =false
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey17_1.X + DataCardKey17_1.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage15_1 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue13_1.Y + DataCardValue13_1.Height
+                    ZIndex: =3
+
+                StarVisible15_1 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey17_1.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey17_1.Y
+                    ZIndex: =4
+
+        btn_Start_42 As button:
+            BorderColor: =_theme.ColorPrimary
+            BorderThickness: =1
+            Color: =RGBA(50, 86, 160, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =Set(varRecordDK,Blank());
+                UpdateContext({varLoadingSpinner:true});
+                If(!IsBlank(DataCardValue12_1.Text),If(IsBlank(First(Filter(TeamRegistrationss,Name=DataCardValue12_1.Text))),Set(varRecordDK, Patch(TeamRegistrationss,Defaults(TeamRegistrationss),{Name:DataCardValue12_1.Text,OwnerID:varCrrUser,TeamAvtar:Image7_5.Image,MemberCount:1})),Notify("Invalid Team Name, User another name!",NotificationType.Error)));
+                If(!IsBlank(varRecordDK),
+                    Notify("New team has been created!",NotificationType.Success) && UpdateContext({varRegScreenHide:false}),
+                    Notify("Failed to create team, Try again !", NotificationType.Error)
+                );
+                //UpdateContext({varUserID:varCrrUser.Registrations_Dv});
+                If(!IsBlank(varRecordDK),Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{TeamID:varRecordDK,ErM:"Yes",NotificationST:"Yes"}));
+                Refresh(Registrations_Dvs);
+                Set(varCrrUser,First(Filter(Registrations_Dvs,LoginName=varlgname)));
+                If(!IsBlank(varRecordDK),UpdateContext({varNewTeamScreen:false}));
+                If(!IsBlank(varRecordDK),UpdateContext({varShowTeamAvtars:false}));
+                If(!IsBlank(varRecordDK),Patch(AIUserScores,Defaults(AIUserScores),{Name:"UserScore",UserID:varCrrUser,Processed:"No",Score:1000,TeamID:varCrrUser.TeamID}));
+                If(!IsBlank(varRecordDK),Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"Congratulations! You have joined a team !",UserID:varCrrUser,IsRead:"No"}));
+                Set(varRecordDK,Blank());
+                Set(varTeamAvtar,varCrrUser.TeamID.TeamAvtar);
+                If(!IsBlank(varCrrUser.TeamID),UpdateContext({varOption:1}),UpdateContext({varOption:0}));
+                UpdateContext({varLoadingSpinner:false});
+            PressedFill: =RGBA(0, 134, 208, 1)
+            Size: =14
+            Text: ="CREATE TEAM"
+            Visible: =varNewTeamScreen
+            X: =627
+            Y: =498
+            ZIndex: =75
+
+        "Gallery2_5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            '#CopilotOverlayLabel': ="Filtered"
+            BorderStyle: =BorderStyle.Dotted
+            BorderThickness: =1
+            DelayItemLoading: =true
+            Fill: =RGBA(1,2,3,10%) //RGBA(50, 86, 160, 1)
+            Height: =539
+            Items: =Filter(Avtars,TeamsImg=1)
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            OnSelect: |-
+                =UpdateContext({varShowTeamAvtars:false})
+            TemplatePadding: =0
+            TemplateSize: =97
+            Visible: |
+                =varNewTeamScreen && varShowTeamAvtars
+            Width: =108
+            X: =948
+            Y: =125
+            ZIndex: =76
+
+            Image2_5 As image:
+                Height: =72
+                Image: =ThisItem.Pic
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =72
+                X: =9
+                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            NextArrow2_5 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(166, 166, 166, 1)
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                DisabledColor: =RGBA(119, 119, 119, 1)
+                Height: =50
+                Icon: =Icon.ChevronRight
+                OnSelect: |-
+                    =Select(Parent);
+                    UpdateContext({varShowTeamAvtars:false})
+                PaddingBottom: =2
+                PaddingLeft: =2
+                PaddingRight: =2
+                PaddingTop: =2
+                Tooltip: ="View item details"
+                Width: =27
+                X: =81
+                Y: =23
+                ZIndex: =4
+
+            Separator2_5 As rectangle:
+                BorderColor: =RGBA(0, 0, 255, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =2
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - Self.Height
+                ZIndex: =5
+
+            Rectangle2_5 As rectangle:
+                Height: =Parent.TemplateHeight - Separator2_5.Height
+                OnSelect: =Select(Parent)
+                Visible: =ThisItem.IsSelected
+                Width: =4
+                ZIndex: =6
+
+        NextArrow1_6 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            DisabledColor: =RGBA(119, 119, 119, 1)
+            Height: =50
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =UpdateContext({varNewTeamScreen:false});
+                UpdateContext({varShowTeamAvtars:false})
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Tooltip: ="Cancel"
+            Visible: =varNewTeamScreen
+            Width: =50
+            X: =864
+            Y: =251
+            ZIndex: =81
+
+    Top10Teams_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =106
+
+        "Gallery5_6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            '#CopilotOverlayLabel': ="Filtered"
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
+            DelayItemLoading: =true
+            DisplayMode: =DisplayMode.Disabled
+            Height: =410
+            Items: =If(IsBlank(TextInput1_1.Text),FirstN(Sort(TeamRegistrationss,Points,SortOrder.Descending),10),FirstN(Sort(Filter(TeamRegistrationss ,TextInput1_1.Text in Name ) ,Points,SortOrder.Descending),10))
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =49
+            Visible: =If(varOption=3, true, false)
+            Width: =626
+            X: =702
+            Y: =291
+            ZIndex: =43
+
+            Title3_8 As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =26
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =11
+                Text: =ThisItem.Name
+                VerticalAlign: =VerticalAlign.Top
+                Width: =147
+                X: =71
+                Y: =15
+                ZIndex: =2
+
+            Subtitle3_13 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =24
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =11
+                Text: =ThisItem.Points
+                VerticalAlign: =VerticalAlign.Top
+                Width: =87
+                X: =364
+                Y: =15
+                ZIndex: =3
+
+            Separator3_6 As rectangle:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =1
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - Self.Height
+                ZIndex: =5
+
+            Subtitle3_14 As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =24
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =11
+                Text: =First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.OwnerID.Registrations_Dv)).LoginName
+                VerticalAlign: =VerticalAlign.Top
+                Width: =87
+                X: =488
+                Y: =15
+                ZIndex: =8
+
+            Subtitle3_12 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =24
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =11
+                Text: =CountRows(Filter(Registrations_Dvs,TeamID.TeamRegistrationssN=ThisItem.TeamRegistrationssN))
+                VerticalAlign: =VerticalAlign.Top
+                Width: =87
+                X: =232
+                Y: =15
+                ZIndex: =9
+
+            Image18_1 As image:
+                Height: =35
+                Image: =ThisItem.TeamAvtar
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Width: =35
+                X: =26
+                Y: =7
+                ZIndex: =10
+
+        Label3_27 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =14
+            Size: =12
+            Text: ="Team Name"
+            Visible: =If(varOption=3, true, false)
+            X: =696
+            Y: =271
+            ZIndex: =44
+
+        Label3_29 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =14
+            Text: ="Score"
+            Visible: =If(varOption=3, true, false)
+            Width: =100
+            X: =1061
+            Y: =271
+            ZIndex: =45
+
+        Label3_30 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =14
+            Size: =12
+            Text: ="Team Owner"
+            Visible: =If(varOption=3, true, false)
+            X: =1150
+            Y: =271
+            ZIndex: =46
+
+        Label3_28 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =14
+            Text: ="Team Count"
+            Visible: =If(varOption=3, true, false)
+            Width: =120
+            X: =915
+            Y: =271
+            ZIndex: =47
+
+        Label3_24 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            Size: =14
+            Text: ="Search for a Team"
+            Visible: =If(varOption=3, true, false)
+            Width: =200
+            X: =918
+            Y: =158
+            ZIndex: =48
+
+        TextInput1_1 As text:
+            Default: =""
+            Height: =32
+            HintText: ="Enter the team name to search"
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Visible: =If(varOption=3, true, false)
+            X: =710
+            Y: =200
+            ZIndex: =49
+
+    Chatbox_1 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =106
+
+        Icon8_2 As icon.Help:
+            Color: =RGBA(39, 67, 125, 1)
+            Height: =50
+            Icon: =Icon.Support
+            OnSelect: |-
+                =UpdateContext({varChatbot:!varChatbot})
+            Tooltip: |-
+                ="I'm IKIMO :) , the super energetic chatbot  for  your guidance."
+            Width: =50
+            X: =1265
+            Y: =35
+            ZIndex: =88
+
+        HtmlText3_3 As htmlViewer:
+            Height: =643
+            HtmlText: |-
+                ="<div style='background-color:rgba(" & 240 & "," & 248 & "," & 255 &"," & 1 & ");
+                box-shadow: 1px 2px 22px 0px rgba(139,147,232,1);
+                margin: 20px; 
+                width: 590px; 
+                height: 580px; 
+                border-radius: 15px'>
+                </div>"
+            Visible: =varChatbot
+            Width: =663
+            X: =703
+            Y: =125
+            ZIndex: =89
+
+        "Chatbot1_1 As 'Chatbot (preview)'":
+            DisplayMode: =DisplayMode.Edit
+            EnvironmentId: ="74c65043-4b35-4f80-be3d-75ebc03a2e49"
+            HeaderLabel: ="Sail23 Bot"
+            Height: =569
+            SchemaName: ="crc74_sail23"
+            Visible: =varChatbot
+            Width: =572
+            X: =736
+            Y: =158
+            ZIndex: =90
+
+        Icon17_1 As icon.Cancel:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =20
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({varChatbot:false})
+            Visible: =varChatbot
+            Width: =20
+            X: =1245
+            Y: =173
+            ZIndex: =91
+
+        Button4 As button:
+            BorderThickness: =0
+            Fill: =RGBA(56, 96, 178, 0.4)
+            Height: =90
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: |-
+                =UpdateContext({varChatbot:!varChatbot})
+            PressedFill: =ColorFade(Self.Fill, 20%)
+            RadiusBottomLeft: =100
+            RadiusBottomRight: =100
+            RadiusTopLeft: =100
+            RadiusTopRight: =100
+            Text: =""
+            Tooltip: |-
+                ="Launch IKIMO :) , the APPs help chat bot"
+            Width: =90
+            X: =1245
+            Y: =18
+            ZIndex: =93
+
+    UserListGroup_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =107
+
+        Shadowed_Bck_2 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Visible: =varUserList
+            Width: =1366
+            ZIndex: =55
+
+        Rectangle15_1 As rectangle:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
+            Fill: =RGBA( R, G , B, .9 )
+            Height: =493
+            Visible: =varUserList && If(varOption=4, true, false)
+            Width: =411
+            X: =499
+            Y: =197
+            ZIndex: =56
+
+        "Gallery7_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            '#CopilotOverlayLabel': ="Filtered"
+            DelayItemLoading: =true
+            Height: =405
+            Items: =If(!IsBlank(TextInput7_1.Text),Filter(Registrations_Dvs,TextInput7_1.Text in LoginName), Registrations_Dvs)
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            OnSelect: |-
+                =Select(Parent);
+                Patch(CustomLeaderBoard,Defaults(CustomLeaderBoard),{Title:"CusLeader",UserID:varCrrUser.ID,MyLeaderMember:ThisItem.ID});
+                Refresh(CustomLeaderBoard);
+                UpdateContext({varUserList:false});
+                Reset(TextInput7_1);
+            TemplatePadding: =0
+            TemplateSize: =56
+            Visible: =varUserList && If(varOption=4, true, false)
+            Width: =377
+            X: =516
+            Y: =276
+            ZIndex: =57
+
+            Image11_1 As image:
+                Height: =50
+                Image: =ThisItem.UserAvtar
+                OnSelect: =
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =50
+                X: =9
+                Y: =6
+                ZIndex: =1
+
+            Title6_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(186, 186, 186, 1)
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =Self.Size * 1.8
+                OnSelect: =
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =14
+                Text: =ThisItem.LoginName
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Parent.TemplateWidth - 173
+                X: =99
+                Y: =16
+                ZIndex: =2
+
+            NextArrow4_1 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                DisabledColor: =RGBA(119, 119, 119, 1)
+                Height: =50
+                Icon: =Icon.AddUser
+                OnSelect: |
+                    =
+                    Patch(CustomLeaderBoards,Defaults(CustomLeaderBoards),{Name:"CusLeader",UserID:varCrrUser,MyLeaderMember:ThisItem,LeaderUID:ThisItem.Registrations_Dv});
+                    Refresh(CustomLeaderBoards);
+                    UpdateContext({varUserList:false});
+                    Refresh(Registrations_Dvs);
+                    Reset(TextInput7_1);
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                Tooltip: ="Click to Select the User"
+                Width: =50
+                X: =303
+                Y: =6
+                ZIndex: =4
+
+            Separator6_1 As rectangle:
+                BorderColor: =RGBA(0, 0, 255, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =1
+                OnSelect: =
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - Self.Height
+                ZIndex: =5
+
+            Rectangle14_1 As rectangle:
+                Height: =Parent.TemplateHeight - Separator6_1.Height
+                OnSelect: =
+                Visible: =ThisItem.IsSelected
+                Width: =4
+                ZIndex: =6
+
+        TextInput7_1 As text:
+            Default: =""
+            Height: =35
+            HintText: ="Search for Loginname to add"
+            Italic: =true
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Size: =12
+            Visible: =varUserList && If(varOption=4, true, false)
+            X: =516
+            Y: =225
+            ZIndex: =58
+
+        Icon10_1 As icon.CancelBadge:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =30
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =UpdateContext({varUserList:false});
+                Reset(TextInput7_1);
+            Visible: =varUserList && If(varOption=4, true, false)
+            Width: =30
+            X: =858
+            Y: =226
+            ZIndex: =59
+
+    JoinATeam_Reg_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =108
+
+        Rectangle1_4 As rectangle:
+            Fill: |-
+                =//RGBA(56, 96, 178, 20%)
+                RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Visible: =varJointeam
+            Width: =1366
+            ZIndex: =77
+
+        HtmlText1_27 As htmlViewer:
+            Height: =676
+            HtmlText: |-
+                ="<div style=' background-color:rgba(" & R & "," & G & "," & B &"," & A & "); 
+                box-shadow: 1px 2px 22px 0px rgba(139,147,232,1);
+                margin: 20px; 
+                width: 565px; 
+                height: 620px; 
+                border-radius: 30px'>
+                </div>"
+            Visible: =varJointeam
+            Width: =627
+            X: =408
+            Y: =44
+            ZIndex: =78
+
+        "Gallery1_7 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            '#CopilotOverlayLabel': ="Filtered"
+            DelayItemLoading: =true
+            Height: =445
+            Items: =If(!IsBlank(TextInput5_2.Text), Filter(Filter(TeamRegistrationss,MemberCount<20),TextInput5_2.Text in Name ), Filter(TeamRegistrationss,MemberCount<20))
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =52
+            Visible: =varJointeam
+            Width: =550
+            X: =437
+            Y: =187
+            ZIndex: =79
+
+            Title1_5 As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(186, 186, 186, 1)
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =24
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: =ThisItem.Name
+                VerticalAlign: =VerticalAlign.Top
+                X: =71
+                Y: =14
+                ZIndex: =2
+
+            Subtitle1_2 As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =25
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.OwnerID.Registrations_Dv)).LoginName
+                VerticalAlign: =VerticalAlign.Top
+                Width: =135
+                X: =323
+                Y: =13
+                ZIndex: =3
+
+            NextArrow1_5 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                DisabledColor: =RGBA(119, 119, 119, 1)
+                Height: =45
+                Icon: =Icon.CheckBadge
+                OnSelect: |
+                    =Select(Parent);
+                    UpdateContext({varTeamMemberCount:ThisItem.MemberCount});
+                    UpdateContext({varTeamMemberCount:varTeamMemberCount+1});
+                    UpdateContext({varLoadingSpinner:true});
+                    UpdateContext({varUserID:varCrrUser.Registrations_Dv});
+                    Set(varRecordT,Blank());
+                    Set(varRecordT,Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{TeamID:ThisItem,ErM:"Yes"}));
+                    Patch(TeamRegistrationss,ThisItem,{MemberCount:varTeamMemberCount});
+                    Refresh(TeamRegistrationss);
+                    If(!IsBlank(varRecordT),Notify("Joined team Successfully !",NotificationType.Information),Notify("Failed to Join Team, Try again !",NotificationType.Error));
+                    Refresh(Registrations_Dvs);
+                    Set(varCrrUser,First(Filter(Registrations_Dvs,LoginName=varlgname)));
+                    UpdateContext({varJointeam:false});
+                    Refresh(TeamRegistrationss);
+                    Set(varTeamAvtar,varCrrUser.TeamID.TeamAvtar);
+                    If(!IsBlank(varRecordT),Patch(AIUserScores,Defaults(AIUserScores),{Name:"UserScore",UserID:varCrrUser,Processed:"No",Score:1000,TeamID:varCrrUser.TeamID}));
+                    
+                    If(!IsBlank(varRecordT),Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"Congratulations! You have joined a team !",UserID:varCrrUser,IsRead:"No"}));
+                    
+                    If(!IsBlank(varCrrUser.TeamID),UpdateContext({varOption:1}),UpdateContext({varOption:0}));
+                    UpdateContext({varLoadingSpinner:false});
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                Tooltip: ="Click to select the team"
+                Width: =45
+                X: =486
+                Y: =1
+                ZIndex: =4
+
+            Separator1_2 As rectangle:
+                BorderColor: =RGBA(0, 0, 255, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =2
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - Self.Height
+                ZIndex: =5
+
+            Title1_4 As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(186, 186, 186, 1)
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =22
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: =CountRows(Filter(Registrations_Dvs,TeamID.TeamRegistrationssN=ThisItem.TeamRegistrationssN))
+                Tooltip: ="Team Count"
+                VerticalAlign: =VerticalAlign.Top
+                Width: =22
+                X: =249
+                Y: =17
+                ZIndex: =9
+
+            Icon8_3 As icon.Information:
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =30
+                Icon: =Icon.Information
+                OnSelect: |-
+                    =Select(Parent);
+                    UpdateContext({varSelectedTeam:ThisItem.TeamRegistrationssN});
+                    UpdateContext({VarShowMemberLookup:!VarShowMemberLookup})
+                Tooltip: ="Show Members"
+                Width: =30
+                X: =275
+                Y: =12
+                ZIndex: =10
+
+            "Gallery4_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                '#CopilotOverlayLabel': ="Filtered"
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =1
+                DelayItemLoading: =true
+                Fill: =RGBA(128, 128, 128, 1)
+                Height: =150
+                Items: =Filter(Registrations_Dvs,TeamID.TeamRegistrationssN=varSelectedTeam)
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplatePadding: =0
+                TemplateSize: =40
+                Visible: =If(ThisItem.TeamRegistrationssN=varSelectedTeam,VarShowMemberLookup && true,VarShowMemberLookup && false)
+                Width: =183
+                X: =305
+                Y: =25
+                ZIndex: =11
+
+                Image10_2 As image:
+                    Height: =30
+                    Image: =ThisItem.UserAvtar
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Width: =30
+                    X: =9
+                    Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                Title5_2 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(186, 186, 186, 1)
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(128, 128, 128, 1)
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =10
+                    Text: =ThisItem.LoginName
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =124
+                    X: =50
+                    Y: =5
+                    ZIndex: =2
+
+                Separator5_2 As rectangle:
+                    BorderColor: =RGBA(0, 0, 255, 1)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =1
+                    OnSelect: =Select(Parent)
+                    Width: =Parent.TemplateWidth
+                    Y: =Parent.TemplateHeight - Self.Height
+                    ZIndex: =5
+
+            Image3_1 As image:
+                Height: =40
+                Image: =ThisItem.TeamAvtar
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =90
+                RadiusBottomRight: =90
+                RadiusTopLeft: =90
+                RadiusTopRight: =90
+                Width: =40
+                X: =18
+                Y: =7
+                ZIndex: =12
+
+        NextArrow1_4 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            DisabledColor: =RGBA(119, 119, 119, 1)
+            Height: =50
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =UpdateContext({varJointeam:false});
+                UpdateContext({VarShowMemberLookup:false});
+                Refresh(TeamRegistrationss);
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Tooltip: ="Cancel"
+            Visible: =varJointeam
+            Width: =50
+            X: =906
+            Y: =85
+            ZIndex: =80
+
+        TextInput5_2 As text:
+            Default: =""
+            Height: =35
+            HintText: ="Type Team name to search"
+            Italic: =true
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Size: =12
+            Visible: =varJointeam
+            Width: =336
+            X: =472
+            Y: =108
+            ZIndex: =82
+
+    Profiles As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =109
+
+        Button7_4 As button:
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =153
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: =""
+            Width: =430
+            X: =184
+            Y: =25
+            ZIndex: =26
+
+        Label23_4 As label:
+            Color: =RGBA(118, 0, 0, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =39
+            Size: =18
+            Text: ="Hello " & varlgname & " ! " 
+            Tooltip: |-
+                ="Score: " & varCrrUser.Scores 
+            Width: =231
+            X: =310
+            Y: =32
+            ZIndex: =27
+
+        btn_Start_15 As button:
+            BorderColor: =_theme.ColorPrimary
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Fill: =RGBA(0,168,240,1) //RGBA(251, 188, 159, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            Height: =45
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =UpdateContext({varJointeam:true})
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =30
+            Size: =14
+            Text: ="JOIN A TEAM"
+            Tooltip: ="You can create or join a team only once. "
+            Visible: =IsBlank(varCrrUser.TeamID)
+            Width: =221
+            X: =298
+            Y: =75
+            ZIndex: =28
+
+        Image13_2 As image:
+            Image: =varUserAvtar
+            ImagePosition: =ImagePosition.Stretch
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Tooltip: |-
+                ="Score: " & varCrrUser.Scores
+            X: =191
+            Y: =25
+            ZIndex: =29
+
+        Label23_5 As label:
+            Color: =RGBA(118, 0, 0, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =33
+            Size: =12
+            Text: =First(Filter(TeamRegistrationss,TeamRegistrationssN=varCrrUser.TeamID.TeamRegistrationssN)).Name & "! "
+            Visible: =!IsBlank(varCrrUser.TeamID)
+            Width: =128
+            X: =299
+            Y: =120
+            ZIndex: =30
+
+        Image13_3 As image:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Height: =35
+            Image: =varTeamAvtar  //First(Filter(TeamRegistrationss,TeamRegistrationssN=varCrrUser.TeamID.TeamRegistrationssN)).TeamAvtar
+            ImagePosition: =ImagePosition.Stretch
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Tooltip: |-
+                ="Score: " & varCrrUser.Scores  & " & My Team Score : "& First(Filter(TeamRegistrationss,TeamRegistrationssN=varCrrUser.TeamID.TeamRegistrationssN)).Points & " ! "
+            Width: =35
+            X: =261
+            Y: =120
+            ZIndex: =37
+
+        btn_Start_38 As button:
+            BorderColor: =_theme.ColorPrimary
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Fill: =RGBA(0,168,240,1) //RGBA(251, 188, 159, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            Height: =45
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =UpdateContext({varNewTeamScreen:true});
+                NewForm(Form2_2)
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =30
+            Size: =14
+            Text: ="CREATE A TEAM"
+            Tooltip: ="You can create or join a team only once."
+            Visible: =IsBlank(varCrrUser.TeamID)
+            Width: =221
+            X: =298
+            Y: =133
+            ZIndex: =38
+
+    RightPane As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =109
+
+        HtmlText9 As htmlViewer:
+            Height: =735
+            HtmlText: |-
+                ="<div style='background-color:rgba(" & R & "," & G & "," & B &"," & 0.8 & ");
+                border: 1px solid #BFBFBF;
+                //box-shadow: 1px 2px 22px 0px rgba(139,147,232,1);
+                margin: 20px; 
+                width: 402px; 
+                height: 679px; 
+                border-radius: 30px'>
+                </div>"
+            Visible: =!IsBlank(varCrrUser.TeamID)
+            Width: =470
+            X: =662
+            Y: =33
+            ZIndex: =23
+
+        HtmlText10 As htmlViewer:
+            Height: =166
+            HtmlText: |-
+                ="<div style='background-color:rgba(" & R & "," & G & "," & B &"," & 1 & ");
+                //border: 1px solid #BFBFBF;
+                //box-shadow: 1px 2px 22px 0px rgba(139,147,232,1);
+                margin-top:20px;
+                margin-left: 20px; 
+                width: 70px;
+                
+                //margin-left: 85px; 
+                //width: 60px; 
+                
+                //margin-left: 140px; 
+                //width: 80px; 
+                
+                //margin-left: 200px; 
+                //width: 80px;
+                
+                //margin-left: 260px; 
+                //width: 80px;
+                
+                //margin-left: 310px; 
+                //width: 70px;
+                
+                height: 130px; 
+                border-radius: 30px'>
+                </div>"
+            Visible: =!IsBlank(varCrrUser.TeamID)
+            Width: =120
+            X: =If(OptionXaxis=0,664,OptionXaxis)
+            Y: =34
+            ZIndex: =24
+
+        HtmlText11 As htmlViewer:
+            Height: =666
+            HtmlText: |-
+                ="<div style='background-color:rgba(" & R & "," & G & "," & B &"," & A & ");
+                //border: 1px solid #BFBFBF;
+                //box-shadow: 1px 2px 22px 0px rgba(139,147,232,1);
+                margin: 20px; 
+                width: 660px; 
+                height: 610px; 
+                border-radius: 30px'>
+                
+                </div>"
+            Visible: =!IsBlank(varCrrUser.TeamID)
+            Width: =704
+            X: =664
+            Y: =102
+            ZIndex: =25
+
+        Icon6_6 As icon.Message:
+            BorderColor: =RGBA(241, 244, 249, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =39
+            Icon: =Icon.Message
+            OnSelect: |-
+                =UpdateContext({varChat:true});
+                UpdateContext({varMyTeamScore:false});
+                UpdateContext({varOption:1});
+                UpdateContext({OptionXaxis: 664});
+            Tooltip: ="My teams conversation !!! "
+            Visible: =!IsBlank(varCrrUser.TeamID)
+            Width: =35
+            X: =706
+            Y: =74
+            ZIndex: =31
+
+        Icon6_8 As icon.Message:
+            BorderColor: =RGBA(241, 244, 249, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =39
+            Icon: =Icon.Search
+            OnSelect: |-
+                =Concurrent(
+                    UpdateContext({varTop10Teams:true}),
+                    UpdateContext({varOption:3}),
+                    UpdateContext({OptionXaxis: 796})
+                )
+            Tooltip: ="Find a team by name and can see the owner and score !!! "
+            Visible: =!IsBlank(varCrrUser.TeamID)
+            Width: =35
+            X: =842
+            Y: =74
+            ZIndex: =32
+
+        Icon6_7 As icon.Message:
+            BorderColor: =RGBA(241, 244, 249, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =39
+            Icon: =Icon.Ribbon
+            OnSelect: |-
+                =Concurrent(
+                    UpdateContext({varChat:false}),
+                    UpdateContext({varMyTeamScore:true}),
+                    UpdateContext({varOption:2}),
+                    UpdateContext({OptionXaxis: 730})
+                )
+            Tooltip: ="My team members Scores !!! "
+            Visible: =!IsBlank(varCrrUser.TeamID)
+            Width: =35
+            X: =772
+            Y: =74
+            ZIndex: =33
+
+        Icon6_9 As icon.Message:
+            BorderColor: =RGBA(241, 244, 249, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =39
+            Icon: =Icon.AddUser
+            OnSelect: |-
+                =Concurrent(
+                    Refresh(CustomLeaderBoards),
+                    Refresh(Registrations_Dvs)
+                );
+                Concurrent(
+                    UpdateContext({varCustomTeamScore:true}),
+                    UpdateContext({varOption:4}),
+                    UpdateContext({OptionXaxis: 862})
+                )
+            Tooltip: ="Custom Leaderboard !!! to track score"
+            Visible: =!IsBlank(varCrrUser.TeamID)
+            Width: =35
+            X: =906
+            Y: =74
+            ZIndex: =34
+
+        Icon6_10 As icon.Message:
+            BorderColor: =RGBA(241, 244, 249, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =39
+            Icon: =Icon.DocumentWithContent
+            OnSelect: |-
+                =Refresh(TipsMessages);
+                Concurrent(
+                    UpdateContext({varShowRequests:true}),
+                    UpdateContext({varOption:5}),
+                    UpdateContext({OptionXaxis: 928})
+                )
+            Tooltip: ="View queries from others users on my post"
+            Visible: =!IsBlank(varCrrUser.TeamID)
+            Width: =35
+            X: =970
+            Y: =74
+            ZIndex: =35
+
+        Icon6_11 As icon.Message:
+            BorderColor: =RGBA(241, 244, 249, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =39
+            Icon: =Icon.LogJournal
+            OnSelect: |-
+                =Concurrent(
+                    UpdateContext({varShowResponses:true}),
+                    UpdateContext({varOption:6}),
+                    UpdateContext({OptionXaxis: 994})
+                )
+            Tooltip: ="Answers to my queries posted to others"
+            Visible: =!IsBlank(varCrrUser.TeamID)
+            Width: =35
+            X: =1036
+            Y: =74
+            ZIndex: =36
+
+    AppFeedback_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =110
+
+        Rectangle1_21 As rectangle:
+            Fill: =RGBA(33, 57, 145, .50)
+            Height: =768
+            Visible: =_varAppFeedbackReg
+            Width: =1366
+            ZIndex: =95
+
+        Rectangle3_16 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =412
+            Visible: =_varAppFeedbackReg
+            Width: =713
+            X: =326
+            Y: =158
+            ZIndex: =96
+
+        Button8_28 As button:
+            BorderThickness: =0
+            Fill: =_theme.ColorPrimary
+            FocusedBorderThickness: =1
+            OnSelect: |-
+                =UpdateContext({_varAppFeedbackReg:false});
+                Reset(Gallery1_6);
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =0
+            RadiusTopRight: =20
+            Text: ="Cancel"
+            Visible: =_varAppFeedbackReg
+            X: =471
+            Y: =491
+            ZIndex: =97
+
+        Button8_29 As button:
+            BorderThickness: =0
+            Fill: =_theme.ColorPrimary
+            FocusedBorderThickness: =1
+            OnSelect: |-
+                =Patch(AppFeedbacks_Dvs,Defaults(AppFeedbacks_Dvs),{Name:_myProfileUPN_V.UserPrincipalName,Comments:TextInput1_6.Text,Rating:Text(Rating1_6.Value),UserName:varCrrUser.LoginName,Category:First(ComboBox1_4.SelectedItems).Value});
+                If(IsBlank(varCrrUser.ErD), Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{ErD:"Yes",NotificationST:"Yes"}));
+                Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"You have submited a feedback !",UserID:varCrrUser,IsRead:"No"});
+                Reset(Gallery1_6);
+                Reset(TextInput1_6);
+                Reset(Rating1_6);
+                UpdateContext({_varAppFeedbackReg:false});
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =0
+            RadiusTopRight: =20
+            Text: ="Submit"
+            Visible: =_varAppFeedbackReg
+            X: =709
+            Y: =491
+            ZIndex: =98
+
+        Label8_17 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="Rate the App:"
+            Visible: =_varAppFeedbackReg && If(First(ComboBox1_4.SelectedItems).ID=1,true,false)
+            Width: =167
+            X: =367
+            Y: =228
+            ZIndex: =99
+
+        Label8_18 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="Comments :"
+            Visible: =_varAppFeedbackReg
+            Width: =120
+            X: =365
+            Y: =268
+            ZIndex: =100
+
+        Rating1_6 As rating:
+            ContentLanguage: =""
+            Default: =0
+            DisabledFill: =Self.Fill
+            DisplayMode: =DisplayMode.Edit
+            FocusedBorderColor: =Self.BorderColor
+            FocusedBorderThickness: =0
+            Height: =40
+            HoverFill: =Self.Fill
+            PressedFill: =Self.Fill
+            Visible: =_varAppFeedbackReg && If(First(ComboBox1_4.SelectedItems).ID=1,true,false)
+            Width: =200
+            X: =548
+            Y: =230
+            ZIndex: =101
+
+        TextInput1_6 As text:
+            BorderThickness: =1
+            Default: =
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =187
+            Mode: =TextMode.MultiLine
+            Visible: =_varAppFeedbackReg
+            Width: =419
+            X: =552
+            Y: =277
+            ZIndex: =102
+
+        Label8_16 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="Feedback Category:"
+            Visible: =_varAppFeedbackReg
+            Width: =167
+            X: =368
+            Y: =181
+            ZIndex: =103
+
+        ComboBox1_4 As combobox:
+            DefaultSelectedItems: |-
+                ={ID:1,Value:"App Feedback"}
+            DisplayFields: =["Value"]
+            Height: =35
+            IsSearchable: =false
+            Items: |-
+                =Table({ID:1,Value:"App Feedback"},{ID:2,Value:"Notify errors to the Apps team"},{ID:3,Value:"Submit a game Idea"})
+            SearchFields: =["Value"]
+            SearchItems: =[]
+            SelectMultiple: =false
+            Visible: =_varAppFeedbackReg
+            X: =550
+            Y: =184
+            ZIndex: =104
+
+    Welcome_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =118
+
+        HtmlText7_1 As htmlViewer:
+            Height: =768
+            HtmlText: |-
+                ="<div style=""
+                
+                    background-color:rgba(" & R & "," & G & "," & B &"," & .3 & ");
+                      height:757px;
+                      box-shadow: 0px 0px 20px 5px rgba(" & R & "," & G & "," & B &"," & 1 & ");
+                border-radius: 60px 60px 60px 60px;"">
+                </div>"
+            Visible: =varWelcomeScreen
+            Width: =1366
+            ZIndex: =64
+
+        Rectangle1_1 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =282
+            Visible: =varWelcomeScreen
+            Width: =681
+            X: =407
+            Y: =209
+            ZIndex: =65
+
+        Label1_1 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Size: =14
+            Text: ="Welcome " & varCrrUser.LoginName & "!"
+            Visible: =varWelcomeScreen
+            Width: =273
+            X: =631
+            Y: =226
+            ZIndex: =66
+
+        HtmlText8_1 As htmlViewer:
+            Height: =69
+            HtmlText: ="<font color=black>Before we let the Games begin, make sure to <b> check out these options.</b>"
+            Size: =14
+            Visible: =varWelcomeScreen
+            Width: =608
+            X: =446
+            Y: =287
+            ZIndex: =67
+
+        Icon18_1 As icon.Cancel:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =35
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(varWelcomeScreen,false);
+            Visible: =varWelcomeScreen
+            Width: =35
+            X: =1047
+            Y: =215
+            ZIndex: =68
+
+        btn_Start_16 As button:
+            BorderColor: =_theme.ColorPrimary
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Fill: =RGBA(242,80,34,1)//RGBA(251, 188, 159, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            Height: =45
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =UpdateContext({varJointeam:true});
+                Set(varWelcomeScreen,false);
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =30
+            Size: =14
+            Text: ="JOIN A TEAM"
+            Tooltip: ="You can create or join a team only once. "
+            Visible: =varWelcomeScreen
+            Width: =221
+            X: =411
+            Y: =396
+            ZIndex: =69
+
+        btn_Start_39 As button:
+            BorderColor: =_theme.ColorPrimary
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Fill: =RGBA(242,166,29,1) //RGBA(251, 188, 159, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            Height: =45
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =UpdateContext({varNewTeamScreen:true});
+                Set(varWelcomeScreen,false);
+                NewForm(Form2_2)
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =30
+            Size: =14
+            Text: ="CREATE A TEAM"
+            Tooltip: ="You can create or join a team only once."
+            Visible: =varWelcomeScreen
+            Width: =221
+            X: =637
+            Y: =396
+            ZIndex: =70
+
+        btn_Start_40 As button:
+            BorderColor: =_theme.ColorPrimary
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Fill: |-
+                =RGBA(138,194,47,1)
+                 //RGBA(251, 188, 159, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            Height: =45
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =Set(varWelcomeScreen,false);
+                Navigate(LandingSplashScreen,ScreenTransition.Fade);
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =30
+            Size: =14
+            Text: ="VIEW POINT SYSTEM"
+            Tooltip: ="You can create or join a team only once."
+            Visible: =varWelcomeScreen
+            Width: =221
+            X: =864
+            Y: =399
+            ZIndex: =71
+

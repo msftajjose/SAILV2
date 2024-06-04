@@ -1,0 +1,98 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crc74_aisummerregistrations",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crc74_aisummerregistration",
+    "MaxGetRowsCount": 2000,
+    "Name": "AISummerRegistrations",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crc74_aisummerregistration_AsyncOperations": "System Jobs",
+      "crc74_aisummerregistration_BulkDeleteFailures": "Bulk Delete Failures",
+      "crc74_aisummerregistration_DuplicateBaseRecord": "Duplicate Records (crc74_aisummerregistration_DuplicateBaseRecord)",
+      "crc74_aisummerregistration_DuplicateMatchingRecord": "Duplicate Records (crc74_aisummerregistration_DuplicateMatchingRecord)",
+      "crc74_aisummerregistration_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crc74_aisummerregistration_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crc74_aisummerregistration_ProcessSession": "Process Sessions",
+      "crc74_aisummerregistration_SyncErrors": "Sync Errors",
+      "crc74_aisummerregistrationid": "AISummerRegistration",
+      "crc74_loginpin": "LoginPin",
+      "crc74_name": "Name",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "AISummerRegistrations",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "AISummerRegistrations (Views)",
+    "Name": "_crc74_aisummerregistration_views",
+    "RelatedEntityName": "AISummerRegistrations",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2a18c86d-1f6c-4c7e-890a-724f10365c54": "Active AISummerRegistrations",
+      "50b41ff7-c549-459b-96fa-df5d4e770d2d": "Inactive AISummerRegistrations",
+      "84cc7035-a044-456b-98ed-bdb417447c09": "AISummerRegistration Associated View",
+      "af7f377c-7419-4e3c-baf8-4a12514c7a87": "AISummerRegistration Advanced Find View",
+      "ecc5cb62-43e4-4d3d-8a97-00957e1dc310": "AISummerRegistration Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (AISummerRegistrations)",
+    "Name": "crc74_aisummerregistration_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "AISummerRegistrations"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "AISummerRegistrations",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (AISummerRegistrations)",
+    "Name": "crc74_aisummerregistration_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "AISummerRegistrations"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "AISummerRegistrations",
+    "Type": "OptionSetInfo"
+  }
+]

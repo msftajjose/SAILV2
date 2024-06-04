@@ -1,0 +1,100 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crc74_customleaderboards",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crc74_customleaderboard",
+    "MaxGetRowsCount": 2000,
+    "Name": "CustomLeaderBoards",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crc74_customleaderboard_AsyncOperations": "System Jobs",
+      "crc74_customleaderboard_BulkDeleteFailures": "Bulk Delete Failures",
+      "crc74_customleaderboard_DuplicateBaseRecord": "Duplicate Records (crc74_customleaderboard_DuplicateBaseRecord)",
+      "crc74_customleaderboard_DuplicateMatchingRecord": "Duplicate Records (crc74_customleaderboard_DuplicateMatchingRecord)",
+      "crc74_customleaderboard_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crc74_customleaderboard_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crc74_customleaderboard_ProcessSession": "Process Sessions",
+      "crc74_customleaderboard_SyncErrors": "Sync Errors",
+      "crc74_customleaderboardid": "CustomLeaderBoard",
+      "crc74_leaderuid": "LeaderUID",
+      "crc74_MyLeaderMember": "MyLeaderMember",
+      "crc74_name": "Name",
+      "crc74_UserID": "UserID",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "CustomLeaderBoards",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "CustomLeaderBoards (Views)",
+    "Name": "_crc74_customleaderboard_views",
+    "RelatedEntityName": "CustomLeaderBoards",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2491b4b3-c7d2-498e-807c-a347497e5a9e": "CustomLeaderBoard Associated View",
+      "58d80c32-1f96-4e2f-8dc8-94bf8954caa3": "CustomLeaderBoard Lookup View",
+      "62f63ee0-0fca-4597-8d93-b7302f91e400": "Inactive CustomLeaderBoards",
+      "a327fc4d-6f7d-4be7-ad3f-b1c7ebf12109": "Active CustomLeaderBoards",
+      "e6804315-e465-4fa7-8ba4-21fb0821fa0d": "CustomLeaderBoard Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (CustomLeaderBoards)",
+    "Name": "crc74_customleaderboard_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "CustomLeaderBoards"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "CustomLeaderBoards",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (CustomLeaderBoards)",
+    "Name": "crc74_customleaderboard_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "CustomLeaderBoards"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "CustomLeaderBoards",
+    "Type": "OptionSetInfo"
+  }
+]

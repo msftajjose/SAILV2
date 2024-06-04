@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "38c1f83d-f761-4554-93bb-7517cbfcba0e",
+    "Name": "AISummerREgAutoFlow",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "0319d51f-422a-ee11-bdf4-000d3af2f4f7"
+  }
+]

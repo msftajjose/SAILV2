@@ -1,0 +1,99 @@
+[
+  {
+    "DisplayName": "tblUserNotifications (Views)",
+    "Name": "_sail23_tblusernotifications_views",
+    "RelatedEntityName": "tblUserNotifications",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0d5bd565-305a-48fb-a2f1-e347cf874974": "tblUserNotifications Associated View",
+      "47b09ad4-12a9-417d-af32-b9e3548606da": "Inactive tblUserNotifications",
+      "80e6ea6e-ef53-450b-836b-db45467a3f2d": "tblUserNotifications Lookup View",
+      "95aa68b9-fb7e-4dd1-b9b0-23cded2642dc": "tblUserNotifications Advanced Find View",
+      "99deda31-a53f-4a3d-9bd8-343e2f966a06": "Active tblUserNotifications"
+    }
+  },
+  {
+    "DisplayName": "Status (tblUserNotifications)",
+    "Name": "sail23_tblusernotifications_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "tblUserNotifications"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "tblUserNotifications",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (tblUserNotifications)",
+    "Name": "sail23_tblusernotifications_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "tblUserNotifications"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "tblUserNotifications",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "sail23_tblusernotificationses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "sail23_tblusernotifications",
+    "MaxGetRowsCount": 2000,
+    "Name": "tblUserNotifications",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "sail23_isread": "IsRead",
+      "sail23_name": "Name",
+      "sail23_tblusernotifications_AsyncOperations": "System Jobs",
+      "sail23_tblusernotifications_BulkDeleteFailures": "Bulk Delete Failures",
+      "sail23_tblusernotifications_DuplicateBaseRecord": "Duplicate Records (sail23_tblusernotifications_DuplicateBaseRecord)",
+      "sail23_tblusernotifications_DuplicateMatchingRecord": "Duplicate Records (sail23_tblusernotifications_DuplicateMatchingRecord)",
+      "sail23_tblusernotifications_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "sail23_tblusernotifications_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "sail23_tblusernotifications_ProcessSession": "Process Sessions",
+      "sail23_tblusernotifications_SyncErrors": "Sync Errors",
+      "sail23_tblusernotificationsid": "tblUserNotifications",
+      "sail23_UserID": "UserID",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "tblUserNotifications",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]

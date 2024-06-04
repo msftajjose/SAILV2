@@ -1,0 +1,195 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_crc74_registrations_dv_forms",
+      "Namespace": "Registrations_Dvs (Forms)",
+      "Values": {
+        "Information": "457e1774-b792-4ef7-a2da-e1ee8c3505a4"
+      }
+    },
+    {
+      "Kind": "default.cds_crc74_avtar_forms",
+      "Namespace": "Avtars (Forms)",
+      "Values": {
+        "Information": "132fec99-0857-424f-9122-e0eea9c2da3d"
+      }
+    },
+    {
+      "Kind": "default.cds_crc74_teamregistrations_forms",
+      "Namespace": "TeamRegistrationss (Forms)",
+      "Values": {
+        "Information": "c0b162df-2250-40e2-9617-fb3fc61caeef"
+      }
+    },
+    {
+      "Kind": "default.cds_crc74_tipsandtrickscollaboration_forms",
+      "Namespace": "TipsandTricksCollaborations (Forms)",
+      "Values": {
+        "Information": "b6a851a0-3b2d-4b80-8ec5-c76ddfdce4cc"
+      }
+    },
+    {
+      "Kind": "default.cds_crc74_teamchat_forms",
+      "Namespace": "TeamChats (Forms)",
+      "Values": {
+        "Information": "f17a9711-dc87-44be-96db-9dc0f2ce04be"
+      }
+    },
+    {
+      "Kind": "default.cds_crc74_customleaderboard_forms",
+      "Namespace": "CustomLeaderBoards (Forms)",
+      "Values": {
+        "Information": "ac02afe7-2f6a-4a6b-b806-b87023bd9373"
+      }
+    },
+    {
+      "Kind": "default.cds_crc74_tipsmessage_forms",
+      "Namespace": "TipsMessages (Forms)",
+      "Values": {
+        "Information": "54a05fdb-8654-4c45-aa7b-dc8c4d531060"
+      }
+    },
+    {
+      "Kind": "default.cds_crc74_aihallucination_forms",
+      "Namespace": "AIhallucinations (Forms)",
+      "Values": {
+        "Information": "34ea163a-1670-449d-8c58-7940628e1a5b"
+      }
+    },
+    {
+      "Kind": "default.cds_crc74_humanai_forms",
+      "Namespace": "HumanAIS (Forms)",
+      "Values": {
+        "Information": "e3eeb310-a999-4ea6-8d59-c29e93a56f77"
+      }
+    },
+    {
+      "Kind": "default.cds_crc74_appfeedbacks_dv_forms",
+      "Namespace": "AppFeedbacks_Dvs (Forms)",
+      "Values": {
+        "Information": "4508d65f-3cda-42ab-a661-8b0c2b4fc89c"
+      }
+    },
+    {
+      "Kind": "default.cds_crc74_tipslike_forms",
+      "Namespace": "TipsLikes (Forms)",
+      "Values": {
+        "Information": "75411c1f-0292-427d-a224-4ee2bf39052e"
+      }
+    },
+    {
+      "Kind": "default.cds_crc74_aisummerregistration_forms",
+      "Namespace": "AISummerRegistrations (Forms)",
+      "Values": {
+        "Information": "eb971949-16f1-4aea-809e-ea49ea79b256"
+      }
+    },
+    {
+      "Kind": "default.cds_crc74_aiuserscores_forms",
+      "Namespace": "AIUserScores (Forms)",
+      "Values": {
+        "Information": "e9226019-4554-4b34-a42a-f150d1066de7"
+      }
+    },
+    {
+      "Kind": "default.cds_crc74_docsuggestion_forms",
+      "Namespace": "DocSuggestions (Forms)",
+      "Values": {
+        "Information": "04c3b3b9-0bbb-46eb-9ca8-bb6668058a3d"
+      }
+    },
+    {
+      "Kind": "default.cds_crc74_suggestioncomment_forms",
+      "Namespace": "SuggestionComments (Forms)",
+      "Values": {
+        "Information": "3d619741-2891-4c77-9c28-ceed0f032af6"
+      }
+    },
+    {
+      "Kind": "default.cds_sail23_merrypranks_forms",
+      "Namespace": "MerryPranks_1 (Forms)",
+      "Values": {
+        "Information": "5650738f-4cc6-4f20-8475-e0037da196eb"
+      }
+    },
+    {
+      "Kind": "default.cds_systemuser_forms",
+      "Namespace": "Users (Forms)",
+      "Values": {
+        "Application User": "d26924ef-4d80-46f7-ab1d-e6ae80a54ce8",
+        "Information": "094fb08a-77bb-49e0-b7ea-8dbddfd01294",
+        "User": "c2cd9e55-d4b4-4b55-9951-16ead79643e5",
+        "User form – Business": "c2413504-7eb2-4c59-a087-95d819866114",
+        "User Hierarchy Tile Form": "c68d6c09-d7a7-4959-8d0f-44b8cff9b452"
+      }
+    },
+    {
+      "Kind": "default.cds_sail23_tbllearnings_forms",
+      "Namespace": "tblLearnings (Forms)",
+      "Values": {
+        "Information": "940ae599-0f8a-418c-b970-75f50f0e7c29"
+      }
+    },
+    {
+      "Kind": "default.cds_sail23_tblweeklychallengenotify_forms",
+      "Namespace": "tblWeeklyChallengeNotifies (Forms)",
+      "Values": {
+        "Information": "88b7e835-ac43-47dd-a0be-f69e3a2641bd"
+      }
+    },
+    {
+      "Kind": "default.cds_sail23_tblweektrans_forms",
+      "Namespace": "tblWeekTrans (Forms)",
+      "Values": {
+        "Information": "8783ffa7-0dae-4b4a-aa27-b258ad58331a"
+      }
+    },
+    {
+      "Kind": "default.cds_sail23_tblusernotifications_forms",
+      "Namespace": "tblUserNotifications (Forms)",
+      "Values": {
+        "Information": "f813d87b-265e-44e6-8e9b-b0e053cadf67"
+      }
+    },
+    {
+      "Kind": "default.cds_sail23_tblbadges_forms",
+      "Namespace": "tblBadges (Forms)",
+      "Values": {
+        "Information": "458241ee-6537-47ec-80f6-f0d1952adbf4"
+      }
+    },
+    {
+      "Kind": "default.cds_sail23_tblaiwishes_forms",
+      "Namespace": "tblAIWishes (Forms)",
+      "Values": {
+        "Information": "e2ed350c-18d9-4e37-b598-ef2f2877faf9"
+      }
+    },
+    {
+      "Kind": "default.cds_sail23_tblapprovers_forms",
+      "Namespace": "tblDisabledUsers (Forms)",
+      "Values": {
+        "Information": "e5f9a9df-012a-4da4-a3dc-d0b1bbbcf60e"
+      }
+    },
+    {
+      "Kind": "default.cds_fileattachment_forms",
+      "Namespace": "FileAttachments (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_sail23_tblapprovers_forms",
+      "Namespace": "tblApprovers (Forms)",
+      "Values": {
+        "Information": "e5f9a9df-012a-4da4-a3dc-d0b1bbbcf60e"
+      }
+    },
+    {
+      "Kind": "default.cds_sail23_tblweeklychallenge_forms",
+      "Namespace": "tblWeeklyChallenges (Forms)",
+      "Values": {
+        "Information": "6d5727ab-82d3-4b24-bc60-e6536c806a85"
+      }
+    }
+  ]
+}

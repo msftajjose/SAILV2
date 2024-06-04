@@ -1,0 +1,101 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crc74_aiuserscoreses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crc74_aiuserscores",
+    "MaxGetRowsCount": 2000,
+    "Name": "AIUserScores",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crc74_aiuserscores_AsyncOperations": "System Jobs",
+      "crc74_aiuserscores_BulkDeleteFailures": "Bulk Delete Failures",
+      "crc74_aiuserscores_DuplicateBaseRecord": "Duplicate Records (crc74_aiuserscores_DuplicateBaseRecord)",
+      "crc74_aiuserscores_DuplicateMatchingRecord": "Duplicate Records (crc74_aiuserscores_DuplicateMatchingRecord)",
+      "crc74_aiuserscores_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crc74_aiuserscores_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crc74_aiuserscores_ProcessSession": "Process Sessions",
+      "crc74_aiuserscores_SyncErrors": "Sync Errors",
+      "crc74_aiuserscoresid": "AIUserScores",
+      "crc74_name": "Name",
+      "crc74_processed": "Processed",
+      "crc74_score": "Score",
+      "crc74_TeamID": "TeamID",
+      "crc74_UserID": "UserID",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "AIUserScores",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "AIUserScores (Views)",
+    "Name": "_crc74_aiuserscores_views",
+    "RelatedEntityName": "AIUserScores",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "270bacf9-bef8-408e-b4cc-fab7875b2853": "Inactive AIUserScores",
+      "423b7293-2cb7-4951-a4eb-f21910645d15": "AIUserScores Associated View",
+      "68fa9e13-8273-4956-bcdd-31779c3b7575": "AIUserScores Advanced Find View",
+      "bb9c744a-b791-47c8-b74a-b053cc68fc0f": "AIUserScores Lookup View",
+      "c9e01b3a-ccac-4e7c-8418-e62d56e9d4bf": "Active AIUserScores"
+    }
+  },
+  {
+    "DisplayName": "Status (AIUserScores)",
+    "Name": "crc74_aiuserscores_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "AIUserScores"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "AIUserScores",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (AIUserScores)",
+    "Name": "crc74_aiuserscores_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "AIUserScores"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "AIUserScores",
+    "Type": "OptionSetInfo"
+  }
+]

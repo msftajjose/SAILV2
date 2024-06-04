@@ -1,0 +1,639 @@
+SettingsPage As screen:
+    BackgroundImage: =work_place_outdoor_1
+    ImagePosition: =ImagePosition.Stretch
+    OnVisible: |-
+        =UpdateContext({varxpos:89});UpdateContext({varapprovalScreenVisible:false});
+
+    "Gallery4 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+        '#CopilotOverlayLabel': ="Filtered"
+        DelayItemLoading: =true
+        Items: =TipsandTricksCollaborations
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =116
+        Visible: =If(varOption=1, true,false)
+        Width: =1112
+        X: =134
+        Y: =112
+        ZIndex: =1
+
+        Title5 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(71, 69, 64, 1)
+            DisabledColor: =RGBA(186, 186, 186, 1)
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =14
+            Text: =ThisItem.Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 86
+            X: =16
+            Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle4.Size*1.8 + 2 + Body1.Size*1.8)) / 2
+            ZIndex: =1
+
+        Subtitle4 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(71, 69, 64, 1)
+            DisabledColor: =RGBA(186, 186, 186, 1)
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Created On'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title5.Width
+            X: =Title5.X
+            Y: =Title5.Y + Title5.Height
+            ZIndex: =2
+
+        Body1 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(71, 69, 64, 1)
+            DisabledColor: =RGBA(186, 186, 186, 1)
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.IsApproved
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title5.Width
+            X: =Title5.X
+            Y: =Subtitle4.Y + Subtitle4.Height
+            ZIndex: =3
+
+        NextArrow3 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator3 As rectangle:
+            BorderColor: =RGBA(0, 0, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle4 As rectangle:
+            Height: =Parent.TemplateHeight - Separator3.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+    Button13_3 As button:
+        BorderThickness: =0
+        Fill: =RGBA(141, 198, 63, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        Height: =80
+        HoverFill: =ColorFade(Self.Fill, -20%)
+        OnSelect: |-
+            =Concurrent(
+                Refresh(Registrations_Dvs),
+                Refresh(TeamRegistrationss));
+                Set(varCrrUser,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv))
+            );
+            
+            Concurrent(
+            Set(varUserAvtar,varCrrUser.UserAvtar),
+            Set(varTeamAvtar,varCrrUser.TeamID.TeamAvtar);
+            );
+            
+            Navigate(Registration)
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =0
+        RadiusTopRight: =30
+        Size: =14
+        Text: ="Home"
+        Tooltip: ="Back to Tune-In view"
+        Width: =227
+        X: =114
+        Y: =549
+        ZIndex: =1
+
+    Button13_4 As button:
+        BorderThickness: =0
+        DisplayMode: =If(!IsBlank(First(Filter(TeamRegistrationss,OwnerID.Registrations_Dv=varCrrUser.Registrations_Dv))),DisplayMode.Edit,DisplayMode.Disabled)
+        Fill: =RGBA(221, 79, 14, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        Height: =80
+        HoverFill: =ColorFade(Self.Fill, -20%)
+        OnSelect: |-
+            =If(!IsBlank(First(Filter(TeamRegistrationss,OwnerID.Registrations_Dv=varCrrUser.Registrations_Dv))),EditForm(Form4_1) && UpdateContext({varEditTeamPic:true}))
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =0
+        RadiusTopRight: =30
+        Size: =14
+        Text: ="Change Team's Picture"
+        Tooltip: ="The Team owner can change the picture"
+        Width: =227
+        X: =424
+        Y: =549
+        ZIndex: =2
+
+    Button13_5 As button:
+        BorderThickness: =0
+        ContentLanguage: ="Change your Profile picture"
+        Fill: =RGBA(0, 94, 146, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        Height: =80
+        HoverFill: =ColorFade(Self.Fill, -20%)
+        OnSelect: |-
+            =UpdateContext({varEditScren:true})
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =0
+        RadiusTopRight: =30
+        Size: =14
+        Text: ="Change Profile Picture"
+        Width: =227
+        X: =718
+        Y: =549
+        ZIndex: =3
+
+    EditPic As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =15
+
+        HtmlText1_6 As htmlViewer:
+            Height: =504
+            HtmlText: |-
+                ="<div style='background-color: rgba(1,2,3,30%); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                margin: 20px; 
+                width:830px; 
+                height: 430px; 
+                border-radius: 30px'>
+                </div>"
+            Visible: =varEditScren
+            Width: =935
+            X: =241
+            Y: =178
+            ZIndex: =6
+
+        Form4 As form:
+            DataSource: =Registrations_Dvs
+            Height: =262
+            Item: =varCrrUser
+            NumberOfColumns: =1
+            Visible: =varEditScren
+            Width: =656
+            X: =360
+            Y: =212
+            ZIndex: =7
+
+            UserAvtar_DataCard1 As typedDataCard.addLargePictureCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="crc74_useravtar"
+                Default: =ThisItem.UserAvtar
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@Registrations_Dvs],DataSourceInfo.DisplayName,crc74_useravtar)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =Image12.Image
+                Width: =656
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+                DataCardKey7 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (AddPicture2.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                Image12 As image:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =AddPicture2.Height
+                    Image: =If(IsBlank(AddPicture2.Media), Parent.Default, AddPicture2.Media)
+                    Tooltip: =Parent.DisplayName
+                    Width: =AddPicture2.Width
+                    X: =AddPicture2.X
+                    Y: =AddPicture2.Y
+                    ZIndex: =2
+
+                AddPicture2 As addMedia:
+                    Height: =150
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey7.X + DataCardKey7.Width
+                    Y: =10
+                    ZIndex: =3
+
+                ErrorMessage5 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =Image12.Y + Image12.Height
+                    ZIndex: =4
+
+                StarVisible5 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey7.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey7.Y
+                    ZIndex: =5
+
+        btn_Start_9 As button:
+            BorderColor: =_theme.ColorPrimary
+            BorderThickness: =1
+            Color: =RGBA(50, 86, 160, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |
+                =UpdateContext({varEditScren:false});
+                UpdateContext({varchangeAv:false});
+            PressedFill: =RGBA(0, 134, 208, 1)
+            Size: =14
+            Text: ="CANCEL"
+            Tooltip: ="New users click to Register"
+            Visible: =varEditScren
+            X: =745
+            Y: =474
+            ZIndex: =8
+
+        btn_Start_10 As button:
+            BorderColor: =_theme.ColorPrimary
+            BorderThickness: =1
+            Color: =RGBA(50, 86, 160, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =SubmitForm(Form4);
+                Refresh(Registrations_Dvs);
+                UpdateContext({varlgname:varCrrUser.LoginName});
+                Set(varCrrUser,First(Filter(Registrations_Dvs,LoginName=varlgname)));
+                UpdateContext({varEditScren:false});
+            PressedFill: =RGBA(0, 134, 208, 1)
+            Size: =14
+            Text: ="CHANGE AVTAR"
+            Visible: =varEditScren
+            X: =493
+            Y: =474
+            ZIndex: =9
+
+        "Gallery2_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            '#CopilotOverlayLabel': ="Filtered"
+            DelayItemLoading: =true
+            Fill: =RGBA(39, 67, 125, .7)
+            Items: =Filter(Avtars,TeamsImg=0)
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            OnSelect: |-
+                =UpdateContext({varchangeAv:false})
+            TemplatePadding: =0
+            TemplateSize: =97
+            Visible: =varEditScren  && varchangeAv
+            Width: =137
+            X: =1000
+            Y: =107
+            ZIndex: =10
+
+            Image2_1 As image:
+                Height: =72
+                Image: =ThisItem.Pic
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =72
+                X: =16
+                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            NextArrow2_1 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(166, 166, 166, 1)
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                DisabledColor: =RGBA(119, 119, 119, 1)
+                Height: =50
+                Icon: =Icon.ChevronRight
+                OnSelect: |-
+                    =Select(Parent);
+                    UpdateContext({varchangeAv:false})
+                PaddingBottom: =2
+                PaddingLeft: =2
+                PaddingRight: =2
+                PaddingTop: =2
+                Tooltip: ="View item details"
+                Width: =38
+                X: =99
+                Y: =23
+                ZIndex: =4
+
+            Separator2_1 As rectangle:
+                BorderColor: =RGBA(0, 0, 255, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =8
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - Self.Height
+                ZIndex: =5
+
+            Rectangle2_2 As rectangle:
+                Height: =Parent.TemplateHeight - Separator2_1.Height
+                OnSelect: =Select(Parent)
+                Visible: =ThisItem.IsSelected
+                Width: =4
+                ZIndex: =6
+
+    Button13_6 As button:
+        BorderThickness: =0
+        Fill: =RGBA(130, 141, 158, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        Height: =80
+        HoverFill: =ColorFade(Self.Fill, -20%)
+        OnSelect: |-
+            =Concurrent(
+            Refresh(Registrations_Dvs),
+            Refresh(TeamRegistrationss));
+            
+            //Set(varCrrUser,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)));
+            
+            //Concurrent(
+            //Set(varUserAvtar,varCrrUser.UserAvtar),
+            //Set(varTeamAvtar,varCrrUser.TeamID.TeamAvtar);
+            //);
+            
+            Navigate(LandingSplashScreen)
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =0
+        RadiusTopRight: =30
+        Size: =14
+        Text: ="Gamification Info page"
+        Tooltip: ="Read more about the available Gamification, how to earn points and complete the MODERN WORK challenge"
+        Width: =227
+        X: =1019
+        Y: =545
+        ZIndex: =18
+
+    EditTeamPic As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =21
+
+        HtmlText1_7 As htmlViewer:
+            Height: =504
+            HtmlText: |-
+                ="<div style='background-color: rgba(1,2,3,30%); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                margin: 20px; 
+                width:830px; 
+                height: 430px; 
+                border-radius: 30px'>
+                </div>"
+            Visible: =varEditTeamPic
+            Width: =935
+            X: =261
+            Y: =198
+            ZIndex: =12
+
+        Form4_1 As form:
+            DataSource: =TeamRegistrationss
+            Height: =250
+            Item: =First(Filter(TeamRegistrationss,OwnerID.Registrations_Dv=varCrrUser.Registrations_Dv))
+            NumberOfColumns: =1
+            Visible: =varEditTeamPic
+            Width: =656
+            X: =380
+            Y: =258
+            ZIndex: =13
+
+            TeamAvtar_DataCard1 As typedDataCard.addLargePictureCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="crc74_teamavtar"
+                Default: =ThisItem.TeamAvtar
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@TeamRegistrationss],DataSourceInfo.DisplayName,crc74_teamavtar)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =Image10.Image
+                Width: =656
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+                DataCardKey4 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (AddPicture1.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                Image10 As image:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =AddPicture1.Height
+                    Image: =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
+                    Tooltip: =Parent.DisplayName
+                    Width: =AddPicture1.Width
+                    X: =AddPicture1.X
+                    Y: =AddPicture1.Y
+                    ZIndex: =2
+
+                AddPicture1 As addMedia:
+                    Height: =150
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey4.X + DataCardKey4.Width
+                    Y: =10
+                    ZIndex: =3
+
+                ErrorMessage3 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =Image10.Y + Image10.Height
+                    ZIndex: =4
+
+                StarVisible3 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey4.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey4.Y
+                    ZIndex: =5
+
+        btn_Start_25 As button:
+            BorderColor: =_theme.ColorPrimary
+            BorderThickness: =1
+            Color: =RGBA(50, 86, 160, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |
+                =UpdateContext({varEditTeamPic:false});
+                UpdateContext({varchangeTeamAv:false});
+            PressedFill: =RGBA(0, 134, 208, 1)
+            Size: =13
+            Text: ="CANCEL"
+            Tooltip: ="New users click to Register"
+            Visible: =varEditTeamPic
+            X: =745
+            Y: =545
+            ZIndex: =14
+
+        btn_Start_26 As button:
+            BorderColor: =_theme.ColorPrimary
+            BorderThickness: =1
+            Color: =RGBA(50, 86, 160, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =SubmitForm(Form4_1);
+                Refresh(TeamRegistrationss);
+                //Set(varCrrUser,First(Filter(Registrations_Dvs,LoginName=varlgname)));
+                UpdateContext({varEditTeamPic:false});
+                UpdateContext({varchangeTeamAv:false});
+            PressedFill: =RGBA(0, 134, 208, 1)
+            Size: =13
+            Text: ="CHANGE PICTURE"
+            Visible: =varEditTeamPic
+            X: =513
+            Y: =545
+            ZIndex: =15
+
+        "Gallery2_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            '#CopilotOverlayLabel': ="Filtered"
+            DelayItemLoading: =true
+            Fill: =RGBA(39, 67, 125, .7)
+            Items: =Filter(Avtars,TeamsImg=1)
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            OnSelect: |-
+                =UpdateContext({varchangeTeamAv:false})
+            TemplatePadding: =0
+            TemplateSize: =97
+            Visible: =varEditTeamPic && varchangeTeamAv
+            Width: =137
+            X: =1020
+            Y: =127
+            ZIndex: =16
+
+            Image2_3 As image:
+                Height: =72
+                Image: =ThisItem.Pic
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =72
+                X: =16
+                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            NextArrow2_3 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(166, 166, 166, 1)
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                DisabledColor: =RGBA(119, 119, 119, 1)
+                Height: =50
+                Icon: =Icon.ChevronRight
+                OnSelect: |-
+                    =Select(Parent);
+                    UpdateContext({varchangeAv:false})
+                PaddingBottom: =2
+                PaddingLeft: =2
+                PaddingRight: =2
+                PaddingTop: =2
+                Tooltip: ="View item details"
+                Width: =38
+                X: =99
+                Y: =23
+                ZIndex: =4
+
+            Separator2_3 As rectangle:
+                BorderColor: =RGBA(0, 0, 255, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =8
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - Self.Height
+                ZIndex: =5
+
+            Rectangle2_3 As rectangle:
+                Height: =Parent.TemplateHeight - Separator2_3.Height
+                OnSelect: =Select(Parent)
+                Visible: =ThisItem.IsSelected
+                Width: =4
+                ZIndex: =6
+

@@ -1,0 +1,104 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crc74_docsuggestions",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crc74_docsuggestion",
+    "MaxGetRowsCount": 2000,
+    "Name": "DocSuggestions",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crc74_crc74_suggestioncomment_SugID_crc74_docsu": "SuggestionComments",
+      "crc74_docsuggestion_AsyncOperations": "System Jobs",
+      "crc74_docsuggestion_BulkDeleteFailures": "Bulk Delete Failures",
+      "crc74_docsuggestion_DuplicateBaseRecord": "Duplicate Records (crc74_docsuggestion_DuplicateBaseRecord)",
+      "crc74_docsuggestion_DuplicateMatchingRecord": "Duplicate Records (crc74_docsuggestion_DuplicateMatchingRecord)",
+      "crc74_docsuggestion_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crc74_docsuggestion_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crc74_docsuggestion_ProcessSession": "Process Sessions",
+      "crc74_docsuggestion_SyncErrors": "Sync Errors",
+      "crc74_docsuggestionid": "DocSuggestion",
+      "crc74_documenturls": "DocumentURLS",
+      "crc74_keywords": "Keywords",
+      "crc74_likes": "Likes",
+      "crc74_name": "Name",
+      "crc74_nooflikes": "NoOfLikes",
+      "crc74_suggestiondetails": "SuggestionDetails",
+      "crc74_UserID": "UserID",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "DocSuggestions",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "DocSuggestions (Views)",
+    "Name": "_crc74_docsuggestion_views",
+    "RelatedEntityName": "DocSuggestions",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0166de56-549a-4191-b468-2a87ec56b0ba": "Active DocSuggestions",
+      "1fa917b9-fa5d-4f0e-9458-92fa0dd64f34": "Inactive DocSuggestions",
+      "4f87cbc7-4a2f-4cbb-b19e-7b4d3c4bfa20": "DocSuggestion Associated View",
+      "5860710d-fff3-45fe-81e3-ba1a61ea72cb": "DocSuggestion Lookup View",
+      "a9f74403-a119-4f27-992f-7d8d8715c542": "DocSuggestion Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (DocSuggestions)",
+    "Name": "crc74_docsuggestion_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "DocSuggestions"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "DocSuggestions",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (DocSuggestions)",
+    "Name": "crc74_docsuggestion_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "DocSuggestions"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "DocSuggestions",
+    "Type": "OptionSetInfo"
+  }
+]
