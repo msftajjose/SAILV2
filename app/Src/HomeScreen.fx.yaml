@@ -184,6 +184,7 @@
                             BasePaletteColor: =RGBA(189, 178, 176, 1)
                             DisplayMode: =DisplayMode.Edit
                             Font: =Font.'Segoe UI'
+                            FontWeight: =If(IsBlank(ThisItem.Icon),FontWeight.Bold,FontWeight.Normal)
                             Height: =30
                             Icon: =
                             IconStyle: ='ButtonCanvas.IconStyle'.Filled
@@ -192,19 +193,19 @@
                             VerticalAlign: =VerticalAlign.Middle
                             Width: =184
                             X: =23
-                            Y: =1
+                            Y: =3
                             ZIndex: =1
 
                         Icon22 As icon.Home:
                             BorderColor: =App.Theme.Colors.Darker40
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledColor: =RGBA(244, 244, 244, 1)
-                            Height: =20
+                            Height: =15
                             Icon: =ThisItem.Icon
                             OnSelect: =Select(Parent)
-                            Width: =20
-                            X: =10
-                            Y: =7
+                            Width: =15
+                            X: =19
+                            Y: =12
                             ZIndex: =2
 
             MainContainer1 As groupContainer.verticalAutoLayoutContainer:
