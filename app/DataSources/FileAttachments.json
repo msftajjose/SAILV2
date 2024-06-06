@@ -33,6 +33,7 @@
       "FileAttachment_flowsession_AdditionalContext": "Flow Sessions (FileAttachment_flowsession_AdditionalContext)",
       "FileAttachment_FlowSession_Inputs": "Flow Sessions (FileAttachment_FlowSession_Inputs)",
       "FileAttachment_flowsession_Outputs": "Flow Sessions (FileAttachment_flowsession_Outputs)",
+      "FileAttachment_KnowledgeArticle_msdyn_contentstore": "Knowledge Articles",
       "FileAttachment_Mailbox_ExchangeSyncStateXmlFileRef": "Mailboxes",
       "FileAttachment_msdyn_AIBFeedbackLoop_msdyn_PredictionInput": "AI Builder Feedback Loops (FileAttachment_msdyn_AIBFeedbackLoop_msdyn_PredictionInput)",
       "FileAttachment_msdyn_AIBFeedbackLoop_msdyn_PredictionResult": "AI Builder Feedback Loops (FileAttachment_msdyn_AIBFeedbackLoop_msdyn_PredictionResult)",

@@ -61,8 +61,8 @@ LandingPageOctalysis As screen:
         Tooltip: ="New user! click to Register your avtar. "
         Visible: =varLoginWindow  && !varspinner
         Width: =180
-        X: =751
-        Y: =498
+        X: =714
+        Y: =528
         ZIndex: =4
 
     btn_Start_55 As button:
@@ -150,8 +150,8 @@ LandingPageOctalysis As screen:
         Size: =14
         Text: ="LOG IN"
         Visible: =varLoginWindow  && !varspinner
-        X: =533
-        Y: =498
+        X: =496
+        Y: =528
         ZIndex: =5
 
     Label5_2 As label:
@@ -436,7 +436,7 @@ LandingPageOctalysis As screen:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =50
-            Image: =//'pngimg.com - microsoft_PNG13_resized (1)'
+            Image: ='pngimg.com - microsoft_PNG13_resized (1)'
             Visible: =varLoginPopUp
             Width: =50
             X: =210

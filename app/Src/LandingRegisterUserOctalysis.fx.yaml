@@ -311,8 +311,8 @@ LandingRegisterUserOctalysis As screen:
                 */
             Visible: =varAvatar
             Width: =950
-            X: =317
-            Y: =314
+            X: =223
+            Y: =262
             ZIndex: =17
 
         Image24 As image:
@@ -326,8 +326,8 @@ LandingRegisterUserOctalysis As screen:
             RadiusTopRight: =10
             Visible: =varAvatar
             Width: =235
-            X: =793
-            Y: =405
+            X: =699
+            Y: =353
             ZIndex: =18
 
         btn_Start_17 As button:
@@ -376,8 +376,8 @@ LandingRegisterUserOctalysis As screen:
             Tooltip: ="New users click to Register"
             Visible: =varAvatar
             Width: =116
-            X: =1066
-            Y: =433
+            X: =972
+            Y: =381
             ZIndex: =19
 
         Label_SubHeading2_6 As label:
@@ -391,8 +391,8 @@ LandingRegisterUserOctalysis As screen:
             Text: ="Generate an AI Avatar"
             Visible: =varAvatar
             Width: =361
-            X: =413
-            Y: =443
+            X: =319
+            Y: =391
             ZIndex: =20
 
         HtmlText6_2 As htmlViewer:
@@ -402,8 +402,8 @@ LandingRegisterUserOctalysis As screen:
             Size: =12
             Visible: =varAvatar
             Width: =312
-            X: =407
-            Y: =567
+            X: =313
+            Y: =515
             ZIndex: =21
 
         btn_Start_51 As button:
@@ -450,8 +450,8 @@ LandingRegisterUserOctalysis As screen:
             Tooltip: ="New users click to Register"
             Visible: =varAvatar
             Width: =81
-            X: =1102
-            Y: =669
+            X: =1008
+            Y: =617
             ZIndex: =22
 
         Label_SubHeading2_8 As label:
@@ -467,8 +467,8 @@ LandingRegisterUserOctalysis As screen:
             Underline: =true
             Visible: =varAvatar
             Width: =184
-            X: =367
-            Y: =670
+            X: =273
+            Y: =618
             ZIndex: =23
 
         Image23 As image:
@@ -479,8 +479,8 @@ LandingRegisterUserOctalysis As screen:
             Image: ='pngimg.com - microsoft_PNG13_resized (1)'
             Visible: =varAvatar
             Width: =50
-            X: =412
-            Y: =383
+            X: =318
+            Y: =331
             ZIndex: =24
 
         Image15 As image:
@@ -491,8 +491,8 @@ LandingRegisterUserOctalysis As screen:
             Image: ='Microsoft_365_Copilot_Icon.svg_resized'
             Visible: =varAvatar
             Width: =30
-            X: =1078
-            Y: =443
+            X: =984
+            Y: =391
             ZIndex: =25
 
     UsernameGroup As group:
@@ -522,8 +522,8 @@ LandingRegisterUserOctalysis As screen:
             Visible: |
                 =varRegisterPopUp
             Width: =950
-            X: =317
-            Y: =314
+            X: =223
+            Y: =262
             ZIndex: =3
 
         btn_Start_49 As button:
@@ -573,8 +573,8 @@ LandingRegisterUserOctalysis As screen:
             Visible: |
                 =varRegisterPopUp
             Width: =116
-            X: =1066
-            Y: =433
+            X: =972
+            Y: =381
             ZIndex: =4
 
         btn_Start_14 As button:
@@ -604,8 +604,8 @@ LandingRegisterUserOctalysis As screen:
             Visible: |
                 =varRegisterPopUp
             Width: =256
-            X: =804
-            Y: =669
+            X: =710
+            Y: =617
             ZIndex: =5
 
         TextInput4_6 As text:
@@ -627,8 +627,8 @@ LandingRegisterUserOctalysis As screen:
             Visible: |
                 =varRegisterPopUp
             Width: =248
-            X: =804
-            Y: =434
+            X: =710
+            Y: =382
             ZIndex: =6
 
         TextInput4_12 As text:
@@ -652,8 +652,8 @@ LandingRegisterUserOctalysis As screen:
             Visible: |
                 =varRegisterPopUp
             Width: =379
-            X: =804
-            Y: =529
+            X: =710
+            Y: =477
             ZIndex: =7
 
         TextInput4_11 As text:
@@ -677,8 +677,8 @@ LandingRegisterUserOctalysis As screen:
             Visible: |
                 =varRegisterPopUp
             Width: =379
-            X: =804
-            Y: =596
+            X: =710
+            Y: =544
             ZIndex: =8
 
         Label_SubHeading2_11 As label:
@@ -693,8 +693,8 @@ LandingRegisterUserOctalysis As screen:
             Visible: |
                 =varRegisterPopUp
             Width: =361
-            X: =407
-            Y: =445
+            X: =313
+            Y: =393
             ZIndex: =10
 
         Label_SubHeading2_12 As label:
@@ -708,8 +708,8 @@ LandingRegisterUserOctalysis As screen:
             Visible: |
                 =varRegisterPopUp
             Width: =184
-            X: =407
-            Y: =549
+            X: =313
+            Y: =497
             ZIndex: =11
 
         HtmlText6_4 As htmlViewer:
@@ -720,8 +720,8 @@ LandingRegisterUserOctalysis As screen:
             Visible: |
                 =varRegisterPopUp
             Width: =312
-            X: =804
-            Y: =487
+            X: =710
+            Y: =435
             ZIndex: =12
 
         btn_Start_50 As button:
@@ -771,8 +771,8 @@ LandingRegisterUserOctalysis As screen:
             Visible: |
                 =varRegisterPopUp
             Width: =81
-            X: =1102
-            Y: =669
+            X: =1008
+            Y: =617
             ZIndex: =13
 
         Label_SubHeading2_13 As label:
@@ -788,8 +788,8 @@ LandingRegisterUserOctalysis As screen:
             Visible: |
                 =varRegisterPopUp
             Width: =184
-            X: =367
-            Y: =670
+            X: =282
+            Y: =618
             ZIndex: =14
 
         Image23_1 As image:
@@ -801,8 +801,8 @@ LandingRegisterUserOctalysis As screen:
             Visible: |
                 =varRegisterPopUp
             Width: =50
-            X: =412
-            Y: =383
+            X: =318
+            Y: =331
             ZIndex: =15
 
         Image15_1 As image:
@@ -814,7 +814,7 @@ LandingRegisterUserOctalysis As screen:
             Visible: |
                 =varRegisterPopUp
             Width: =30
-            X: =1078
-            Y: =443
+            X: =984
+            Y: =391
             ZIndex: =16
 
