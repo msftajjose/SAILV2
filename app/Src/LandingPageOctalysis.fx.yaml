@@ -167,17 +167,6 @@ LandingPageOctalysis As screen:
         Y: =753
         ZIndex: =6
 
-    Label6 As label:
-        BorderColor: =App.Theme.Colors.Darker40
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =App.Theme.Font
-        Size: =13
-        Text: ="Manuel change"
-        X: =40
-        Y: =40
-        ZIndex: =20
-
     Group2 As group:
         Height: =5
         Width: =5
