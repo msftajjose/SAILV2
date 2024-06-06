@@ -150,7 +150,7 @@ LandingPageOctalysis As screen:
         Size: =14
         Text: ="LOG IN"
         Visible: =varLoginWindow  && !varspinner
-        X: =538
+        X: =533
         Y: =498
         ZIndex: =5
 
