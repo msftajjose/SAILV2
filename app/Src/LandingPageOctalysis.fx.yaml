@@ -195,8 +195,8 @@ LandingPageOctalysis As screen:
                 </div>"
             Visible: =varLoginPopUp
             Width: =1041
-            X: =227
-            Y: =313
+            X: =150
+            Y: =223
             ZIndex: =7
 
         btn_Start_56 As button:
@@ -233,8 +233,8 @@ LandingPageOctalysis As screen:
             Tooltip: ="New user! click to Register your avtar. "
             Visible: =varLoginPopUp
             Width: =91
-            X: =931
-            Y: =583
+            X: =854
+            Y: =493
             ZIndex: =8
 
         btn_Start_57 As button:
@@ -321,8 +321,8 @@ LandingPageOctalysis As screen:
                 "
             Visible: =varLoginPopUp
             Width: =133
-            X: =1059
-            Y: =583
+            X: =982
+            Y: =493
             ZIndex: =9
 
         TextInput4_8 As text:
@@ -342,8 +342,8 @@ LandingPageOctalysis As screen:
             Tooltip: ="User Name (Do not use your Microsoft alias or Id)"
             Visible: =varLoginPopUp
             Width: =351
-            X: =842
-            Y: =425
+            X: =765
+            Y: =335
             ZIndex: =10
 
         TextInput4_9 As text:
@@ -367,8 +367,8 @@ LandingPageOctalysis As screen:
             Tooltip: ="Numeric - maximum 6 digits. "
             Visible: =varLoginPopUp
             Width: =351
-            X: =842
-            Y: =489
+            X: =765
+            Y: =399
             ZIndex: =11
 
         Icon11_4 As icon.AddUser:
@@ -382,8 +382,8 @@ LandingPageOctalysis As screen:
             Tooltip: ="User Name"
             Visible: =varLoginPopUp
             Width: =40
-            X: =793
-            Y: =425
+            X: =716
+            Y: =335
             ZIndex: =12
 
         Icon11_5 As icon.AddUser:
@@ -397,8 +397,8 @@ LandingPageOctalysis As screen:
             Tooltip: ="Password"
             Visible: =varLoginPopUp
             Width: =40
-            X: =793
-            Y: =493
+            X: =716
+            Y: =403
             ZIndex: =13
 
         Label_SubHeading2_4 As label:
@@ -412,8 +412,8 @@ LandingPageOctalysis As screen:
             Text: ="Welcome to SAIL"
             Visible: =varLoginPopUp
             Width: =361
-            X: =287
-            Y: =436
+            X: =210
+            Y: =346
             ZIndex: =14
 
         Label_SubHeading2_5 As label:
@@ -427,8 +427,8 @@ LandingPageOctalysis As screen:
             Text: ="Start your engines!"
             Visible: =varLoginPopUp
             Width: =361
-            X: =287
-            Y: =509
+            X: =210
+            Y: =419
             ZIndex: =15
 
         Image20 As image:
@@ -439,8 +439,8 @@ LandingPageOctalysis As screen:
             Image: =//'pngimg.com - microsoft_PNG13_resized (1)'
             Visible: =varLoginPopUp
             Width: =50
-            X: =287
-            Y: =386
+            X: =210
+            Y: =296
             ZIndex: =16
 
     Loading_4 As group:
