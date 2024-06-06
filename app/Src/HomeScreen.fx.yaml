@@ -113,7 +113,7 @@
             LayoutAlignItems: =LayoutAlignItems.Stretch
             LayoutGap: =1
             LayoutMinHeight: =100
-            LayoutMinWidth: =250
+            LayoutMinWidth: =200
             LayoutMode: =LayoutMode.Auto
             LayoutWrap: =true
             PaddingBottom: =2
@@ -139,6 +139,61 @@
                 RadiusTopLeft: =1
                 RadiusTopRight: =1
                 ZIndex: =4
+
+                Container2 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =1
+
+                    TextCanvas1 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Segoe UI'
+                        FontColor: =RGBA(0, 0, 0, 1)
+                        Height: =28
+                        Size: =18
+                        Text: ="Season of AI Love"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =222
+                        Wrap: =true
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    Gallery7 As gallery.galleryVertical:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        DelayItemLoading: =true
+                        Height: =554
+                        Items: |-
+                            =Table( { ID:1,Icon:"" ,Value: "Discover" }, { ID:2,Icon:Icon.Home ,Value: "Home" }, { ID:3,Icon:Icon.AddLibrary ,Value: "Prompt Library" },{ ID:4,Icon:"" ,Value: "Play" } ,{ ID:5,Icon:Icon.Home ,Value: "Challenges" },{ ID:6,Icon:Icon.AddLibrary ,Value: "Leader Boards" },{ ID:7,Icon:Icon.AddLibrary ,Value: "Squad" },{ ID:8,Icon:"" ,Value: "Adjust" },{ ID:9,Icon:Icon.Settings ,Value: "Settings" },{ ID:10,Icon:Icon.QuestionMark ,Value: "Feedback" })
+                        Layout: =Layout.Vertical
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplateSize: =35
+                        Width: =302
+                        Y: =61
+                        ZIndex: =2
+
+                        ButtonCanvas4 As Button:
+                            Align: =Align.Left
+                            Appearance: ='ButtonCanvas.Appearance'.Transparent
+                            BasePaletteColor: =RGBA(189, 178, 176, 1)
+                            DisplayMode: =DisplayMode.Edit
+                            Font: =Font.'Segoe UI'
+                            Height: =30
+                            Icon: =ThisItem.Icon
+                            IconStyle: ='ButtonCanvas.IconStyle'.Filled
+                            OnSelect: =Select(Parent)
+                            Text: =ThisItem.Value
+                            VerticalAlign: =VerticalAlign.Middle
+                            Width: =184
+                            X: =10
+                            Y: =2
+                            ZIndex: =1
 
             MainContainer1 As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
