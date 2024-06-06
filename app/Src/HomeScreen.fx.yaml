@@ -49,6 +49,43 @@
                 Width: =Parent.Width
                 ZIndex: =1
 
+                "Gallery5 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DelayItemLoading: =true
+                    Height: =60
+                    Items: |-
+                        =Table( { Value: "Home" }, { Value: "What is Sail?" },{ Value: "Lore" } )
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =148
+                    Width: =447
+                    X: =729
+                    ZIndex: =1
+
+                    ButtonCanvas3 As Button:
+                        Align: =Align.Justify
+                        Appearance: ='ButtonCanvas.Appearance'.Subtle
+                        BasePaletteColor: =RGBA(246, 142, 104, 1)
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =
+                        Height: =29
+                        IconStyle: ='ButtonCanvas.IconStyle'.Outline
+                        Text: =ThisItem.Value
+                        Width: =131
+                        X: =10
+                        Y: =15
+                        ZIndex: =1
+
+                    Rectangle1 As rectangle:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Fill: =App.Theme.Colors.Primary
+                        Height: =2
+                        Visible: =ThisItem.IsSelected
+                        Width: =120
+                        X: =15
+                        Y: =58
+                        ZIndex: =2
+
                 Image5 As image:
                     BorderColor: =App.Theme.Colors.Darker40
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -60,6 +97,7 @@
                     ZIndex: =1
 
                 ButtonCanvas1 As Button:
+                    BasePaletteColor: =RGBA(189, 178, 176, 1)
                     DisplayMode: =DisplayMode.Edit
                     Height: =32
                     Icon: ="DocumentBulletList"
