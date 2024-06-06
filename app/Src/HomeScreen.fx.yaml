@@ -22,14 +22,53 @@
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
             Height: =60
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =20
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
+            LayoutWrap: =true
+            PaddingLeft: =10
+            PaddingRight: =10
             RadiusBottomLeft: =1
             RadiusBottomRight: =1
             RadiusTopLeft: =1
             RadiusTopRight: =1
             ZIndex: =2
+
+            Container1 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                Height: =Parent.Height
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Image5 As image:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =50
+                    Image: =Micrsooft
+                    X: =3
+                    Y: =5
+                    ZIndex: =1
+
+                ButtonCanvas1 As Button:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    Icon: ="DocumentBulletList"
+                    PaddingRight: =0
+                    Text: ="Prompt Library"
+                    Width: =150
+                    X: =1176
+                    Y: =14
+                    ZIndex: =2
 
         BottomContainer1 As groupContainer.horizontalAutoLayoutContainer:
             Fill: =RGBA(245, 245, 245, 1)
