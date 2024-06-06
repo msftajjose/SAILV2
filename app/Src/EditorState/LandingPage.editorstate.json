@@ -3128,7 +3128,7 @@
       "MetaDataIDKey": "",
       "Name": "Group_Initial",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 46,
+      "ParentIndex": 45,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9397,7 +9397,7 @@
       "MetaDataIDKey": "",
       "Name": "Loading",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 49,
+      "ParentIndex": 46,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9449,7 +9449,7 @@
       "MetaDataIDKey": "",
       "Name": "LoginGroup",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 47,
+      "ParentIndex": 49,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10007,7 +10007,7 @@
       "MetaDataIDKey": "",
       "Name": "RegistrationGroup",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 48,
+      "ParentIndex": 47,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10059,7 +10059,7 @@
       "MetaDataIDKey": "",
       "Name": "ResetPassword",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 45,
+      "ParentIndex": 48,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
