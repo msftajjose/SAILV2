@@ -526,7 +526,7 @@ LandingRegisterUserOctalysis As screen:
                 UpdateContext({varspinner:false});
                 
                 */
-                If(TextInput4_11.Text=TextInput4_12.Text,UpdateContext({varAvatar:true}),Notify("Pin does not match !",NotificationType.Error));
+                If(TextInput4_11.Text=TextInput4_12.Text && !IsBlank(TextInput4_12.Text) && !IsBlank(TextInput4_11.Text),UpdateContext({varAvatar:true}),Notify("Username or password is empty / pin does not match !",NotificationType.Error));
                 
             PressedFill: =RGBA(0, 134, 208, 1)
             RadiusBottomLeft: =5
@@ -734,7 +734,7 @@ LandingRegisterUserOctalysis As screen:
                 Set(varRecordD,Blank());
                 If(Value(TextInput4_12.Text)>0,Set(varRegResponse,AISummerREgAutoFlow.Run(TextInput4_6.Text,Value(TextInput4_12.Text) * 3 -5 +100)));
                 
-                If(Value(TextInput4_12.Text)>0,If(!IsBlank(First(Filter(Registrations_Dvs,LoginName=TextInput4_6.Text)).Name),UpdateContext({varUserAvailaibilty:false}),Set(varRecordD, Patch(Registrations_Dvs,Defaults(Registrations_Dvs),{Name:TextInput4_6.Text,LoginPin:0,UserAvtar:UploadedImage1_1.Image,LoginName:TextInput4_6.Text,Week1Score:0,Week2Score:0,Week3Score:0,Week4Score:0,Week5Score:0,Week6Score:0,Week7Score:0 ,Week8Score:0,Week9Score:0,Week10Score:0,Week11Score:0,Week12Score:0,Scores:0, RegLink:varRegResponse.varregid}))),Notify("Invalid Username or password !"));
+                If(Value(TextInput4_12.Text)>0,If(!IsBlank(First(Filter(Registrations_Dvs,LoginName=TextInput4_6.Text)).Name),UpdateContext({varUserAvailaibilty:false}),Set(varRecordD, Patch(Registrations_Dvs,Defaults(Registrations_Dvs),{Name:TextInput4_6.Text,LoginPin:Value(TextInput4_12.Text) * 3 -5 +100,UserAvtar:UploadedImage1_1.Image,LoginName:TextInput4_6.Text,Week1Score:0,Week2Score:0,Week3Score:0,Week4Score:0,Week5Score:0,Week6Score:0,Week7Score:0 ,Week8Score:0,Week9Score:0,Week10Score:0,Week11Score:0,Week12Score:0,Scores:0, RegLink:varRegResponse.varregid}))),Notify("Invalid Username or password !"));
                 If(!IsBlank(varRecordD),
                     Notify("New user account has been created!",NotificationType.Success) && UpdateContext({varRegScreenHide:false}),
                     Notify("Failed to create user, Try again !", NotificationType.Error)

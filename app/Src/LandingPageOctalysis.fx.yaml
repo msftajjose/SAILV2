@@ -97,6 +97,8 @@ LandingPageOctalysis As screen:
                 Set(varTeamAvtar,varCrrUser.TeamID.TeamAvtar);
             );
             */
+            Reset(TextInput4_8);
+            Reset(TextInput4_9);
             
             UpdateContext({varLoginPopUp:true});
             
