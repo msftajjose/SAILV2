@@ -346,7 +346,7 @@ LandingPageOctalysis As screen:
             FocusedBorderThickness: =4
             Format: =TextFormat.Number
             Height: =44
-            HintText: ="Enter your password"
+            HintText: ="Enter your 6 digit pin"
             HoverBorderColor: =RGBA(0, 18, 107, 1)
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =RGBA(186, 202, 226, 1)
