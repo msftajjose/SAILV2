@@ -285,6 +285,24 @@ LandingRegisterUserOctalysis As screen:
         Y: =753
         ZIndex: =43
 
+    UploadedImage1_1 As image:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =166
+        Image: =If(IsBlank(AddMediaButton1_1.Media), SampleImage, AddMediaButton1_1.Media)
+        ImagePosition: =ImagePosition.Fill
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Tooltip: ="Do not use your picture"
+        Visible: =varAvatar
+        Width: =183
+        X: =749
+        Y: =340
+        ZIndex: =44
+
     AvatarGroup As group:
         Height: =5
         Width: =5
@@ -314,21 +332,6 @@ LandingRegisterUserOctalysis As screen:
             X: =223
             Y: =262
             ZIndex: =17
-
-        Image24 As image:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =235
-            RadiusBottomLeft: =10
-            RadiusBottomRight: =10
-            RadiusTopLeft: =10
-            RadiusTopRight: =10
-            Visible: =varAvatar
-            Width: =235
-            X: =699
-            Y: =353
-            ZIndex: =18
 
         btn_Start_17 As button:
             Align: =Align.Right
@@ -440,17 +443,42 @@ LandingRegisterUserOctalysis As screen:
                 UpdateContext({varspinner:false});
                 
                 */
+                
+                
+                
+                //UpdateContext({varLoadingSpinner:true});
+                UpdateContext({varspinner:true});
+                Set(varRecordD,Blank());
+                If(Value(TextInput4_12.Text)>0,Set(varRegResponse,AISummerREgAutoFlow.Run(TextInput4_6.Text,Value(TextInput4_12.Text) * 3 -5 +100)));
+                
+                If(Value(TextInput4_12.Text)>0,If(!IsBlank(First(Filter(Registrations_Dvs,LoginName=TextInput4_6.Text)).Name),UpdateContext({varUserAvailaibilty:false}),Set(varRecordD, Patch(Registrations_Dvs,Defaults(Registrations_Dvs),{Name:TextInput4_6.Text,LoginPin:0,UserAvtar:UploadedImage1_1.Image,LoginName:TextInput4_6.Text,Week1Score:0,Week2Score:0,Week3Score:0,Week4Score:0,Week5Score:0,Week6Score:0,Week7Score:0 ,Week8Score:0,Week9Score:0,Week10Score:0,Week11Score:0,Week12Score:0,Scores:0, RegLink:varRegResponse.varregid}))),Notify("Invalid Username or password !"));
+                If(!IsBlank(varRecordD),
+                    Notify("New user account has been created!",NotificationType.Success) && UpdateContext({varRegScreenHide:false}),
+                    Notify("Failed to create user, Try again !", NotificationType.Error)
+                );
+                
+                If(!IsBlank(varRecordD),Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"Congratulations! User registration was succesfull !",UserID:varRecordD,IsRead:"No"}));
+                
+                //Set(varRegResponse,AISummerREgAutoFlow.Run(TextInput4_2.Text,Value(TextInput4_3.Text) * 3 -5 +100));
+                
+                If(!IsBlank(varRecordD),UpdateContext({varLoginWindow:true}));
+                Set(varRecordD,Blank());
+                Reset(TextInput4_12);
+                Reset(TextInput4_6);
+                
+                UpdateContext({varspinner:false});
+                //UpdateContext({varLoadingSpinner:false});
             PressedFill: =RGBA(0, 134, 208, 1)
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
             RadiusTopLeft: =5
             RadiusTopRight: =5
             Size: =14
-            Text: ="Next"
+            Text: ="Submit"
             Tooltip: ="New users click to Register"
             Visible: =varAvatar
-            Width: =81
-            X: =1008
+            Width: =105
+            X: =984
             Y: =617
             ZIndex: =22
 
@@ -495,6 +523,22 @@ LandingRegisterUserOctalysis As screen:
             Y: =391
             ZIndex: =25
 
+    AddMediaButton1_1 As addMedia:
+        BorderColor: =RGBA(0, 94, 245, 1)
+        BorderThickness: =2
+        ChangePictureText: ="Change Avtar"
+        Color: =RGBA(0, 94, 245, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        Height: =43
+        Size: =14
+        Text: ="Add a picture"
+        Visible: =varAvatar
+        Width: =156
+        X: =765
+        Y: =506
+        ZIndex: =45
+
     UsernameGroup As group:
         Height: =5
         Width: =5
@@ -523,7 +567,7 @@ LandingRegisterUserOctalysis As screen:
                 =varRegisterPopUp
             Width: =950
             X: =223
-            Y: =262
+            Y: =202
             ZIndex: =3
 
         btn_Start_49 As button:
@@ -574,7 +618,7 @@ LandingRegisterUserOctalysis As screen:
                 =varRegisterPopUp
             Width: =116
             X: =972
-            Y: =381
+            Y: =321
             ZIndex: =4
 
         btn_Start_14 As button:
@@ -605,7 +649,7 @@ LandingRegisterUserOctalysis As screen:
                 =varRegisterPopUp
             Width: =256
             X: =710
-            Y: =617
+            Y: =557
             ZIndex: =5
 
         TextInput4_6 As text:
@@ -628,7 +672,7 @@ LandingRegisterUserOctalysis As screen:
                 =varRegisterPopUp
             Width: =248
             X: =710
-            Y: =382
+            Y: =322
             ZIndex: =6
 
         TextInput4_12 As text:
@@ -653,7 +697,7 @@ LandingRegisterUserOctalysis As screen:
                 =varRegisterPopUp
             Width: =379
             X: =710
-            Y: =477
+            Y: =417
             ZIndex: =7
 
         TextInput4_11 As text:
@@ -678,7 +722,7 @@ LandingRegisterUserOctalysis As screen:
                 =varRegisterPopUp
             Width: =379
             X: =710
-            Y: =544
+            Y: =484
             ZIndex: =8
 
         Label_SubHeading2_11 As label:
@@ -694,7 +738,7 @@ LandingRegisterUserOctalysis As screen:
                 =varRegisterPopUp
             Width: =361
             X: =313
-            Y: =393
+            Y: =333
             ZIndex: =10
 
         Label_SubHeading2_12 As label:
@@ -709,7 +753,7 @@ LandingRegisterUserOctalysis As screen:
                 =varRegisterPopUp
             Width: =184
             X: =313
-            Y: =497
+            Y: =437
             ZIndex: =11
 
         HtmlText6_4 As htmlViewer:
@@ -721,7 +765,7 @@ LandingRegisterUserOctalysis As screen:
                 =varRegisterPopUp
             Width: =312
             X: =710
-            Y: =435
+            Y: =375
             ZIndex: =12
 
         btn_Start_50 As button:
@@ -772,7 +816,7 @@ LandingRegisterUserOctalysis As screen:
                 =varRegisterPopUp
             Width: =81
             X: =1008
-            Y: =617
+            Y: =557
             ZIndex: =13
 
         Label_SubHeading2_13 As label:
@@ -789,7 +833,7 @@ LandingRegisterUserOctalysis As screen:
                 =varRegisterPopUp
             Width: =184
             X: =282
-            Y: =618
+            Y: =558
             ZIndex: =14
 
         Image23_1 As image:
@@ -802,7 +846,7 @@ LandingRegisterUserOctalysis As screen:
                 =varRegisterPopUp
             Width: =50
             X: =318
-            Y: =331
+            Y: =271
             ZIndex: =15
 
         Image15_1 As image:
@@ -815,6 +859,6 @@ LandingRegisterUserOctalysis As screen:
                 =varRegisterPopUp
             Width: =30
             X: =984
-            Y: =391
+            Y: =331
             ZIndex: =16
 
