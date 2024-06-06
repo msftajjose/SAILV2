@@ -42,7 +42,7 @@ LandingRegisterUserOctalysis As screen:
             Height: =768
             Visible: =varPromptPopUp
             Width: =1366
-            ZIndex: =23
+            ZIndex: =25
 
         HtmlText1_15 As htmlViewer:
             Height: =571
@@ -63,9 +63,9 @@ LandingRegisterUserOctalysis As screen:
                 */
             Visible: =varPromptPopUp
             Width: =851
-            X: =322
-            Y: =176
-            ZIndex: =24
+            X: =273
+            Y: =173
+            ZIndex: =26
 
         Label_SubHeading2_9 As label:
             BorderColor: =RGBA(0, 18, 107, 1)
@@ -78,9 +78,9 @@ LandingRegisterUserOctalysis As screen:
             Text: ="Use a Prompt Template"
             Visible: =varPromptPopUp
             Width: =467
-            X: =472
-            Y: =211
-            ZIndex: =25
+            X: =423
+            Y: =208
+            ZIndex: =27
 
         HtmlText6_3 As htmlViewer:
             Color: =RGBA(128, 128, 128, 1)
@@ -89,9 +89,9 @@ LandingRegisterUserOctalysis As screen:
             Size: =14
             Visible: =varPromptPopUp
             Width: =692
-            X: =404
-            Y: =304
-            ZIndex: =26
+            X: =355
+            Y: =301
+            ZIndex: =28
 
         HtmlText6_5 As htmlViewer:
             Color: =RGBA(128, 128, 128, 1)
@@ -101,9 +101,9 @@ LandingRegisterUserOctalysis As screen:
             Size: =14
             Visible: =varPromptPopUp
             Width: =308
-            X: =404
-            Y: =361
-            ZIndex: =27
+            X: =355
+            Y: =358
+            ZIndex: =29
 
         HtmlText6_6 As htmlViewer:
             BorderColor: =RGBA(116, 116, 116, 1)
@@ -111,13 +111,13 @@ LandingRegisterUserOctalysis As screen:
             BorderThickness: =1
             Color: =RGBA(128, 128, 128, 1)
             Height: =168
-            HtmlText: ="Give me 10 unique username options for a gamified platform. The usernames should start with a descriptive / mood / trait / personality / atmosphere / fantasy / tech / futuristic adjective that is metaphorically connected to what I like to do in my free time, which is <font color=LimeGreen>[YourHobby]</font>. The adjective should be followed by a noun that is my superhero name taking into consideration my last month e-mails."
+            HtmlText: ="create few avtars for me. The avtars should be metaphorically connected to what I like to do in my free time, which is <font color=LimeGreen>[YourHobby]</font>. "
             Size: =14
             Visible: =varPromptPopUp
             Width: =692
-            X: =404
-            Y: =405
-            ZIndex: =28
+            X: =347
+            Y: =401
+            ZIndex: =30
 
         Label_SubHeading2_10 As label:
             BorderColor: =RGBA(0, 18, 107, 1)
@@ -132,9 +132,9 @@ LandingRegisterUserOctalysis As screen:
             Underline: =true
             Visible: =varPromptPopUp
             Width: =184
-            X: =374
-            Y: =640
-            ZIndex: =29
+            X: =325
+            Y: =637
+            ZIndex: =31
 
         btn_Start_53 As button:
             BorderColor: =RGBA(137, 34, 156, 1)
@@ -159,9 +159,9 @@ LandingRegisterUserOctalysis As screen:
             Tooltip: ="Click here to copy prompt above"
             Visible: =varPromptPopUp
             Width: =145
-            X: =950
-            Y: =620
-            ZIndex: =30
+            X: =901
+            Y: =617
+            ZIndex: =32
 
         btn_Start_52 As button:
             Align: =Align.Right
@@ -178,7 +178,7 @@ LandingRegisterUserOctalysis As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
             OnSelect: |-
-                =Launch( "https://copilot.microsoft.com/?BCB=1#/home" )
+                =Launch( "https://www.bing.com/images/create" )
             PressedFill: =RGBA(0, 134, 208, 1)
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
@@ -189,9 +189,9 @@ LandingRegisterUserOctalysis As screen:
             Tooltip: ="New users click to Register"
             Visible: =varPromptPopUp
             Width: =165
-            X: =765
-            Y: =620
-            ZIndex: =31
+            X: =716
+            Y: =617
+            ZIndex: =33
 
         Image21 As image:
             BorderColor: =RGBA(0, 18, 107, 1)
@@ -201,9 +201,9 @@ LandingRegisterUserOctalysis As screen:
             Image: ='Microsoft_365_Copilot_Icon.svg_resized'
             Visible: =varPromptPopUp
             Width: =45
-            X: =404
-            Y: =239
-            ZIndex: =32
+            X: =355
+            Y: =236
+            ZIndex: =34
 
         Image22 As image:
             BorderColor: =RGBA(0, 18, 107, 1)
@@ -213,9 +213,9 @@ LandingRegisterUserOctalysis As screen:
             Image: ='Microsoft_365_Copilot_Icon.svg_resized'
             Visible: =varPromptPopUp
             Width: =28
-            X: =774
-            Y: =631
-            ZIndex: =33
+            X: =725
+            Y: =628
+            ZIndex: =35
 
     Loading_3 As group:
         Height: =5
@@ -823,7 +823,7 @@ LandingRegisterUserOctalysis As screen:
             Width: =183
             X: =749
             Y: =340
-            ZIndex: =34
+            ZIndex: =23
 
         AddMediaButton1_1 As addMedia:
             BorderColor: =RGBA(0, 94, 245, 1)
@@ -839,5 +839,5 @@ LandingRegisterUserOctalysis As screen:
             Width: =156
             X: =765
             Y: =506
-            ZIndex: =35
+            ZIndex: =24
 
