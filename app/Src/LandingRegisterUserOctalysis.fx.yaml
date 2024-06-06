@@ -1,0 +1,820 @@
+LandingRegisterUserOctalysis As screen:
+    BackgroundImage: =ScreenBack
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: |-
+        =Concurrent(
+            UpdateContext({varRegisterPopUp:true}),
+            UpdateContext({varAvatar:false}),
+            UpdateContext({varspinner:false}),
+            UpdateContext({varPromptPopUp:false})
+            //UpdateContext({varLoginWindow:true})
+        )
+
+    HtmlText_Background_1 As htmlViewer:
+        Height: =768
+        HtmlText: |-
+            ="<div style=""
+            
+                background-color:" & "#FFFFFF" & ";
+                  height:757px;
+                  box-shadow: 0px 0px 20px 5px rgba(139,147,232,1);
+            border-radius: 60px 60px 60px 60px;"">
+            </div>"
+            
+            //rgba(139,147,232,1)
+            
+            //rgba(193, 196, 216, 1)
+        Visible: =false
+        Width: =1366
+        ZIndex: =1
+
+    GroupPromptPopUp As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =33
+
+        Shadowed_Bck_4 As rectangle:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Visible: =varPromptPopUp
+            Width: =1366
+            ZIndex: =26
+
+        HtmlText1_15 As htmlViewer:
+            Height: =571
+            HtmlText: |
+                ="<div style='background-color: rgba(255,255,255,100%); 
+                margin: 20px; 
+                width: 800px; 
+                height: 500px; 
+                border-radius: 30px'>
+                </div>"
+                
+                /*
+                "<div style='background-color: rgba(1,2,3,30%); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                "<div style='background-color: rgba(39,69,129,1); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                
+                */
+            Visible: =varPromptPopUp
+            Width: =851
+            X: =322
+            Y: =176
+            ZIndex: =27
+
+        Label_SubHeading2_9 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            Height: =105
+            Size: =30
+            Text: ="Use a Prompt Template"
+            Visible: =varPromptPopUp
+            Width: =467
+            X: =472
+            Y: =211
+            ZIndex: =28
+
+        HtmlText6_3 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Height: =77
+            HtmlText: ="A strong, <b>structured prompt</b> is one of the key factors for obtaining the <b>best AI outputs.</b>"
+            Size: =14
+            Visible: =varPromptPopUp
+            Width: =692
+            X: =404
+            Y: =304
+            ZIndex: =29
+
+        HtmlText6_5 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Height: =44
+            HtmlText: |-
+                ="<b>Try using this one</b> using Copilot:"
+            Size: =14
+            Visible: =varPromptPopUp
+            Width: =308
+            X: =404
+            Y: =361
+            ZIndex: =30
+
+        HtmlText6_6 As htmlViewer:
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =1
+            Color: =RGBA(128, 128, 128, 1)
+            Height: =168
+            HtmlText: ="Give me 10 unique username options for a gamified platform. The usernames should start with a descriptive / mood / trait / personality / atmosphere / fantasy / tech / futuristic adjective that is metaphorically connected to what I like to do in my free time, which is <font color=LimeGreen>[YourHobby]</font>. The adjective should be followed by a noun that is my superhero name taking into consideration my last month e-mails."
+            Size: =14
+            Visible: =varPromptPopUp
+            Width: =692
+            X: =404
+            Y: =405
+            ZIndex: =31
+
+        Label_SubHeading2_10 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 94, 245, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Arial
+            Height: =44
+            OnSelect: |-
+                =UpdateContext({varPromptPopUp:false})
+            Size: =15
+            Text: ="<-- Close"
+            Underline: =true
+            Visible: =varPromptPopUp
+            Width: =184
+            X: =374
+            Y: =640
+            ZIndex: =32
+
+        btn_Start_53 As button:
+            BorderColor: =RGBA(137, 34, 156, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(137, 34, 156, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: =Copy("Give me 10 unique username options for a gamified platform. The usernames should start with a descriptive / mood / trait / personality / atmosphere / fantasy / tech / futuristic adjective that is metaphorically connected to what I like to do in my free time, which is [YourHobby]. The adjective should be followed by a noun that is my superhero name taking into consideration my last month e-mails.")
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="Copy Prompt"
+            Tooltip: ="Click here to copy prompt above"
+            Visible: =varPromptPopUp
+            Width: =145
+            X: =950
+            Y: =620
+            ZIndex: =35
+
+        btn_Start_52 As button:
+            Align: =Align.Right
+            BorderColor: =RGBA(137, 34, 156, 1)
+            Color: =RGBA(137, 34, 156, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =Launch( "https://copilot.microsoft.com/?BCB=1#/home" )
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="Go to Copilot "
+            Tooltip: ="New users click to Register"
+            Visible: =varPromptPopUp
+            Width: =165
+            X: =765
+            Y: =620
+            ZIndex: =36
+
+        Image21 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Image: ='Microsoft_365_Copilot_Icon.svg_resized'
+            Visible: =varPromptPopUp
+            Width: =45
+            X: =404
+            Y: =239
+            ZIndex: =37
+
+        Image22 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =28
+            Image: ='Microsoft_365_Copilot_Icon.svg_resized'
+            Visible: =varPromptPopUp
+            Width: =28
+            X: =774
+            Y: =631
+            ZIndex: =38
+
+    Loading_3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =34
+
+        Timer1_1 As timer:
+            AutoStart: =true
+            Duration: =3000
+            Fill: =RGBA(56, 96, 178, 1)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnTimerEnd: |-
+                =UpdateContext({varspinner:false})
+            Visible: =false
+            X: =78
+            Y: =659
+            ZIndex: =39
+
+        Shadowed_Bck_5 As rectangle:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Visible: =varspinner
+            Width: =1366
+            ZIndex: =40
+
+        Spinner_3 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Image: |
+                ="data:image/svg+xml;utf8, " & EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; background: none; display: block; shape-rendering: auto;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'>
+                <circle cx='50' cy='50' r='32' stroke-width='8' stroke='#00aab4' stroke-dasharray='50.26548245743669 50.26548245743669' fill='none' stroke-linecap='round'>
+                  <animateTransform attributeName='transform' type='rotate' dur='1s' repeatCount='indefinite' keyTimes='0;1' values='0 50 50;360 50 50'></animateTransform>
+                </circle>
+                <circle cx='50' cy='50' r='23' stroke-width='8' stroke='#f4f4f4' stroke-dasharray='36.12831551628262 36.12831551628262' stroke-dashoffset='36.12831551628262' fill='none' stroke-linecap='round'>
+                  <animateTransform attributeName='transform' type='rotate' dur='1s' repeatCount='indefinite' keyTimes='0;1' values='0 50 50;-360 50 50'></animateTransform>
+                </circle>
+                <!-- [ldio] generated by https://loading.io/ --></svg>")
+            Visible: =varspinner
+            X: =698
+            Y: =398
+            ZIndex: =41
+
+    Label5_1 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =15
+        Size: =8
+        Text: ="Version 5.5"
+        X: =213
+        Y: =753
+        ZIndex: =42
+
+    Label5_3 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =15
+        Size: =8
+        Text: ="Version 5.5"
+        X: =233
+        Y: =753
+        ZIndex: =43
+
+    AvatarGroup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        HtmlText1_13 As htmlViewer:
+            Height: =453
+            HtmlText: |
+                ="<div style='background-color: rgba(255,255,255,100%); 
+                margin: 20px; 
+                width: 900px; 
+                height: 400px; 
+                border-radius: 30px'>
+                </div>"
+                
+                /*
+                "<div style='background-color: rgba(1,2,3,30%); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                "<div style='background-color: rgba(39,69,129,1); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                
+                */
+            Visible: =varAvatar
+            Width: =950
+            X: =317
+            Y: =314
+            ZIndex: =17
+
+        Image24 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =235
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Visible: =varAvatar
+            Width: =235
+            X: =793
+            Y: =405
+            ZIndex: =18
+
+        btn_Start_17 As button:
+            Align: =Align.Right
+            BorderColor: =_theme.ColorPrimary
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 94, 245, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =/*
+                UpdateContext({varspinner:true});
+                Set(varRecordD,Blank());
+                If(Value(TextInput4_7.Text)>0,Set(varRegResponse,AISummerREgAutoFlow.Run(TextInput4_5.Text,Value(TextInput4_7.Text) * 3 -5 +100)));
+                
+                If(Value(TextInput4_7.Text)>0,If(!IsBlank(First(Filter(Registrations_Dvs,LoginName=TextInput4_5.Text)).Name),UpdateContext({varUserAvailaibilty:false}),Set(varRecordD, Patch(Registrations_Dvs,Defaults(Registrations_Dvs),{Name:"DFMCop",LoginPin:Value(TextInput4_7.Text) * 3 -5 +100,UserAvtar:UploadedImage1_1.Image,LoginName:TextInput4_5.Text,RegLink:varRegResponse.varregid}))),Notify("Invalid Username or password !"));
+                If(!IsBlank(varRecordD),
+                    Notify("New user account has been created!",NotificationType.Success) && UpdateContext({varRegScreenHide:false}),
+                    Notify("Failed to create user, Try again !", NotificationType.Error)
+                );
+                
+                //Set(varRegResponse,AISummerREgAutoFlow.Run(TextInput4_2.Text,Value(TextInput4_3.Text) * 3 -5 +100));
+                
+                If(!IsBlank(varRecordD),UpdateContext({varLoginWindow:true}));
+                Set(varRecordD,Blank());
+                Reset(TextInput4_5);
+                Reset(TextInput4_7);
+                UpdateContext({varspinner:false});
+                
+                */
+                
+                UpdateContext({varPromptPopUp:true})
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="Use AI  "
+            Tooltip: ="New users click to Register"
+            Visible: =varAvatar
+            Width: =116
+            X: =1066
+            Y: =433
+            ZIndex: =19
+
+        Label_SubHeading2_6 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            Height: =105
+            Size: =30
+            Text: ="Generate an AI Avatar"
+            Visible: =varAvatar
+            Width: =361
+            X: =413
+            Y: =443
+            ZIndex: =20
+
+        HtmlText6_2 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Height: =61
+            HtmlText: ="Use the <b>Copilot Designer AI</b> to create a unique Avatar."
+            Size: =12
+            Visible: =varAvatar
+            Width: =312
+            X: =407
+            Y: =567
+            ZIndex: =21
+
+        btn_Start_51 As button:
+            BorderColor: =RGBA(0, 94, 245, 1)
+            Color: =RGBA(0, 94, 245, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =/*
+                UpdateContext({varspinner:true});
+                Set(varRecordD,Blank());
+                If(Value(TextInput4_7.Text)>0,Set(varRegResponse,AISummerREgAutoFlow.Run(TextInput4_5.Text,Value(TextInput4_7.Text) * 3 -5 +100)));
+                
+                If(Value(TextInput4_7.Text)>0,If(!IsBlank(First(Filter(Registrations_Dvs,LoginName=TextInput4_5.Text)).Name),UpdateContext({varUserAvailaibilty:false}),Set(varRecordD, Patch(Registrations_Dvs,Defaults(Registrations_Dvs),{Name:"DFMCop",LoginPin:Value(TextInput4_7.Text) * 3 -5 +100,UserAvtar:UploadedImage1_1.Image,LoginName:TextInput4_5.Text,RegLink:varRegResponse.varregid}))),Notify("Invalid Username or password !"));
+                If(!IsBlank(varRecordD),
+                    Notify("New user account has been created!",NotificationType.Success) && UpdateContext({varRegScreenHide:false}),
+                    Notify("Failed to create user, Try again !", NotificationType.Error)
+                );
+                
+                //Set(varRegResponse,AISummerREgAutoFlow.Run(TextInput4_2.Text,Value(TextInput4_3.Text) * 3 -5 +100));
+                
+                If(!IsBlank(varRecordD),UpdateContext({varLoginWindow:true}));
+                Set(varRecordD,Blank());
+                Reset(TextInput4_5);
+                Reset(TextInput4_7);
+                UpdateContext({varspinner:false});
+                
+                */
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="Next"
+            Tooltip: ="New users click to Register"
+            Visible: =varAvatar
+            Width: =81
+            X: =1102
+            Y: =669
+            ZIndex: =22
+
+        Label_SubHeading2_8 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 94, 245, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Arial
+            Height: =44
+            OnSelect: |-
+                =UpdateContext({varAvatar:false})
+            Size: =15
+            Text: ="<-- Go back"
+            Underline: =true
+            Visible: =varAvatar
+            Width: =184
+            X: =367
+            Y: =670
+            ZIndex: =23
+
+        Image23 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Image: ='pngimg.com - microsoft_PNG13_resized (1)'
+            Visible: =varAvatar
+            Width: =50
+            X: =412
+            Y: =383
+            ZIndex: =24
+
+        Image15 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =30
+            Image: ='Microsoft_365_Copilot_Icon.svg_resized'
+            Visible: =varAvatar
+            Width: =30
+            X: =1078
+            Y: =443
+            ZIndex: =25
+
+    UsernameGroup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =45
+
+        HtmlText1_12 As htmlViewer:
+            Height: =453
+            HtmlText: |
+                ="<div style='background-color: rgba(255,255,255,100%); 
+                margin: 20px; 
+                width: 900px; 
+                height: 400px; 
+                border-radius: 30px'>
+                </div>"
+                
+                /*
+                "<div style='background-color: rgba(1,2,3,30%); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                "<div style='background-color: rgba(39,69,129,1); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                
+                */
+            Visible: |
+                =varRegisterPopUp
+            Width: =950
+            X: =317
+            Y: =314
+            ZIndex: =3
+
+        btn_Start_49 As button:
+            Align: =Align.Right
+            BorderColor: =_theme.ColorPrimary
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 94, 245, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =/*
+                UpdateContext({varspinner:true});
+                Set(varRecordD,Blank());
+                If(Value(TextInput4_7.Text)>0,Set(varRegResponse,AISummerREgAutoFlow.Run(TextInput4_5.Text,Value(TextInput4_7.Text) * 3 -5 +100)));
+                
+                If(Value(TextInput4_7.Text)>0,If(!IsBlank(First(Filter(Registrations_Dvs,LoginName=TextInput4_5.Text)).Name),UpdateContext({varUserAvailaibilty:false}),Set(varRecordD, Patch(Registrations_Dvs,Defaults(Registrations_Dvs),{Name:"DFMCop",LoginPin:Value(TextInput4_7.Text) * 3 -5 +100,UserAvtar:UploadedImage1_1.Image,LoginName:TextInput4_5.Text,RegLink:varRegResponse.varregid}))),Notify("Invalid Username or password !"));
+                If(!IsBlank(varRecordD),
+                    Notify("New user account has been created!",NotificationType.Success) && UpdateContext({varRegScreenHide:false}),
+                    Notify("Failed to create user, Try again !", NotificationType.Error)
+                );
+                
+                //Set(varRegResponse,AISummerREgAutoFlow.Run(TextInput4_2.Text,Value(TextInput4_3.Text) * 3 -5 +100));
+                
+                If(!IsBlank(varRecordD),UpdateContext({varLoginWindow:true}));
+                Set(varRecordD,Blank());
+                Reset(TextInput4_5);
+                Reset(TextInput4_7);
+                UpdateContext({varspinner:false});
+                
+                */
+                
+                UpdateContext({varPromptPopUp:true})
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="Use AI  "
+            Tooltip: ="New users click to Register"
+            Visible: |
+                =varRegisterPopUp
+            Width: =116
+            X: =1066
+            Y: =433
+            ZIndex: =4
+
+        btn_Start_14 As button:
+            BorderColor: =RGBA(0, 94, 245, 1)
+            Color: =RGBA(0, 94, 245, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |
+                =Refresh(Registrations_Dvs);
+                If(!IsBlank(First(Filter(Registrations_Dvs,LoginName=TextInput4_6.Text)).Name),Notify("Username not available ! try a different user name",NotificationType.Error),Notify("Username available !",NotificationType.Success))
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            TabIndex: =-1
+            Text: ="Check Name Availability"
+            Visible: |
+                =varRegisterPopUp
+            Width: =256
+            X: =804
+            Y: =669
+            ZIndex: =5
+
+        TextInput4_6 As text:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Height: =50
+            HintText: ="User Name"
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            MaxLength: =10
+            Size: =13
+            Tooltip: ="Do not use your Microsoft alias or Id (Max 10 letter)"
+            Visible: |
+                =varRegisterPopUp
+            Width: =248
+            X: =804
+            Y: =434
+            ZIndex: =6
+
+        TextInput4_12 As text:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Format: =TextFormat.Number
+            Height: =50
+            HintText: ="6-digit Pin"
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            MaxLength: =6
+            Mode: =TextMode.Password
+            Size: =13
+            Tooltip: ="Use only Numbers"
+            Visible: |
+                =varRegisterPopUp
+            Width: =379
+            X: =804
+            Y: =529
+            ZIndex: =7
+
+        TextInput4_11 As text:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Format: =TextFormat.Number
+            Height: =50
+            HintText: ="Confirm Pin"
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            MaxLength: =6
+            Mode: =TextMode.Password
+            Size: =13
+            Tooltip: ="Use only Numbers"
+            Visible: |
+                =varRegisterPopUp
+            Width: =379
+            X: =804
+            Y: =596
+            ZIndex: =8
+
+        Label_SubHeading2_11 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            Height: =105
+            Size: =30
+            Text: ="Create a SAIL Account"
+            Visible: |
+                =varRegisterPopUp
+            Width: =361
+            X: =407
+            Y: =445
+            ZIndex: =10
+
+        Label_SubHeading2_12 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(128, 128, 128, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Arial
+            Height: =44
+            Size: =15
+            Text: ="Basic information"
+            Visible: |
+                =varRegisterPopUp
+            Width: =184
+            X: =407
+            Y: =549
+            ZIndex: =11
+
+        HtmlText6_4 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Height: =31
+            HtmlText: ="<b><font color=BurntOrange>Don't use</font></b> your Microsoft alias or ID."
+            Size: =10
+            Visible: |
+                =varRegisterPopUp
+            Width: =312
+            X: =804
+            Y: =487
+            ZIndex: =12
+
+        btn_Start_50 As button:
+            BorderColor: =RGBA(0, 94, 245, 1)
+            Color: =RGBA(0, 94, 245, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =/*
+                UpdateContext({varspinner:true});
+                Set(varRecordD,Blank());
+                If(Value(TextInput4_7.Text)>0,Set(varRegResponse,AISummerREgAutoFlow.Run(TextInput4_5.Text,Value(TextInput4_7.Text) * 3 -5 +100)));
+                
+                If(Value(TextInput4_7.Text)>0,If(!IsBlank(First(Filter(Registrations_Dvs,LoginName=TextInput4_5.Text)).Name),UpdateContext({varUserAvailaibilty:false}),Set(varRecordD, Patch(Registrations_Dvs,Defaults(Registrations_Dvs),{Name:"DFMCop",LoginPin:Value(TextInput4_7.Text) * 3 -5 +100,UserAvtar:UploadedImage1_1.Image,LoginName:TextInput4_5.Text,RegLink:varRegResponse.varregid}))),Notify("Invalid Username or password !"));
+                If(!IsBlank(varRecordD),
+                    Notify("New user account has been created!",NotificationType.Success) && UpdateContext({varRegScreenHide:false}),
+                    Notify("Failed to create user, Try again !", NotificationType.Error)
+                );
+                
+                //Set(varRegResponse,AISummerREgAutoFlow.Run(TextInput4_2.Text,Value(TextInput4_3.Text) * 3 -5 +100));
+                
+                If(!IsBlank(varRecordD),UpdateContext({varLoginWindow:true}));
+                Set(varRecordD,Blank());
+                Reset(TextInput4_5);
+                Reset(TextInput4_7);
+                UpdateContext({varspinner:false});
+                
+                */
+                
+                UpdateContext({varAvatar:true})
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="Next"
+            Tooltip: ="New users click to Register"
+            Visible: |
+                =varRegisterPopUp
+            Width: =81
+            X: =1102
+            Y: =669
+            ZIndex: =13
+
+        Label_SubHeading2_13 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 94, 245, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Arial
+            Height: =44
+            OnSelect: =Navigate(LandingPageOctalysis)
+            Size: =15
+            Text: ="<-- Go back"
+            Underline: =true
+            Visible: |
+                =varRegisterPopUp
+            Width: =184
+            X: =367
+            Y: =670
+            ZIndex: =14
+
+        Image23_1 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Image: ='pngimg.com - microsoft_PNG13_resized (1)'
+            Visible: |
+                =varRegisterPopUp
+            Width: =50
+            X: =412
+            Y: =383
+            ZIndex: =15
+
+        Image15_1 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =30
+            Image: ='Microsoft_365_Copilot_Icon.svg_resized'
+            Visible: |
+                =varRegisterPopUp
+            Width: =30
+            X: =1078
+            Y: =443
+            ZIndex: =16
+

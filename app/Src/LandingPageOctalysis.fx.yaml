@@ -1,0 +1,480 @@
+LandingPageOctalysis As screen:
+    BackgroundImage: =HomeBackground
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: |-
+        =
+        Concurrent(
+            UpdateContext({varspinner:true}),
+            UpdateContext({varLoginWindow:true}),
+            UpdateContext({varLoginPopUp:false})
+        )
+
+    HtmlText_Background_2 As htmlViewer:
+        Height: =768
+        HtmlText: |-
+            ="<div style=""
+            
+                background-color:" & "#FFFFFF" & ";
+                  height:757px;
+                  box-shadow: 0px 0px 20px 5px rgba(139,147,232,1);
+            border-radius: 60px 60px 60px 60px;"">
+            </div>"
+            
+            //rgba(139,147,232,1)
+            
+            //rgba(193, 196, 216, 1)
+        Visible: =false
+        Width: =1366
+        ZIndex: =2
+
+    btn_Start_54 As button:
+        BorderColor: |
+            =//_theme.ColorPrimary
+        BorderThickness: =1
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 94, 245, 1)
+        FocusedBorderThickness: =2
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =50
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(167, 182, 203, 1)
+        OnSelect: |-
+            =/*
+            UpdateContext({varRegScreenHide:true});
+            UpdateContext({ResetImage:true});
+            Reset(AddMediaButton1_2);
+            UpdateContext({varLoginWindow:false})
+            */
+            
+            Navigate(LandingRegisterUserOctalysis)
+        PressedFill: =RGBA(0, 134, 208, 1)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =14
+        Text: ="REGISTER"
+        Tooltip: ="New user! click to Register your avtar. "
+        Visible: =varLoginWindow  && !varspinner
+        Width: =180
+        X: =751
+        Y: =498
+        ZIndex: =4
+
+    btn_Start_55 As button:
+        BorderColor: =RGBA(0, 94, 245, 1)
+        BorderThickness: =1
+        Color: =RGBA(0, 94, 245, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =2
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =50
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(167, 182, 203, 1)
+        OnSelect: |-
+            =/*
+            Concurrent(
+                Set(varpin,Value(TextInput4_10.Text) *3 -5 +100),
+                Set(varlgname,TextInput4_8.Text);
+            );
+            Concurrent(
+                Set(varCrrUser,First(Filter(Registrations_Dvs,LoginName=varlgname && LoginPin = Text(varpin)))),
+                Set(varLogFromDataVerse,First(Filter(AISummerRegistrations,Name=varlgname && LoginPin = Text(varpin))))
+            );
+            If(!IsBlank(varCrrUser.Name),Navigate(Registration_Manuel,ScreenTransition.Fade),Notify("Invalid username or password!",NotificationType.Error) && Reset(TextInput4_10));
+            Set(varCrrUser,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)));
+            //Set(varCurUserIDD,varCrrUser.Registrations_Dv);
+            Concurrent(
+                Set(varUserAvtar,varCrrUser.UserAvtar),
+                Set(varTeamAvtar,varCrrUser.TeamID.TeamAvtar);
+            );
+            */
+            
+            UpdateContext({varLoginPopUp:true});
+            
+            
+            // Storing to SharePoint. A flow will update the other things
+            
+            /*
+            If(_existingUser,
+                Patch(
+                    'User Choice',
+                    LookUp('User Choice','User UPN'=_myProfileUPN_V.UserPrincipalName),
+                    {
+                        Region: {
+                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                        Id: 1,
+                        Value: Drp_Time.Selected.Value
+                    },
+                    Technology: {
+                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                        Id: 1,
+                        Value: Drp_Tech.Selected.Value
+                    }
+                    }
+                ),
+                Patch(
+                'User Choice',
+                Defaults('User Choice'),
+                {
+                    Title: "User Choice",
+                    'User UPN': _myProfileUPN_V.UserPrincipalName,
+                    Region: {
+                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                        Id: 1,
+                        Value: Drp_Time.Selected.Value
+                    },
+                    Technology: {
+                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                        Id: 1,
+                        Value: Drp_Tech.Selected.Value
+                    }
+                }
+            )
+            );
+            
+            */
+        PressedFill: =RGBA(0, 134, 208, 1)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =14
+        Text: ="LOG IN"
+        Visible: =varLoginWindow  && !varspinner
+        X: =538
+        Y: =498
+        ZIndex: =5
+
+    Label5_2 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =15
+        Size: =8
+        Text: ="Version 5.5"
+        X: =213
+        Y: =753
+        ZIndex: =6
+
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =20
+
+        HtmlText1_16 As htmlViewer:
+            Height: =420
+            HtmlText: |-
+                ="<div style='background-color: rgba(255,255,255,99%); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                margin: 20px; 
+                width: 1000px; 
+                height: 330px; 
+                border-radius: 30px'>
+                </div>"
+            Visible: =varLoginPopUp
+            Width: =1041
+            X: =227
+            Y: =313
+            ZIndex: =7
+
+        btn_Start_56 As button:
+            BorderColor: =RGBA(0, 94, 245, 1)
+            Color: =RGBA(0, 94, 245, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =51
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =/*
+                UpdateContext({varRegScreenHide:true});
+                UpdateContext({ResetImage:true});
+                Reset(AddMediaButton1_1);
+                UpdateContext({varLoginWindow:false})
+                */
+                
+                UpdateContext({varLoginPopUp:false})
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: |-
+                ="Back
+                "
+            Tooltip: ="New user! click to Register your avtar. "
+            Visible: =varLoginPopUp
+            Width: =91
+            X: =931
+            Y: =583
+            ZIndex: =8
+
+        btn_Start_57 As button:
+            BorderColor: =RGBA(0, 94, 245, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 94, 245, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =Concurrent(
+                    Set(varpin,Value(TextInput4_9.Text) *3 -5 +100),
+                    Set(varlgname,TextInput4_8.Text);
+                );
+                Concurrent(
+                    Set(varCrrUser,First(Filter(Registrations_Dvs,LoginName=varlgname && LoginPin = Text(varpin)))),
+                    Set(varLogFromDataVerseN,First(Filter(AISummerRegistrations,Name=varlgname && LoginPin = Text(varpin))))
+                );
+                If(!IsBlank(varCrrUser.Name),Navigate(Registration,ScreenTransition.Fade),Notify("Invalid username or password!",NotificationType.Error) && Reset(TextInput4_9));
+                Set(varCrrUser,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)));
+                //Set(varCurUserIDD,varCrrUser.Registrations_Dv);
+                Concurrent(
+                    Set(varUserAvtar,varCrrUser.UserAvtar),
+                    Set(varTeamAvtar,varCrrUser.TeamID.TeamAvtar);
+                );
+                
+                
+                
+                
+                // Storing to SharePoint. A flow will update the other things
+                
+                /*
+                If(_existingUser,
+                    Patch(
+                        'User Choice',
+                        LookUp('User Choice','User UPN'=_myProfileUPN_V.UserPrincipalName),
+                        {
+                            Region: {
+                            '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                            Id: 1,
+                            Value: Drp_Time.Selected.Value
+                        },
+                        Technology: {
+                            '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                            Id: 1,
+                            Value: Drp_Tech.Selected.Value
+                        }
+                        }
+                    ),
+                    Patch(
+                    'User Choice',
+                    Defaults('User Choice'),
+                    {
+                        Title: "User Choice",
+                        'User UPN': _myProfileUPN_V.UserPrincipalName,
+                        Region: {
+                            '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                            Id: 1,
+                            Value: Drp_Time.Selected.Value
+                        },
+                        Technology: {
+                            '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                            Id: 1,
+                            Value: Drp_Tech.Selected.Value
+                        }
+                    }
+                )
+                );
+                
+                */
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: |-
+                ="Log In
+                "
+            Visible: =varLoginPopUp
+            Width: =133
+            X: =1059
+            Y: =583
+            ZIndex: =9
+
+        TextInput4_8 As text:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            HintText: ="User Name"
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Size: =13
+            Tooltip: ="User Name (Do not use your Microsoft alias or Id)"
+            Visible: =varLoginPopUp
+            Width: =351
+            X: =842
+            Y: =425
+            ZIndex: =10
+
+        TextInput4_9 As text:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Format: =TextFormat.Number
+            Height: =44
+            HintText: ="Enter your password"
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            MaxLength: =6
+            Mode: =TextMode.Password
+            Size: =13
+            Tooltip: ="Numeric - maximum 6 digits. "
+            Visible: =varLoginPopUp
+            Width: =351
+            X: =842
+            Y: =489
+            ZIndex: =11
+
+        Icon11_4 As icon.AddUser:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.View
+            Height: =40
+            Icon: =Icon.Person
+            Tooltip: ="User Name"
+            Visible: =varLoginPopUp
+            Width: =40
+            X: =793
+            Y: =425
+            ZIndex: =12
+
+        Icon11_5 As icon.AddUser:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.View
+            Height: =40
+            Icon: =Icon.Lock
+            Tooltip: ="Password"
+            Visible: =varLoginPopUp
+            Width: =40
+            X: =793
+            Y: =493
+            ZIndex: =13
+
+        Label_SubHeading2_4 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            Height: =78
+            Size: =30
+            Text: ="Welcome to SAIL"
+            Visible: =varLoginPopUp
+            Width: =361
+            X: =287
+            Y: =436
+            ZIndex: =14
+
+        Label_SubHeading2_5 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(128, 128, 128, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            Height: =44
+            Size: =15
+            Text: ="Start your engines!"
+            Visible: =varLoginPopUp
+            Width: =361
+            X: =287
+            Y: =509
+            ZIndex: =15
+
+        Image20 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Image: =//'pngimg.com - microsoft_PNG13_resized (1)'
+            Visible: =varLoginPopUp
+            Width: =50
+            X: =287
+            Y: =386
+            ZIndex: =16
+
+    Loading_4 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =22
+
+        Timer1_2 As timer:
+            AutoStart: =true
+            Duration: =3000
+            Fill: =RGBA(56, 96, 178, 1)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnTimerEnd: |-
+                =UpdateContext({varspinner:false})
+            Visible: =false
+            X: =78
+            Y: =659
+            ZIndex: =17
+
+        Shadowed_Bck_6 As rectangle:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Visible: =varspinner
+            Width: =1366
+            ZIndex: =18
+
+        Spinner_4 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Image: |
+                ="data:image/svg+xml;utf8, " & EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; background: none; display: block; shape-rendering: auto;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'>
+                <circle cx='50' cy='50' r='32' stroke-width='8' stroke='#00aab4' stroke-dasharray='50.26548245743669 50.26548245743669' fill='none' stroke-linecap='round'>
+                  <animateTransform attributeName='transform' type='rotate' dur='1s' repeatCount='indefinite' keyTimes='0;1' values='0 50 50;360 50 50'></animateTransform>
+                </circle>
+                <circle cx='50' cy='50' r='23' stroke-width='8' stroke='#f4f4f4' stroke-dasharray='36.12831551628262 36.12831551628262' stroke-dashoffset='36.12831551628262' fill='none' stroke-linecap='round'>
+                  <animateTransform attributeName='transform' type='rotate' dur='1s' repeatCount='indefinite' keyTimes='0;1' values='0 50 50;-360 50 50'></animateTransform>
+                </circle>
+                <!-- [ldio] generated by https://loading.io/ --></svg>")
+            Visible: =varspinner
+            X: =673
+            Y: =436
+            ZIndex: =19
+
