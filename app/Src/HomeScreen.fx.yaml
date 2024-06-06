@@ -173,7 +173,7 @@
                             =Table( { ID:1,Icon:"" ,Value: "Discover" }, { ID:2,Icon:Icon.Home ,Value: "Home" }, { ID:3,Icon:Icon.AddLibrary ,Value: "Prompt Library" },{ ID:4,Icon:"" ,Value: "Play" } ,{ ID:5,Icon:Icon.Home ,Value: "Challenges" },{ ID:6,Icon:Icon.AddLibrary ,Value: "Leader Boards" },{ ID:7,Icon:Icon.AddLibrary ,Value: "Squad" },{ ID:8,Icon:"" ,Value: "Adjust" },{ ID:9,Icon:Icon.Settings ,Value: "Settings" },{ ID:10,Icon:Icon.QuestionMark ,Value: "Feedback" })
                         Layout: =Layout.Vertical
                         LoadingSpinner: =LoadingSpinner.Data
-                        TemplateFill: =If(ThisItem.IsSelected, RGBA(214, 221, 224, 1),  RGBA(0, 0, 0, 0))
+                        TemplateFill: =If(ThisItem.IsSelected && !IsBlank(ThisItem.Icon), RGBA(214, 221, 224, 1),  RGBA(0, 0, 0, 0))
                         TemplateSize: =35
                         Width: =302
                         Y: =61
