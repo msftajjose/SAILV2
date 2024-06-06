@@ -931,7 +931,7 @@
       "MetaDataIDKey": "",
       "Name": "btn_Start_17",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 20,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2098,7 +2098,7 @@
       "MetaDataIDKey": "",
       "Name": "btn_Start_51",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 31,
+      "ParentIndex": 33,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2494,7 +2494,7 @@
       "MetaDataIDKey": "",
       "Name": "btn_Start_52",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 33,
+      "ParentIndex": 31,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2883,7 +2883,7 @@
       "MetaDataIDKey": "",
       "Name": "btn_Start_53",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 34,
+      "ParentIndex": 32,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4410,7 +4410,7 @@
       "MetaDataIDKey": "",
       "Name": "HtmlText6_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 21,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7688,7 +7688,7 @@
       "MetaDataIDKey": "",
       "Name": "Label_SubHeading2_8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 32,
+      "ParentIndex": 34,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

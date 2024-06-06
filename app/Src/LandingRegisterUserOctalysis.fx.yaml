@@ -111,7 +111,7 @@ LandingRegisterUserOctalysis As screen:
             BorderThickness: =1
             Color: =RGBA(128, 128, 128, 1)
             Height: =168
-            HtmlText: ="create few avtars for me. The avtars should be metaphorically connected to what I like to do in my free time, which is <font color=LimeGreen>[YourHobby]</font>. "
+            HtmlText: ="create few avtars for me. The avtars should be metaphorically connected to what I like to do in my free time, which is [YourHobby]. "
             Size: =14
             Visible: =varPromptPopUp
             Width: =692
@@ -148,7 +148,7 @@ LandingRegisterUserOctalysis As screen:
             Height: =50
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
-            OnSelect: =Copy("Give me 10 unique username options for a gamified platform. The usernames should start with a descriptive / mood / trait / personality / atmosphere / fantasy / tech / futuristic adjective that is metaphorically connected to what I like to do in my free time, which is [YourHobby]. The adjective should be followed by a noun that is my superhero name taking into consideration my last month e-mails.")
+            OnSelect: =Copy(HtmlText6_6.HtmlText)
             PressedFill: =RGBA(0, 134, 208, 1)
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
