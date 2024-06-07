@@ -751,7 +751,7 @@
 
                             Container12 As groupContainer.manualLayoutContainer:
                                 DropShadow: =DropShadow.Light
-                                Fill: =RGBA(237, 186, 157, 1)
+                                Fill: =RGBA(255, 255, 255, 1)
                                 LayoutMinHeight: =100
                                 LayoutMinWidth: =250
                                 RadiusBottomLeft: =4
@@ -759,116 +759,6 @@
                                 RadiusTopLeft: =4
                                 RadiusTopRight: =4
                                 ZIndex: =1
-
-                                "Gallery3_3 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
-                                    '#CopilotOverlayLabel': ="Filtered"
-                                    BorderColor: =App.Theme.Colors.Darker40
-                                    DelayItemLoading: =true
-                                    Height: =277
-                                    Items: =Sort(Filter(tblUserNotifications,(UserID.Registrations_Dv=varCrrUser.Registrations_Dv && IsRead="No") || IsRead="NA"   ),'Created On',SortOrder.Descending)
-                                    Layout: =Layout.Vertical
-                                    LoadingSpinner: =LoadingSpinner.Data
-                                    TemplatePadding: =0
-                                    TemplateSize: =79
-                                    Width: =Parent.Width
-                                    Y: =45
-                                    ZIndex: =1
-
-                                    Button5_1 As button:
-                                        BorderColor: =App.Theme.Colors.Primary
-                                        BorderThickness: =0
-                                        DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        DisabledFill: =RGBA(244, 244, 244, 1)
-                                        DisplayMode: =DisplayMode.View
-                                        Fill: =If(ThisItem.IsRead="NA",RGBA(204, 231, 246, 1),  RGBA(255, 255, 255, 1))
-                                        Font: =App.Theme.Font
-                                        FontWeight: =FontWeight.Semibold
-                                        Height: =68
-                                        HoverBorderColor: =App.Theme.Colors.Darker10
-                                        HoverColor: =RGBA(255, 255, 255, 1)
-                                        HoverFill: =App.Theme.Colors.Darker10
-                                        OnSelect: =Select(Parent)
-                                        PressedBorderColor: =App.Theme.Colors.Darker40
-                                        PressedColor: =Self.Color
-                                        PressedFill: =App.Theme.Colors.Darker40
-                                        Size: =15
-                                        Text: =""
-                                        Width: =632
-                                        X: =6
-                                        Y: =6
-                                        ZIndex: =1
-
-                                    Title4_4 As label:
-                                        BorderColor: =App.Theme.Colors.Darker40
-                                        Color: =RGBA(0, 0, 0, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        Font: =Font.'Segoe UI'
-                                        Height: =20
-                                        LineHeight: =2.2
-                                        OnSelect: =Select(Parent)
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Size: =10
-                                        Text: =ThisItem.'Created On'
-                                        VerticalAlign: =VerticalAlign.Top
-                                        Width: =Parent.TemplateWidth - 86
-                                        X: =6
-                                        Y: =5
-                                        ZIndex: =2
-
-                                    Subtitle2_5 As label:
-                                        BorderColor: =App.Theme.Colors.Darker40
-                                        Color: =RGBA(0, 0, 0, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        Font: =App.Theme.Font
-                                        Height: =42
-                                        OnSelect: =Select(Parent)
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Size: =10
-                                        Text: =ThisItem.Name
-                                        VerticalAlign: =VerticalAlign.Top
-                                        Width: =620
-                                        X: =Title4_4.X
-                                        Y: =27
-                                        ZIndex: =3
-
-                                    Icon10_2 As icon.Cancel:
-                                        BorderColor: =App.Theme.Colors.Darker40
-                                        Color: =App.Theme.Colors.Darker30
-                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                        DisabledColor: =RGBA(244, 244, 244, 1)
-                                        Height: =15
-                                        Icon: =Icon.CancelBadge
-                                        OnSelect: |-
-                                            =Select(Parent);If(ThisItem.IsRead="No", Patch(tblUserNotifications,ThisItem,{IsRead:"Yes"}); Refresh(tblUserNotifications))
-                                        Tooltip: ="Dismiss"
-                                        Visible: =If(ThisItem.IsRead="NA",false,true)
-                                        Width: =15
-                                        X: =611
-                                        Y: =10
-                                        ZIndex: =4
-
-                                TextCanvas1_5 As Text:
-                                    Align: ='TextCanvas.Align'.Center
-                                    DisplayMode: =DisplayMode.Edit
-                                    Font: =Font.'Segoe UI'
-                                    FontColor: =RGBA(0, 0, 0, 1)
-                                    Height: =30
-                                    Size: =14
-                                    Text: ="Notifications"
-                                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
-                                    Weight: ='TextCanvas.Weight'.Bold
-                                    Width: =144
-                                    Wrap: =true
-                                    X: =240
-                                    Y: =10
-                                    ZIndex: =2
 
                     Container7 As groupContainer.verticalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
@@ -934,4 +824,123 @@
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
                             ZIndex: =2
+
+                            Container13 As groupContainer.manualLayoutContainer:
+                                DropShadow: =DropShadow.Light
+                                Fill: =RGBA(214, 221, 224, 1)
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                ZIndex: =1
+
+                                "Gallery3_3 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+                                    '#CopilotOverlayLabel': ="Filtered"
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    DelayItemLoading: =true
+                                    Height: =277
+                                    Items: =Sort(Filter(tblUserNotifications,(UserID.Registrations_Dv=varCrrUser.Registrations_Dv && IsRead="No") || IsRead="NA"   ),'Created On',SortOrder.Descending)
+                                    Layout: =Layout.Vertical
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    TemplatePadding: =0
+                                    TemplateSize: =79
+                                    Width: =Parent.Width
+                                    Y: =45
+                                    ZIndex: =1
+
+                                    Button5_1 As button:
+                                        BorderColor: =App.Theme.Colors.Primary
+                                        BorderThickness: =0
+                                        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        DisabledFill: =RGBA(244, 244, 244, 1)
+                                        DisplayMode: =DisplayMode.View
+                                        Fill: =If(ThisItem.IsRead="NA",RGBA(204, 231, 246, 1),  RGBA(255, 255, 255, 1))
+                                        Font: =App.Theme.Font
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =68
+                                        HoverBorderColor: =App.Theme.Colors.Darker10
+                                        HoverColor: =RGBA(255, 255, 255, 1)
+                                        HoverFill: =App.Theme.Colors.Darker10
+                                        OnSelect: =Select(Parent)
+                                        PressedBorderColor: =App.Theme.Colors.Darker40
+                                        PressedColor: =Self.Color
+                                        PressedFill: =App.Theme.Colors.Darker40
+                                        Size: =15
+                                        Text: =""
+                                        Width: =409
+                                        Y: =6
+                                        ZIndex: =1
+
+                                    Title4_4 As label:
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Font: =Font.'Segoe UI'
+                                        Height: =20
+                                        LineHeight: =2.2
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Size: =10
+                                        Text: =ThisItem.'Created On'
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =Parent.TemplateWidth - 86
+                                        X: =6
+                                        Y: =5
+                                        ZIndex: =2
+
+                                    Subtitle2_5 As label:
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Font: =App.Theme.Font
+                                        Height: =42
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Size: =10
+                                        Text: =ThisItem.Name
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =409
+                                        Y: =27
+                                        ZIndex: =3
+
+                                    Icon10_2 As icon.Cancel:
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =App.Theme.Colors.Darker30
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledColor: =RGBA(244, 244, 244, 1)
+                                        Height: =15
+                                        Icon: =Icon.CancelBadge
+                                        OnSelect: |-
+                                            =Select(Parent);If(ThisItem.IsRead="No", Patch(tblUserNotifications,ThisItem,{IsRead:"Yes"}); Refresh(tblUserNotifications))
+                                        Tooltip: ="Dismiss"
+                                        Visible: =If(ThisItem.IsRead="NA",false,true)
+                                        Width: =15
+                                        X: =394
+                                        Y: =10
+                                        ZIndex: =4
+
+                                TextCanvas1_5 As Text:
+                                    Align: ='TextCanvas.Align'.Center
+                                    DisplayMode: =DisplayMode.Edit
+                                    Font: =Font.'Segoe UI'
+                                    FontColor: =RGBA(0, 0, 0, 1)
+                                    Height: =30
+                                    Size: =14
+                                    Text: ="Notifications"
+                                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                                    Weight: ='TextCanvas.Weight'.Bold
+                                    Width: =144
+                                    Wrap: =true
+                                    X: =137
+                                    Y: =10
+                                    ZIndex: =2
 
