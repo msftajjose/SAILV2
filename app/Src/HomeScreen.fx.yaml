@@ -523,7 +523,7 @@
                                         TemplateSize: =64
                                         Width: =626
                                         X: =14
-                                        Y: =11
+                                        Y: =31
                                         ZIndex: =2
 
                                         Button6_14 As button:
@@ -554,7 +554,7 @@
                                             RadiusTopRight: =15
                                             Size: =15
                                             Text: =""
-                                            Width: =Parent.TemplateWidth-10
+                                            Width: =Parent.TemplateWidth-13
                                             ZIndex: =1
 
                                         Image5_2 As image:
@@ -670,7 +670,7 @@
                                         DisabledFill: =RGBA(244, 244, 244, 1)
                                         FocusedBorderThickness: =4
                                         Font: =App.Theme.Font
-                                        Height: =58
+                                        Height: =50
                                         HintText: ="""Type your message"""
                                         HoverBorderColor: =App.Theme.Colors.Darker40
                                         HoverColor: =RGBA(0, 0, 0, 1)
@@ -684,7 +684,7 @@
                                         Size: =11
                                         Width: =578
                                         X: =14
-                                        Y: =250
+                                        Y: =260
                                         ZIndex: =3
 
                                     Icon7_6 As icon.Send:
@@ -705,7 +705,7 @@
                                         Tooltip: ="Send"
                                         Width: =28
                                         X: =609
-                                        Y: =281
+                                        Y: =286
                                         ZIndex: =4
 
                                     Icon7_7 As icon.Send:
@@ -719,9 +719,24 @@
                                             =Refresh(TeamChats);
                                         Tooltip: ="Refresh"
                                         Width: =23
-                                        X: =612
-                                        Y: =245
+                                        X: =607
+                                        Y: =260
                                         ZIndex: =5
+
+                                TextCanvas1_3 As Text:
+                                    Align: ='TextCanvas.Align'.Start
+                                    DisplayMode: =DisplayMode.Edit
+                                    Font: =Font.'Segoe UI'
+                                    FontColor: =RGBA(255, 255, 255, 1)
+                                    Height: =30
+                                    Size: =14
+                                    Text: ="Squad Chat"
+                                    Weight: ='TextCanvas.Weight'.Bold
+                                    Width: =144
+                                    Wrap: =true
+                                    X: =19
+                                    Y: =1
+                                    ZIndex: =6
 
                         Container9 As groupContainer.horizontalAutoLayoutContainer:
                             DropShadow: =DropShadow.Light
