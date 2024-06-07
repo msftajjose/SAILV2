@@ -10,24 +10,6 @@ LandingPageOctalysis As screen:
             UpdateContext({varLoginPopUp:false})
         )
 
-    HtmlText_Background_2 As htmlViewer:
-        Height: =768
-        HtmlText: |-
-            ="<div style=""
-            
-                background-color:" & "#FFFFFF" & ";
-                  height:757px;
-                  box-shadow: 0px 0px 20px 5px rgba(139,147,232,1);
-            border-radius: 60px 60px 60px 60px;"">
-            </div>"
-            
-            //rgba(139,147,232,1)
-            
-            //rgba(193, 196, 216, 1)
-        Visible: =false
-        Width: =1366
-        ZIndex: =2
-
     btn_Start_54 As button:
         BorderColor: |
             =//_theme.ColorPrimary
@@ -63,7 +45,7 @@ LandingPageOctalysis As screen:
         Width: =180
         X: =714
         Y: =528
-        ZIndex: =4
+        ZIndex: =2
 
     btn_Start_55 As button:
         BorderColor: =RGBA(0, 94, 245, 1)
@@ -79,71 +61,12 @@ LandingPageOctalysis As screen:
         Height: =50
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(167, 182, 203, 1)
-        OnSelect: |-
-            =/*
-            Concurrent(
-                Set(varpin,Value(TextInput4_10.Text) *3 -5 +100),
-                Set(varlgname,TextInput4_8.Text);
+        OnSelect: |
+            =Concurrent(
+                Reset(TextInput4_8),
+                Reset(TextInput4_9)
             );
-            Concurrent(
-                Set(varCrrUser,First(Filter(Registrations_Dvs,LoginName=varlgname && LoginPin = Text(varpin)))),
-                Set(varLogFromDataVerse,First(Filter(AISummerRegistrations,Name=varlgname && LoginPin = Text(varpin))))
-            );
-            If(!IsBlank(varCrrUser.Name),Navigate(Registration_Manuel,ScreenTransition.Fade),Notify("Invalid username or password!",NotificationType.Error) && Reset(TextInput4_10));
-            Set(varCrrUser,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)));
-            //Set(varCurUserIDD,varCrrUser.Registrations_Dv);
-            Concurrent(
-                Set(varUserAvtar,varCrrUser.UserAvtar),
-                Set(varTeamAvtar,varCrrUser.TeamID.TeamAvtar);
-            );
-            */
-            Reset(TextInput4_8);
-            Reset(TextInput4_9);
-            
             UpdateContext({varLoginPopUp:true});
-            
-            
-            // Storing to SharePoint. A flow will update the other things
-            
-            /*
-            If(_existingUser,
-                Patch(
-                    'User Choice',
-                    LookUp('User Choice','User UPN'=_myProfileUPN_V.UserPrincipalName),
-                    {
-                        Region: {
-                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                        Id: 1,
-                        Value: Drp_Time.Selected.Value
-                    },
-                    Technology: {
-                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                        Id: 1,
-                        Value: Drp_Tech.Selected.Value
-                    }
-                    }
-                ),
-                Patch(
-                'User Choice',
-                Defaults('User Choice'),
-                {
-                    Title: "User Choice",
-                    'User UPN': _myProfileUPN_V.UserPrincipalName,
-                    Region: {
-                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                        Id: 1,
-                        Value: Drp_Time.Selected.Value
-                    },
-                    Technology: {
-                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                        Id: 1,
-                        Value: Drp_Tech.Selected.Value
-                    }
-                }
-            )
-            );
-            
-            */
         PressedFill: =RGBA(0, 134, 208, 1)
         RadiusBottomLeft: =5
         RadiusBottomRight: =5
@@ -154,7 +77,7 @@ LandingPageOctalysis As screen:
         Visible: =varLoginWindow  && !varspinner
         X: =496
         Y: =528
-        ZIndex: =5
+        ZIndex: =3
 
     Label5_2 As label:
         BorderColor: =RGBA(0, 18, 107, 1)
@@ -165,14 +88,20 @@ LandingPageOctalysis As screen:
         Text: ="Version 5.5"
         X: =213
         Y: =753
-        ZIndex: =6
+        ZIndex: =4
 
-    Group2 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =20
+    ContainerLogin As groupContainer:
+        DropShadow: =DropShadow.Light
+        Height: =500
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =varLoginPopUp
+        Width: =1121
+        X: =110
+        Y: =183
+        ZIndex: =5
 
         HtmlText1_16 As htmlViewer:
             Height: =420
@@ -186,9 +115,9 @@ LandingPageOctalysis As screen:
                 </div>"
             Visible: =varLoginPopUp
             Width: =1041
-            X: =150
-            Y: =223
-            ZIndex: =7
+            X: =40
+            Y: =40
+            ZIndex: =1
 
         btn_Start_56 As button:
             BorderColor: =RGBA(0, 94, 245, 1)
@@ -224,9 +153,9 @@ LandingPageOctalysis As screen:
             Tooltip: ="New user! click to Register your avtar. "
             Visible: =varLoginPopUp
             Width: =91
-            X: =854
-            Y: =493
-            ZIndex: =8
+            X: =744
+            Y: =310
+            ZIndex: =2
 
         btn_Start_57 As button:
             BorderColor: =RGBA(0, 94, 245, 1)
@@ -312,9 +241,9 @@ LandingPageOctalysis As screen:
                 "
             Visible: =varLoginPopUp
             Width: =133
-            X: =982
-            Y: =493
-            ZIndex: =9
+            X: =872
+            Y: =310
+            ZIndex: =3
 
         TextInput4_8 As text:
             BorderColor: =RGBA(0, 18, 107, 1)
@@ -333,9 +262,9 @@ LandingPageOctalysis As screen:
             Tooltip: ="User Name (Do not use your Microsoft alias or Id)"
             Visible: =varLoginPopUp
             Width: =351
-            X: =765
-            Y: =335
-            ZIndex: =10
+            X: =655
+            Y: =152
+            ZIndex: =4
 
         TextInput4_9 As text:
             BorderColor: =RGBA(0, 18, 107, 1)
@@ -358,9 +287,9 @@ LandingPageOctalysis As screen:
             Tooltip: ="Numeric - maximum 6 digits. "
             Visible: =varLoginPopUp
             Width: =351
-            X: =765
-            Y: =399
-            ZIndex: =11
+            X: =655
+            Y: =216
+            ZIndex: =5
 
         Icon11_4 As icon.AddUser:
             BorderColor: =RGBA(255, 255, 255, 1)
@@ -373,9 +302,9 @@ LandingPageOctalysis As screen:
             Tooltip: ="User Name"
             Visible: =varLoginPopUp
             Width: =40
-            X: =716
-            Y: =335
-            ZIndex: =12
+            X: =606
+            Y: =152
+            ZIndex: =6
 
         Icon11_5 As icon.AddUser:
             BorderColor: =RGBA(255, 255, 255, 1)
@@ -388,9 +317,9 @@ LandingPageOctalysis As screen:
             Tooltip: ="Password"
             Visible: =varLoginPopUp
             Width: =40
-            X: =716
-            Y: =403
-            ZIndex: =13
+            X: =606
+            Y: =220
+            ZIndex: =7
 
         Label_SubHeading2_4 As label:
             BorderColor: =RGBA(0, 18, 107, 1)
@@ -403,9 +332,9 @@ LandingPageOctalysis As screen:
             Text: ="Welcome to SAIL"
             Visible: =varLoginPopUp
             Width: =361
-            X: =210
-            Y: =346
-            ZIndex: =14
+            X: =100
+            Y: =163
+            ZIndex: =8
 
         Label_SubHeading2_5 As label:
             BorderColor: =RGBA(0, 18, 107, 1)
@@ -418,9 +347,9 @@ LandingPageOctalysis As screen:
             Text: ="Start your engines!"
             Visible: =varLoginPopUp
             Width: =361
-            X: =210
-            Y: =419
-            ZIndex: =15
+            X: =100
+            Y: =236
+            ZIndex: =9
 
         Image20 As image:
             BorderColor: =RGBA(0, 18, 107, 1)
@@ -430,16 +359,20 @@ LandingPageOctalysis As screen:
             Image: ='pngimg.com - microsoft_PNG13_resized (1)'
             Visible: =varLoginPopUp
             Width: =50
-            X: =210
-            Y: =296
-            ZIndex: =16
+            X: =100
+            Y: =113
+            ZIndex: =10
 
-    Loading_4 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =22
+    ContainerSpinner As groupContainer:
+        DropShadow: =DropShadow.Light
+        Height: =768
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =varspinner
+        Width: =1366
+        ZIndex: =6
 
         Timer1_2 As timer:
             AutoStart: =true
@@ -450,9 +383,9 @@ LandingPageOctalysis As screen:
             OnTimerEnd: |-
                 =UpdateContext({varspinner:false})
             Visible: =false
-            X: =78
-            Y: =659
-            ZIndex: =17
+            X: =118
+            Y: =699
+            ZIndex: =1
 
         Shadowed_Bck_6 As rectangle:
             BorderColor: =RGBA(0, 18, 107, 1)
@@ -460,7 +393,7 @@ LandingPageOctalysis As screen:
             Height: =768
             Visible: =varspinner
             Width: =1366
-            ZIndex: =18
+            ZIndex: =2
 
         Spinner_4 As image:
             BorderColor: =RGBA(0, 18, 107, 1)
@@ -476,7 +409,7 @@ LandingPageOctalysis As screen:
                 </circle>
                 <!-- [ldio] generated by https://loading.io/ --></svg>")
             Visible: =varspinner
-            X: =621
-            Y: =319
-            ZIndex: =19
+            X: =634
+            Y: =521
+            ZIndex: =3
 
