@@ -2,7 +2,7 @@
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
+    MainContainer As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
@@ -17,7 +17,8 @@
         Width: =Parent.Width
         ZIndex: =1
 
-        HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
+        TopNavContainer As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
@@ -38,7 +39,7 @@
             ZIndex: =2
 
             Container1 As groupContainer.manualLayoutContainer:
-                AlignInContainer: =AlignInContainer.Center
+                AlignInContainer: =AlignInContainer.SetByContainer
                 Height: =Parent.Height
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
@@ -109,7 +110,8 @@
                     Y: =14
                     ZIndex: =2
 
-        BottomContainer1 As groupContainer.horizontalAutoLayoutContainer:
+        BottomContainer As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             Fill: =RGBA(245, 245, 245, 1)
             LayoutAlignItems: =LayoutAlignItems.Stretch
             LayoutGap: =1
@@ -127,7 +129,8 @@
             RadiusTopRight: =4
             ZIndex: =3
 
-            SidebarContainer1 As groupContainer.verticalAutoLayoutContainer:
+            LeftNavContainer As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(255, 255, 255, 1)
                 FillPortions: =2
@@ -142,6 +145,7 @@
                 ZIndex: =4
 
                 Container2 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.Light
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -210,7 +214,8 @@
                             Y: =12
                             ZIndex: =2
 
-            MainContainer1 As groupContainer.verticalAutoLayoutContainer:
+            CommonContainer As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(255, 255, 255, 1)
                 FillPortions: =7
