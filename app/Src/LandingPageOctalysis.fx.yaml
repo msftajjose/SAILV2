@@ -38,12 +38,12 @@ LandingPageOctalysis As screen:
         RadiusBottomRight: =5
         RadiusTopLeft: =5
         RadiusTopRight: =5
-        Size: =14
-        Text: ="REGISTER"
+        Size: =18
+        Text: ="Register"
         Tooltip: ="New user! click to Register your avtar. "
         Visible: =varLoginWindow  && !varspinner
         Width: =180
-        X: =714
+        X: =705
         Y: =528
         ZIndex: =2
 
@@ -72,10 +72,10 @@ LandingPageOctalysis As screen:
         RadiusBottomRight: =5
         RadiusTopLeft: =5
         RadiusTopRight: =5
-        Size: =14
-        Text: ="LOG IN"
+        Size: =18
+        Text: ="Log In"
         Visible: =varLoginWindow  && !varspinner
-        X: =496
+        X: =505
         Y: =528
         ZIndex: =3
 
