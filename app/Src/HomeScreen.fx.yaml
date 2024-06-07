@@ -55,7 +55,7 @@
                     DelayItemLoading: =true
                     Height: =60
                     Items: |-
-                        =Table( { Value: "Home" }, { Value: "What is Sail?" },{ Value: "Lore" } )
+                        =Table( { Value: "Home" }, { Value: "What is SAIL?" },{ Value: "Lore" } )
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
                     TemplateSize: =148
@@ -153,6 +153,7 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
+                    Width: =302
                     ZIndex: =1
 
                     TextCanvas1 As Text:
@@ -173,14 +174,14 @@
                     Gallery7 As gallery.galleryVertical:
                         BorderColor: =App.Theme.Colors.Darker40
                         DelayItemLoading: =true
-                        Height: =554
+                        Height: =437
                         Items: |-
                             =Table( { ID:1,Icon:"" ,Value: "Discover" }, { ID:2,Icon:Icon.Home ,Value: "Home" }, { ID:3,Icon:Icon.AddLibrary ,Value: "Prompt Library" },{ ID:4,Icon:"" ,Value: "Play" } ,{ ID:5,Icon:Icon.Home ,Value: "Challenges" },{ ID:6,Icon:Icon.AddLibrary ,Value: "Leader Boards" },{ ID:7,Icon:Icon.AddLibrary ,Value: "Squad" },{ ID:8,Icon:"" ,Value: "Adjust" },{ ID:9,Icon:Icon.Settings ,Value: "Settings" },{ ID:10,Icon:Icon.QuestionMark ,Value: "Feedback" })
                         Layout: =Layout.Vertical
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplateFill: =If(ThisItem.IsSelected && !IsBlank(ThisItem.Icon), RGBA(214, 221, 224, 1),  RGBA(0, 0, 0, 0))
                         TemplateSize: =35
-                        Width: =302
+                        Width: =Parent.Width
                         Y: =61
                         ZIndex: =2
 
@@ -213,6 +214,42 @@
                             X: =19
                             Y: =12
                             ZIndex: =2
+
+                    TextCanvas2 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =25
+                        Text: =varCrrUser.Scores
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =171
+                        X: =55
+                        Y: =570
+                        ZIndex: =3
+
+                    TextCanvas1_1 As Text:
+                        Align: ='TextCanvas.Align'.Start
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Segoe UI'
+                        FontColor: =RGBA(0, 0, 0, 1)
+                        Height: =28
+                        Size: =14
+                        Text: ="Your Score"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =222
+                        Wrap: =true
+                        X: =20
+                        Y: =530
+                        ZIndex: =4
+
+                    Image6 As image:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        Height: =25
+                        Image: =Heart
+                        Width: =25
+                        X: =20
+                        Y: =570
+                        ZIndex: =5
 
             CommonContainer As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
