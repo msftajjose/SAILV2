@@ -17,7 +17,7 @@ LandingPageOctalysis As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 94, 245, 1)
+        Fill: =RGBA(30, 81, 238, 1)
         FocusedBorderThickness: =2
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
@@ -48,9 +48,9 @@ LandingPageOctalysis As screen:
         ZIndex: =2
 
     btn_Start_55 As button:
-        BorderColor: =RGBA(0, 94, 245, 1)
+        BorderColor: =RGBA(30, 81, 238, 1)
         BorderThickness: =1
-        Color: =RGBA(0, 94, 245, 1)
+        Color: =RGBA(30, 81, 238, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -100,7 +100,7 @@ LandingPageOctalysis As screen:
         Visible: =varLoginPopUp
         Width: =1121
         X: =110
-        Y: =183
+        Y: =200
         ZIndex: =5
 
         HtmlText1_16 As htmlViewer:
@@ -120,8 +120,8 @@ LandingPageOctalysis As screen:
             ZIndex: =1
 
         btn_Start_56 As button:
-            BorderColor: =RGBA(0, 94, 245, 1)
-            Color: =RGBA(0, 94, 245, 1)
+            BorderColor: =RGBA(30, 81, 238, 1)
+            Color: =RGBA(30, 81, 238, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -153,16 +153,19 @@ LandingPageOctalysis As screen:
             Tooltip: ="New user! click to Register your avtar. "
             Visible: =varLoginPopUp
             Width: =91
-            X: =744
+            X: =736
             Y: =310
             ZIndex: =2
 
         btn_Start_57 As button:
-            BorderColor: =RGBA(0, 94, 245, 1)
+            BorderColor: =RGBA(30, 81, 238, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 94, 245, 1)
+            DisplayMode: |-
+                =If(IsBlank(TextInput4_8.Text) || IsBlank(TextInput4_9.Text),DisplayMode.Disabled,
+                DisplayMode.Edit)
+            Fill: =RGBA(30, 81, 238, 1)
             FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
@@ -241,12 +244,12 @@ LandingPageOctalysis As screen:
                 "
             Visible: =varLoginPopUp
             Width: =133
-            X: =872
+            X: =864
             Y: =310
             ZIndex: =3
 
         TextInput4_8 As text:
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(79, 90, 94, 1)
             BorderThickness: =2
             Color: =RGBA(0, 0, 0, 1)
             Default: =""
@@ -262,12 +265,12 @@ LandingPageOctalysis As screen:
             Tooltip: ="User Name (Do not use your Microsoft alias or Id)"
             Visible: =varLoginPopUp
             Width: =351
-            X: =655
-            Y: =152
+            X: =647
+            Y: =160
             ZIndex: =4
 
         TextInput4_9 As text:
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(79, 90, 94, 1)
             BorderThickness: =2
             Color: =RGBA(0, 0, 0, 1)
             Default: =""
@@ -287,8 +290,8 @@ LandingPageOctalysis As screen:
             Tooltip: ="Numeric - maximum 6 digits. "
             Visible: =varLoginPopUp
             Width: =351
-            X: =655
-            Y: =216
+            X: =647
+            Y: =224
             ZIndex: =5
 
         Icon11_4 As icon.AddUser:
@@ -299,11 +302,15 @@ LandingPageOctalysis As screen:
             DisplayMode: =DisplayMode.View
             Height: =40
             Icon: =Icon.Person
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
             Tooltip: ="User Name"
             Visible: =varLoginPopUp
             Width: =40
-            X: =606
-            Y: =152
+            X: =598
+            Y: =160
             ZIndex: =6
 
         Icon11_5 As icon.AddUser:
@@ -314,11 +321,15 @@ LandingPageOctalysis As screen:
             DisplayMode: =DisplayMode.View
             Height: =40
             Icon: =Icon.Lock
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
             Tooltip: ="Password"
             Visible: =varLoginPopUp
             Width: =40
-            X: =606
-            Y: =220
+            X: =598
+            Y: =228
             ZIndex: =7
 
         Label_SubHeading2_4 As label:
@@ -329,11 +340,11 @@ LandingPageOctalysis As screen:
             FontWeight: =FontWeight.Bold
             Height: =78
             Size: =30
-            Text: ="Welcome to SAIL"
+            Text: ="Log in with your SAIL Account"
             Visible: =varLoginPopUp
             Width: =361
-            X: =100
-            Y: =163
+            X: =116
+            Y: =179
             ZIndex: =8
 
         Label_SubHeading2_5 As label:
@@ -347,8 +358,8 @@ LandingPageOctalysis As screen:
             Text: ="Start your engines!"
             Visible: =varLoginPopUp
             Width: =361
-            X: =100
-            Y: =236
+            X: =116
+            Y: =268
             ZIndex: =9
 
         Image20 As image:
@@ -359,8 +370,8 @@ LandingPageOctalysis As screen:
             Image: ='pngimg.com - microsoft_PNG13_resized (1)'
             Visible: =varLoginPopUp
             Width: =50
-            X: =100
-            Y: =113
+            X: =116
+            Y: =105
             ZIndex: =10
 
     ContainerSpinner As groupContainer:
