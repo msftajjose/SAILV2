@@ -405,5 +405,19 @@
     "Name": "typedDataCard",
     "OverridableProperties": {},
     "Version": "1.0.6"
+  },
+  "videoPlayback": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/videoPlayback",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": false,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": true,
+    "LastModifiedTimestamp": "0",
+    "Name": "videoPlayback",
+    "OverridableProperties": {},
+    "Version": "2.4.0"
   }
 }

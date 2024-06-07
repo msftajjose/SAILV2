@@ -1,0 +1,214 @@
+IntroScreenWhatIsSail As screen:
+    BackgroundImage: =ScreenBack
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    SAILHistoryContainer As groupContainer:
+        DropShadow: =DropShadow.Light
+        Height: =768
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1366
+        ZIndex: =2
+
+        HtmlText1_19 As htmlViewer:
+            Height: =710
+            HtmlText: |
+                ="<div style='background-color: rgba(255,255,255,100%); 
+                margin: 20px; 
+                width: 480px; 
+                height:650px; 
+                border-radius: 8px'>
+                </div>"
+                
+                /*
+                "<div style='background-color: rgba(1,2,3,30%); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                "<div style='background-color: rgba(39,69,129,1); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                
+                */
+            Width: =552
+            X: =814
+            Y: =11
+            ZIndex: =2
+
+        Label_SubHeading2_12 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =39
+            Size: =18
+            Text: ="Tribes"
+            Width: =173
+            X: =904
+            Y: =45
+            ZIndex: =3
+
+        HtmlText6_9 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Height: =44
+            HtmlText: |-
+                ="<b>Try using this one</b> using Copilot:"
+            Size: =14
+            Width: =308
+            X: =339
+            Y: =368
+            ZIndex: =5
+
+        HtmlText6_10 As htmlViewer:
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =1
+            Color: =RGBA(128, 128, 128, 1)
+            Height: =516
+            HtmlText: ="create few avtars for me. The avtars should be metaphorically connected to what I like to do in my free time, which is [YourHobby]. "
+            Size: =14
+            Width: =453
+            X: =852
+            Y: =91
+            ZIndex: =6
+
+        btn_Start_58 As button:
+            BorderColor: =RGBA(15, 108, 189, 1)
+            Color: =RGBA(15, 108, 189, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: =Navigate(HomeScreen)
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="Skip"
+            Tooltip: ="New users click to Register"
+            Width: =121
+            X: =504
+            Y: =636
+            ZIndex: =9
+
+        Image21_1 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Image: ='Microsoft_365_Copilot_Icon.svg_resized'
+            Width: =45
+            X: =339
+            Y: =246
+            ZIndex: =10
+
+        Video1 As videoPlayback:
+            AutoStart: =true
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =App.Theme.Colors.Primary
+            Height: =576
+            Width: =773
+            X: =55
+            Y: =35
+            ZIndex: =12
+
+        Image22_1 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =28
+            Image: ='Microsoft_365_Copilot_Icon.svg_resized'
+            Width: =28
+            X: =876
+            Y: =50
+            ZIndex: =13
+
+        btn_Start_59 As button:
+            BorderColor: =RGBA(15, 108, 189, 1)
+            Color: =RGBA(15, 108, 189, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: =Navigate(LandingPageOctalysis)
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="Home"
+            Tooltip: ="New users click to Register"
+            Width: =165
+            X: =649
+            Y: =636
+            ZIndex: =14
+
+        btn_Start_61 As button:
+            BorderColor: =RGBA(15, 108, 189, 1)
+            Color: =RGBA(15, 108, 189, 1)
+            DisabledBorderColor: =RGBA(15, 84, 140, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: =
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="Back"
+            Tooltip: ="New users click to Register"
+            Width: =95
+            X: =1077
+            Y: =621
+            ZIndex: =15
+
+        btn_Start_62 As button:
+            BorderColor: =RGBA(15, 84, 140, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(15, 108, 189, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: =
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="Next"
+            Tooltip: ="New users click to Register"
+            Width: =113
+            X: =1192
+            Y: =621
+            ZIndex: =16
+

@@ -38,7 +38,7 @@
             RadiusTopRight: =1
             ZIndex: =2
 
-            Container1 As groupContainer.manualLayoutContainer:
+            TopMenu As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 Height: =Parent.Height
                 LayoutMinHeight: =100
@@ -324,6 +324,8 @@
                     "Gallery5_1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
                         AlignInContainer: =AlignInContainer.Center
                         BorderColor: =App.Theme.Colors.Darker40
+                        Default: |-
+                            ={ ID:2,Value: "Copilot" }
                         DelayItemLoading: =true
                         Height: =60
                         Items: |-

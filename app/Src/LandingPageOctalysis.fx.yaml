@@ -181,7 +181,7 @@ LandingPageOctalysis As screen:
                     Set(varCrrUser,First(Filter(Registrations_Dvs,LoginName=varlgname && LoginPin = Text(varpin)))),
                     Set(varLogFromDataVerseN,First(Filter(AISummerRegistrations,Name=varlgname && LoginPin = Text(varpin))))
                 );
-                If(!IsBlank(varCrrUser.Name),Navigate(HomeScreen,ScreenTransition.Fade),Notify("Invalid username or password!",NotificationType.Error) && Reset(TextInput4_9));
+                If(!IsBlank(varCrrUser.Name),Navigate(IntroScreenWhatIsSail,ScreenTransition.Fade),Notify("Invalid username or password!",NotificationType.Error) && Reset(TextInput4_9));
                 Set(varCrrUser,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)));
                 //Set(varCurUserIDD,varCrrUser.Registrations_Dv);
                 Concurrent(
