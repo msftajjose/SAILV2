@@ -173,8 +173,10 @@
 
                     Gallery7 As gallery.galleryVertical:
                         BorderColor: =App.Theme.Colors.Darker40
+                        Default: |-
+                            ={ ID:2,Icon:Icon.Home ,Value: "Home" }
                         DelayItemLoading: =true
-                        Height: =437
+                        Height: =428
                         Items: |-
                             =Table( { ID:1,Icon:"" ,Value: "Discover" }, { ID:2,Icon:Icon.Home ,Value: "Home" }, { ID:3,Icon:Icon.AddLibrary ,Value: "Prompt Library" },{ ID:4,Icon:"" ,Value: "Play" } ,{ ID:5,Icon:Icon.Home ,Value: "Challenges" },{ ID:6,Icon:Icon.AddLibrary ,Value: "Leader Boards" },{ ID:7,Icon:Icon.AddLibrary ,Value: "Squad" },{ ID:8,Icon:"" ,Value: "Adjust" },{ ID:9,Icon:Icon.Settings ,Value: "Settings" },{ ID:10,Icon:Icon.QuestionMark ,Value: "Feedback" })
                         Layout: =Layout.Vertical
@@ -265,4 +267,85 @@
                 RadiusTopLeft: =1
                 RadiusTopRight: =1
                 ZIndex: =5
+
+                Container3 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    FillPortions: =0
+                    Height: =60
+                    LayoutMinHeight: =20
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =1
+
+                    "Gallery5_1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        DelayItemLoading: =true
+                        Height: =60
+                        Items: |-
+                            =Table( { ID:1,Value: "Home" }, { ID:2,Value: "Copilot" },{ ID:3,Value: "Learning" } )
+                        LayoutMinHeight: =287
+                        LayoutMinWidth: =320
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplatePadding: =0
+                        TemplateSize: =148
+                        Visible: =If(Gallery7.Selected.ID=2,true,false)
+                        Width: =447
+                        X: =729
+                        ZIndex: =1
+
+                        ButtonCanvas3_1 As Button:
+                            Align: =Align.Justify
+                            Appearance: ='ButtonCanvas.Appearance'.Subtle
+                            BasePaletteColor: =RGBA(246, 142, 104, 1)
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =
+                            Height: =29
+                            IconStyle: ='ButtonCanvas.IconStyle'.Outline
+                            OnSelect: =If(ThisItem.Value="Home",Navigate(LandingPageOctalysis));
+                            Text: =ThisItem.Value
+                            Width: =131
+                            X: =10
+                            Y: =15
+                            ZIndex: =1
+
+                        Rectangle1_6 As rectangle:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Fill: =App.Theme.Colors.Primary
+                            Height: =2
+                            Visible: =ThisItem.IsSelected
+                            Width: =120
+                            X: =15
+                            Y: =55
+                            ZIndex: =2
+
+                Container4 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =2
+
+                    IframePCF2 As IframePCF:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        Height: =200
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =200
+                        src: |-
+                            ="https://copilot.microsoft.com/"
+                        Visible: =If(Gallery7.Selected.ID=2 && Gallery5_1.Selected.ID=1,true,false)
+                        Width: =200
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
 
