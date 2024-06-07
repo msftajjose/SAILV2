@@ -523,7 +523,7 @@
                                         TemplateSize: =64
                                         Width: =626
                                         X: =24
-                                        Y: =86
+                                        Y: =6
                                         ZIndex: =2
 
                                         Button6_14 As button:
@@ -641,6 +641,26 @@
                                             Y: =28
                                             ZIndex: =6
 
+                                        Title4_3 As label:
+                                            BorderColor: =App.Theme.Colors.Darker40
+                                            Color: =RGBA(0, 13, 75, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            DisplayMode: =DisplayMode.View
+                                            Font: =App.Theme.Font
+                                            Height: =20
+                                            OnSelect: =Select(Parent)
+                                            PaddingBottom: =0
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Size: =9
+                                            Text: =ThisItem.'Created On'
+                                            VerticalAlign: =VerticalAlign.Top
+                                            Width: =154
+                                            X: =444
+                                            Y: =7
+                                            ZIndex: =7
+
                                     TextInput3_2 As text:
                                         BorderColor: =RGBA(255, 255, 255, 1)
                                         Color: =RGBA(0, 0, 0, 1)
@@ -664,7 +684,7 @@
                                         Size: =11
                                         Width: =578
                                         X: =24
-                                        Y: =13
+                                        Y: =245
                                         ZIndex: =3
 
                                     Icon7_6 As icon.Send:
@@ -685,7 +705,7 @@
                                         Tooltip: ="Send"
                                         Width: =28
                                         X: =619
-                                        Y: =44
+                                        Y: =276
                                         ZIndex: =4
 
                                     Icon7_7 As icon.Send:
@@ -700,7 +720,7 @@
                                         Tooltip: ="Refresh"
                                         Width: =23
                                         X: =622
-                                        Y: =8
+                                        Y: =240
                                         ZIndex: =5
 
                         Container9 As groupContainer.horizontalAutoLayoutContainer:
