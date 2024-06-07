@@ -4058,7 +4058,7 @@
       "MetaDataIDKey": "",
       "Name": "EditPic",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 16,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4110,7 +4110,7 @@
       "MetaDataIDKey": "",
       "Name": "EditTeamPic",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 15,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
