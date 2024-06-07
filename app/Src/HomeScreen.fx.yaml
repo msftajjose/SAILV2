@@ -405,7 +405,7 @@
                             BorderColor: =App.Theme.Colors.Darker40
                             DelayItemLoading: =true
                             Height: =Parent.Height
-                            Items: =tblLearnings
+                            Items: =Filter(tblLearnings, 'tblLearnings (Views)'.'Active tblLearnings')
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             TemplateSize: =96
