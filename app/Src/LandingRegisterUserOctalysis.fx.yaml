@@ -454,6 +454,7 @@ LandingRegisterUserOctalysis As screen:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =If(IsBlank(TextInput4_14.Text) || IsBlank(TextInput4_13.Text),DisplayMode.Disabled, DisplayMode.Edit)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
@@ -510,7 +511,7 @@ LandingRegisterUserOctalysis As screen:
 
         HtmlText5 As htmlViewer:
             Color: =RGBA(79, 90, 94, 1)
-            Height: =55
+            Height: =66
             HtmlText: ="We use a <b>6-digit Pin</b> to secure your account"
             Size: =12
             Visible: =varPassword
@@ -1031,7 +1032,8 @@ LandingRegisterUserOctalysis As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
             OnSelect: |-
-                =Launch( "https://www.bing.com/images/create" )
+                =//Launch( "https://www.bing.com/images/create" )
+                Launch("https://copilot.microsoft.com/#/home")
             PressedFill: =RGBA(0, 134, 208, 1)
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
