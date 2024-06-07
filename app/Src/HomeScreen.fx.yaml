@@ -306,7 +306,7 @@
                             FontColor: =
                             Height: =29
                             IconStyle: ='ButtonCanvas.IconStyle'.Outline
-                            OnSelect: =If(ThisItem.Value="Home",Navigate(LandingPageOctalysis));
+                            OnSelect: =//If(ThisItem.Value="Home",Navigate(LandingPageOctalysis));
                             Text: =ThisItem.Value
                             Width: =131
                             X: =10
@@ -342,8 +342,8 @@
                         LayoutMinHeight: =200
                         LayoutMinWidth: =200
                         src: |-
-                            ="https://copilot.microsoft.com/"
-                        Visible: =If(Gallery7.Selected.ID=2 && Gallery5_1.Selected.ID=1,true,false)
+                            ="https://www.bing.com/business/chat?q=Bing+AI&FORM=hpcodx#/home"
+                        Visible: =If(Gallery7.Selected.ID=2 && Gallery5_1.Selected.ID=2,true,false)
                         Width: =200
                         X: =0
                         Y: =0
