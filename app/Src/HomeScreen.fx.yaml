@@ -384,10 +384,32 @@
                         LayoutMinHeight: =200
                         LayoutMinWidth: =200
                         src: |-
-                            ="https://www.bing.com/business/chat?q=Bing+AI&FORM=hpcodx#/home"
+                            ="https://www.bing.com/chat"
                         Visible: =If(Gallery7.Selected.ID=2 && Gallery5_1.Selected.ID=2,true,false)
                         Width: =200
                         X: =0
                         Y: =0
                         ZIndex: =1
+
+                    Container1 As groupContainer.manualLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        Gallery10 As gallery.galleryVertical:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            DelayItemLoading: =true
+                            Height: =Parent.Height
+                            Items: =tblLearnings
+                            Layout: =Layout.Vertical
+                            LoadingSpinner: =LoadingSpinner.Data
+                            TemplateSize: =96
+                            Width: =Parent.Width
+                            WrapCount: =2
+                            ZIndex: =1
 
