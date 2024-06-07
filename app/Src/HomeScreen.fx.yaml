@@ -522,8 +522,8 @@
                                         TemplatePadding: =0
                                         TemplateSize: =64
                                         Width: =626
-                                        X: =24
-                                        Y: =6
+                                        X: =14
+                                        Y: =11
                                         ZIndex: =2
 
                                         Button6_14 As button:
@@ -683,8 +683,8 @@
                                         RadiusTopRight: =25
                                         Size: =11
                                         Width: =578
-                                        X: =24
-                                        Y: =245
+                                        X: =14
+                                        Y: =250
                                         ZIndex: =3
 
                                     Icon7_6 As icon.Send:
@@ -704,8 +704,8 @@
                                             UpdateContext({varLoadingSpinner:false});
                                         Tooltip: ="Send"
                                         Width: =28
-                                        X: =619
-                                        Y: =276
+                                        X: =609
+                                        Y: =281
                                         ZIndex: =4
 
                                     Icon7_7 As icon.Send:
@@ -719,8 +719,8 @@
                                             =Refresh(TeamChats);
                                         Tooltip: ="Refresh"
                                         Width: =23
-                                        X: =622
-                                        Y: =240
+                                        X: =612
+                                        Y: =245
                                         ZIndex: =5
 
                         Container9 As groupContainer.horizontalAutoLayoutContainer:
