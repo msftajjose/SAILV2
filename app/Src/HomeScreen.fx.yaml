@@ -296,7 +296,6 @@
             CommonContainer As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Light
-                Fill: =RGBA(255, 255, 255, 1)
                 FillPortions: =7
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
@@ -327,6 +326,7 @@
                         Default: |-
                             ={ ID:2,Value: "Copilot" }
                         DelayItemLoading: =true
+                        Fill: =RGBA(255, 255, 255, 1)
                         Height: =60
                         Items: |-
                             =Table( { ID:1,Value: "Home" }, { ID:2,Value: "Copilot" },{ ID:3,Value: "Learning" } )
@@ -459,6 +459,7 @@
 
                 Container5 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
+                    Fill: =RGBA(130, 130, 130, 1)
                     FillPortions: =2
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -494,8 +495,7 @@
                             ZIndex: =1
 
                             Container11 As groupContainer.manualLayoutContainer:
-                                DropShadow: =DropShadow.Light
-                                Fill: =RGBA(214, 221, 224, 1)
+                                Fill: =RGBA(255, 255, 255, .95)
                                 LayoutMinHeight: =100
                                 LayoutMinWidth: =250
                                 RadiusBottomLeft: =4
@@ -520,7 +520,7 @@
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =0
-                                        TemplateSize: =64
+                                        TemplateSize: =74
                                         Width: =626
                                         X: =14
                                         Y: =31
@@ -528,15 +528,15 @@
 
                                         Button6_14 As button:
                                             BorderColor: =App.Theme.Colors.Primary
-                                            BorderThickness: =0
-                                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                            BorderThickness: =1
+                                            DisabledBorderColor: =RGBA(13, 50, 61, 1)
                                             DisabledColor: =RGBA(166, 166, 166, 1)
                                             DisabledFill: =RGBA(244, 244, 244, 1)
                                             DisplayMode: =DisplayMode.Disabled
                                             Fill: =If(ThisItem.IsSelected,RGBA(255, 255, 255, 1),RGBA(255,255, 255, .95))
                                             Font: =Font.'Segoe UI'
                                             FontWeight: =FontWeight.Semibold
-                                            Height: =Parent.TemplateHeight-3
+                                            Height: =50
                                             HoverBorderColor: =
                                             HoverColor: =RGBA(255, 255, 255, 1)
                                             HoverFill: =RGBA(255, 255, 255, 1)
@@ -555,22 +555,22 @@
                                             Size: =15
                                             Text: =""
                                             Width: =Parent.TemplateWidth-13
+                                            Y: =22
                                             ZIndex: =1
 
                                         Image5_2 As image:
                                             BorderColor: =App.Theme.Colors.Darker40
                                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                             DisabledFill: =RGBA(244, 244, 244, 1)
-                                            Height: =25
+                                            Height: =50
                                             Image: =First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)).UserAvtar
                                             OnSelect: =Select(Parent)
-                                            RadiusBottomLeft: =40
-                                            RadiusBottomRight: =40
-                                            RadiusTopLeft: =40
-                                            RadiusTopRight: =40
-                                            Width: =25
-                                            X: =14
-                                            Y: =24
+                                            RadiusBottomLeft: =15
+                                            RadiusBottomRight: =15
+                                            RadiusTopLeft: =15
+                                            RadiusTopRight: =15
+                                            Width: =50
+                                            Y: =22
                                             ZIndex: =2
 
                                         Title4_2 As label:
@@ -599,7 +599,7 @@
                                             Color: =RGBA(116, 116, 116, 1)
                                             DisabledColor: =RGBA(166, 166, 166, 1)
                                             Font: =App.Theme.Font
-                                            Height: =30
+                                            Height: =44
                                             Italic: =true
                                             OnSelect: |
                                                 =Select(Parent);
@@ -613,33 +613,10 @@
                                             Size: =10
                                             Text: =ThisItem.Msg
                                             VerticalAlign: =VerticalAlign.Top
-                                            Width: =507
-                                            X: =73
+                                            Width: =527
+                                            X: =66
                                             Y: =28
                                             ZIndex: =4
-
-                                        Subtitle2_4 As label:
-                                            AutoHeight: =true
-                                            BorderColor: =App.Theme.Colors.Darker40
-                                            BorderStyle: =BorderStyle.Dotted
-                                            BorderThickness: =1
-                                            Color: =RGBA(116, 116, 116, 1)
-                                            DisabledColor: =RGBA(166, 166, 166, 1)
-                                            Fill: =RGBA(244, 244, 244, 1)
-                                            Font: =App.Theme.Font
-                                            Height: =17
-                                            Italic: =true
-                                            OnSelect: |
-                                                =Select(Parent);
-                                                UpdateContext({varShowmoreNew:!varShowmoreNew});
-                                            Overflow: =Overflow.Scroll
-                                            Size: =10
-                                            Text: =ThisItem.Msg
-                                            Visible: =varShowmoreNew && ThisItem.IsSelected
-                                            Width: =525
-                                            X: =73
-                                            Y: =28
-                                            ZIndex: =6
 
                                         Title4_3 As label:
                                             BorderColor: =App.Theme.Colors.Darker40
@@ -647,22 +624,23 @@
                                             DisabledColor: =RGBA(166, 166, 166, 1)
                                             DisplayMode: =DisplayMode.View
                                             Font: =App.Theme.Font
-                                            Height: =20
+                                            Height: =12
                                             OnSelect: =Select(Parent)
                                             PaddingBottom: =0
                                             PaddingLeft: =0
                                             PaddingRight: =0
                                             PaddingTop: =0
-                                            Size: =9
+                                            Size: =7
                                             Text: =ThisItem.'Created On'
                                             VerticalAlign: =VerticalAlign.Top
-                                            Width: =154
-                                            X: =444
-                                            Y: =7
+                                            Visible: =false
+                                            Width: =89
+                                            X: =504
+                                            Y: =8
                                             ZIndex: =7
 
                                     TextInput3_2 As text:
-                                        BorderColor: =RGBA(255, 255, 255, 1)
+                                        BorderColor: =RGBA(13, 50, 61, 1)
                                         Color: =RGBA(0, 0, 0, 1)
                                         Default: =""
                                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -689,7 +667,7 @@
 
                                     Icon7_6 As icon.Send:
                                         BorderColor: =App.Theme.Colors.Darker40
-                                        Color: =RGBA(255, 255, 255, 1)
+                                        Color: =RGBA(13, 50, 61, 1)
                                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                         DisabledColor: =RGBA(244, 244, 244, 1)
                                         Height: =32
@@ -710,7 +688,7 @@
 
                                     Icon7_7 As icon.Send:
                                         BorderColor: =App.Theme.Colors.Darker40
-                                        Color: =RGBA(255, 255, 255, 1)
+                                        Color: =RGBA(13, 50, 61, 1)
                                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                         DisabledColor: =RGBA(244, 244, 244, 1)
                                         Height: =27
@@ -734,8 +712,8 @@
                                     Weight: ='TextCanvas.Weight'.Bold
                                     Width: =144
                                     Wrap: =true
-                                    X: =231
-                                    Y: =1
+                                    X: =14
+                                    Y: =0
                                     ZIndex: =6
 
                         Container9 As groupContainer.horizontalAutoLayoutContainer:
@@ -750,14 +728,9 @@
                             ZIndex: =2
 
                             Container12 As groupContainer.manualLayoutContainer:
-                                DropShadow: =DropShadow.Light
-                                Fill: =RGBA(255, 255, 255, 1)
+                                Fill: =RGBA(255, 255, 255, .95)
                                 LayoutMinHeight: =100
                                 LayoutMinWidth: =250
-                                RadiusBottomLeft: =4
-                                RadiusBottomRight: =4
-                                RadiusTopLeft: =4
-                                RadiusTopRight: =4
                                 ZIndex: =1
 
                     Container7 As groupContainer.verticalAutoLayoutContainer:
@@ -773,21 +746,16 @@
                         ZIndex: =2
 
                         Container10 As groupContainer.horizontalAutoLayoutContainer:
-                            DropShadow: =DropShadow.Light
-                            Fill: =RGBA(214, 221, 224, 1)
+                            Fill: =RGBA(255, 255, 255, .95)
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
                             LayoutMode: =LayoutMode.Auto
-                            RadiusBottomLeft: =4
-                            RadiusBottomRight: =4
-                            RadiusTopLeft: =4
-                            RadiusTopRight: =4
                             ZIndex: =1
 
                             TextCanvas1_4 As Text:
                                 Align: ='TextCanvas.Align'.Center
-                                AlignInContainer: =AlignInContainer.Center
+                                AlignInContainer: =AlignInContainer.Start
                                 DisplayMode: =DisplayMode.Edit
                                 Font: =Font.'Segoe UI'
                                 FontColor: =RGBA(0, 0, 0, 1)
@@ -795,7 +763,7 @@
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =96
                                 Size: =14
-                                Text: ="Squad Chat"
+                                Text: ="Current Challenge"
                                 VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                                 Weight: ='TextCanvas.Weight'.Bold
                                 Width: =144
@@ -826,14 +794,9 @@
                             ZIndex: =2
 
                             Container13 As groupContainer.manualLayoutContainer:
-                                DropShadow: =DropShadow.Light
-                                Fill: =RGBA(214, 221, 224, 1)
+                                Fill: =RGBA(255, 255, 255, .95)
                                 LayoutMinHeight: =100
                                 LayoutMinWidth: =250
-                                RadiusBottomLeft: =4
-                                RadiusBottomRight: =4
-                                RadiusTopLeft: =4
-                                RadiusTopRight: =4
                                 ZIndex: =1
 
                                 "Gallery3_3 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
