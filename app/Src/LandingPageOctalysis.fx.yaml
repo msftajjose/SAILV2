@@ -294,11 +294,6 @@ LandingPageOctalysis As screen:
             Y: =105
             ZIndex: =10
 
-    BlueButton_1 As BlueButton:
-        X: =896
-        Y: =528
-        ZIndex: =2
-
     btn_Start_54 As button:
         BorderColor: |
             =//_theme.ColorPrimary
