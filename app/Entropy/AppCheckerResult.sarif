@@ -14622,77 +14622,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.AM"
+                  "fullyQualifiedName": "App._myManagerV"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.AM",
+                  "fullyQualifiedName": "App._myManagerV",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AM",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.RLF"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.RLF",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "RLF",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.GLF"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.GLF",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "GLF",
+                "member": "_myManagerV",
                 "module": "App",
                 "type": "App"
               }
@@ -14742,17 +14682,77 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App._myManagerV"
+                  "fullyQualifiedName": "App.GLF"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App._myManagerV",
+                  "fullyQualifiedName": "App.GLF",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "_myManagerV",
+                "member": "GLF",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.RLF"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.RLF",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "RLF",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.AM"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.AM",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AM",
                 "module": "App",
                 "type": "App"
               }

@@ -15,7 +15,9 @@ App As appinfo:
                 _Button,
                 {
                     Blue: RGBA(30,81,238,1),
-                    White: RGBA(255,255,255,1)
+                    White: RGBA(255,255,255,1),
+                    Purple: RGBA(141,48,128,1),
+                    Redish: RGBA(238,64,76,1)
                 }
             ),
             Set(MSlogo,MSlogo_resized),
