@@ -1,6 +1,6 @@
 {
   "ComponentIndexes": {
-    "Component1": 11
+    "BlueButton": 11
   },
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
@@ -19,6 +19,7 @@
     "AppFeedback_Sess": 353,
     "BadgePic_DataCard1": 250,
     "BadgeScreen": 369,
+    "BlueButton": 982,
     "Body1": 618,
     "BottomContainer": 783,
     "btn_AIpicture": 975,
@@ -173,7 +174,6 @@
     "ComboBox1_4": 430,
     "CommnLeaderBoard": 711,
     "CommonContainer": 795,
-    "Component1": 982,
     "Container1": 803,
     "Container10": 828,
     "Container10_1": 831,
@@ -989,7 +989,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "06/08/2024 07:40:26",
+  "HeaderLastSavedDateTimeUTC": "06/08/2024 07:45:34",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "4048eb5b-ffea-4eca-9fd8-b28ca5620bb1": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/b56b0789a64e752853b898a32c4a66d6-245268a4950e3476\"",
@@ -1752,6 +1752,7 @@
     "AppFeedback_Sess": {},
     "BadgePic_DataCard1": {},
     "BadgeScreen": {},
+    "BlueButton": {},
     "Body1": {},
     "BottomContainer": {},
     "btn_AIpicture": {},
@@ -1906,7 +1907,6 @@
     "ComboBox1_4": {},
     "CommnLeaderBoard": {},
     "CommonContainer": {},
-    "Component1": {},
     "Container1": {},
     "Container10": {},
     "Container10_1": {},
@@ -2977,6 +2977,7 @@
     "AppFeedback_Sess": 471,
     "BadgePic_DataCard1": 708,
     "BadgeScreen": 539,
+    "BlueButton": 0,
     "Body1": 140,
     "BottomContainer": 898,
     "btn_AIpicture": 64,
@@ -3131,7 +3132,6 @@
     "ComboBox1_4": 247,
     "CommnLeaderBoard": 62,
     "CommonContainer": 910,
-    "Component1": 0,
     "Container1": 918,
     "Container10": 943,
     "Container10_1": 946,

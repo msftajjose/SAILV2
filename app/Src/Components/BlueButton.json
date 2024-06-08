@@ -5,7 +5,7 @@
     "AllowAccessToGlobals": false,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "Component1",
+    "Name": "BlueButton",
     "TemplateGuid": "6db744760e8441aabe41af7482a6266a"
   },
   "ComponentType": "CanvasComponent",
@@ -19,7 +19,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638534292246554003",
+  "LastModifiedTimestamp": "638534295314936274",
   "Name": "6db744760e8441aabe41af7482a6266a",
   "OverridableProperties": {},
   "Version": "1.0"
