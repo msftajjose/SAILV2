@@ -295,19 +295,20 @@ LandingPageOctalysis As screen:
             ZIndex: =10
 
     btn_Start_54 As button:
-        BorderColor: |
-            =//_theme.ColorPrimary
+        BorderColor: =_Button.Blue
         BorderThickness: =1
+        Color: =_Button.White
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(30, 81, 238, 1)
+        Fill: =_Button.Blue
         FocusedBorderThickness: =2
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =50
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(167, 182, 203, 1)
+        HoverBorderColor: =Self.BorderColor
+        HoverColor: =_Button.White
+        HoverFill: =ColorFade(Self.Fill, -20%)
         OnSelect: |-
             =/*
             UpdateContext({varRegScreenHide:true});
@@ -317,7 +318,8 @@ LandingPageOctalysis As screen:
             */
             
             Navigate(LandingRegisterUserOctalysis)
-        PressedFill: =RGBA(0, 134, 208, 1)
+        PressedColor: =_Button.White
+        PressedFill: =ColorFade(Self.Fill, 20%)
         RadiusBottomLeft: =5
         RadiusBottomRight: =5
         RadiusTopLeft: =5
