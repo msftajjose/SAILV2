@@ -324,7 +324,7 @@
                         AlignInContainer: =AlignInContainer.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Default: |-
-                            ={ ID:2,Value: "Copilot" }
+                            ={ ID:1,Value: "Home" }
                         DelayItemLoading: =true
                         Fill: =RGBA(255, 255, 255, 1)
                         Height: =60
@@ -519,9 +519,8 @@
                                         Items: =Sort(Filter(TeamChats,TeamID.TeamRegistrationssN = varCrrUser.TeamID.TeamRegistrationssN),'Created On',SortOrder.Descending)
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
-                                        TemplatePadding: =0
                                         TemplateSize: =74
-                                        Width: =626
+                                        Width: =620
                                         X: =14
                                         Y: =31
                                         ZIndex: =2
@@ -554,7 +553,7 @@
                                             RadiusTopRight: =15
                                             Size: =15
                                             Text: =""
-                                            Width: =Parent.TemplateWidth-13
+                                            Width: =593
                                             Y: =22
                                             ZIndex: =1
 
@@ -590,7 +589,7 @@
                                                 =First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)).LoginName & " Says:" 
                                             VerticalAlign: =VerticalAlign.Top
                                             Width: =154
-                                            X: =14
+                                            X: =4
                                             Y: =7
                                             ZIndex: =3
 
@@ -704,7 +703,7 @@
                                 TextCanvas1_3 As Text:
                                     Align: ='TextCanvas.Align'.Start
                                     DisplayMode: =DisplayMode.Edit
-                                    Font: =Font.'Segoe UI'
+                                    Font: =Font.'Courier New'
                                     FontColor: =RGBA(0, 0, 0, 1)
                                     Height: =30
                                     Size: =14
@@ -757,7 +756,7 @@
                                 Align: ='TextCanvas.Align'.Center
                                 AlignInContainer: =AlignInContainer.Start
                                 DisplayMode: =DisplayMode.Edit
-                                Font: =Font.'Segoe UI'
+                                Font: =Font.'Courier New'
                                 FontColor: =RGBA(0, 0, 0, 1)
                                 Height: =30
                                 LayoutMinHeight: =32
@@ -842,19 +841,19 @@
                                         Color: =RGBA(0, 0, 0, 1)
                                         DisabledColor: =RGBA(166, 166, 166, 1)
                                         Font: =Font.'Segoe UI'
-                                        Height: =20
+                                        Height: =19
                                         LineHeight: =2.2
                                         OnSelect: =Select(Parent)
                                         PaddingBottom: =0
                                         PaddingLeft: =0
                                         PaddingRight: =0
                                         PaddingTop: =0
-                                        Size: =10
+                                        Size: =7
                                         Text: =ThisItem.'Created On'
                                         VerticalAlign: =VerticalAlign.Top
-                                        Width: =Parent.TemplateWidth - 86
+                                        Width: =123
                                         X: =6
-                                        Y: =5
+                                        Y: =6
                                         ZIndex: =2
 
                                     Subtitle2_5 As label:
@@ -862,7 +861,7 @@
                                         Color: =RGBA(0, 0, 0, 1)
                                         DisabledColor: =RGBA(166, 166, 166, 1)
                                         Font: =App.Theme.Font
-                                        Height: =42
+                                        Height: =47
                                         OnSelect: =Select(Parent)
                                         PaddingBottom: =0
                                         PaddingLeft: =0
@@ -871,7 +870,8 @@
                                         Size: =10
                                         Text: =ThisItem.Name
                                         VerticalAlign: =VerticalAlign.Top
-                                        Width: =409
+                                        Width: =388
+                                        X: =6
                                         Y: =27
                                         ZIndex: =3
 
@@ -894,7 +894,7 @@
                                 TextCanvas1_5 As Text:
                                     Align: ='TextCanvas.Align'.Center
                                     DisplayMode: =DisplayMode.Edit
-                                    Font: =Font.'Segoe UI'
+                                    Font: =Font.'Courier New'
                                     FontColor: =RGBA(0, 0, 0, 1)
                                     Height: =30
                                     Size: =14
@@ -903,7 +903,7 @@
                                     Weight: ='TextCanvas.Weight'.Bold
                                     Width: =144
                                     Wrap: =true
-                                    X: =137
+                                    X: =0
                                     Y: =10
                                     ZIndex: =2
 
