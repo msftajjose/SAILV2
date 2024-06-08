@@ -2,6 +2,26 @@ App As appinfo:
     BackEnabled: =false
     OnStart: |+
         =// Creating CSS Style Sheet
+        Concurrent(
+            Set(
+                _theme,
+                {
+                    ColorPrimary: RGBA(33,57,145,1),
+                    ColorSecondary: RGBA(153,207,236,1),
+                    LeftHandColor: RGBA(33,57,145,1)
+                }
+            ),
+            Set(
+                _Button,
+                {
+                    Blue: RGBA(30,81,238,1),
+                    White: RGBA(255,255,255,1)
+                }
+            ),
+            Set(MSlogo,MSlogo_resized),
+            Set(CopilotLogo, CopilotLogo_resized),
+            Set(DesignerLogo,CopilotDesigner)
+        );
         
         Concurrent(
             Set(R,90),
@@ -31,28 +51,6 @@ App As appinfo:
             Set(GLF,244),
             Set(BLF,240)
         );
-        
-        Concurrent(
-            Set(
-                _theme,
-                {
-                    ColorPrimary: RGBA(33,57,145,1),
-                    ColorSecondary: RGBA(153,207,236,1),
-                    LeftHandColor: RGBA(33,57,145,1)
-                }
-            ),
-            Set(
-                _Button,
-                {
-                    Blue: RGBA(30,81,238,1),
-                    White: RGBA(255,255,255,1)
-                }
-            ),
-            Set(MSlogo,MSlogo_resized),
-            Set(CopilotLogo, 'Microsoft_365_Copilot_Icon.svg_resized'),
-            Set(DesignerLogo,CopilotDesigner)
-        );
-        
         
         //Setting my profile
         Set(_myProfileUPN_V,Office365Users.MyProfile());
