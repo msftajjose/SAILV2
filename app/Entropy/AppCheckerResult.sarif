@@ -15312,6 +15312,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.HomeBackground"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.HomeBackground",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "HomeBackground",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.Like"
                 }
               ],
@@ -15413,6 +15443,36 @@
               },
               "properties": {
                 "member": "LikesNew",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.pngimg.com - microsoft_PNG13_resized (1)"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.pngimg.com - microsoft_PNG13_resized (1)",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "pngimg.com - microsoft_PNG13_resized (1)",
                 "module": "App",
                 "type": "App"
               }

@@ -1,5 +1,5 @@
 LandingRegisterUserOctalysis As screen:
-    BackgroundImage: =ScreenBack
+    BackgroundImage: =SAIL_background2_reduced
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
@@ -105,7 +105,7 @@ LandingRegisterUserOctalysis As screen:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =30
-            Image: ='Microsoft_365_Copilot_Icon.svg_resized'
+            Image: =CopilotLogo
             Visible: |
                 =varRegisterPopUp
             Width: =30
@@ -309,7 +309,7 @@ LandingRegisterUserOctalysis As screen:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =50
-            Image: ='pngimg.com - microsoft_PNG13_resized (1)'
+            Image: =MSlogo
             Visible: |
                 =varRegisterPopUp
             Width: =50
@@ -502,7 +502,7 @@ LandingRegisterUserOctalysis As screen:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =50
-            Image: ='pngimg.com - microsoft_PNG13_resized (1)'
+            Image: =MSlogo
             Visible: =varPassword
             Width: =50
             X: =130
@@ -561,7 +561,8 @@ LandingRegisterUserOctalysis As screen:
             ZIndex: =15
 
     ContainerAvatar As groupContainer:
-        DropShadow: =DropShadow.Light
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
         Height: =533
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
@@ -653,7 +654,7 @@ LandingRegisterUserOctalysis As screen:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =30
-            Image: ='Microsoft_365_Copilot_Icon.svg_resized'
+            Image: =DesignerLogo
             Visible: =varAvatar
             Width: =30
             X: =807
@@ -838,10 +839,10 @@ LandingRegisterUserOctalysis As screen:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =50
-            Image: ='pngimg.com - microsoft_PNG13_resized (1)'
+            Image: =MSlogo
             Visible: =varAvatar
             Width: =50
-            X: =135
+            X: =130
             Y: =110
             ZIndex: =9
 
@@ -1053,7 +1054,7 @@ LandingRegisterUserOctalysis As screen:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =50
-            Image: ='Microsoft_365_Copilot_Icon.svg_resized'
+            Image: =If(!varAvatar,CopilotLogo,DesignerLogo)
             Visible: =varPromptPopUp
             Width: =45
             X: =339
@@ -1065,7 +1066,7 @@ LandingRegisterUserOctalysis As screen:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =28
-            Image: ='Microsoft_365_Copilot_Icon.svg_resized'
+            Image: =If(!varAvatar,CopilotLogo,DesignerLogo)
             Visible: =varPromptPopUp
             Width: =28
             X: =709

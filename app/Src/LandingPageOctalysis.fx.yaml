@@ -1,5 +1,5 @@
 LandingPageOctalysis As screen:
-    BackgroundImage: =HomeBackground
+    BackgroundImage: =SAIL_background1_reduced
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
@@ -10,9 +10,82 @@ LandingPageOctalysis As screen:
             UpdateContext({varLoginPopUp:false})
         )
 
+    btn_Start_54 As button:
+        BorderColor: =_Button.Blue
+        BorderThickness: =1
+        Color: =_Button.White
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =_Button.Blue
+        FocusedBorderThickness: =2
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =50
+        HoverBorderColor: =ColorFade(Self.BorderColor, -20%)
+        HoverColor: =_Button.White
+        HoverFill: =ColorFade(Self.Fill, -20%)
+        OnSelect: |-
+            =/*
+            UpdateContext({varRegScreenHide:true});
+            UpdateContext({ResetImage:true});
+            Reset(AddMediaButton1_2);
+            UpdateContext({varLoginWindow:false})
+            */
+            
+            Navigate(LandingRegisterUserOctalysis)
+        PressedBorderColor: =ColorFade(Self.BorderColor, -30%)
+        PressedColor: =_Button.White
+        PressedFill: =ColorFade(Self.Fill,-30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =18
+        Text: ="Register"
+        Tooltip: ="New user! click to Register your avtar. "
+        Visible: =varLoginWindow  && !varspinner
+        Width: =180
+        X: =705
+        Y: =528
+        ZIndex: =1
+
+    btn_Start_55 As button:
+        BorderColor: =RGBA(30, 81, 238, 1)
+        BorderThickness: =1
+        Color: =RGBA(30, 81, 238, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =2
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =50
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(167, 182, 203, 1)
+        OnSelect: |
+            =Concurrent(
+                Reset(TextInput4_8),
+                Reset(TextInput4_9)
+            );
+            UpdateContext({varLoginPopUp:true});
+        PressedFill: =RGBA(0, 134, 208, 1)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =18
+        Text: ="Log In"
+        Visible: =varLoginWindow  && !varspinner
+        X: =505
+        Y: =528
+        ZIndex: =2
+
     ContainerLogin As groupContainer:
+        BorderStyle: =BorderStyle.None
         DropShadow: =DropShadow.Light
-        Height: =500
+        Height: =441
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
@@ -20,23 +93,23 @@ LandingPageOctalysis As screen:
         Visible: =varLoginPopUp
         Width: =1121
         X: =110
-        Y: =200
-        ZIndex: =1
+        Y: =228
+        ZIndex: =3
 
         HtmlText1_16 As htmlViewer:
-            Height: =420
+            Height: =351
             HtmlText: |-
                 ="<div style='background-color: rgba(255,255,255,99%); 
                 box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
-                margin: 20px; 
+                margin: 5x; 
                 width: 1000px; 
                 height: 330px; 
                 border-radius: 30px'>
                 </div>"
             Visible: =varLoginPopUp
-            Width: =1041
-            X: =40
-            Y: =40
+            Width: =1016
+            X: =63
+            Y: =48
             ZIndex: =1
 
         btn_Start_56 As button:
@@ -73,8 +146,8 @@ LandingPageOctalysis As screen:
             Tooltip: ="New user! click to Register your avtar. "
             Visible: =varLoginPopUp
             Width: =91
-            X: =736
-            Y: =310
+            X: =743
+            Y: =298
             ZIndex: =2
 
         btn_Start_57 As button:
@@ -164,8 +237,8 @@ LandingPageOctalysis As screen:
                 "
             Visible: =varLoginPopUp
             Width: =133
-            X: =864
-            Y: =310
+            X: =871
+            Y: =298
             ZIndex: =3
 
         TextInput4_8 As text:
@@ -185,8 +258,8 @@ LandingPageOctalysis As screen:
             Tooltip: ="User Name (Do not use your Microsoft alias or Id)"
             Visible: =varLoginPopUp
             Width: =351
-            X: =647
-            Y: =160
+            X: =654
+            Y: =148
             ZIndex: =4
 
         TextInput4_9 As text:
@@ -210,8 +283,8 @@ LandingPageOctalysis As screen:
             Tooltip: ="Numeric - maximum 6 digits. "
             Visible: =varLoginPopUp
             Width: =351
-            X: =647
-            Y: =224
+            X: =654
+            Y: =212
             ZIndex: =5
 
         Icon11_4 As icon.AddUser:
@@ -229,8 +302,8 @@ LandingPageOctalysis As screen:
             Tooltip: ="User Name"
             Visible: =varLoginPopUp
             Width: =40
-            X: =598
-            Y: =160
+            X: =605
+            Y: =148
             ZIndex: =6
 
         Icon11_5 As icon.AddUser:
@@ -248,8 +321,8 @@ LandingPageOctalysis As screen:
             Tooltip: ="Password"
             Visible: =varLoginPopUp
             Width: =40
-            X: =598
-            Y: =228
+            X: =605
+            Y: =216
             ZIndex: =7
 
         Label_SubHeading2_4 As label:
@@ -263,8 +336,8 @@ LandingPageOctalysis As screen:
             Text: ="Log in with your SAIL Account"
             Visible: =varLoginPopUp
             Width: =361
-            X: =116
-            Y: =179
+            X: =123
+            Y: =167
             ZIndex: =8
 
         Label_SubHeading2_5 As label:
@@ -278,8 +351,8 @@ LandingPageOctalysis As screen:
             Text: ="Start your engines!"
             Visible: =varLoginPopUp
             Width: =361
-            X: =116
-            Y: =268
+            X: =123
+            Y: =256
             ZIndex: =9
 
         Image20 As image:
@@ -287,83 +360,12 @@ LandingPageOctalysis As screen:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =50
-            Image: ='pngimg.com - microsoft_PNG13_resized (1)'
+            Image: =MSlogo
             Visible: =varLoginPopUp
             Width: =50
-            X: =116
-            Y: =105
+            X: =123
+            Y: =93
             ZIndex: =10
-
-    btn_Start_54 As button:
-        BorderColor: =_Button.Blue
-        BorderThickness: =1
-        Color: =_Button.White
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =_Button.Blue
-        FocusedBorderThickness: =2
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =50
-        HoverBorderColor: =Self.BorderColor
-        HoverColor: =_Button.White
-        HoverFill: =ColorFade(Self.Fill, -20%)
-        OnSelect: |-
-            =/*
-            UpdateContext({varRegScreenHide:true});
-            UpdateContext({ResetImage:true});
-            Reset(AddMediaButton1_2);
-            UpdateContext({varLoginWindow:false})
-            */
-            
-            Navigate(LandingRegisterUserOctalysis)
-        PressedColor: =_Button.White
-        PressedFill: =ColorFade(Self.Fill, 20%)
-        RadiusBottomLeft: =5
-        RadiusBottomRight: =5
-        RadiusTopLeft: =5
-        RadiusTopRight: =5
-        Size: =18
-        Text: ="Register"
-        Tooltip: ="New user! click to Register your avtar. "
-        Visible: =varLoginWindow  && !varspinner
-        Width: =180
-        X: =705
-        Y: =528
-        ZIndex: =3
-
-    btn_Start_55 As button:
-        BorderColor: =RGBA(30, 81, 238, 1)
-        BorderThickness: =1
-        Color: =RGBA(30, 81, 238, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        FocusedBorderThickness: =2
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =50
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(167, 182, 203, 1)
-        OnSelect: |
-            =Concurrent(
-                Reset(TextInput4_8),
-                Reset(TextInput4_9)
-            );
-            UpdateContext({varLoginPopUp:true});
-        PressedFill: =RGBA(0, 134, 208, 1)
-        RadiusBottomLeft: =5
-        RadiusBottomRight: =5
-        RadiusTopLeft: =5
-        RadiusTopRight: =5
-        Size: =18
-        Text: ="Log In"
-        Visible: =varLoginWindow  && !varspinner
-        X: =505
-        Y: =528
-        ZIndex: =4
 
     Label5_2 As label:
         BorderColor: =RGBA(0, 18, 107, 1)
@@ -374,7 +376,7 @@ LandingPageOctalysis As screen:
         Text: ="Version 5.6"
         X: =213
         Y: =753
-        ZIndex: =5
+        ZIndex: =4
 
     ContainerSpinner As groupContainer:
         DropShadow: =DropShadow.Light
@@ -385,7 +387,7 @@ LandingPageOctalysis As screen:
         RadiusTopRight: =4
         Visible: =varspinner
         Width: =1366
-        ZIndex: =6
+        ZIndex: =5
 
         Timer1_2 As timer:
             AutoStart: =true

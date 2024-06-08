@@ -4540,8 +4540,22 @@
     "ContainerAvatar": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "BorderColor",
-        "BorderStyle",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "BorderColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "BorderStyle",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Fill",
         "X",
         {
@@ -4568,7 +4582,14 @@
         "LayoutJustifyContent",
         "LayoutOverflowX",
         "LayoutOverflowY",
-        "DropShadow",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "DropShadow",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ZIndex",
         "RadiusTopLeft",
         "RadiusTopRight",
@@ -7748,7 +7769,14 @@
     "Image15": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "Image",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "'Microsoft_365_Copilot_Icon.svg_resized'",
+          "InvariantPropertyName": "Image",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ImagePosition",
         "ImageRotation",
         "X",
@@ -7971,7 +7999,14 @@
     "Image15_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "Image",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "'Microsoft_365_Copilot_Icon.svg_resized'",
+          "InvariantPropertyName": "Image",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ImagePosition",
         "ImageRotation",
         "X",
@@ -8194,7 +8229,14 @@
     "Image21": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "Image",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "'Microsoft_365_Copilot_Icon.svg_resized'",
+          "InvariantPropertyName": "Image",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ImagePosition",
         "ImageRotation",
         "X",
@@ -8417,7 +8459,14 @@
     "Image22": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "Image",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "'Microsoft_365_Copilot_Icon.svg_resized'",
+          "InvariantPropertyName": "Image",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ImagePosition",
         "ImageRotation",
         "X",
@@ -8650,7 +8699,14 @@
         },
         "ImagePosition",
         "ImageRotation",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
