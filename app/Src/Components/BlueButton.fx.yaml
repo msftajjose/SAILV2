@@ -1,7 +1,7 @@
 BlueButton As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
-    Height: =640
-    Width: =640
+    Height: =50
+    Width: =180
     X: =0
     Y: =0
     ZIndex: =1
@@ -32,7 +32,5 @@ BlueButton As CanvasComponent:
         Text: ="Register"
         Tooltip: ="New user! click to Register your avtar. "
         Width: =180
-        X: =190
-        Y: =210
         ZIndex: =1
 

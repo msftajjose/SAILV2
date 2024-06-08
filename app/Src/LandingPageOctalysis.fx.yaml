@@ -10,86 +10,6 @@ LandingPageOctalysis As screen:
             UpdateContext({varLoginPopUp:false})
         )
 
-    btn_Start_54 As button:
-        BorderColor: |
-            =//_theme.ColorPrimary
-        BorderThickness: =1
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(30, 81, 238, 1)
-        FocusedBorderThickness: =2
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =50
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(167, 182, 203, 1)
-        OnSelect: |-
-            =/*
-            UpdateContext({varRegScreenHide:true});
-            UpdateContext({ResetImage:true});
-            Reset(AddMediaButton1_2);
-            UpdateContext({varLoginWindow:false})
-            */
-            
-            Navigate(LandingRegisterUserOctalysis)
-        PressedFill: =RGBA(0, 134, 208, 1)
-        RadiusBottomLeft: =5
-        RadiusBottomRight: =5
-        RadiusTopLeft: =5
-        RadiusTopRight: =5
-        Size: =18
-        Text: ="Register"
-        Tooltip: ="New user! click to Register your avtar. "
-        Visible: =varLoginWindow  && !varspinner
-        Width: =180
-        X: =705
-        Y: =528
-        ZIndex: =2
-
-    btn_Start_55 As button:
-        BorderColor: =RGBA(30, 81, 238, 1)
-        BorderThickness: =1
-        Color: =RGBA(30, 81, 238, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        FocusedBorderThickness: =2
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =50
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(167, 182, 203, 1)
-        OnSelect: |
-            =Concurrent(
-                Reset(TextInput4_8),
-                Reset(TextInput4_9)
-            );
-            UpdateContext({varLoginPopUp:true});
-        PressedFill: =RGBA(0, 134, 208, 1)
-        RadiusBottomLeft: =5
-        RadiusBottomRight: =5
-        RadiusTopLeft: =5
-        RadiusTopRight: =5
-        Size: =18
-        Text: ="Log In"
-        Visible: =varLoginWindow  && !varspinner
-        X: =505
-        Y: =528
-        ZIndex: =3
-
-    Label5_2 As label:
-        BorderColor: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =15
-        Size: =8
-        Text: ="Version 5.6"
-        X: =213
-        Y: =753
-        ZIndex: =4
-
     ContainerLogin As groupContainer:
         DropShadow: =DropShadow.Light
         Height: =500
@@ -101,7 +21,7 @@ LandingPageOctalysis As screen:
         Width: =1121
         X: =110
         Y: =200
-        ZIndex: =5
+        ZIndex: =1
 
         HtmlText1_16 As htmlViewer:
             Height: =420
@@ -373,6 +293,91 @@ LandingPageOctalysis As screen:
             X: =116
             Y: =105
             ZIndex: =10
+
+    BlueButton_1 As BlueButton:
+        X: =896
+        Y: =528
+        ZIndex: =2
+
+    btn_Start_54 As button:
+        BorderColor: |
+            =//_theme.ColorPrimary
+        BorderThickness: =1
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(30, 81, 238, 1)
+        FocusedBorderThickness: =2
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =50
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(167, 182, 203, 1)
+        OnSelect: |-
+            =/*
+            UpdateContext({varRegScreenHide:true});
+            UpdateContext({ResetImage:true});
+            Reset(AddMediaButton1_2);
+            UpdateContext({varLoginWindow:false})
+            */
+            
+            Navigate(LandingRegisterUserOctalysis)
+        PressedFill: =RGBA(0, 134, 208, 1)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =18
+        Text: ="Register"
+        Tooltip: ="New user! click to Register your avtar. "
+        Visible: =varLoginWindow  && !varspinner
+        Width: =180
+        X: =705
+        Y: =528
+        ZIndex: =3
+
+    btn_Start_55 As button:
+        BorderColor: =RGBA(30, 81, 238, 1)
+        BorderThickness: =1
+        Color: =RGBA(30, 81, 238, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =2
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =50
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(167, 182, 203, 1)
+        OnSelect: |
+            =Concurrent(
+                Reset(TextInput4_8),
+                Reset(TextInput4_9)
+            );
+            UpdateContext({varLoginPopUp:true});
+        PressedFill: =RGBA(0, 134, 208, 1)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =18
+        Text: ="Log In"
+        Visible: =varLoginWindow  && !varspinner
+        X: =505
+        Y: =528
+        ZIndex: =4
+
+    Label5_2 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =15
+        Size: =8
+        Text: ="Version 5.6"
+        X: =213
+        Y: =753
+        ZIndex: =5
 
     ContainerSpinner As groupContainer:
         DropShadow: =DropShadow.Light
