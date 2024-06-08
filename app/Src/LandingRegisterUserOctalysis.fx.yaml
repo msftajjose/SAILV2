@@ -928,13 +928,13 @@ LandingRegisterUserOctalysis As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.Arial
             FontWeight: =FontWeight.Bold
-            Height: =105
+            Height: =53
             Size: =30
             Text: ="Use a Prompt Template"
             Visible: =varPromptPopUp
             Width: =467
-            X: =407
-            Y: =218
+            X: =409
+            Y: =241
             ZIndex: =3
 
         HtmlText6_3 As htmlViewer:
@@ -1058,7 +1058,7 @@ LandingRegisterUserOctalysis As screen:
             Visible: =varPromptPopUp
             Width: =45
             X: =339
-            Y: =246
+            Y: =239
             ZIndex: =10
 
         Image22 As image:
