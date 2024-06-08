@@ -70,7 +70,9 @@ LandingPageOctalysis As screen:
                 Reset(TextInput4_9)
             );
             UpdateContext({varLoginPopUp:true});
-        PressedFill: =RGBA(0, 134, 208, 1)
+        PressedBorderColor: =_Button.Blue
+        PressedColor: =_Button.White
+        PressedFill: =_Button.Blue
         RadiusBottomLeft: =5
         RadiusBottomRight: =5
         RadiusTopLeft: =5
