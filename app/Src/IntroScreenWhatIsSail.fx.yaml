@@ -1,7 +1,8 @@
 IntroScreenWhatIsSail As screen:
-    BackgroundImage: =ScreenBack
+    BackgroundImage: ='Lore screen 1 image-reduced'
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: =Set(VarLore,1);
 
     SAILHistoryContainer As groupContainer:
         DropShadow: =DropShadow.Light
@@ -14,12 +15,11 @@ IntroScreenWhatIsSail As screen:
         ZIndex: =2
 
         HtmlText1_19 As htmlViewer:
-            Height: =710
+            Height: =579
             HtmlText: |
-                ="<div style='background-color: rgba(255,255,255,100%); 
-                margin: 20px; 
-                width: 480px; 
-                height:650px; 
+                ="<div style='background-color: rgba(255,255,255,100%);  
+                width: 430px; 
+                height:540px; 
                 border-radius: 8px'>
                 </div>"
                 
@@ -30,9 +30,9 @@ IntroScreenWhatIsSail As screen:
                 box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
                 
                 */
-            Width: =552
-            X: =814
-            Y: =11
+            Width: =466
+            X: =830
+            Y: =94
             ZIndex: =2
 
         Label_SubHeading2_12 As label:
@@ -42,11 +42,18 @@ IntroScreenWhatIsSail As screen:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =39
-            Size: =18
-            Text: ="Tribes"
-            Width: =173
-            X: =904
-            Y: =45
+            Size: =30
+            Text: |-
+                =Switch(VarLore,
+                1,"The World",
+                2,"Tribes",
+                3,"Prompts",
+                4,"Seasons",
+                5,"Chaos"
+                )
+            Width: =208
+            X: =959
+            Y: =121
             ZIndex: =3
 
         HtmlText6_9 As htmlViewer:
@@ -62,15 +69,31 @@ IntroScreenWhatIsSail As screen:
 
         HtmlText6_10 As htmlViewer:
             BorderColor: =RGBA(116, 116, 116, 1)
-            BorderStyle: =BorderStyle.Solid
-            BorderThickness: =1
             Color: =RGBA(128, 128, 128, 1)
-            Height: =516
-            HtmlText: ="create few avtars for me. The avtars should be metaphorically connected to what I like to do in my free time, which is [YourHobby]. "
+            Height: =373
+            HtmlText: |-
+                =Switch(VarLore,
+                1,"In the year 2050, the world has evolved into a place where <b>technology and nature coexist in harmony</b>. 
+                
+                <br>
+                <br>
+                
+                Humanity has discovered the ability to control the elements, becoming ''element-benders''. These benders belong to one of four tribes, each mastering a unique element: <b>Water</b>, <b>Fire</b>, <b>Earth</b>, and <b>Wind</b>. 
+                
+                <br>
+                <br>
+                
+                This extraordinary power allows them to manipulate their environment, and it has fundamentally <b>changed the way society operates</b>.",
+                
+                2,"Tribes",
+                3,"Prompts",
+                4,"Seasons",
+                5,"Chaos"
+                )
             Size: =14
-            Width: =453
-            X: =852
-            Y: =91
+            Width: =351
+            X: =872
+            Y: =180
             ZIndex: =6
 
         Image21_1 As image:
@@ -85,29 +108,36 @@ IntroScreenWhatIsSail As screen:
             ZIndex: =10
 
         Video1 As videoPlayback:
-            AutoStart: =true
             BorderColor: =App.Theme.Colors.Darker40
-            Fill: =App.Theme.Colors.Primary
-            Height: =576
-            Width: =773
-            X: =55
-            Y: =35
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =472
+            Width: =719
+            X: =91
+            Y: =94
             ZIndex: =12
 
         Image22_1 As image:
             BorderColor: =RGBA(0, 18, 107, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =28
-            Image: ='Microsoft_365_Copilot_Icon.svg_resized'
-            Width: =28
-            X: =876
-            Y: =50
+            Height: =50
+            Image: |-
+                =Switch(VarLore,
+                1,WorldIcon,
+                2,TribestIcon,
+                3,PromptIcon,
+                4,SeasonsIcon,
+                5,RobotIcon
+                )
+            Width: =50
+            X: =887
+            Y: =118
             ZIndex: =13
 
         btn_Start_59 As button:
-            BorderColor: =RGBA(15, 108, 189, 1)
-            Color: =RGBA(15, 108, 189, 1)
+            BorderColor: =_Button.Blue
+            BorderThickness: =3
+            Color: =_Button.Blue
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -119,7 +149,9 @@ IntroScreenWhatIsSail As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
             OnSelect: =Navigate(HomeScreen)
-            PressedFill: =RGBA(0, 134, 208, 1)
+            PressedBorderColor: =_Button.Blue
+            PressedColor: =_Button.White
+            PressedFill: =_Button.Blue
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
             RadiusTopLeft: =5
@@ -127,14 +159,15 @@ IntroScreenWhatIsSail As screen:
             Size: =14
             Text: ="Home"
             Tooltip: ="New users click to Register"
-            Width: =165
-            X: =649
-            Y: =636
+            Width: =82
+            X: =726
+            Y: =587
             ZIndex: =14
 
         btn_Start_61 As button:
-            BorderColor: =RGBA(15, 108, 189, 1)
-            Color: =RGBA(15, 108, 189, 1)
+            BorderColor: =_Button.Blue
+            BorderThickness: =3
+            Color: =_Button.Blue
             DisabledBorderColor: =RGBA(15, 84, 140, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -145,8 +178,10 @@ IntroScreenWhatIsSail As screen:
             Height: =50
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
-            OnSelect: =
-            PressedFill: =RGBA(0, 134, 208, 1)
+            OnSelect: =Set(VarLore,VarLore - 1)
+            PressedBorderColor: =_Button.Blue
+            PressedColor: =_Button.White
+            PressedFill: =_Button.Blue
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
             RadiusTopLeft: =5
@@ -154,25 +189,31 @@ IntroScreenWhatIsSail As screen:
             Size: =14
             Text: ="Back"
             Tooltip: ="New users click to Register"
+            Visible: =If(VarLore>1 && VarLore<=5, true, false)
             Width: =95
-            X: =1077
-            Y: =621
+            X: =1007
+            Y: =571
             ZIndex: =15
 
         btn_Start_62 As button:
-            BorderColor: =RGBA(15, 84, 140, 1)
+            BorderColor: =_Button.Blue
+            BorderThickness: =3
+            Color: =_Button.White
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(15, 108, 189, 1)
+            Fill: =_Button.Blue
             FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =50
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(167, 182, 203, 1)
-            OnSelect: =
-            PressedFill: =RGBA(0, 134, 208, 1)
+            HoverBorderColor: =ColorFade(Self.Fill,-20%)
+            HoverColor: =_Button.White
+            HoverFill: =ColorFade(Self.Fill,-20%)
+            OnSelect: =Set(VarLore,VarLore + 1)
+            PressedBorderColor: =ColorFade(Self.Fill,-30%)
+            PressedColor: =_Button.White
+            PressedFill: =ColorFade(Self.Fill,-30%)
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
             RadiusTopLeft: =5
@@ -180,8 +221,39 @@ IntroScreenWhatIsSail As screen:
             Size: =14
             Text: ="Next"
             Tooltip: ="New users click to Register"
+            Visible: =If(VarLore>=1 && VarLore<5, true, false)
             Width: =113
-            X: =1192
-            Y: =621
+            X: =1110
+            Y: =571
             ZIndex: =16
+
+        btn_Start_64 As button:
+            BorderColor: =_Button.Blue
+            BorderThickness: =3
+            Color: =_Button.Blue
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: =Navigate(HomeScreen)
+            PressedBorderColor: =_Button.Blue
+            PressedColor: =_Button.White
+            PressedFill: =_Button.Blue
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="What Is SAIL?"
+            Tooltip: ="New users click to Register"
+            Width: =139
+            X: =568
+            Y: =587
+            ZIndex: =17
 

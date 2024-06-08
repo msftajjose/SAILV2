@@ -22,7 +22,12 @@ App As appinfo:
             ),
             Set(MSlogo,MSlogo_resized),
             Set(CopilotLogo, CopilotLogo_resized),
-            Set(DesignerLogo,CopilotDesigner)
+            Set(DesignerLogo,CopilotDesigner),
+            Set(PromptIcon,'prompts-min'),
+            Set(RobotIcon,'robot-min'),
+            Set(SeasonsIcon,'seasons-min'),
+            Set(TribestIcon,'tribes-min'),
+            Set(WorldIcon,'world-min')
         );
         
         Concurrent(
