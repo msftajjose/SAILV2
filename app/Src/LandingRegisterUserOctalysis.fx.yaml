@@ -873,6 +873,9 @@ LandingRegisterUserOctalysis As screen:
             Fill: =RGBA(255, 255, 255, 1)
             Font: =Font.'Segoe UI'
             Height: =40
+            HoverFill: =RGBA(167, 182, 203, 1)
+            PressedColor: =_Button.White
+            PressedFill: =_Button.Blue
             Size: =14
             Text: ="Add a picture"
             Visible: =varAvatar
