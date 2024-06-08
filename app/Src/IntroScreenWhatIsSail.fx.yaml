@@ -73,27 +73,54 @@ IntroScreenWhatIsSail As screen:
             Height: =373
             HtmlText: |-
                 =Switch(VarLore,
+                //1,"World"
                 1,"In the year 2050, the world has evolved into a place where <b>technology and nature coexist in harmony</b>. 
-                
-                <br>
-                <br>
-                
+                <br><br>
                 Humanity has discovered the ability to control the elements, becoming ''element-benders''. These benders belong to one of four tribes, each mastering a unique element: <b>Water</b>, <b>Fire</b>, <b>Earth</b>, and <b>Wind</b>. 
-                
-                <br>
-                <br>
-                
+                <br><br>
                 This extraordinary power allows them to manipulate their environment, and it has fundamentally <b>changed the way society operates</b>.",
                 
-                2,"Tribes",
-                3,"Prompts",
-                4,"Seasons",
+                //2,"Tribes"
+                2,"Each tribe has its own distinct culture and techniques. 
+                <br><br>
+                The <b><font color=#00A4EF>Blue</font></b> tribe, known for their precision and innovation, harnesses the power of the cloud. 
+                <br><br>
+                The <b><font color=#7FBA00>Green</font></b> tribe, passionate and strategic, excels in gaming and virtual environments. 
+                <br><br>
+                The <b><font color=#FFB900>Yellow</font></b> tribe, analytical and insightful, masters data and business intelligence. 
+                <br><br>
+                The <b><font color=#F25022>Orange</font></b> tribe, productive and collaborative, drives efficiency and teamwork.
+                <br><br>
+                As benders grow in skill, they begin to learn techniques from other elements, creating a diverse and dynamic society. 
+                <br><br>
+                These techniques, learned through real-life prompts, become more powerful as they are used and shared by others.",
+                
+                //3,"Prompts"
+                3,"In this world, <b>AI has become an integral part of learning and growth</b>.
+                <br><br> 
+                Each bender can create and <b>''own'' prompts</b>, which are essentially AI-generated techniques that they can master and share. These prompts are designed to enhance their elemental abilities and improve their everyday lives. 
+                <br><br>
+                <b>The more these prompts are used and found helpful by others, the more powerful they become</b>, evolving into advanced techniques that can significantly impact the world.",
+                
+                //4,"Seasons"
+                4,"The world of the element-benders is governed by the <b>cycles of the four seasons</b>: Spring, Summer, Fall, and Winter. 
+                <br><br>
+                Every three months, the SAIL (Seasons of AI Love) world provides new AI-related <b>challenges for its inhabitants</b>, reflecting the ever-changing nature of AI.
+                <br><br>
+                <b><font color=##7FBA00>Spring:</font></b> A season of renewal and growth. AI challenges in Spring focus on innovation and new beginnings. The Green tribe takes the lead, introducing fresh gaming experiences and virtual realities that inspire creativity and strategy.
+                <br><br>
+                Summer: A time of activity and peak energy. The Yellow tribe drives the AI challenges, focusing on data analysis and business intelligence, helping tribes optimize their techniques and gather insights during the most active months.
+                <br><br>
+                Fall: A season of reflection and harvest. The Orange tribe spearheads the AI challenges, enhancing productivity and collaboration, ensuring that the tribes can efficiently harvest the fruits of their labor.
+                <br><br>
+                Winter: A period of rest and introspection. The Blue tribe leads with challenges that focus on cloud-based solutions and advancements, maintaining innovation and technological growth even during the coldest months.",
+                
                 5,"Chaos"
                 )
             Size: =14
             Width: =351
             X: =872
-            Y: =180
+            Y: =183
             ZIndex: =6
 
         Image21_1 As image:
@@ -241,7 +268,7 @@ IntroScreenWhatIsSail As screen:
             Height: =50
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
-            OnSelect: =Navigate(HomeScreen)
+            OnSelect: =//Navigate(HomeScreen)
             PressedBorderColor: =_Button.Blue
             PressedColor: =_Button.White
             PressedFill: =_Button.Blue
