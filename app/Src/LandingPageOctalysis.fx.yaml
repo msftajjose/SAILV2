@@ -426,3 +426,11 @@ LandingPageOctalysis As screen:
             Y: =521
             ZIndex: =3
 
+    ButtonCanvas6 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =54
+        Width: =96
+        X: =537
+        Y: =509
+        ZIndex: =6
+
