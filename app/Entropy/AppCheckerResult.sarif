@@ -14622,36 +14622,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "LandingPageOctalysis.ButtonCanvas6.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "LandingPageOctalysis.ButtonCanvas6.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "LandingPageOctalysis",
-                "type": "LandingPageOctalysis.ButtonCanvas6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.AM"
                 }
               ],
@@ -16522,6 +16492,96 @@
                 "member": "varUserAvailaibilty",
                 "module": "LandingPage",
                 "type": "LandingPage"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "LandingRegisterUserOctalysis.varLoginWindow"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "LandingRegisterUserOctalysis.varLoginWindow",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varLoginWindow",
+                "module": "LandingRegisterUserOctalysis",
+                "type": "LandingRegisterUserOctalysis"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "LandingRegisterUserOctalysis.varRegScreenHide"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "LandingRegisterUserOctalysis.varRegScreenHide",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varRegScreenHide",
+                "module": "LandingRegisterUserOctalysis",
+                "type": "LandingRegisterUserOctalysis"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "LandingRegisterUserOctalysis.varUserAvailaibilty"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "LandingRegisterUserOctalysis.varUserAvailaibilty",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varUserAvailaibilty",
+                "module": "LandingRegisterUserOctalysis",
+                "type": "LandingRegisterUserOctalysis"
               }
             }
           ],

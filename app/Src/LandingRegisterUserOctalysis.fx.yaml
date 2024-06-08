@@ -183,11 +183,10 @@ LandingRegisterUserOctalysis As screen:
             Height: =50
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
-            OnSelect: |-
-                =/*
+            OnSelect: |
+                =
                 Refresh(Registrations_Dvs);
                 If(!IsBlank(First(Filter(Registrations_Dvs,LoginName=TextInput4_6.Text)).Name),Notify("Username not available ! try a different user name",NotificationType.Error),Notify("Username available !",NotificationType.Success))
-                */
             PressedFill: =RGBA(0, 134, 208, 1)
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
@@ -754,36 +753,37 @@ LandingRegisterUserOctalysis As screen:
             Height: =50
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
-            OnSelect: |-
+            OnSelect: |+
                 =/*
                 UpdateContext({varspinner:true});
                 Set(varRecordD,Blank());
-                If(Value(TextInput4_7.Text)>0,Set(varRegResponse,AISummerREgAutoFlow.Run(TextInput4_5.Text,Value(TextInput4_7.Text) * 3 -5 +100)));
+                If(Value(TextInput4_6.Text)>0,Set(varRegResponse,AISummerREgAutoFlow.Run(TextInput4_6.Text,Value(TextInput4_13.Text) * 3 -5 +100)));
                 
-                If(Value(TextInput4_7.Text)>0,If(!IsBlank(First(Filter(Registrations_Dvs,LoginName=TextInput4_5.Text)).Name),UpdateContext({varUserAvailaibilty:false}),Set(varRecordD, Patch(Registrations_Dvs,Defaults(Registrations_Dvs),{Name:"DFMCop",LoginPin:Value(TextInput4_7.Text) * 3 -5 +100,UserAvtar:UploadedImage1_1.Image,LoginName:TextInput4_5.Text,RegLink:varRegResponse.varregid}))),Notify("Invalid Username or password !"));
+                If(Value(TextInput4_6.Text)>0,If(!IsBlank(First(Filter(Registrations_Dvs,LoginName=TextInput4_6.Text)).Name),UpdateContext({varUserAvailaibilty:false}),Set(varRecordD, Patch(Registrations_Dvs,Defaults(Registrations_Dvs),{Name:TextInput4_6.Text,LoginPin:Value(TextInput4_13.Text) * 3 -5 +100,UserAvtar:UploadedImage1_1.Image,LoginName:TextInput4_6.Text}))),Notify("Invalid Username or password !"));
                 If(!IsBlank(varRecordD),
                     Notify("New user account has been created!",NotificationType.Success) && UpdateContext({varRegScreenHide:false}),
                     Notify("Failed to create user, Try again !", NotificationType.Error)
                 );
                 
                 //Set(varRegResponse,AISummerREgAutoFlow.Run(TextInput4_2.Text,Value(TextInput4_3.Text) * 3 -5 +100));
-                
+                //,RegLink:varRegResponse.varregid
                 If(!IsBlank(varRecordD),UpdateContext({varLoginWindow:true}));
                 Set(varRecordD,Blank());
-                Reset(TextInput4_5);
-                Reset(TextInput4_7);
+                //Reset(TextInput4_6);
+                //Reset(TextInput4_13);
+                //Reset(TextInput4_14);
                 UpdateContext({varspinner:false});
                 
                 */
                 
                 
-                /*
+                
                 //UpdateContext({varLoadingSpinner:true});
                 UpdateContext({varspinner:true});
                 Set(varRecordD,Blank());
-                If(Value(TextInput4_12.Text)>0,Set(varRegResponse,AISummerREgAutoFlow.Run(TextInput4_6.Text,Value(TextInput4_12.Text) * 3 -5 +100)));
+                If(Value(TextInput4_13.Text)>0,Set(varRegResponse,AISummerREgAutoFlow.Run(TextInput4_6.Text,Value(TextInput4_13.Text) * 3 -5 +100)));
                 
-                If(Value(TextInput4_12.Text)>0,If(!IsBlank(First(Filter(Registrations_Dvs,LoginName=TextInput4_6.Text)).Name),UpdateContext({varUserAvailaibilty:false}),Set(varRecordD, Patch(Registrations_Dvs,Defaults(Registrations_Dvs),{Name:TextInput4_6.Text,LoginPin:Value(TextInput4_12.Text) * 3 -5 +100,UserAvtar:UploadedImage1_1.Image,LoginName:TextInput4_6.Text,Week1Score:0,Week2Score:0,Week3Score:0,Week4Score:0,Week5Score:0,Week6Score:0,Week7Score:0 ,Week8Score:0,Week9Score:0,Week10Score:0,Week11Score:0,Week12Score:0,Scores:0, RegLink:varRegResponse.varregid}))),Notify("Invalid Username or password !"));
+                If(Value(TextInput4_13.Text)>0,If(!IsBlank(First(Filter(Registrations_Dvs,LoginName=TextInput4_6.Text)).Name),UpdateContext({varUserAvailaibilty:false}),Set(varRecordD, Patch(Registrations_Dvs,Defaults(Registrations_Dvs),{Name:TextInput4_6.Text,LoginPin:Value(TextInput4_13.Text) * 3 -5 +100,UserAvtar:UploadedImage1_1.Image,LoginName:TextInput4_6.Text,Week1Score:0,Week2Score:0,Week3Score:0,Week4Score:0,Week5Score:0,Week6Score:0,Week7Score:0 ,Week8Score:0,Week9Score:0,Week10Score:0,Week11Score:0,Week12Score:0,Scores:0, RegLink:varRegResponse.varregid}))),Notify("Invalid Username or password !"));
                 If(!IsBlank(varRecordD),
                     Notify("New user account has been created!",NotificationType.Success) && UpdateContext({varRegScreenHide:false}),
                     Notify("Failed to create user, Try again !", NotificationType.Error)
@@ -795,14 +795,13 @@ LandingRegisterUserOctalysis As screen:
                 
                 If(!IsBlank(varRecordD),UpdateContext({varLoginWindow:true})&& Navigate(LandingPageOctalysis));
                 Set(varRecordD,Blank());
-                Reset(TextInput4_12);
-                Reset(TextInput4_11);
+                Reset(TextInput4_14);
+                Reset(TextInput4_13);
                 Reset(TextInput4_6);
                 
                 UpdateContext({varspinner:false});
                 //UpdateContext({varLoadingSpinner:false});
                 
-                */
             PressedFill: =RGBA(0, 134, 208, 1)
             RadiusBottomLeft: =5
             RadiusBottomRight: =5

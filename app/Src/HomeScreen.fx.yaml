@@ -519,7 +519,8 @@
                                         Items: =Sort(Filter(TeamChats,TeamID.TeamRegistrationssN = varCrrUser.TeamID.TeamRegistrationssN),'Created On',SortOrder.Descending)
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
-                                        TemplateSize: =74
+                                        TemplatePadding: =3
+                                        TemplateSize: =70
                                         Width: =620
                                         X: =14
                                         Y: =31
@@ -554,7 +555,7 @@
                                             Size: =15
                                             Text: =""
                                             Width: =593
-                                            Y: =22
+                                            Y: =17
                                             ZIndex: =1
 
                                         Image5_2 As image:
@@ -569,7 +570,7 @@
                                             RadiusTopLeft: =15
                                             RadiusTopRight: =15
                                             Width: =50
-                                            Y: =22
+                                            Y: =17
                                             ZIndex: =2
 
                                         Title4_2 As label:
@@ -590,7 +591,7 @@
                                             VerticalAlign: =VerticalAlign.Top
                                             Width: =154
                                             X: =4
-                                            Y: =7
+                                            Y: =2
                                             ZIndex: =3
 
                                         Subtitle2_3 As label:
@@ -613,8 +614,8 @@
                                             Text: =ThisItem.Msg
                                             VerticalAlign: =VerticalAlign.Top
                                             Width: =527
-                                            X: =66
-                                            Y: =28
+                                            X: =56
+                                            Y: =20
                                             ZIndex: =4
 
                                         Title4_3 As label:

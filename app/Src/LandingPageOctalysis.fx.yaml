@@ -426,11 +426,13 @@ LandingPageOctalysis As screen:
             Y: =521
             ZIndex: =3
 
-    ButtonCanvas6 As Button:
-        DisplayMode: =DisplayMode.Edit
-        Height: =54
-        Width: =96
-        X: =537
-        Y: =509
-        ZIndex: =6
+        TextCanvas3 As Text:
+            DisplayMode: =DisplayMode.Edit
+            FontColor: =RGBA(255, 255, 255, 1)
+            Height: =32
+            Text: =varspinner
+            Width: =96
+            X: =40
+            Y: =40
+            ZIndex: =4
 
