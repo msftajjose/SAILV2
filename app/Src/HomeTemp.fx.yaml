@@ -1172,7 +1172,8 @@ HomeTemp As screen:
                                         PressedFill: =App.Theme.Colors.Darker40
                                         Size: =15
                                         Text: =""
-                                        Width: =409
+                                        Width: =390
+                                        X: =6
                                         Y: =6
                                         ZIndex: =1
 
@@ -1227,7 +1228,7 @@ HomeTemp As screen:
                                         Tooltip: ="Dismiss"
                                         Visible: =If(ThisItem.IsRead="NA",false,true)
                                         Width: =15
-                                        X: =394
+                                        X: =374
                                         Y: =10
                                         ZIndex: =4
 
