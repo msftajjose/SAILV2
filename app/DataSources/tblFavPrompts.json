@@ -1,0 +1,99 @@
+[
+  {
+    "DisplayName": "tblFavPrompts (Views)",
+    "Name": "_sail23_tblfavprompts_views",
+    "RelatedEntityName": "tblFavPrompts",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0e324d54-06f2-4789-a309-d0cfb825b72d": "tblFavPrompts Advanced Find View",
+      "133babdf-f479-492a-a4d6-468c60f74aba": "tblFavPrompts Lookup View",
+      "77b5998b-774a-4f73-9a69-fa17a633164b": "Active tblFavPrompts",
+      "b1b79c2e-e70e-48ff-9f85-36d27b164326": "Inactive tblFavPrompts",
+      "d4a26713-7384-4360-a058-c34539733b83": "tblFavPrompts Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (tblFavPrompts)",
+    "Name": "sail23_tblfavprompts_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "tblFavPrompts"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "tblFavPrompts",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (tblFavPrompts)",
+    "Name": "sail23_tblfavprompts_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "tblFavPrompts"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "tblFavPrompts",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "sail23_tblfavpromptses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "sail23_tblfavprompts",
+    "Name": "tblFavPrompts",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "sail23_isactivefav": "IsActiveFav",
+      "sail23_name": "Name",
+      "sail23_PromptID": "PromptID",
+      "sail23_tblfavprompts_AsyncOperations": "System Jobs",
+      "sail23_tblfavprompts_BulkDeleteFailures": "Bulk Delete Failures",
+      "sail23_tblfavprompts_DuplicateBaseRecord": "Duplicate Records (sail23_tblfavprompts_DuplicateBaseRecord)",
+      "sail23_tblfavprompts_DuplicateMatchingRecord": "Duplicate Records (sail23_tblfavprompts_DuplicateMatchingRecord)",
+      "sail23_tblfavprompts_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "sail23_tblfavprompts_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "sail23_tblfavprompts_ProcessSession": "Process Sessions",
+      "sail23_tblfavprompts_SyncErrors": "Sync Errors",
+      "sail23_tblfavpromptsid": "tblFavPrompts",
+      "sail23_UserID": "UserID",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "tblFavPrompts",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]

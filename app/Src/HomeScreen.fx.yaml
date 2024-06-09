@@ -211,6 +211,8 @@ HomeScreen As screen:
                             =Table( { ID:1,Icon:"" ,Value: "Discover" }, { ID:2,Icon:Icon.Home ,Value: "Home" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" },{ ID:4,Icon:"" ,Value: "Play" } ,{ ID:5,Icon:Icon.Signal ,Value: "Challenges" },{ ID:6,Icon:Icon.OptionsList ,Value: "Leader Boards" },{ ID:7,Icon:Icon.EmojiSmile ,Value: "Squad" },{ ID:8,Icon:"" ,Value: "Adjust" },{ ID:9,Icon:Icon.Settings ,Value: "Settings" },{ ID:10,Icon:Icon.Post ,Value: "Feedback" })
                         Layout: =Layout.Vertical
                         LoadingSpinner: =LoadingSpinner.Data
+                        OnSelect: |-
+                            =If(ThisItem.ID=10, UpdateContext({_varAppFeedbackReg:true}),UpdateContext({_varAppFeedbackReg:false}));
                         TemplateFill: =If(ThisItem.IsSelected && !IsBlank(ThisItem.Icon), RGBA(214, 221, 224, 1),  RGBA(0, 0, 0, 0))
                         TemplateSize: =35
                         Width: =Parent.Width
@@ -284,9 +286,9 @@ HomeScreen As screen:
                         ZIndex: =5
 
                     Rectangle5_1 As rectangle:
-                        BorderColor: =Color.Black
+                        BorderColor: =RGBA(79, 90, 94, 1)
                         BorderThickness: =1
-                        Fill: =Color.Black
+                        Fill: =RGBA(106, 122, 127, 1)
                         Height: =1
                         Width: =240
                         X: =21
@@ -875,7 +877,8 @@ HomeScreen As screen:
                                     OnSelect: |-
                                         =UpdateContext({varJointeam:true})
                                     PaddingRight: =0
-                                    Text: ="JOIN A TEAM"
+                                    Text: ="JOIN A SQUAD"
+                                    Visible: =IsBlank(varCrrUser.TeamID)
                                     Width: =221
                                     X: =213
                                     Y: =105
@@ -890,7 +893,8 @@ HomeScreen As screen:
                                         =UpdateContext({varNewTeamScreen:true});
                                         NewForm(Form2_3)
                                     PaddingRight: =0
-                                    Text: ="CREATE A TEAM"
+                                    Text: ="CREATE A SQAD"
+                                    Visible: =IsBlank(varCrrUser.TeamID)
                                     Width: =221
                                     X: =213
                                     Y: =182
@@ -1031,7 +1035,7 @@ HomeScreen As screen:
                                         OnSelect: =Copy(ThisItem.TipsTricks)
                                         Tooltip: ="Copy Prompt"
                                         Width: =15
-                                        X: =619
+                                        X: =614
                                         Y: =17
                                         ZIndex: =11
 
@@ -2009,4 +2013,214 @@ HomeScreen As screen:
             X: =904
             Y: =291
             ZIndex: =13
+
+    AppFeedback_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =24
+
+        Rectangle1_22 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Visible: =If(Gallery7_2.Selected.ID=10 && _varAppFeedbackReg,true,false)
+            Width: =1366
+            ZIndex: =14
+
+        Rectangle3_17 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =412
+            Visible: =If(Gallery7_2.Selected.ID=10 && _varAppFeedbackReg,true,false)
+            Width: =713
+            X: =326
+            Y: =158
+            ZIndex: =15
+
+        Button8_30 As button:
+            BorderColor: =App.Theme.Colors.Primary
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =_theme.ColorPrimary
+            FocusedBorderThickness: =1
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =App.Theme.Colors.Darker10
+            OnSelect: |-
+                =UpdateContext({_varAppFeedbackReg:false});
+                Reset(Gallery7_2);
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =App.Theme.Colors.Darker40
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =0
+            RadiusTopRight: =20
+            Size: =15
+            Text: ="Cancel"
+            Visible: =If(Gallery7_2.Selected.ID=10 && _varAppFeedbackReg,true,false)
+            X: =471
+            Y: =491
+            ZIndex: =16
+
+        Button8_31 As button:
+            BorderColor: =App.Theme.Colors.Primary
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =_theme.ColorPrimary
+            FocusedBorderThickness: =1
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =App.Theme.Colors.Darker10
+            OnSelect: |-
+                =Patch(AppFeedbacks_Dvs,Defaults(AppFeedbacks_Dvs),{Name:_myProfileUPN_V.UserPrincipalName,Comments:TextInput1_7.Text,Rating:Text(Rating1_7.Value),UserName:varCrrUser.LoginName,Category:First(ComboBox1_5.SelectedItems).Value});
+                If(IsBlank(varCrrUser.ErD), Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{ErD:"Yes",NotificationST:"Yes"}));
+                Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"You have submited a feedback !",UserID:varCrrUser,IsRead:"No"});
+                Reset(Gallery7_2);
+                Reset(TextInput1_7);
+                Reset(Rating1_7);
+                UpdateContext({_varAppFeedbackReg:false});
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =App.Theme.Colors.Darker40
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =0
+            RadiusTopRight: =20
+            Size: =15
+            Text: ="Submit"
+            Visible: =If(Gallery7_2.Selected.ID=10 && _varAppFeedbackReg,true,false)
+            X: =709
+            Y: =491
+            ZIndex: =17
+
+        Label8_19 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Size: =13
+            Text: |-
+                ="Rate the App:"
+            Visible: =If(Gallery7_2.Selected.ID=10 && _varAppFeedbackReg,true,false)
+            Width: =167
+            X: =367
+            Y: =228
+            ZIndex: =18
+
+        Label8_20 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Size: =13
+            Text: |-
+                ="Comments :"
+            Visible: =If(Gallery7_2.Selected.ID=10 && _varAppFeedbackReg,true,false)
+            Width: =120
+            X: =365
+            Y: =268
+            ZIndex: =19
+
+        Rating1_7 As rating:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            ContentLanguage: =""
+            Default: =0
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =Self.Fill
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =Self.BorderColor
+            FocusedBorderThickness: =0
+            Height: =40
+            HoverFill: =Self.Fill
+            PressedFill: =Self.Fill
+            RatingFill: =App.Theme.Colors.Darker30
+            Visible: =If(Gallery7_2.Selected.ID=10 && _varAppFeedbackReg,true,false)
+            Width: =200
+            X: =548
+            Y: =230
+            ZIndex: =20
+
+        TextInput1_7 As text:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =187
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
+            Mode: =TextMode.MultiLine
+            Size: =13
+            Visible: =If(Gallery7_2.Selected.ID=10 && _varAppFeedbackReg,true,false)
+            Width: =419
+            X: =552
+            Y: =277
+            ZIndex: =21
+
+        Label8_21 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Size: =13
+            Text: |-
+                ="Feedback Category:"
+            Visible: =If(Gallery7_2.Selected.ID=10 && _varAppFeedbackReg,true,false)
+            Width: =167
+            X: =368
+            Y: =181
+            ZIndex: =22
+
+        ComboBox1_5 As combobox:
+            BorderColor: =App.Theme.Colors.Darker40
+            ChevronBackground: =App.Theme.Colors.Primary
+            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+            ChevronHoverBackground: =App.Theme.Colors.Darker10
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            DefaultSelectedItems: |-
+                ={ID:1,Value:"App Feedback"}
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayFields: =["Value"]
+            Font: =App.Theme.Font
+            Height: =35
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
+            IsSearchable: =false
+            Items: |-
+                =Table({ID:1,Value:"App Feedback"},{ID:2,Value:"Notify errors to the Apps team"},{ID:3,Value:"Submit a game Idea"})
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =App.Theme.Colors.Darker30
+            SearchFields: =["Value"]
+            SearchItems: =[]
+            SelectionFill: =App.Theme.Colors.Primary
+            SelectMultiple: =false
+            Size: =13
+            Visible: =If(Gallery7_2.Selected.ID=10 && _varAppFeedbackReg,true,false)
+            X: =550
+            Y: =184
+            ZIndex: =23
 
