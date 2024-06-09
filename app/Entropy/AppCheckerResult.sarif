@@ -13152,19 +13152,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.TopNavContainer.TopMenu.Gallery5.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.TopNavContainer.TopMenu.Gallery5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.TopNavContainer.TopMenu.Gallery5.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.TopNavContainer.TopMenu.Gallery5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.TopNavContainer.TopMenu.Gallery5"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.TopNavContainer.TopMenu.Gallery5"
               }
             }
           ],
@@ -13182,19 +13182,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.TopNavContainer.TopMenu.Gallery5.TabIndex"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.TopNavContainer.TopMenu.Gallery5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.TopNavContainer.TopMenu.Gallery5.TabIndex",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.TopNavContainer.TopMenu.Gallery5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.TopNavContainer.TopMenu.Gallery5"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.TopNavContainer.TopMenu.Gallery5"
               }
             }
           ],
@@ -13212,19 +13212,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.TopNavContainer.TopMenu.Gallery5.ButtonCanvas3.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.TopNavContainer.TopMenu.Gallery5.ButtonCanvas3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.TopNavContainer.TopMenu.Gallery5.ButtonCanvas3.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.TopNavContainer.TopMenu.Gallery5.ButtonCanvas3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.TopNavContainer.TopMenu.Gallery5.ButtonCanvas3"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.TopNavContainer.TopMenu.Gallery5.ButtonCanvas3"
               }
             }
           ],
@@ -13242,19 +13242,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.TopNavContainer.TopMenu.ButtonCanvas1.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.TopNavContainer.TopMenu.ButtonCanvas1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.TopNavContainer.TopMenu.ButtonCanvas1.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.TopNavContainer.TopMenu.ButtonCanvas1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.TopNavContainer.TopMenu.ButtonCanvas1"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.TopNavContainer.TopMenu.ButtonCanvas1"
               }
             }
           ],
@@ -13272,19 +13272,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7"
               }
             }
           ],
@@ -13302,19 +13302,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7.TabIndex"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7.TabIndex",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7"
               }
             }
           ],
@@ -13332,19 +13332,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7.ButtonCanvas4.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7.ButtonCanvas4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7.ButtonCanvas4.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7.ButtonCanvas4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7.ButtonCanvas4"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.LeftNavContainer.Container2.Gallery7.ButtonCanvas4"
               }
             }
           ],
@@ -13362,19 +13362,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1"
               }
             }
           ],
@@ -13392,19 +13392,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1.TabIndex"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1.TabIndex",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1"
               }
             }
           ],
@@ -13422,19 +13422,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1.ButtonCanvas3_1.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1.ButtonCanvas3_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1.ButtonCanvas3_1.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1.ButtonCanvas3_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1.ButtonCanvas3_1"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container3.Gallery5_1.ButtonCanvas3_1"
               }
             }
           ],
@@ -13452,19 +13452,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container1.Gallery5_2.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container1.Gallery5_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container1.Gallery5_2.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container1.Gallery5_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container1.Gallery5_2"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container1.Gallery5_2"
               }
             }
           ],
@@ -13482,19 +13482,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container1.Gallery5_2.TabIndex"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container1.Gallery5_2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container1.Gallery5_2.TabIndex",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container1.Gallery5_2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container1.Gallery5_2"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container1.Gallery5_2"
               }
             }
           ],
@@ -13512,19 +13512,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container1.ButtonCanvas5.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container1.ButtonCanvas5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container1.ButtonCanvas5.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container1.ButtonCanvas5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container1.ButtonCanvas5"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container1.ButtonCanvas5"
               }
             }
           ],
@@ -13542,19 +13542,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2"
               }
             }
           ],
@@ -13572,19 +13572,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.TabIndex"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.TabIndex",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2"
               }
             }
           ],
@@ -13602,19 +13602,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.Subtitle2_3.FocusedBorderThickness"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.Subtitle2_3.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.Subtitle2_3.FocusedBorderThickness",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.Subtitle2_3.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.Subtitle2_3"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.Subtitle2_3"
               }
             }
           ],
@@ -13632,19 +13632,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.Subtitle2_3.TabIndex"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.Subtitle2_3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.Subtitle2_3.TabIndex",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.Subtitle2_3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.Subtitle2_3"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Gallery3_2.Subtitle2_3"
               }
             }
           ],
@@ -13662,19 +13662,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.TextInput3_2.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.TextInput3_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.TextInput3_2.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.TextInput3_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.TextInput3_2"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.TextInput3_2"
               }
             }
           ],
@@ -13692,19 +13692,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_7.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_7.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_7"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_7"
               }
             }
           ],
@@ -13722,19 +13722,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_7.TabIndex"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_7.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_7.TabIndex",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_7.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_7"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_7"
               }
             }
           ],
@@ -13752,19 +13752,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_6.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_6.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_6"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_6"
               }
             }
           ],
@@ -13782,19 +13782,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_6.TabIndex"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_6.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_6.TabIndex",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_6.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_6"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container6.Container8.Container11.Icon7_6"
               }
             }
           ],
@@ -13812,19 +13812,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3"
               }
             }
           ],
@@ -13842,19 +13842,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.TabIndex"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.TabIndex",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3"
               }
             }
           ],
@@ -13872,19 +13872,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.Icon10_2.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.Icon10_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.Icon10_2.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.Icon10_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.Icon10_2"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.Icon10_2"
               }
             }
           ],
@@ -13902,19 +13902,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.Icon10_2.TabIndex"
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.Icon10_2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.Icon10_2.TabIndex",
+                  "fullyQualifiedName": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.Icon10_2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeScreen",
-                "type": "HomeScreen.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.Icon10_2"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp.MainContainer.BottomContainer.CommonContainer.Container5.Container7.Container10_1.Container13.Gallery3_3.Icon10_2"
               }
             }
           ],
@@ -14832,19 +14832,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4"
               }
             }
           ],
@@ -14862,19 +14862,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4"
               }
             }
           ],
@@ -14892,19 +14892,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4.ButtonCanvas3_3.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4.ButtonCanvas3_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4.ButtonCanvas3_3.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4.ButtonCanvas3_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4.ButtonCanvas3_3"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.TopNavContainer_1.TopMenu_2.Gallery5_4.ButtonCanvas3_3"
               }
             }
           ],
@@ -14922,19 +14922,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.TopNavContainer_1.TopMenu_2.ButtonCanvas1_2.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.TopNavContainer_1.TopMenu_2.ButtonCanvas1_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.TopNavContainer_1.TopMenu_2.ButtonCanvas1_2.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.TopNavContainer_1.TopMenu_2.ButtonCanvas1_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.TopNavContainer_1.TopMenu_2.ButtonCanvas1_2"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.TopNavContainer_1.TopMenu_2.ButtonCanvas1_2"
               }
             }
           ],
@@ -14952,19 +14952,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2"
               }
             }
           ],
@@ -14982,19 +14982,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2"
               }
             }
           ],
@@ -15012,19 +15012,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2.ButtonCanvas4_1.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2.ButtonCanvas4_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2.ButtonCanvas4_1.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2.ButtonCanvas4_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2.ButtonCanvas4_1"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.LeftNavContainer_1.Container2_1.Gallery7_2.ButtonCanvas4_1"
               }
             }
           ],
@@ -15042,19 +15042,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9"
               }
             }
           ],
@@ -15072,19 +15072,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9"
               }
             }
           ],
@@ -15102,19 +15102,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9.ButtonCanvas3_4.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9.ButtonCanvas3_4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9.ButtonCanvas3_4.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9.ButtonCanvas3_4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9.ButtonCanvas3_4"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container3_1.Gallery5_9.ButtonCanvas3_4"
               }
             }
           ],
@@ -15132,19 +15132,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery5_10.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery5_10.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery5_10.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery5_10.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery5_10"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery5_10"
               }
             }
           ],
@@ -15162,19 +15162,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery5_10.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery5_10.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery5_10.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery5_10.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery5_10"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery5_10"
               }
             }
           ],
@@ -15192,19 +15192,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.ButtonCanvas5_1.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.ButtonCanvas5_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.ButtonCanvas5_1.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.ButtonCanvas5_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.ButtonCanvas5_1"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.ButtonCanvas5_1"
               }
             }
           ],
@@ -15222,19 +15222,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10"
               }
             }
           ],
@@ -15252,19 +15252,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10"
               }
             }
           ],
@@ -15282,19 +15282,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10.ButtonCanvas1_3.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10.ButtonCanvas1_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10.ButtonCanvas1_3.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10.ButtonCanvas1_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10.ButtonCanvas1_3"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container1_1.Gallery10.ButtonCanvas1_3"
               }
             }
           ],
@@ -15312,19 +15312,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4"
               }
             }
           ],
@@ -15342,19 +15342,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4"
               }
             }
           ],
@@ -15372,19 +15372,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.Subtitle2_4.FocusedBorderThickness"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.Subtitle2_4.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.Subtitle2_4.FocusedBorderThickness",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.Subtitle2_4.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.Subtitle2_4"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.Subtitle2_4"
               }
             }
           ],
@@ -15402,19 +15402,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.Subtitle2_4.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.Subtitle2_4.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.Subtitle2_4.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.Subtitle2_4.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.Subtitle2_4"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Gallery3_4.Subtitle2_4"
               }
             }
           ],
@@ -15432,19 +15432,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.ButtonCanvas1_4.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.ButtonCanvas1_4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.ButtonCanvas1_4.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.ButtonCanvas1_4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.ButtonCanvas1_4"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.ButtonCanvas1_4"
               }
             }
           ],
@@ -15462,19 +15462,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.ButtonCanvas1_5.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.ButtonCanvas1_5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.ButtonCanvas1_5.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.ButtonCanvas1_5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.ButtonCanvas1_5"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.ButtonCanvas1_5"
               }
             }
           ],
@@ -15492,19 +15492,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.TextInput3_3.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.TextInput3_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.TextInput3_3.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.TextInput3_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.TextInput3_3"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.TextInput3_3"
               }
             }
           ],
@@ -15522,19 +15522,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_8.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_8.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_8.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_8.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_8"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_8"
               }
             }
           ],
@@ -15552,19 +15552,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_8.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_8.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_8.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_8.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_8"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_8"
               }
             }
           ],
@@ -15582,19 +15582,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_9.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_9.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_9"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_9"
               }
             }
           ],
@@ -15612,19 +15612,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_9.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_9.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_9.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_9.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_9"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container8_1.Container11_1.Icon7_9"
               }
             }
           ],
@@ -15642,19 +15642,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1"
               }
             }
           ],
@@ -15672,19 +15672,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1"
               }
             }
           ],
@@ -15702,19 +15702,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.Icon18_9.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.Icon18_9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.Icon18_9.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.Icon18_9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.Icon18_9"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.Icon18_9"
               }
             }
           ],
@@ -15732,19 +15732,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.Icon18_9.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.Icon18_9.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.Icon18_9.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.Icon18_9.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.Icon18_9"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Gallery10_1.Icon18_9"
               }
             }
           ],
@@ -15762,19 +15762,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5"
               }
             }
           ],
@@ -15792,19 +15792,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5"
               }
             }
           ],
@@ -15822,19 +15822,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.Icon10_3.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.Icon10_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.Icon10_3.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.Icon10_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.Icon10_3"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.Icon10_3"
               }
             }
           ],
@@ -15852,19 +15852,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.Icon10_3.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.Icon10_3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.Icon10_3.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.Icon10_3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.Icon10_3"
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container7_1.Container10_3.Container13_1.Gallery3_5.Icon10_3"
               }
             }
           ],
@@ -15882,19 +15882,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.Gallery1_8.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.Gallery1_8.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.Gallery1_8.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.Gallery1_8.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.Gallery1_8"
+                "module": "HomeScreen",
+                "type": "HomeScreen.Gallery1_8"
               }
             }
           ],
@@ -15912,19 +15912,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.Gallery1_8.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.Gallery1_8.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.Gallery1_8.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.Gallery1_8.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.Gallery1_8"
+                "module": "HomeScreen",
+                "type": "HomeScreen.Gallery1_8"
               }
             }
           ],
@@ -15942,19 +15942,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.Gallery1_8.Gallery4_3.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.Gallery1_8.Gallery4_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.Gallery1_8.Gallery4_3.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.Gallery1_8.Gallery4_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.Gallery1_8.Gallery4_3"
+                "module": "HomeScreen",
+                "type": "HomeScreen.Gallery1_8.Gallery4_3"
               }
             }
           ],
@@ -15972,19 +15972,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.Gallery1_8.Gallery4_3.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.Gallery1_8.Gallery4_3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.Gallery1_8.Gallery4_3.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.Gallery1_8.Gallery4_3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.Gallery1_8.Gallery4_3"
+                "module": "HomeScreen",
+                "type": "HomeScreen.Gallery1_8.Gallery4_3"
               }
             }
           ],
@@ -16002,19 +16002,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.Gallery1_8.NextArrow1_7.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.Gallery1_8.NextArrow1_7.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.Gallery1_8.NextArrow1_7.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.Gallery1_8.NextArrow1_7.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.Gallery1_8.NextArrow1_7"
+                "module": "HomeScreen",
+                "type": "HomeScreen.Gallery1_8.NextArrow1_7"
               }
             }
           ],
@@ -16032,19 +16032,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.Gallery1_8.Icon8_4.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.Gallery1_8.Icon8_4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.Gallery1_8.Icon8_4.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.Gallery1_8.Icon8_4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.Gallery1_8.Icon8_4"
+                "module": "HomeScreen",
+                "type": "HomeScreen.Gallery1_8.Icon8_4"
               }
             }
           ],
@@ -16062,19 +16062,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.Gallery1_8.Icon8_4.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.Gallery1_8.Icon8_4.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.Gallery1_8.Icon8_4.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.Gallery1_8.Icon8_4.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.Gallery1_8.Icon8_4"
+                "module": "HomeScreen",
+                "type": "HomeScreen.Gallery1_8.Icon8_4"
               }
             }
           ],
@@ -16092,19 +16092,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.NextArrow1_8.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.NextArrow1_8.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.NextArrow1_8.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.NextArrow1_8.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.NextArrow1_8"
+                "module": "HomeScreen",
+                "type": "HomeScreen.NextArrow1_8"
               }
             }
           ],
@@ -16122,19 +16122,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.TextInput5_3.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.TextInput5_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.TextInput5_3.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.TextInput5_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.TextInput5_3"
+                "module": "HomeScreen",
+                "type": "HomeScreen.TextInput5_3"
               }
             }
           ],
@@ -16152,19 +16152,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.Form2_3.Name_DataCard1_2.DataCardValue12_2.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.Form2_3.Name_DataCard1_2.DataCardValue12_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.Form2_3.Name_DataCard1_2.DataCardValue12_2.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.Form2_3.Name_DataCard1_2.DataCardValue12_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.Form2_3.Name_DataCard1_2.DataCardValue12_2"
+                "module": "HomeScreen",
+                "type": "HomeScreen.Form2_3.Name_DataCard1_2.DataCardValue12_2"
               }
             }
           ],
@@ -16182,19 +16182,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.Form2_3.TeamAvtar_DataCard3_2.AddPicture5_2.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.Form2_3.TeamAvtar_DataCard3_2.AddPicture5_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.Form2_3.TeamAvtar_DataCard3_2.AddPicture5_2.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.Form2_3.TeamAvtar_DataCard3_2.AddPicture5_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.Form2_3.TeamAvtar_DataCard3_2.AddPicture5_2"
+                "module": "HomeScreen",
+                "type": "HomeScreen.Form2_3.TeamAvtar_DataCard3_2.AddPicture5_2"
               }
             }
           ],
@@ -16212,19 +16212,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.Form2_3.OwnerID_DataCard1_2.DataCardValue13_2.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.Form2_3.OwnerID_DataCard1_2.DataCardValue13_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.Form2_3.OwnerID_DataCard1_2.DataCardValue13_2.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.Form2_3.OwnerID_DataCard1_2.DataCardValue13_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.Form2_3.OwnerID_DataCard1_2.DataCardValue13_2"
+                "module": "HomeScreen",
+                "type": "HomeScreen.Form2_3.OwnerID_DataCard1_2.DataCardValue13_2"
               }
             }
           ],
@@ -16242,19 +16242,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.Gallery2_6.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.Gallery2_6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.Gallery2_6.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.Gallery2_6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "HomeTemp",
-                "type": "HomeTemp.Gallery2_6"
+                "module": "HomeScreen",
+                "type": "HomeScreen.Gallery2_6"
               }
             }
           ],
@@ -16272,19 +16272,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.Gallery2_6.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.Gallery2_6.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.Gallery2_6.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.Gallery2_6.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.Gallery2_6"
+                "module": "HomeScreen",
+                "type": "HomeScreen.Gallery2_6"
               }
             }
           ],
@@ -16302,19 +16302,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.Gallery2_6.NextArrow2_6.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.Gallery2_6.NextArrow2_6.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.Gallery2_6.NextArrow2_6.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.Gallery2_6.NextArrow2_6.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.Gallery2_6.NextArrow2_6"
+                "module": "HomeScreen",
+                "type": "HomeScreen.Gallery2_6.NextArrow2_6"
               }
             }
           ],
@@ -16332,19 +16332,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.NextArrow1_9.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.NextArrow1_9.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.NextArrow1_9.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.NextArrow1_9.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "HomeTemp",
-                "type": "HomeTemp.NextArrow1_9"
+                "module": "HomeScreen",
+                "type": "HomeScreen.NextArrow1_9"
               }
             }
           ],
@@ -17409,19 +17409,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.popupText"
+                  "fullyQualifiedName": "HomeScreenTemp.popupText"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.popupText",
+                  "fullyQualifiedName": "HomeScreenTemp.popupText",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "popupText",
-                "module": "HomeScreen",
-                "type": "HomeScreen"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp"
               }
             }
           ],
@@ -17439,19 +17439,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.varLoadingSpinner"
+                  "fullyQualifiedName": "HomeScreenTemp.varLoadingSpinner"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.varLoadingSpinner",
+                  "fullyQualifiedName": "HomeScreenTemp.varLoadingSpinner",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "varLoadingSpinner",
-                "module": "HomeScreen",
-                "type": "HomeScreen"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp"
               }
             }
           ],
@@ -17469,19 +17469,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.varShowmoreNew"
+                  "fullyQualifiedName": "HomeScreenTemp.varShowmoreNew"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.varShowmoreNew",
+                  "fullyQualifiedName": "HomeScreenTemp.varShowmoreNew",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "varShowmoreNew",
-                "module": "HomeScreen",
-                "type": "HomeScreen"
+                "module": "HomeScreenTemp",
+                "type": "HomeScreenTemp"
               }
             }
           ],
@@ -17649,18 +17649,18 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp"
+                  "fullyQualifiedName": "HomeScreen"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp",
+                  "fullyQualifiedName": "HomeScreen",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "module": "HomeTemp",
-                "type": "HomeTemp"
+                "module": "HomeScreen",
+                "type": "HomeScreen"
               }
             }
           ],
@@ -17678,19 +17678,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.popupText"
+                  "fullyQualifiedName": "HomeScreen.popupText"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.popupText",
+                  "fullyQualifiedName": "HomeScreen.popupText",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "popupText",
-                "module": "HomeTemp",
-                "type": "HomeTemp"
+                "module": "HomeScreen",
+                "type": "HomeScreen"
               }
             }
           ],
@@ -17708,19 +17708,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.varLoadingSpinner"
+                  "fullyQualifiedName": "HomeScreen.varLoadingSpinner"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.varLoadingSpinner",
+                  "fullyQualifiedName": "HomeScreen.varLoadingSpinner",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "varLoadingSpinner",
-                "module": "HomeTemp",
-                "type": "HomeTemp"
+                "module": "HomeScreen",
+                "type": "HomeScreen"
               }
             }
           ],
@@ -17738,19 +17738,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.varOption"
+                  "fullyQualifiedName": "HomeScreen.varOption"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.varOption",
+                  "fullyQualifiedName": "HomeScreen.varOption",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "varOption",
-                "module": "HomeTemp",
-                "type": "HomeTemp"
+                "module": "HomeScreen",
+                "type": "HomeScreen"
               }
             }
           ],
@@ -17768,19 +17768,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.varRegScreenHide"
+                  "fullyQualifiedName": "HomeScreen.varRegScreenHide"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.varRegScreenHide",
+                  "fullyQualifiedName": "HomeScreen.varRegScreenHide",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "varRegScreenHide",
-                "module": "HomeTemp",
-                "type": "HomeTemp"
+                "module": "HomeScreen",
+                "type": "HomeScreen"
               }
             }
           ],
@@ -17798,19 +17798,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.varShowmoreNew"
+                  "fullyQualifiedName": "HomeScreen.varShowmoreNew"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.varShowmoreNew",
+                  "fullyQualifiedName": "HomeScreen.varShowmoreNew",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "varShowmoreNew",
-                "module": "HomeTemp",
-                "type": "HomeTemp"
+                "module": "HomeScreen",
+                "type": "HomeScreen"
               }
             }
           ],
@@ -17828,19 +17828,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeTemp.varUserID"
+                  "fullyQualifiedName": "HomeScreen.varUserID"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeTemp.varUserID",
+                  "fullyQualifiedName": "HomeScreen.varUserID",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "varUserID",
-                "module": "HomeTemp",
-                "type": "HomeTemp"
+                "module": "HomeScreen",
+                "type": "HomeScreen"
               }
             }
           ],
