@@ -175,7 +175,7 @@ IntroScreenWhatIsSail As screen:
             Height: =50
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
-            OnSelect: =Navigate(HomeScreenTemp)
+            OnSelect: =Navigate(HomeScreen)
             PressedBorderColor: =_Button.Blue
             PressedColor: =_Button.White
             PressedFill: =_Button.Blue
