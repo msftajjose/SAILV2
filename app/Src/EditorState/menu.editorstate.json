@@ -1720,8 +1720,22 @@
       "AllowAccessToGlobals": false,
       "ControlPropertyState": [
         "Fill",
-        "Height",
-        "Width",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Height",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Width",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "X",
         "Y",
         "ZIndex",
@@ -1732,6 +1746,14 @@
           "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "Table({SampleStringField: \"SampleText\", SampleNumberField: 10, SampleBooleanField: true})",
           "InvariantPropertyName": "Items",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Reset",
+          "InvariantPropertyName": "OnReset",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         }
@@ -1792,6 +1814,11 @@
         {
           "Category": "Design",
           "PropertyName": "Fill",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnReset",
           "RuleProviderType": "System"
         }
       ],

@@ -2767,8 +2767,22 @@
     ],
     "ControlPropertyState": [
       "Fill",
-      "Height",
-      "Width",
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "",
+        "InvariantPropertyName": "Height",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      },
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "",
+        "InvariantPropertyName": "Width",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      },
       "X",
       "Y",
       "ZIndex",
@@ -2781,9 +2795,17 @@
         "InvariantPropertyName": "Items",
         "IsLockable": false,
         "NameMapSourceSchema": "?"
+      },
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "Reset",
+        "InvariantPropertyName": "OnReset",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638536464179395712",
+    "LastModifiedTimestamp": "638536467905815430",
     "Name": "menu",
     "Rules": [
       {
@@ -2824,7 +2846,7 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "640",
+        "InvariantScript": "230",
         "Property": "Width",
         "RuleProviderType": "System"
       },
@@ -2838,6 +2860,12 @@
         "Category": "Design",
         "InvariantScript": "RGBA(0, 0, 0, 0)",
         "Property": "Fill",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Behavior",
+        "InvariantScript": "Reset(Gallery7_3)",
+        "Property": "OnReset",
         "RuleProviderType": "System"
       }
     ]
@@ -2888,7 +2916,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638536464179395712",
+  "LastModifiedTimestamp": "638536467905815430",
   "Name": "3dcb2ec1d1f74675969b80e7b1fbd350",
   "OverridableProperties": {},
   "Version": "1.0"

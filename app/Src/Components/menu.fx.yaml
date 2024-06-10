@@ -2,9 +2,10 @@ menu As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
     Height: =640
     Items: =
+    OnReset: =Reset(Gallery7_3)
     score: ="Text"
     SelectedItem: =Gallery7_3.Selected
-    Width: =640
+    Width: =230
     X: =0
     Y: =0
     ZIndex: =1
