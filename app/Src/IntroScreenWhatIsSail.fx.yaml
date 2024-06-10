@@ -15,7 +15,7 @@ IntroScreenWhatIsSail As screen:
         ZIndex: =2
 
         HtmlText1_19 As htmlViewer:
-            Height: =579
+            Height: =554
             HtmlText: |
                 ="<div style='background-color: rgba(255,255,255,100%);  
                 width: 430px; 
@@ -30,10 +30,10 @@ IntroScreenWhatIsSail As screen:
                 box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
                 
                 */
-            Width: =466
+            Width: =447
             X: =830
             Y: =94
-            ZIndex: =2
+            ZIndex: =1
 
         Label_SubHeading2_12 As label:
             BorderColor: =RGBA(0, 18, 107, 1)
@@ -54,18 +54,7 @@ IntroScreenWhatIsSail As screen:
             Width: =208
             X: =959
             Y: =121
-            ZIndex: =3
-
-        HtmlText6_9 As htmlViewer:
-            Color: =RGBA(128, 128, 128, 1)
-            Height: =44
-            HtmlText: |-
-                ="<b>Try using this one</b> using Copilot:"
-            Size: =14
-            Width: =308
-            X: =339
-            Y: =368
-            ZIndex: =5
+            ZIndex: =2
 
         HtmlText6_10 As htmlViewer:
             BorderColor: =RGBA(116, 116, 116, 1)
@@ -133,18 +122,7 @@ IntroScreenWhatIsSail As screen:
             Width: =351
             X: =872
             Y: =183
-            ZIndex: =6
-
-        Image21_1 As image:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =50
-            Image: ='Microsoft_365_Copilot_Icon.svg_resized'
-            Width: =45
-            X: =339
-            Y: =246
-            ZIndex: =10
+            ZIndex: =4
 
         Video1 As videoPlayback:
             BorderColor: =App.Theme.Colors.Darker40
@@ -153,7 +131,7 @@ IntroScreenWhatIsSail As screen:
             Width: =719
             X: =91
             Y: =94
-            ZIndex: =12
+            ZIndex: =5
 
         Image22_1 As image:
             BorderColor: =RGBA(0, 18, 107, 1)
@@ -171,7 +149,7 @@ IntroScreenWhatIsSail As screen:
             Width: =50
             X: =887
             Y: =118
-            ZIndex: =13
+            ZIndex: =6
 
         btn_Start_59 As button:
             BorderColor: =_Button.Blue
@@ -201,7 +179,7 @@ IntroScreenWhatIsSail As screen:
             Width: =82
             X: =726
             Y: =587
-            ZIndex: =14
+            ZIndex: =7
 
         btn_Start_61 As button:
             BorderColor: =_Button.Blue
@@ -232,7 +210,7 @@ IntroScreenWhatIsSail As screen:
             Width: =95
             X: =1007
             Y: =571
-            ZIndex: =15
+            ZIndex: =8
 
         btn_Start_62 As button:
             BorderColor: =_Button.Blue
@@ -264,7 +242,7 @@ IntroScreenWhatIsSail As screen:
             Width: =113
             X: =1110
             Y: =571
-            ZIndex: =16
+            ZIndex: =9
 
         btn_Start_64 As button:
             BorderColor: =_Button.Blue
@@ -294,5 +272,5 @@ IntroScreenWhatIsSail As screen:
             Width: =139
             X: =568
             Y: =587
-            ZIndex: =17
+            ZIndex: =10
 

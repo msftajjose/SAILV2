@@ -96,7 +96,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 14,
+    "BindingErrorCount": 17,
     "ContainsThirdPartyPcfControls": true,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -140,6 +140,7 @@
     "LandingSplashScreen",
     "HomeScreenTemp",
     "IntroScreenWhatIsSail",
-    "HomeScreen"
+    "HomeScreen",
+    "HomeScreen_ManuelTest"
   ]
 }

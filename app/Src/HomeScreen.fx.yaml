@@ -163,10 +163,9 @@ HomeScreen As screen:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(255, 255, 255, 1)
-                FillPortions: =2
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
-                LayoutMinWidth: =150
+                LayoutMinWidth: =230
                 LayoutMode: =LayoutMode.Auto
                 RadiusBottomLeft: =1
                 RadiusBottomRight: =1
@@ -175,15 +174,13 @@ HomeScreen As screen:
                 ZIndex: =4
 
                 Container2_1 As groupContainer.manualLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.Light
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
+                    Height: =703
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =302
+                    Width: =230
                     ZIndex: =1
 
                     TextCanvas1_8 As Text:
@@ -215,7 +212,7 @@ HomeScreen As screen:
                             =If(ThisItem.ID=10, UpdateContext({_varAppFeedbackReg:true}),UpdateContext({_varAppFeedbackReg:false}));
                         TemplateFill: =If(ThisItem.IsSelected && !IsBlank(ThisItem.Icon), RGBA(214, 221, 224, 1),  RGBA(0, 0, 0, 0))
                         TemplateSize: =35
-                        Width: =Parent.Width
+                        Width: =226
                         Y: =61
                         ZIndex: =2
 
@@ -232,6 +229,10 @@ HomeScreen As screen:
                             OnSelect: =Select(Parent)
                             Text: =ThisItem.Value
                             VerticalAlign: =VerticalAlign.Middle
+                            Visible: |+
+                                =If(ThisItem.ID=1 || ThisItem.ID=4 || ThisItem.ID=8, false, true)
+                                
+                                
                             Width: =184
                             X: =23
                             Y: =3
@@ -244,10 +245,48 @@ HomeScreen As screen:
                             Height: =15
                             Icon: =ThisItem.Icon
                             OnSelect: =Select(Parent)
+                            Visible: |+
+                                =If(ThisItem.ID=1 || ThisItem.ID=4 || ThisItem.ID=8, false, true)
+                                
+                                
                             Width: =15
-                            X: =19
+                            X: =15
                             Y: =12
                             ZIndex: =2
+
+                        Label6_1 As label:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Color: =RGBA(53, 61, 63, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            Height: =23
+                            OnSelect: =Select(Parent)
+                            Size: =12
+                            Text: =ThisItem.Value
+                            Visible: |+
+                                =If(ThisItem.ID=1 || ThisItem.ID=4 || ThisItem.ID=8, true, false)
+                                
+                                
+                            Width: =100
+                            X: =8
+                            Y: =12
+                            ZIndex: =3
+
+                        Rectangle5_7 As rectangle:
+                            BorderColor: =RGBA(139, 154, 159, 1)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =1
+                            Fill: =RGBA(106, 122, 127, 1)
+                            Height: =1
+                            Visible: |+
+                                =If(ThisItem.ID=4 || ThisItem.ID=8, true, false)
+                                
+                                
+                            Width: =200
+                            X: =4
+                            Y: =9
+                            ZIndex: =4
 
                     TextCanvas2_1 As Text:
                         DisplayMode: =DisplayMode.Edit
@@ -259,41 +298,44 @@ HomeScreen As screen:
                         Y: =520
                         ZIndex: =3
 
-                    TextCanvas1_9 As Text:
-                        Align: ='TextCanvas.Align'.Start
-                        DisplayMode: =DisplayMode.Edit
-                        Font: =Font.'Segoe UI'
-                        FontColor: =RGBA(0, 0, 0, 1)
-                        Height: =28
-                        Size: =14
-                        Text: ="Your Score"
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =222
-                        Wrap: =true
-                        X: =20
-                        Y: =480
-                        ZIndex: =4
-
                     Image6_2 As image:
                         BorderColor: =App.Theme.Colors.Darker40
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         Height: =25
-                        Image: =Heart
+                        Image: =heart
                         Width: =25
                         X: =20
                         Y: =520
                         ZIndex: =5
 
-                    Rectangle5_1 As rectangle:
-                        BorderColor: =RGBA(79, 90, 94, 1)
+                    Rectangle5_8 As rectangle:
+                        BorderColor: =RGBA(139, 154, 159, 1)
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =1
                         Fill: =RGBA(106, 122, 127, 1)
                         Height: =1
-                        Width: =240
-                        X: =21
-                        Y: =473
-                        ZIndex: =6
+                        Width: =200
+                        X: =13
+                        Y: =471
+                        ZIndex: =7
+
+                    LabelScore As label:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(53, 61, 63, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Height: =23
+                        OnSelect: =
+                        Size: =12
+                        Text: ="Your score"
+                        Visible: |
+                            =true
+                        Width: =100
+                        X: =13
+                        Y: =478
+                        ZIndex: =8
 
             CommonContainer_1 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
