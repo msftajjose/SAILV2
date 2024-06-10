@@ -18807,12 +18807,11 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "{SampleStringField: \"SampleText\", SampleNumberField: 10, SampleBooleanField: true}",
-          "InvariantPropertyName": "DefaultValHome",
+          "AutoRuleBindingString": "100",
+          "InvariantPropertyName": "SelectedGalID",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        },
-        "DefaultValPrompt"
+        }
       ],
       "DynamicProperties": [
         {
@@ -18898,14 +18897,8 @@
         },
         {
           "Category": "Data",
-          "NameMap": "{\"SampleNumberField\":\"ID\",\"SampleStringField\":\"Icon\",\"SampleBooleanField\":\"Value\"}",
-          "PropertyName": "DefaultValHome",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "DefaultValPrompt",
-          "RuleProviderType": "System"
+          "PropertyName": "SelectedGalID",
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",

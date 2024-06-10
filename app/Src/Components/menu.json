@@ -235,7 +235,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "//If(ThisItem.ID=10, UpdateContext({_varAppFeedbackReg:true}),UpdateContext({_varAppFeedbackReg:false}))\n\n\nSwitch(ThisItem.ID,\n1, false,\n2, Navigate(menu.ScreenNavHome) && Set(varDefaultSel,{ ID:2,Icon:Icon.Home ,Value: \"Home\" }),\n3, Navigate(menu.ScreenNavPrompt) && Set(varDefaultSel,{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" }),\n4, false,\n5, false,\n6, false,\n7, false,\n8, false,\n9, false,\n10, false)\n\n\n",
+                    "InvariantScript": "//If(ThisItem.ID=10, UpdateContext({_varAppFeedbackReg:true}),UpdateContext({_varAppFeedbackReg:false}))\n\n\nSwitch(ThisItem.ID,\n1, false,\n2, Navigate(menu.ScreenNavHome) ,\n3, Navigate(menu.ScreenNavPrompt) ,\n4, false,\n5, false,\n6, false,\n7, false,\n8, false,\n9, false,\n10, false)\n\n\n",
                     "Property": "OnSelect",
                     "RuleProviderType": "User"
                   }
@@ -1408,7 +1408,7 @@
               },
               {
                 "Category": "Data",
-                "InvariantScript": "varDefaultSel\r\n\r\n//If(menu.ScreenNavHome.Name=\"HomeScreen\", { ID:2,Icon:Icon.Home ,Value: \"Home\" },{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" })",
+                "InvariantScript": "{ID:menu.SelectedGalID}\r\n//If(menu.ScreenNavHome.Name=\"HomeScreen\", { ID:2,Icon:Icon.Home ,Value: \"Home\" },{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" })",
                 "Property": "Default",
                 "RuleProviderType": "Unknown"
               },
@@ -2806,10 +2806,9 @@
       },
       "ScreenNavHome",
       "ScreenNavPrompt",
-      "DefaultValHome",
-      "DefaultValPrompt"
+      "SelectedGalID"
     ],
-    "LastModifiedTimestamp": "638536542220908043",
+    "LastModifiedTimestamp": "638536550361148361",
     "Name": "menu",
     "Rules": [
       {
@@ -2844,14 +2843,8 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "{SampleStringField: \"SampleText\", SampleNumberField: 10, SampleBooleanField: true}",
-        "Property": "DefaultValHome",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "{SampleStringField: \"SampleText\", SampleNumberField: 10, SampleBooleanField: true}",
-        "Property": "DefaultValPrompt",
+        "InvariantScript": "100",
+        "Property": "SelectedGalID",
         "RuleProviderType": "System"
       },
       {
@@ -2955,21 +2948,12 @@
     },
     {
       "Category": 0,
-      "DisplayName": "DefaultValHome",
+      "DisplayName": "SelectedGalID",
       "Hidden": false,
-      "Name": "DefaultValHome",
-      "PropertyDataTypeKey": "Record",
+      "Name": "SelectedGalID",
+      "PropertyDataTypeKey": "Number",
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"SampleBooleanField\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"SampleNumberField\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"SampleStringField\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
-    },
-    {
-      "Category": 0,
-      "DisplayName": "DefaultValPrompt",
-      "Hidden": false,
-      "Name": "DefaultValPrompt",
-      "PropertyDataTypeKey": "Record",
-      "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"SampleBooleanField\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"SampleNumberField\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"SampleStringField\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+      "Type": "{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -2980,7 +2964,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638536542220908043",
+  "LastModifiedTimestamp": "638536550361148361",
   "Name": "3dcb2ec1d1f74675969b80e7b1fbd350",
   "OverridableProperties": {},
   "Version": "1.0"

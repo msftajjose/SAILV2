@@ -2,8 +2,8 @@ PromptLibraryScreen As screen:
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
-        =Set(varPrimval,{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" });
-        
+        =
+        Reset(menu_1);
         //If(menu.ScreenNavHome.Name="HomeScreen", { ID:2,Icon:Icon.Home ,Value: "Home" },{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" })
 
     MainContainer_2 As groupContainer.verticalAutoLayoutContainer:
@@ -179,11 +179,11 @@ PromptLibraryScreen As screen:
                 ZIndex: =4
 
                 menu_1 As menu:
-                    DefaultValHome: =varPrimval
                     LayoutMinWidth: =640
                     score: =varCrrUser.Scores
                     ScreenNavHome: =HomeScreen
                     ScreenNavPrompt: =PromptLibraryScreen
+                    SelectedGalID: =3
 
                 TextCanvas3 As Text:
                     DisplayMode: =DisplayMode.Edit

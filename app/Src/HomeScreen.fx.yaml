@@ -2,8 +2,7 @@ HomeScreen As screen:
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
-        =Set(varPrimval,{ ID:2,Icon:Icon.Home ,Value: "Home" });
-        
+        =Reset(menu_3);
         //If(menu.ScreenNavHome.Name="HomeScreen", { ID:2,Icon:Icon.Home ,Value: "Home" },{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" })
 
     MainContainer_1 As groupContainer.verticalAutoLayoutContainer:
@@ -178,11 +177,11 @@ HomeScreen As screen:
                 ZIndex: =4
 
                 menu_3 As menu:
-                    DefaultValHome: =varPrimval
                     LayoutMinWidth: =640
                     score: =varCrrUser.Scores
                     ScreenNavHome: =
                     ScreenNavPrompt: =PromptLibraryScreen
+                    SelectedGalID: =2
 
             CommonContainer_1 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
