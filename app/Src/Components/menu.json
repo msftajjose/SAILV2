@@ -1408,7 +1408,7 @@
               },
               {
                 "Category": "Data",
-                "InvariantScript": "If(menu.ScreenNavHome.Name=\"HomeScreen\", { ID:2,Icon:Icon.Home ,Value: \"Home\" },{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" })",
+                "InvariantScript": "varDefaultSel\r\n\r\n//If(menu.ScreenNavHome.Name=\"HomeScreen\", { ID:2,Icon:Icon.Home ,Value: \"Home\" },{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" })",
                 "Property": "Default",
                 "RuleProviderType": "Unknown"
               },
@@ -2809,7 +2809,7 @@
       "DefaultValHome",
       "DefaultValPrompt"
     ],
-    "LastModifiedTimestamp": "638536540674759868",
+    "LastModifiedTimestamp": "638536542220908043",
     "Name": "menu",
     "Rules": [
       {
@@ -2980,7 +2980,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638536540674759868",
+  "LastModifiedTimestamp": "638536542220908043",
   "Name": "3dcb2ec1d1f74675969b80e7b1fbd350",
   "OverridableProperties": {},
   "Version": "1.0"

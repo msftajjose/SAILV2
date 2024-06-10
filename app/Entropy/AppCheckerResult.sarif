@@ -17471,36 +17471,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "menu.varDefaultSel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "menu.varDefaultSel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varDefaultSel",
-                "module": "menu",
-                "type": "menu"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Registration"
                 }
               ],
