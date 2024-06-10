@@ -176,6 +176,19 @@ PromptLibraryScreen As screen:
 
                 menu_1 As menu:
                     LayoutMinWidth: =640
+                    ScreenNavHome: =HomeScreen
+                    ScreenNavPrompt: =PromptLibraryScreen
+
+                TextCanvas3 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Text: =menu_1.ScreenNavHome.Name
+                    Width: =96
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
 
             CommonContainer_2 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer

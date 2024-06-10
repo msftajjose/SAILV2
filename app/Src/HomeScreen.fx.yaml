@@ -176,6 +176,8 @@ HomeScreen As screen:
                 menu_3 As menu:
                     LayoutMinWidth: =640
                     score: =varCrrUser.Scores
+                    ScreenNavHome: =
+                    ScreenNavPrompt: =PromptLibraryScreen
 
             CommonContainer_1 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer

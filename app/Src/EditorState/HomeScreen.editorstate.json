@@ -18775,8 +18775,24 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "ScreenNavHome",
-        "ScreenNavPrompt"
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "App.ActiveScreen",
+          "InvariantPropertyName": "ScreenNavHome",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "App.ActiveScreen",
+          "InvariantPropertyName": "ScreenNavPrompt",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        "DefaultValHome",
+        "DefaultValPrompt"
       ],
       "DynamicProperties": [
         {
@@ -18853,11 +18869,21 @@
         {
           "Category": "Data",
           "PropertyName": "ScreenNavHome",
-          "RuleProviderType": "System"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
           "PropertyName": "ScreenNavPrompt",
+          "RuleProviderType": "User"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "DefaultValHome",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "DefaultValPrompt",
           "RuleProviderType": "System"
         },
         {
