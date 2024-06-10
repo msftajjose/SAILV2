@@ -64,6 +64,7 @@
     "Name": "tblFavPrompts",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
+      "crc74_tipid": "tipID",
       "createdby": "Created By",
       "createdon": "Created On",
       "createdonbehalfby": "Created By (Delegate)",
