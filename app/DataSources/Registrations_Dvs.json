@@ -85,6 +85,7 @@
       "sail23_sail23_tblweektrans_UserID_crc74_registra": "tblWeekTrans",
       "sail23_tblaiwishes_UserID_crc74_registrations_dv": "tblAIWishes",
       "sail23_tblapprovers_UserID_crc74_registrations_d": "tblDisabledUsers",
+      "sail23_tblfavprompts_UserID_crc74_registrations_dv": "tblFavPrompts",
       "statecode": "Status",
       "statuscode": "Status Reason",
       "timezoneruleversionnumber": "Time Zone Rule Version Number",

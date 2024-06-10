@@ -60,6 +60,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "sail23_tblfavprompts",
+    "MaxGetRowsCount": 2000,
     "Name": "tblFavPrompts",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",

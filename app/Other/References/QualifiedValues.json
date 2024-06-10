@@ -178,6 +178,13 @@
       }
     },
     {
+      "Kind": "default.cds_sail23_tblfavprompts_forms",
+      "Namespace": "tblFavPrompts (Forms)",
+      "Values": {
+        "Information": "01c40d84-6414-4076-ad76-515859e390a7"
+      }
+    },
+    {
       "Kind": "default.cds_sail23_tblapprovers_forms",
       "Namespace": "tblApprovers (Forms)",
       "Values": {
@@ -189,13 +196,6 @@
       "Namespace": "tblWeeklyChallenges (Forms)",
       "Values": {
         "Information": "6d5727ab-82d3-4b24-bc60-e6536c806a85"
-      }
-    },
-    {
-      "Kind": "default.cds_sail23_tblfavprompts_forms",
-      "Namespace": "tblFavPrompts (Forms)",
-      "Values": {
-        "Information": "01c40d84-6414-4076-ad76-515859e390a7"
       }
     }
   ]

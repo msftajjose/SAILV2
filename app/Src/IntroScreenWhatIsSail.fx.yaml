@@ -109,13 +109,25 @@ IntroScreenWhatIsSail As screen:
                 <br><br>
                 <b><font color=##7FBA00>Spring:</font></b> A season of renewal and growth. AI challenges in Spring focus on innovation and new beginnings. The Green tribe takes the lead, introducing fresh gaming experiences and virtual realities that inspire creativity and strategy.
                 <br><br>
-                Summer: A time of activity and peak energy. The Yellow tribe drives the AI challenges, focusing on data analysis and business intelligence, helping tribes optimize their techniques and gather insights during the most active months.
+                <b><font color=#FFB900>Summer:</font></b> A time of activity and peak energy. The Yellow tribe drives the AI challenges, focusing on data analysis and business intelligence, helping tribes optimize their techniques and gather insights during the most active months.
                 <br><br>
-                Fall: A season of reflection and harvest. The Orange tribe spearheads the AI challenges, enhancing productivity and collaboration, ensuring that the tribes can efficiently harvest the fruits of their labor.
+                <b><font color=#F25022>Fall</font></b> A season of reflection and harvest. The Orange tribe spearheads the AI challenges, enhancing productivity and collaboration, ensuring that the tribes can efficiently harvest the fruits of their labor.
                 <br><br>
-                Winter: A period of rest and introspection. The Blue tribe leads with challenges that focus on cloud-based solutions and advancements, maintaining innovation and technological growth even during the coldest months.",
+                <b><font color=#00A4EF>Winter:</font></b> A period of rest and introspection. The Blue tribe leads with challenges that focus on cloud-based solutions and advancements, maintaining innovation and technological growth even during the coldest months.",
                 
-                5,"Chaos"
+                //5,"Chaos"
+                5,"However, with great power comes great responsibility. The AI that generates these prompts is not infallible. Sometimes, it enters a state known as <b><font color=#9F0E99>''hallucination''</font></b>, where it provides <b>incorrect or misleading information</b>. 
+                <br><br>
+                To combat this, benders from the four main tribes (Green, Yellow, Orange, and Blue) can join a special task force known as the <b><font color=#9F0E99>''Chaos League''</font></b>. 
+                <br><br>
+                This elite group is dedicated to <b>identifying and correcting these errors</b>, often finding humor in the more amusing mistakes made by the AI. 
+                <br><br>
+                Together, they share knowledge and insights to <b>ensure that the AI remains a helpful tool rather than a disruptive force</b>. 
+                <br><br>
+                By shaping AI responsibly and <b>learning from each other's strengths</b>, the element-benders maintain harmony in their world and continue to evolve, pushing the boundaries of what is possible with their incredible abilities.
+                
+                
+                ."
                 )
             Size: =14
             Width: =351
