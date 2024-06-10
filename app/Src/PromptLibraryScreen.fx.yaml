@@ -2,7 +2,7 @@ PromptLibraryScreen As screen:
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
-        =
+        =Reset(menu_1)
         
         //If(menu.ScreenNavHome.Name="HomeScreen", { ID:2,Icon:Icon.Home ,Value: "Home" },{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" })
 
