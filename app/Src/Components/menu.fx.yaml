@@ -4,6 +4,8 @@ menu As CanvasComponent:
     Items: =
     OnReset: =Reset(Gallery7_3)
     score: ="Text"
+    ScreenNavHome: =App.ActiveScreen
+    ScreenNavPrompt: =App.ActiveScreen
     SelectedItem: =Gallery7_3.Selected
     Width: =230
     X: =0
@@ -99,8 +101,8 @@ menu As CanvasComponent:
                 
                 Switch(ThisItem.ID,
                 1, false,
-                2, false,
-                3, false,
+                2, Navigate(menu.ScreenNavPrompt),
+                3, Navigate(menu.ScreenNavPrompt),
                 4, false,
                 5, false,
                 6, false,

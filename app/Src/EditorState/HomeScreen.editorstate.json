@@ -18774,7 +18774,9 @@
           "InvariantPropertyName": "OnReset",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "ScreenNavHome",
+        "ScreenNavPrompt"
       ],
       "DynamicProperties": [
         {
@@ -18847,6 +18849,16 @@
           "Category": "Data",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "ScreenNavHome",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "ScreenNavPrompt",
+          "RuleProviderType": "System"
         },
         {
           "Category": "Design",
