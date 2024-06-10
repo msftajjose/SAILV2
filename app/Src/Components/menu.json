@@ -235,7 +235,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "//If(ThisItem.ID=10, UpdateContext({_varAppFeedbackReg:true}),UpdateContext({_varAppFeedbackReg:false}))\n\n\nSwitch(ThisItem.ID,\n1, false,\n2, Navigate(menu.ScreenNavHome) && Set(varDefault,{ ID:2,Icon:Icon.Home ,Value: \"Home\" }),\n3, Navigate(menu.ScreenNavPrompt) && Set(varDefault,{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" }),\n4, false,\n5, false,\n6, false,\n7, false,\n8, false,\n9, false,\n10, false)\n\n\n",
+                    "InvariantScript": "//If(ThisItem.ID=10, UpdateContext({_varAppFeedbackReg:true}),UpdateContext({_varAppFeedbackReg:false}))\n\n\nSwitch(ThisItem.ID,\n1, false,\n2, Navigate(menu.ScreenNavHome) && Set(varDefaultSel,{ ID:2,Icon:Icon.Home ,Value: \"Home\" }),\n3, Navigate(menu.ScreenNavPrompt) && Set(varDefaultSel,{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" }),\n4, false,\n5, false,\n6, false,\n7, false,\n8, false,\n9, false,\n10, false)\n\n\n",
                     "Property": "OnSelect",
                     "RuleProviderType": "User"
                   }
@@ -1408,7 +1408,7 @@
               },
               {
                 "Category": "Data",
-                "InvariantScript": "varDefault",
+                "InvariantScript": "If(menu.ScreenNavHome.Name=\"HomeScreen\", { ID:2,Icon:Icon.Home ,Value: \"Home\" },{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" })",
                 "Property": "Default",
                 "RuleProviderType": "Unknown"
               },
@@ -2809,7 +2809,7 @@
       "DefaultValHome",
       "DefaultValPrompt"
     ],
-    "LastModifiedTimestamp": "638536532357336394",
+    "LastModifiedTimestamp": "638536540674759868",
     "Name": "menu",
     "Rules": [
       {
@@ -2980,7 +2980,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638536532357336394",
+  "LastModifiedTimestamp": "638536540674759868",
   "Name": "3dcb2ec1d1f74675969b80e7b1fbd350",
   "OverridableProperties": {},
   "Version": "1.0"

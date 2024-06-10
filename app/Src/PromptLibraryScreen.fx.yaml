@@ -184,7 +184,7 @@ PromptLibraryScreen As screen:
                     Height: =32
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
-                    Text: =menu_1.ScreenNavHome.Name
+                    Text: =
                     Width: =96
                     X: =0
                     Y: =0
@@ -543,7 +543,7 @@ PromptLibraryScreen As screen:
                                     LoadingSpinner: =LoadingSpinner.Data
                                     TemplatePadding: =3
                                     TemplateSize: =45
-                                    Visible: =If(Gallery7_2.Selected.ID=3 && Gallery5_11.Selected.ID=2 ,true,false)
+                                    Visible: =If(menu_1.SelectedItem.ID=3 && Gallery5_11.Selected.ID=2 ,true,false)
                                     Width: =Parent.Width
                                     Y: =45
                                     ZIndex: =4
@@ -637,7 +637,7 @@ PromptLibraryScreen As screen:
                                         OnSelect: =Copy(ThisItem.TipsTricks)
                                         Tooltip: ="Copy Prompt"
                                         Width: =15
-                                        X: =1127
+                                        X: =1110
                                         Y: =12
                                         ZIndex: =11
 

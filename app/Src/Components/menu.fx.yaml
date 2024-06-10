@@ -91,7 +91,8 @@ menu As CanvasComponent:
 
         Gallery7_3 As gallery.galleryVertical:
             BorderColor: =App.Theme.Colors.Darker40
-            Default: =varDefault
+            Default: |-
+                =If(menu.ScreenNavHome.Name="HomeScreen", { ID:2,Icon:Icon.Home ,Value: "Home" },{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" })
             DelayItemLoading: =true
             Height: =406
             Items: |-
@@ -104,8 +105,8 @@ menu As CanvasComponent:
                 
                 Switch(ThisItem.ID,
                 1, false,
-                2, Navigate(menu.ScreenNavHome) && Set(varDefault,{ ID:2,Icon:Icon.Home ,Value: "Home" }),
-                3, Navigate(menu.ScreenNavPrompt) && Set(varDefault,{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" }),
+                2, Navigate(menu.ScreenNavHome) && Set(varDefaultSel,{ ID:2,Icon:Icon.Home ,Value: "Home" }),
+                3, Navigate(menu.ScreenNavPrompt) && Set(varDefaultSel,{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" }),
                 4, false,
                 5, false,
                 6, false,
