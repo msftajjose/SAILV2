@@ -7549,8 +7549,8 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "100",
-          "InvariantPropertyName": "SelectedGalID",
+          "AutoRuleBindingString": "{ ID:2,Icon:Icon.Home ,Value: \"Home\" }",
+          "InvariantPropertyName": "VarMenuDefaultVal",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         }
@@ -7639,8 +7639,9 @@
         },
         {
           "Category": "Data",
-          "PropertyName": "SelectedGalID",
-          "RuleProviderType": "User"
+          "NameMap": "{\"ID\":\"ID\",\"Icon\":\"Icon\",\"Value\":\"Value\"}",
+          "PropertyName": "VarMenuDefaultVal",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",

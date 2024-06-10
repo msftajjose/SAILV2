@@ -6,8 +6,9 @@ menu As CanvasComponent:
     score: ="Text"
     ScreenNavHome: =App.ActiveScreen
     ScreenNavPrompt: =App.ActiveScreen
-    SelectedGalID: =100
     SelectedItem: =Gallery7_3.Selected
+    VarMenuDefaultVal: |-
+        ={ ID:2,Icon:Icon.Home ,Value: "Home" }
     Width: =230
     X: =0
     Y: =0
@@ -88,9 +89,7 @@ menu As CanvasComponent:
 
         Gallery7_3 As gallery.galleryVertical:
             BorderColor: =App.Theme.Colors.Darker40
-            Default: |-
-                ={ID:menu.SelectedGalID}
-                //If(menu.ScreenNavHome.Name="HomeScreen", { ID:2,Icon:Icon.Home ,Value: "Home" },{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" })
+            Default: =menu.VarMenuDefaultVal
             DelayItemLoading: =true
             Height: =406
             Items: |-

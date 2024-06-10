@@ -3,7 +3,7 @@ PromptLibraryScreen As screen:
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
         =
-        Reset(menu_1);
+        
         //If(menu.ScreenNavHome.Name="HomeScreen", { ID:2,Icon:Icon.Home ,Value: "Home" },{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" })
 
     MainContainer_2 As groupContainer.verticalAutoLayoutContainer:
@@ -183,7 +183,8 @@ PromptLibraryScreen As screen:
                     score: =varCrrUser.Scores
                     ScreenNavHome: =HomeScreen
                     ScreenNavPrompt: =PromptLibraryScreen
-                    SelectedGalID: =3
+                    VarMenuDefaultVal: |-
+                        ={ ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" }
 
                 TextCanvas3 As Text:
                     DisplayMode: =DisplayMode.Edit

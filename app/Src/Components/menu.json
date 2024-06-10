@@ -1408,7 +1408,7 @@
               },
               {
                 "Category": "Data",
-                "InvariantScript": "{ID:menu.SelectedGalID}\r\n//If(menu.ScreenNavHome.Name=\"HomeScreen\", { ID:2,Icon:Icon.Home ,Value: \"Home\" },{ ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" })",
+                "InvariantScript": "menu.VarMenuDefaultVal",
                 "Property": "Default",
                 "RuleProviderType": "Unknown"
               },
@@ -2806,9 +2806,16 @@
       },
       "ScreenNavHome",
       "ScreenNavPrompt",
-      "SelectedGalID"
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "{SampleStringField: \"SampleText\", SampleNumberField: 10, SampleBooleanField: true}",
+        "InvariantPropertyName": "VarMenuDefaultVal",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      }
     ],
-    "LastModifiedTimestamp": "638536550361148361",
+    "LastModifiedTimestamp": "638536555169998712",
     "Name": "menu",
     "Rules": [
       {
@@ -2843,8 +2850,8 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "100",
-        "Property": "SelectedGalID",
+        "InvariantScript": "{ ID:2,Icon:Icon.Home ,Value: \"Home\" }",
+        "Property": "VarMenuDefaultVal",
         "RuleProviderType": "System"
       },
       {
@@ -2948,12 +2955,12 @@
     },
     {
       "Category": 0,
-      "DisplayName": "SelectedGalID",
+      "DisplayName": "VarMenuDefaultVal",
       "Hidden": false,
-      "Name": "SelectedGalID",
-      "PropertyDataTypeKey": "Number",
+      "Name": "VarMenuDefaultVal",
+      "PropertyDataTypeKey": "Record",
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"ID\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Icon\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
     }
   ],
   "FirstParty": true,
@@ -2964,7 +2971,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638536550361148361",
+  "LastModifiedTimestamp": "638536555169998712",
   "Name": "3dcb2ec1d1f74675969b80e7b1fbd350",
   "OverridableProperties": {},
   "Version": "1.0"
