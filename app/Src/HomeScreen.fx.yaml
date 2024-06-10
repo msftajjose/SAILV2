@@ -189,13 +189,13 @@ HomeScreen As screen:
                         Font: =Font.'Segoe UI'
                         FontColor: =RGBA(0, 0, 0, 1)
                         Height: =28
-                        Size: =18
+                        Size: =20
                         Text: ="Season of AI Love"
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =222
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =183
                         Wrap: =true
-                        X: =30
-                        Y: =10
+                        X: =21
+                        Y: =16
                         ZIndex: =1
 
                     Gallery7_2 As gallery.galleryVertical:
@@ -208,8 +208,9 @@ HomeScreen As screen:
                             =Table( { ID:1,Icon:"" ,Value: "Discover" }, { ID:2,Icon:Icon.Home ,Value: "Home" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" },{ ID:4,Icon:"" ,Value: "Play" } ,{ ID:5,Icon:Icon.Signal ,Value: "Challenges" },{ ID:6,Icon:Icon.OptionsList ,Value: "Leader Boards" },{ ID:7,Icon:Icon.EmojiSmile ,Value: "Squad" },{ ID:8,Icon:"" ,Value: "Adjust" },{ ID:9,Icon:Icon.Settings ,Value: "Settings" },{ ID:10,Icon:Icon.Post ,Value: "Feedback" })
                         Layout: =Layout.Vertical
                         LoadingSpinner: =LoadingSpinner.Data
-                        OnSelect: |-
+                        OnSelect: |
                             =If(ThisItem.ID=10, UpdateContext({_varAppFeedbackReg:true}),UpdateContext({_varAppFeedbackReg:false}));
+                            If(ThisItem.ID=1 || ThisItem.ID=4 || ThisItem.ID=8, false, true)
                         TemplateFill: =If(ThisItem.IsSelected && !IsBlank(ThisItem.Icon), RGBA(214, 221, 224, 1),  RGBA(0, 0, 0, 0))
                         TemplateSize: =35
                         Width: =226
@@ -275,7 +276,6 @@ HomeScreen As screen:
 
                         Rectangle5_7 As rectangle:
                             BorderColor: =RGBA(139, 154, 159, 1)
-                            BorderStyle: =BorderStyle.None
                             BorderThickness: =1
                             Fill: =RGBA(106, 122, 127, 1)
                             Height: =1
@@ -285,7 +285,7 @@ HomeScreen As screen:
                                 
                             Width: =200
                             X: =4
-                            Y: =9
+                            Y: =7
                             ZIndex: =4
 
                     TextCanvas2_1 As Text:
@@ -311,7 +311,6 @@ HomeScreen As screen:
 
                     Rectangle5_8 As rectangle:
                         BorderColor: =RGBA(139, 154, 159, 1)
-                        BorderStyle: =BorderStyle.None
                         BorderThickness: =1
                         Fill: =RGBA(106, 122, 127, 1)
                         Height: =1
@@ -334,7 +333,7 @@ HomeScreen As screen:
                             =true
                         Width: =100
                         X: =13
-                        Y: =478
+                        Y: =475
                         ZIndex: =8
 
             CommonContainer_1 As groupContainer.verticalAutoLayoutContainer:
