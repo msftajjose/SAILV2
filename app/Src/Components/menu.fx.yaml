@@ -1,0 +1,189 @@
+menu As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Items: =
+    score: ="Text"
+    SelectedItem: =Gallery7_3.Selected
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Container2_2 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =703
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =230
+        ZIndex: =1
+
+        TextCanvas1_9 As Text:
+            Align: ='TextCanvas.Align'.Center
+            DisplayMode: =DisplayMode.Edit
+            Font: =Font.'Segoe UI'
+            FontColor: =RGBA(0, 0, 0, 1)
+            Height: =28
+            Size: =20
+            Text: ="Season of AI Love"
+            Weight: ='TextCanvas.Weight'.Bold
+            Width: =183
+            Wrap: =true
+            X: =21
+            Y: =16
+            ZIndex: =1
+
+        TextCanvas2_2 As Text:
+            DisplayMode: =DisplayMode.Edit
+            Height: =25
+            Text: =menu.score
+            Weight: ='TextCanvas.Weight'.Bold
+            Width: =171
+            X: =55
+            Y: =520
+            ZIndex: =3
+
+        Image6_3 As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =25
+            Image: =heart
+            Width: =25
+            X: =20
+            Y: =520
+            ZIndex: =5
+
+        Rectangle5_9 As rectangle:
+            BorderColor: =RGBA(139, 154, 159, 1)
+            BorderThickness: =1
+            Fill: =RGBA(106, 122, 127, 1)
+            Height: =1
+            Width: =200
+            X: =13
+            Y: =471
+            ZIndex: =7
+
+        LabelScore_1 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(53, 61, 63, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =23
+            OnSelect: =
+            Size: =12
+            Text: ="Your score"
+            Visible: |
+                =true
+            Width: =100
+            X: =13
+            Y: =475
+            ZIndex: =8
+
+        Gallery7_3 As gallery.galleryVertical:
+            BorderColor: =App.Theme.Colors.Darker40
+            Default: |-
+                ={ ID:2,Icon:Icon.Home ,Value: "Home" }
+            DelayItemLoading: =true
+            Height: =406
+            Items: |-
+                =Table( { ID:1,Icon:"" ,Value: "Discover" }, { ID:2,Icon:Icon.Home ,Value: "Home" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" },{ ID:4,Icon:"" ,Value: "Play" } ,{ ID:5,Icon:Icon.Signal ,Value: "Challenges" },{ ID:6,Icon:Icon.OptionsList ,Value: "Leader Boards" },{ ID:7,Icon:Icon.EmojiSmile ,Value: "Squad" },{ ID:8,Icon:"" ,Value: "Adjust" },{ ID:9,Icon:Icon.Settings ,Value: "Settings" },{ ID:10,Icon:Icon.Post ,Value: "Feedback" })
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            OnSelect: |+
+                =//If(ThisItem.ID=10, UpdateContext({_varAppFeedbackReg:true}),UpdateContext({_varAppFeedbackReg:false}))
+                
+                
+                Switch(ThisItem.ID,
+                1, false,
+                2, false,
+                3, false,
+                4, false,
+                5, false,
+                6, false,
+                7, false,
+                8, false,
+                9, false,
+                10, false)
+                
+                
+            TemplateFill: =If(ThisItem.IsSelected && !IsBlank(ThisItem.Icon), RGBA(214, 221, 224, 1),  RGBA(0, 0, 0, 0))
+            TemplateSize: =35
+            Width: =226
+            X: =4
+            Y: =40
+            ZIndex: =9
+
+            ButtonCanvas4_2 As Button:
+                Align: =Align.Left
+                Appearance: ='ButtonCanvas.Appearance'.Transparent
+                BasePaletteColor: =RGBA(189, 178, 176, 1)
+                DisplayMode: =DisplayMode.Edit
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(IsBlank(ThisItem.Icon),FontWeight.Bold,FontWeight.Normal)
+                Height: =30
+                Icon: =
+                IconStyle: ='ButtonCanvas.IconStyle'.Filled
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.Value
+                VerticalAlign: =VerticalAlign.Middle
+                Visible: |+
+                    =If(ThisItem.ID=1 || ThisItem.ID=4 || ThisItem.ID=8, false, true)
+                    
+                    
+                Width: =184
+                X: =23
+                Y: =3
+                ZIndex: =1
+
+            Icon22_2 As icon.Home:
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =15
+                Icon: =ThisItem.Icon
+                OnSelect: =Select(Parent)
+                Visible: |+
+                    =If(ThisItem.ID=1 || ThisItem.ID=4 || ThisItem.ID=8, false, true)
+                    
+                    
+                Width: =15
+                X: =15
+                Y: =12
+                ZIndex: =2
+
+            Label6_2 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(53, 61, 63, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =23
+                OnSelect: =Select(Parent)
+                Size: =12
+                Text: =ThisItem.Value
+                Visible: |+
+                    =If(ThisItem.ID=1 || ThisItem.ID=4 || ThisItem.ID=8, true, false)
+                    
+                    
+                Width: =100
+                X: =8
+                Y: =12
+                ZIndex: =3
+
+            Rectangle5_10 As rectangle:
+                BorderColor: =RGBA(139, 154, 159, 1)
+                BorderThickness: =1
+                Fill: =RGBA(106, 122, 127, 1)
+                Height: =1
+                Visible: |+
+                    =If(ThisItem.ID=4 || ThisItem.ID=8, true, false)
+                    
+                    
+                Width: =200
+                X: =4
+                Y: =7
+                ZIndex: =4
+

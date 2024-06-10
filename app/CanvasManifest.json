@@ -140,6 +140,8 @@
     "LandingSplashScreen",
     "HomeScreenTemp",
     "IntroScreenWhatIsSail",
-    "HomeScreen"
+    "HomeScreen",
+    "HomeScreen_componentTest",
+    "Screen1"
   ]
 }
