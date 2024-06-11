@@ -569,7 +569,7 @@ PromptLibraryScreen As screen:
                                     ZIndex: =10
 
                                     HtmlText1_25 As htmlViewer:
-                                        Height: =132
+                                        Height: =137
                                         HtmlText: |+
                                             ="<div style='background-color:rgba(" & 255 & "," & 255 & "," & 255 &"," & 1 & ");   
                                             
@@ -577,14 +577,14 @@ PromptLibraryScreen As screen:
                                             border-width: 1px;
                                             margin: 0px; 
                                             width: "& Parent.Width-75 &"px; 
-                                            height: 110px; 
+                                            height: 120px; 
                                             border-radius: 5px'>
                                             </div>"
                                             //box-shadow: 1px 2px 12px 0px rgba(" & 0 & "," & 0 & "," & 0 &"," & 1 & ");
                                             
                                         Width: =1086
                                         X: =33
-                                        Y: =492
+                                        Y: =487
                                         ZIndex: =1
 
                                     TextCanvas1_16 As Text:
@@ -632,7 +632,7 @@ PromptLibraryScreen As screen:
                                             ="Try: How to solve error 123 in powerapps"
                                         Width: =390
                                         X: =652
-                                        Y: =517
+                                        Y: =507
                                         ZIndex: =7
 
                                     ButtonCanvas1_7 As Button:
@@ -649,7 +649,7 @@ PromptLibraryScreen As screen:
                                         Text: ="Create a Prompt"
                                         Width: =159
                                         X: =885
-                                        Y: =560
+                                        Y: =565
                                         ZIndex: =8
 
                                     Icon27 As icon.Newspaper:
@@ -661,7 +661,7 @@ PromptLibraryScreen As screen:
                                         Icon: =Icon.Newspaper
                                         Width: =25
                                         X: =618
-                                        Y: =522
+                                        Y: =512
                                         ZIndex: =9
 
                                 "TextInputCanvas1_1 As 'Text input'":
@@ -906,6 +906,49 @@ PromptLibraryScreen As screen:
                                         X: =829
                                         Y: =13
                                         ZIndex: =17
+
+                                HtmlText6_26 As htmlViewer:
+                                    Color: =RGBA(128, 128, 128, 1)
+                                    Font: =Font.'Segoe UI'
+                                    Height: =30
+                                    HtmlText: ="<b></b>Daily Reward"
+                                    Size: =10
+                                    Width: =122
+                                    X: =604
+                                    Y: =547
+                                    ZIndex: =14
+
+                                Image22_6 As image:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: |+
+                                        =If(IsBlank(varAlreadySubmittedPrompt), DisplayMode.Edit,DisplayMode.Disabled)
+                                        
+                                    Height: =25
+                                    Image: =heart
+                                    Width: =25
+                                    X: =609
+                                    Y: =577
+                                    ZIndex: =15
+
+                                HtmlText6_27 As htmlViewer:
+                                    AutoHeight: =true
+                                    DisabledBorderColor: =RGBA(106, 122, 127, 1)
+                                    DisabledFill: =RGBA(255, 255, 255, 1)
+                                    DisplayMode: |
+                                        =DisplayMode.Edit
+                                    Fill: =RGBA(255, 255, 255, 1)
+                                    Font: =Font.'Segoe UI'
+                                    Height: =31
+                                    HtmlText: |+
+                                        ="100"
+                                        
+                                    Size: =10
+                                    Width: =95
+                                    X: =639
+                                    Y: =577
+                                    ZIndex: =16
 
     ContainerSpinner_1 As groupContainer:
         DropShadow: =DropShadow.Light
