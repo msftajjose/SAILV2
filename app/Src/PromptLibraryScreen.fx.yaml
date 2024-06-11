@@ -358,8 +358,7 @@ PromptLibraryScreen As screen:
                                         DisabledColor: =RGBA(166, 166, 166, 1)
                                         DisabledFill: =RGBA(244, 244, 244, 1)
                                         Fill: =If(ThisItem.IsSelected,  Color.Black,Color.White)
-                                        Font: =App.Theme.Font
-                                        FontWeight: =FontWeight.Lighter
+                                        Font: =Font.'Segoe UI'
                                         Height: =29
                                         HoverBorderColor: =
                                         HoverFill: =Self.Fill
