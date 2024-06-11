@@ -757,7 +757,7 @@ PromptLibraryScreen As screen:
                                             border-style: solid;
                                             border-width: 1px;
                                             margin: 0px; 
-                                            width: "& Parent.Width-60 &"px; 
+                                            width: "& Parent.Width-75 &"px; 
                                             height: 110px; 
                                             border-radius: 5px'>
                                             </div>"
@@ -812,7 +812,7 @@ PromptLibraryScreen As screen:
                                         Placeholder: |-
                                             ="Try: How to solve error 123 in powerapps"
                                         Width: =390
-                                        X: =692
+                                        X: =652
                                         Y: =527
                                         ZIndex: =7
 
@@ -828,7 +828,7 @@ PromptLibraryScreen As screen:
                                         PaddingRight: =0
                                         Text: ="Create a Prompt"
                                         Width: =150
-                                        X: =932
+                                        X: =892
                                         Y: =564
                                         ZIndex: =8
 
@@ -840,7 +840,7 @@ PromptLibraryScreen As screen:
                                         Height: =21
                                         Icon: =Icon.Newspaper
                                         Width: =25
-                                        X: =658
+                                        X: =618
                                         Y: =532
                                         ZIndex: =9
 
