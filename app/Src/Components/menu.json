@@ -88,7 +88,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "Container2_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1181,
+            "PublishOrderIndex": 1194,
             "Rules": [
               {
                 "Category": "Data",
@@ -225,7 +225,7 @@
                 "OptimizeForDevices": "Off",
                 "Parent": "Gallery7_3",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1183,
+                "PublishOrderIndex": 1196,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -235,7 +235,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "//If(ThisItem.ID=10, UpdateContext({_varAppFeedbackReg:true}),UpdateContext({_varAppFeedbackReg:false}))\n\n\nSwitch(ThisItem.ID,\n1, false,\n2, Navigate(menu.ScreenNavHome),\n3, Navigate(menu.ScreenNavPrompt),\n//2, Reset(menu); Navigate(menu.ScreenNavHome); Set(varMenuID,2) ,\n//3, Reset(menu); Navigate(menu.ScreenNavPrompt); Set(varMenuID,3)  ,\n4, false,\n5, false,\n6, false,\n7, false,\n8, false,\n9, false,\n10, false)\n\n\n",
+                    "InvariantScript": "//If(ThisItem.ID=10, UpdateContext({_varAppFeedbackReg:true}),UpdateContext({_varAppFeedbackReg:false}))\nReset(Gallery7_3);\n\nSwitch(ThisItem.ID,\n1, false,\n2, Navigate(menu.ScreenNavHome),\n3, Navigate(menu.ScreenNavPrompt),\n//2, Reset(menu); Navigate(menu.ScreenNavHome); Set(varMenuID,2) ,\n//3, Reset(menu); Navigate(menu.ScreenNavPrompt); Set(varMenuID,3)  ,\n4, false,\n5, false,\n6, false,\n7, false,\n8, false,\n9, false,\n10, false)\n\n\n",
                     "Property": "OnSelect",
                     "RuleProviderType": "User"
                   }
@@ -369,7 +369,7 @@
                 "OptimizeForDevices": "Off",
                 "Parent": "Gallery7_3",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1184,
+                "PublishOrderIndex": 1197,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -583,7 +583,7 @@
                 "OptimizeForDevices": "Off",
                 "Parent": "Gallery7_3",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1185,
+                "PublishOrderIndex": 1198,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -800,7 +800,7 @@
                 "OptimizeForDevices": "Off",
                 "Parent": "Gallery7_3",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1186,
+                "PublishOrderIndex": 1199,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1165,7 +1165,7 @@
                 "OptimizeForDevices": "Off",
                 "Parent": "Gallery7_3",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1187,
+                "PublishOrderIndex": 1200,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -1399,7 +1399,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "Container2_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1182,
+            "PublishOrderIndex": 1195,
             "Rules": [
               {
                 "Category": "Data",
@@ -1415,7 +1415,7 @@
               },
               {
                 "Category": "Data",
-                "InvariantScript": "//menu.VarMenuDefaultVal\r\n\r\nIf(menu.varID=2, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" })",
+                "InvariantScript": "//menu.VarMenuDefaultVal\n\nIf(menu.varID=2, { ID:2,Icon:Icon.Home ,Value: \"Home\" },menu.varID=3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" })\n\n/*\nSwitch(menu.varID,\n2, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, \n3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" }\n)\n*/",
                 "Property": "Default",
                 "RuleProviderType": "Unknown"
               },
@@ -1664,7 +1664,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "Container2_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1188,
+            "PublishOrderIndex": 1201,
             "Rules": [
               {
                 "Category": "Design",
@@ -1895,7 +1895,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "Container2_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1189,
+            "PublishOrderIndex": 1202,
             "Rules": [
               {
                 "Category": "Data",
@@ -2250,7 +2250,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "Container2_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1190,
+            "PublishOrderIndex": 1203,
             "Rules": [
               {
                 "Category": "Data",
@@ -2498,7 +2498,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "Container2_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1191,
+            "PublishOrderIndex": 1204,
             "Rules": [
               {
                 "Category": "Data",
@@ -2620,7 +2620,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "menu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1180,
+        "PublishOrderIndex": 1193,
         "Rules": [
           {
             "Category": "Design",
@@ -2811,12 +2811,26 @@
         "IsLockable": false,
         "NameMapSourceSchema": "?"
       },
-      "ScreenNavHome",
-      "ScreenNavPrompt",
       {
         "AFDDataSourceName": "",
         "AutoRuleBindingEnabled": false,
-        "AutoRuleBindingString": "//{ ID:2,Icon:Icon.Home ,Value: \"Home\" }\r\n\r\n//{ ID:1,Icon:\"\" ,Value: \"Discover\" }, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" },{ ID:4,Icon:\"\" ,Value: \"Play\" } ,{ ID:5,Icon:Icon.Signal ,Value: \"Challenges\" },{ ID:6,Icon:Icon.OptionsList ,Value: \"Leader Boards\" },{ ID:7,Icon:Icon.EmojiSmile ,Value: \"Squad\" },{ ID:8,Icon:\"\" ,Value: \"Adjust\" },{ ID:9,Icon:Icon.Settings ,Value: \"Settings\" },{ ID:10,Icon:Icon.Post ,Value: \"Feedback\" }\r\n\r\nIf(menu.varID=12, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" })",
+        "AutoRuleBindingString": "App.ActiveScreen",
+        "InvariantPropertyName": "ScreenNavHome",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      },
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "App.ActiveScreen",
+        "InvariantPropertyName": "ScreenNavPrompt",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      },
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "//vardefault\n//{ ID:2,Icon:Icon.Home ,Value: \"Home\" }\n\n//{ ID:1,Icon:\"\" ,Value: \"Discover\" }, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" },{ ID:4,Icon:\"\" ,Value: \"Play\" } ,{ ID:5,Icon:Icon.Signal ,Value: \"Challenges\" },{ ID:6,Icon:Icon.OptionsList ,Value: \"Leader Boards\" },{ ID:7,Icon:Icon.EmojiSmile ,Value: \"Squad\" },{ ID:8,Icon:\"\" ,Value: \"Adjust\" },{ ID:9,Icon:Icon.Settings ,Value: \"Settings\" },{ ID:10,Icon:Icon.Post ,Value: \"Feedback\" }\n\n/If(menu.varID=12, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" })",
         "InvariantPropertyName": "VarMenuDefaultVal",
         "IsLockable": false,
         "NameMapSourceSchema": "?"
@@ -2830,7 +2844,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638536899339369263",
+    "LastModifiedTimestamp": "638537061486524878",
     "Name": "menu",
     "Rules": [
       {
@@ -2853,25 +2867,26 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "App.ActiveScreen",
+        "InvariantScript": "",
         "Property": "ScreenNavHome",
         "RuleProviderType": "System"
       },
       {
         "Category": "Data",
-        "InvariantScript": "App.ActiveScreen",
+        "InvariantScript": "",
         "Property": "ScreenNavPrompt",
         "RuleProviderType": "System"
       },
       {
         "Category": "Data",
-        "InvariantScript": "//{ ID:2,Icon:Icon.Home ,Value: \"Home\" }\r\n\r\n//{ ID:1,Icon:\"\" ,Value: \"Discover\" }, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" },{ ID:4,Icon:\"\" ,Value: \"Play\" } ,{ ID:5,Icon:Icon.Signal ,Value: \"Challenges\" },{ ID:6,Icon:Icon.OptionsList ,Value: \"Leader Boards\" },{ ID:7,Icon:Icon.EmojiSmile ,Value: \"Squad\" },{ ID:8,Icon:\"\" ,Value: \"Adjust\" },{ ID:9,Icon:Icon.Settings ,Value: \"Settings\" },{ ID:10,Icon:Icon.Post ,Value: \"Feedback\" }\r\n\r\n//If(menu.varID=12, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" })",
+        "InvariantScript": "//vardefault\n//{ ID:2,Icon:Icon.Home ,Value: \"Home\" }\n\n//{ ID:1,Icon:\"\" ,Value: \"Discover\" }, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" },{ ID:4,Icon:\"\" ,Value: \"Play\" } ,{ ID:5,Icon:Icon.Signal ,Value: \"Challenges\" },{ ID:6,Icon:Icon.OptionsList ,Value: \"Leader Boards\" },{ ID:7,Icon:Icon.EmojiSmile ,Value: \"Squad\" },{ ID:8,Icon:\"\" ,Value: \"Adjust\" },{ ID:9,Icon:Icon.Settings ,Value: \"Settings\" },{ ID:10,Icon:Icon.Post ,Value: \"Feedback\" }\n\nSwitch(menu.varID,\n2, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, \n3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" }\n)",
+        "NameMap": "{\"ID\":\"ID\",\"Icon\":\"Icon\",\"Value\":\"Value\"}",
         "Property": "VarMenuDefaultVal",
-        "RuleProviderType": "System"
+        "RuleProviderType": "Unknown"
       },
       {
         "Category": "Data",
-        "InvariantScript": "2",
+        "InvariantScript": "",
         "Property": "varID",
         "RuleProviderType": "System"
       },
@@ -2981,7 +2996,7 @@
       "Name": "VarMenuDefaultVal",
       "PropertyDataTypeKey": "Record",
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"ObjNull\",\"EnumString\":\"N\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"ID\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Icon\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
     },
     {
       "Category": 0,
@@ -3001,7 +3016,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638536899339369263",
+  "LastModifiedTimestamp": "638537061486524878",
   "Name": "3dcb2ec1d1f74675969b80e7b1fbd350",
   "OverridableProperties": {},
   "Version": "1.0"

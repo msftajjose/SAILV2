@@ -18896,7 +18896,7 @@
         {
           "Category": "Data",
           "PropertyName": "ScreenNavHome",
-          "RuleProviderType": "User"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Data",

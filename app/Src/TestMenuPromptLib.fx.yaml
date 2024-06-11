@@ -1,0 +1,84 @@
+TestMenuPromptLib As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: =Set(varMenuID,3)
+
+    menu_4 As menu:
+        ScreenNavHome: =TestMenuHome
+        ScreenNavPrompt: =TestMenuPromptLib
+        varID: =3
+        VarMenuDefaultVal: |-
+            =//vardefault
+            //{ ID:2,Icon:Icon.Home ,Value: "Home" }
+            
+            //{ ID:1,Icon:"" ,Value: "Discover" }, { ID:2,Icon:Icon.Home ,Value: "Home" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" },{ ID:4,Icon:"" ,Value: "Play" } ,{ ID:5,Icon:Icon.Signal ,Value: "Challenges" },{ ID:6,Icon:Icon.OptionsList ,Value: "Leader Boards" },{ ID:7,Icon:Icon.EmojiSmile ,Value: "Squad" },{ ID:8,Icon:"" ,Value: "Adjust" },{ ID:9,Icon:Icon.Settings ,Value: "Settings" },{ ID:10,Icon:Icon.Post ,Value: "Feedback" }
+            
+            Switch(menu_4.varID,
+            2, { ID:2,Icon:Icon.Home ,Value: "Home" }, 
+            3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" }
+            )
+
+    Label6_1 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Size: =13
+        Text: |-
+            ="Prompt
+            "
+        X: =616
+        Y: =112
+        ZIndex: =2
+
+    Label6_4 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Size: =13
+        Text: ="varMenuID = " & varMenuID
+        Width: =200
+        X: =644
+        Y: =172
+        ZIndex: =3
+
+    Icon26_1 As icon.Home:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =App.Theme.Colors.Darker30
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.ListScrollWatchlist
+        PaddingBottom: =5
+        PaddingLeft: =5
+        PaddingRight: =5
+        PaddingTop: =5
+        X: =552
+        Y: =100
+        ZIndex: =4
+
+    Label6_6 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Size: =13
+        Text: ="SelectedItem = " & menu_4.SelectedItem.ID
+        Width: =200
+        X: =644
+        Y: =225
+        ZIndex: =5
+
+    Label6_8 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =If(varMenuID = menu_4.SelectedItem.ID, Color.Green, Color.Red)
+        Font: =App.Theme.Font
+        Size: =13
+        Text: =
+        Width: =200
+        X: =872
+        Y: =212
+        ZIndex: =6
+

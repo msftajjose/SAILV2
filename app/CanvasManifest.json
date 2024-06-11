@@ -62,7 +62,7 @@
       "herocontrols": false,
       "improvedtabstopbehavior": false,
       "isemptyrequirestableargument": true,
-      "keeprecentscreensloaded": false,
+      "keeprecentscreensloaded": true,
       "legacyformulabar": false,
       "longlivingcache": false,
       "mobilenativerendering": false,
@@ -141,6 +141,8 @@
     "HomeScreenTemp",
     "IntroScreenWhatIsSail",
     "HomeScreen",
-    "PromptLibraryScreen"
+    "PromptLibraryScreen",
+    "TestMenuHome",
+    "TestMenuPromptLib"
   ]
 }
