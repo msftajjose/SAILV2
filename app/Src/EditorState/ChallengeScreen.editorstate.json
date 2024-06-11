@@ -5282,7 +5282,7 @@
         {
           "Category": "Data",
           "PropertyName": "score",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",

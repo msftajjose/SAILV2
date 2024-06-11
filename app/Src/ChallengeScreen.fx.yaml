@@ -183,7 +183,7 @@ ChallengeScreen As screen:
 
                 menu_5 As menu:
                     LayoutMinWidth: =640
-                    score: =varCrrUser.Scores
+                    score: =First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores
                     ScreenChallenge: =ChallengeScreen
                     ScreenNavHome: =HomeScreen
                     ScreenNavPrompt: =PromptLibraryScreen
