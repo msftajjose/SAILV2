@@ -969,9 +969,16 @@ HomeScreen As screen:
                                             Font: =Font.'Segoe UI'
                                             Height: =28
                                             HtmlText: =If(First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=ThisItem.TipsandTricksCollaboration)).IsDFMCo=2,"<font color=blue>(Dfm)</font>","") &"  " & If(Len(ThisItem.Subject)>40,Left(ThisItem.TipsTricks,40) & "...",ThisItem.Subject)
-                                            OnSelect: =Select(Parent)
+                                            OnSelect: |-
+                                                =Select(Parent);
+                                                
+                                                UpdateContext({varShowExistingPrompt:true});
+                                                
+                                                UpdateContext({varSelectedPromptLib:ThisItem});
+                                                Refresh(tblFavPrompts);
+                                                Set(varFavAlreadyExist,Filter(tblFavPrompts,UserID.LoginName=varlgname && PromptID.TipsandTricksCollaboration=ThisItem.TipsandTricksCollaboration));
                                             Size: =8
-                                            Width: =285
+                                            Width: =255
                                             X: =47
                                             Y: =9
                                             ZIndex: =12
@@ -2166,4 +2173,285 @@ HomeScreen As screen:
             X: =590
             Y: =224
             ZIndex: =10
+
+    OpenExistingPrompt As groupContainer:
+        DropShadow: =DropShadow.Light
+        Height: =768
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =varShowExistingPrompt
+        Width: =1366
+        ZIndex: =26
+
+        Shadowed_Bck_10 As rectangle:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Width: =1366
+            ZIndex: =1
+
+        HtmlText1_26 As htmlViewer:
+            Height: =584
+            HtmlText: |
+                ="<div style='background-color: rgba(255,255,255,100%); 
+                margin: 20px; 
+                width: 1120px; 
+                height: 500px; 
+                border-radius: 30px'>
+                </div>"
+                
+                /*
+                "<div style='background-color: rgba(1,2,3,30%); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                "<div style='background-color: rgba(39,69,129,1); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                
+                */
+            Width: =1175
+            X: =110
+            Y: =92
+            ZIndex: =2
+
+        Label_SubHeading2_17 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            Height: =53
+            Size: =30
+            Text: |+
+                =
+                
+            Width: =839
+            X: =232
+            Y: =152
+            ZIndex: =3
+
+        HtmlText6_12 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =62
+            HtmlText: ="Make sure to input the Prompt in your DfM Copilot to ensure the best results🎁"
+            Size: =12
+            Width: =1041
+            X: =160
+            Y: =230
+            ZIndex: =4
+
+        btn_Start_66 As button:
+            BorderColor: =RGBA(141, 48, 128, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: = DisplayMode.Edit
+            Fill: =RGBA(15, 108, 189, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =Copy(TextInputCanvas3_1.Value);
+                
+                Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewPromptScore",Score:5,UserID:varCrrUser});
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="Copy Prompt"
+            Tooltip: ="Click here to copy prompt above"
+            Width: =145
+            X: =1075
+            Y: =555
+            ZIndex: =8
+
+        btn_Start_65 As button:
+            BorderColor: =RGBA(141, 48, 128, 1)
+            Color: =RGBA(141, 48, 128, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =UpdateContext({varShowExistingPrompt:false});
+                UpdateContext({varSelectedPromptLib:Blank()});
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="             Cancel"
+            Tooltip: ="New users click to Register"
+            Width: =165
+            X: =709
+            Y: =555
+            ZIndex: =9
+
+        Image21_3 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Image: =CopilotLogo
+            Width: =45
+            X: =162
+            Y: =150
+            ZIndex: =10
+
+        HtmlText6_18 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =34
+            HtmlText: =varSelectedPromptLib.Scenario
+            Size: =12
+            Width: =173
+            X: =187
+            Y: =272
+            ZIndex: =13
+
+        HtmlText6_19 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =39
+            HtmlText: =varSelectedPromptLib.Subject
+            Size: =12
+            Width: =909
+            X: =162
+            Y: =315
+            ZIndex: =15
+
+        "TextInputCanvas3_1 As 'Text input'":
+            Appearance: ='TextInputCanvas.Appearance'.Outline
+            DisplayMode: =DisplayMode.View
+            Font: =Font.'Segoe UI'
+            Height: =160
+            Mode: ='TextInputCanvas.Mode'.Multiline
+            Placeholder: ="Input your prompt here"
+            Value: =varSelectedPromptLib.TipsTricks
+            Visible: =true
+            Width: =1060
+            X: =160
+            Y: =365
+            ZIndex: =16
+
+        Image22_4 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =25
+            Image: =heart
+            Width: =25
+            X: =1150
+            Y: =318
+            ZIndex: =18
+
+        HtmlText6_20 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =31
+            HtmlText: =First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)).NoOfLikes
+            Size: =10
+            Width: =50
+            X: =1180
+            Y: =316
+            ZIndex: =19
+
+        btn_Start_67 As button:
+            Align: =Align.Right
+            BorderColor: =RGBA(141, 48, 128, 1)
+            Color: =RGBA(141, 48, 128, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: = DisplayMode.Edit
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |
+                =Launch("https://www.bing.com/business/chat");
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="Go to Copilot "
+            Tooltip: ="Click here to copy prompt above"
+            Width: =171
+            X: =890
+            Y: =555
+            ZIndex: =22
+
+        Image21_4 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Image: =CopilotLogo
+            Width: =45
+            X: =891
+            Y: =555
+            ZIndex: =23
+
+        Rectangle6_1 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =If(varSelectedPromptLib.Scenario="Other",Color.Gray,If(varSelectedPromptLib.Scenario="Productivity",Color.Red,If(varSelectedPromptLib.Scenario="Entertainment",Color.Green,If(varSelectedPromptLib.Scenario="Cloud",Color.Blue,If(varSelectedPromptLib.Scenario="Insights",Color.Orange)))))
+            Height: =22
+            OnSelect: =
+            Width: =22
+            X: =165
+            Y: =278
+            ZIndex: =24
+
+        HtmlText6_22 As htmlViewer:
+            Font: =Font.'Segoe UI'
+            Height: =115
+            HtmlText: ="<h2><b>" & If(First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)).IsDFMCo=2,"<font color = blue>(DFM)</font>  Prompt Details"," Prompt Details") & "</b></h2>"
+            Size: =16
+            Width: =766
+            X: =217
+            Y: =122
+            ZIndex: =25
+
+        Icon26_2 As icon.BookmarkFilled:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =Color.Brown
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(139, 154, 159, 1)
+            DisplayMode: =If(IsEmpty(varFavAlreadyExist),DisplayMode.Edit, DisplayMode.Disabled)
+            Height: =30
+            Icon: =Icon.BookmarkFilled
+            OnSelect: |-
+                =UpdateContext({varLoadingSpinner:true});
+                UpdateContext({varExtScore:varSelectedPromptLib.NoOfLikes});
+                UpdateContext({varExtScore:varExtScore+5});
+                Refresh(tblFavPrompts);
+                /*
+                Set(varFavAlreadyExist,Filter(tblFavPrompts,UserID.LoginName=varlgname && PromptID.TipsandTricksCollaboration= varAlreadySubmittedPrompt.));
+                If(IsEmpty(varFavAlreadyExist),Patch(tblFavPrompts,Defaults(tblFavPrompts),{Name:"FavTips",UserID:varCrrUser,PromptID:varAlreadySubmittedPrompt,IsActiveFav:1,tipID:varAlreadySubmittedPrompt.TipsandTricksCollaboration}),Patch(First(varFavAlreadyExist), { IsActiveFav:0}));
+                Patch(TipsandTricksCollaborations,First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)),{NoOfLikes:varExtScore});
+                */
+                UpdateContext({varLoadingSpinner:false});
+            Tooltip: ="Bookmark prompt"
+            Width: =30
+            X: =1155
+            Y: =175
+            ZIndex: =26
 
