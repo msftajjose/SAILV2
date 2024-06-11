@@ -2,7 +2,7 @@ HomeScreen As screen:
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
-        =Reset(menu_3);
+        =//Reset(menu_3);
         Set(varMenuID, 2)
 
     MainContainer_1 As groupContainer.verticalAutoLayoutContainer:

@@ -1350,7 +1350,14 @@
               "Layout",
               "Transition",
               "DelayItemLoading",
-              "LoadingSpinner",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "LoadingSpinner.Data",
+                "InvariantPropertyName": "LoadingSpinner",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "LoadingSpinnerColor",
               "DisplayMode",
               "BorderColor",
@@ -1450,7 +1457,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "LoadingSpinner.Data",
+                "InvariantScript": "LoadingSpinner.None",
                 "Property": "LoadingSpinner",
                 "RuleProviderType": "User"
               },
@@ -2823,7 +2830,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638536897074331975",
+    "LastModifiedTimestamp": "638536899339369263",
     "Name": "menu",
     "Rules": [
       {
@@ -2994,7 +3001,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638536897074331975",
+  "LastModifiedTimestamp": "638536899339369263",
   "Name": "3dcb2ec1d1f74675969b80e7b1fbd350",
   "OverridableProperties": {},
   "Version": "1.0"

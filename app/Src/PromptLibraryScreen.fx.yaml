@@ -2,7 +2,7 @@ PromptLibraryScreen As screen:
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |
-        =Reset(menu_1);
+        =//Reset(menu_1);
         Set(varMenuID, 3)
 
     MainContainer_2 As groupContainer.verticalAutoLayoutContainer:

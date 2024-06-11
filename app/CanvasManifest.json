@@ -62,7 +62,7 @@
       "herocontrols": false,
       "improvedtabstopbehavior": false,
       "isemptyrequirestableargument": true,
-      "keeprecentscreensloaded": true,
+      "keeprecentscreensloaded": false,
       "legacyformulabar": false,
       "longlivingcache": false,
       "mobilenativerendering": false,
