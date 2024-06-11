@@ -296,6 +296,152 @@ ChallengeScreen As screen:
                         Width: =Parent.Width
                         ZIndex: =1
 
+                    HtmlText1_23 As htmlViewer:
+                        Height: =306
+                        HtmlText: |
+                            ="<div style='background-color: rgba(255,255,255,100%); 
+                            margin: 10px; 
+                            width: 400x; 
+                            height: 270px; 
+                            border-radius: 5px'>
+                            </div>"
+                            
+                            /*
+                            "<div style='background-color: rgba(1,2,3,30%); 
+                            box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                            "<div style='background-color: rgba(39,69,129,1); 
+                            box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                            
+                            */
+                        Width: =751
+                        Y: =25
+                        ZIndex: =2
+
+                    HtmlText1_24 As htmlViewer:
+                        Height: =306
+                        HtmlText: |
+                            ="<div style='background-color: rgba(255,255,255,100%); 
+                            margin: 10px; 
+                            width: 400x; 
+                            height: 270px; 
+                            border-radius: 5px'>
+                            </div>"
+                            
+                            /*
+                            "<div style='background-color: rgba(1,2,3,30%); 
+                            box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                            "<div style='background-color: rgba(39,69,129,1); 
+                            box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                            
+                            */
+                        Width: =751
+                        Y: =338
+                        ZIndex: =3
+
+                    HtmlText1_32 As htmlViewer:
+                        Height: =306
+                        HtmlText: |
+                            ="<div style='background-color: rgba(255,255,255,100%); 
+                            margin: 10px; 
+                            width: 200x; 
+                            height: 270px; 
+                            border-radius: 5px'>
+                            </div>"
+                            
+                            /*
+                            "<div style='background-color: rgba(1,2,3,30%); 
+                            box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                            "<div style='background-color: rgba(39,69,129,1); 
+                            box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                            
+                            */
+                        Width: =391
+                        X: =740
+                        Y: =25
+                        ZIndex: =4
+
+                    HtmlText1_33 As htmlViewer:
+                        Height: =306
+                        HtmlText: |
+                            ="<div style='background-color: rgba(255,255,255,100%); 
+                            margin: 10px; 
+                            width: 200x; 
+                            height: 270px; 
+                            border-radius: 5px'>
+                            </div>"
+                            
+                            /*
+                            "<div style='background-color: rgba(1,2,3,30%); 
+                            box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                            "<div style='background-color: rgba(39,69,129,1); 
+                            box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                            
+                            */
+                        Width: =391
+                        X: =740
+                        Y: =337
+                        ZIndex: =5
+
+                    TextCanvas1_15 As Text:
+                        Align: ='TextCanvas.Align'.Start
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Courier New'
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =30
+                        Size: =14
+                        Text: ="Solo Challenges"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =144
+                        Wrap: =true
+                        X: =17
+                        Y: =15
+                        ZIndex: =6
+
+                    TextCanvas1_17 As Text:
+                        Align: ='TextCanvas.Align'.Start
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Courier New'
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =30
+                        Size: =14
+                        Text: ="Daily Secret Code"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =144
+                        Wrap: =true
+                        X: =756
+                        Y: =15
+                        ZIndex: =7
+
+                    TextCanvas1_18 As Text:
+                        Align: ='TextCanvas.Align'.Start
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Courier New'
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =30
+                        Size: =14
+                        Text: ="Team Challenges"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =144
+                        Wrap: =true
+                        X: =17
+                        Y: =318
+                        ZIndex: =8
+
+                    TextCanvas1_19 As Text:
+                        Align: ='TextCanvas.Align'.Start
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Courier New'
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =20
+                        Size: =14
+                        Text: ="Completed Challenges"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =191
+                        Wrap: =true
+                        X: =756
+                        Y: =331
+                        ZIndex: =9
+
     Container18_2 As groupContainer:
         DropShadow: =DropShadow.Light
         Height: =768
