@@ -4091,6 +4091,22 @@
           "InvariantPropertyName": "BasePaletteColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "AccessibleLabel",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
+          "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -4128,6 +4144,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Design",
           "PropertyName": "X",
           "RuleProviderType": "Unknown"
@@ -4156,6 +4177,11 @@
           "Category": "Design",
           "PropertyName": "ZIndex",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnSelect",
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "",
@@ -4244,7 +4270,7 @@
       "MetaDataIDKey": "",
       "Name": "ButtonCanvas1_7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4454,7 +4480,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "",
@@ -10396,7 +10422,7 @@
       "MetaDataIDKey": "",
       "Name": "HtmlText6_26",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

@@ -4157,6 +4157,14 @@
           "InvariantPropertyName": "BasePaletteColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
+          "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -4222,6 +4230,11 @@
           "Category": "Design",
           "PropertyName": "ZIndex",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnSelect",
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "",
@@ -4846,7 +4859,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "",
@@ -5813,7 +5826,7 @@
       "MetaDataIDKey": "",
       "Name": "Container1_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8396,7 +8409,7 @@
       "MetaDataIDKey": "",
       "Name": "Container4_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8621,7 +8634,7 @@
       "MetaDataIDKey": "",
       "Name": "Container5_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
