@@ -616,7 +616,7 @@ PromptLibraryScreen As screen:
                                         PaddingTop: =0
                                         Width: =569
                                         X: =56
-                                        Y: =503
+                                        Y: =498
                                         ZIndex: =6
 
                                     "TextInputCanvas1 As 'Text input'":
@@ -914,8 +914,8 @@ PromptLibraryScreen As screen:
                                     HtmlText: ="<b></b>Daily Reward"
                                     Size: =10
                                     Width: =122
-                                    X: =604
-                                    Y: =547
+                                    X: =602
+                                    Y: =540
                                     ZIndex: =14
 
                                 Image22_6 As image:
@@ -928,8 +928,8 @@ PromptLibraryScreen As screen:
                                     Height: =25
                                     Image: =heart
                                     Width: =25
-                                    X: =609
-                                    Y: =577
+                                    X: =607
+                                    Y: =570
                                     ZIndex: =15
 
                                 HtmlText6_27 As htmlViewer:
@@ -946,8 +946,8 @@ PromptLibraryScreen As screen:
                                         
                                     Size: =10
                                     Width: =95
-                                    X: =639
-                                    Y: =577
+                                    X: =637
+                                    Y: =570
                                     ZIndex: =16
 
     ContainerSpinner_1 As groupContainer:
