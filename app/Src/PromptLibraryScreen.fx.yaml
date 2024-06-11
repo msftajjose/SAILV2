@@ -2,7 +2,7 @@ PromptLibraryScreen As screen:
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |
-        =//Reset(menu_3);
+        =Reset(menu_1);
         Set(varMenuID, 3)
 
     MainContainer_2 As groupContainer.verticalAutoLayoutContainer:
@@ -183,6 +183,7 @@ PromptLibraryScreen As screen:
                     ScreenNavHome: =HomeScreen
                     ScreenNavPrompt: =PromptLibraryScreen
                     varID: =varMenuID
+                    VarMenuDefaultVal: =
 
                 TextCanvas3 As Text:
                     DisplayMode: =DisplayMode.Edit

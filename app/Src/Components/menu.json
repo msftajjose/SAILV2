@@ -235,7 +235,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "//If(ThisItem.ID=10, UpdateContext({_varAppFeedbackReg:true}),UpdateContext({_varAppFeedbackReg:false}))\n\n\nSwitch(ThisItem.ID,\n1, false,\n2, Navigate(menu.ScreenNavHome); Set(varMenuID,2) ,\n3, Navigate(menu.ScreenNavPrompt); Set(varMenuID,3)  ,\n4, false,\n5, false,\n6, false,\n7, false,\n8, false,\n9, false,\n10, false)\n\n\n",
+                    "InvariantScript": "//If(ThisItem.ID=10, UpdateContext({_varAppFeedbackReg:true}),UpdateContext({_varAppFeedbackReg:false}))\n\n\nSwitch(ThisItem.ID,\n1, false,\n2, Reset(menu); Navigate(menu.ScreenNavHome); Set(varMenuID,2) ,\n3, Reset(menu); Navigate(menu.ScreenNavPrompt); Set(varMenuID,3)  ,\n4, false,\n5, false,\n6, false,\n7, false,\n8, false,\n9, false,\n10, false)\n\n\n",
                     "Property": "OnSelect",
                     "RuleProviderType": "User"
                   }
@@ -2837,7 +2837,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638536881771676817",
+    "LastModifiedTimestamp": "638536884443071519",
     "Name": "menu",
     "Rules": [
       {
@@ -3008,7 +3008,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638536881771676817",
+  "LastModifiedTimestamp": "638536884443071519",
   "Name": "3dcb2ec1d1f74675969b80e7b1fbd350",
   "OverridableProperties": {},
   "Version": "1.0"
