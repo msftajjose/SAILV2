@@ -180,8 +180,6 @@ PromptLibraryScreen As screen:
                     score: =varCrrUser.Scores
                     ScreenNavHome: =HomeScreen
                     ScreenNavPrompt: =PromptLibraryScreen
-                    VarMenuDefaultVal: |-
-                        ={ ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" }
 
                 TextCanvas3 As Text:
                     DisplayMode: =DisplayMode.Edit

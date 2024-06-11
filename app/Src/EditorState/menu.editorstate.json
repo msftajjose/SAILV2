@@ -385,8 +385,22 @@
         "TemplatePadding",
         "Layout",
         "Transition",
-        "DelayItemLoading",
-        "LoadingSpinner",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "true",
+          "InvariantPropertyName": "DelayItemLoading",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "LoadingSpinner.Data",
+          "InvariantPropertyName": "LoadingSpinner",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "LoadingSpinnerColor",
         "DisplayMode",
         "BorderColor",
@@ -472,12 +486,12 @@
         {
           "Category": "Design",
           "PropertyName": "DelayItemLoading",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
           "PropertyName": "LoadingSpinner",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -1762,7 +1776,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "{SampleStringField: \"SampleText\", SampleNumberField: 10, SampleBooleanField: true}",
+          "AutoRuleBindingString": "//{ ID:2,Icon:Icon.Home ,Value: \"Home\" }",
           "InvariantPropertyName": "VarMenuDefaultVal",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
