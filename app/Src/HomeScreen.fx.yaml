@@ -361,7 +361,7 @@ HomeScreen As screen:
                         IconStyle: ='ButtonCanvas.IconStyle'.Outline
                         Text: ="Suggest a Content"
                         Width: =180
-                        X: =853
+                        X: =918
                         Y: =9
                         ZIndex: =3
 
