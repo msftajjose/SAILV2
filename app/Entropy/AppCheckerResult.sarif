@@ -17591,36 +17591,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "menu.varMenuID"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "menu.varMenuID",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varMenuID",
-                "module": "menu",
-                "type": "menu"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "PromptLibraryScreen.varLikedUser"
                 }
               ],

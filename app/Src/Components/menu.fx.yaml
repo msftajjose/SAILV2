@@ -109,8 +109,10 @@ menu As CanvasComponent:
                 
                 Switch(ThisItem.ID,
                 1, false,
-                2, Reset(menu); Navigate(menu.ScreenNavHome); Set(varMenuID,2) ,
-                3, Reset(menu); Navigate(menu.ScreenNavPrompt); Set(varMenuID,3)  ,
+                2, Navigate(menu.ScreenNavHome),
+                3, Navigate(menu.ScreenNavPrompt),
+                //2, Reset(menu); Navigate(menu.ScreenNavHome); Set(varMenuID,2) ,
+                //3, Reset(menu); Navigate(menu.ScreenNavPrompt); Set(varMenuID,3)  ,
                 4, false,
                 5, false,
                 6, false,
