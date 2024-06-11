@@ -5,6 +5,7 @@ HomeScreen As screen:
         =//Reset(menu_3);
         Set(varMenuID, 2);
         Reset(Gallery5_4);
+        UpdateContext({varSavedPrompts:Filter(tblFavPrompts,UserID.LoginName=varlgname && IsActiveFav=1)});
 
     MainContainer_1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -870,7 +871,7 @@ HomeScreen As screen:
                                         BorderStyle: =BorderStyle.None
                                         DelayItemLoading: =true
                                         Height: =220
-                                        Items: =FirstN(Sort(TipsandTricksCollaborations,'Created On',SortOrder.Descending),50)
+                                        Items: =If(Gallery5_15.Selected.ID=2,FirstN(Sort(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration exactin varSavedPrompts.tipID),NoOfLikes,SortOrder.Descending),50),Sort(FirstN(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration exactin varSavedPrompts.tipID),50),'Created On',SortOrder.Descending))
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =3
@@ -2448,21 +2449,23 @@ HomeScreen As screen:
             Color: =Color.Brown
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(139, 154, 159, 1)
-            DisplayMode: =If(IsEmpty(varFavAlreadyExist),DisplayMode.Edit, DisplayMode.Disabled)
             Height: =30
             Icon: =Icon.BookmarkFilled
-            OnSelect: |-
-                =UpdateContext({varLoadingSpinner:true});
-                UpdateContext({varExtScore:varSelectedPromptLib.NoOfLikes});
-                UpdateContext({varExtScore:varExtScore+5});
+            OnSelect: |+
+                =UpdateContext({varspinner:true});
+                
                 Refresh(tblFavPrompts);
-                /*
-                Set(varFavAlreadyExist,Filter(tblFavPrompts,UserID.LoginName=varlgname && PromptID.TipsandTricksCollaboration= varAlreadySubmittedPrompt.));
-                If(IsEmpty(varFavAlreadyExist),Patch(tblFavPrompts,Defaults(tblFavPrompts),{Name:"FavTips",UserID:varCrrUser,PromptID:varAlreadySubmittedPrompt,IsActiveFav:1,tipID:varAlreadySubmittedPrompt.TipsandTricksCollaboration}),Patch(First(varFavAlreadyExist), { IsActiveFav:0}));
-                Patch(TipsandTricksCollaborations,First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)),{NoOfLikes:varExtScore});
-                */
-                UpdateContext({varLoadingSpinner:false});
+                Patch(tblFavPrompts,First(Filter(tblFavPrompts,UserID.LoginName=varlgname && PromptID.TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)), { IsActiveFav:0});
+                Refresh(tblFavPrompts);
+                UpdateContext({varSavedPrompts:Filter(tblFavPrompts,UserID.LoginName=varlgname && IsActiveFav=1)});
+                Reset(Gallery5_11);
+                Reset(Gallery10_5);
+                UpdateContext({varShowExistingPrompt:false});
+                UpdateContext({varSelectedPromptLib:Blank()});
+                UpdateContext({varspinner:false});
+                
             Tooltip: ="Bookmark prompt"
+            Visible: =false
             Width: =30
             X: =1155
             Y: =175

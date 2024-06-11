@@ -1492,6 +1492,86 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Container15.Gallery10_2.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Container15.Gallery10_2.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 103,
+                  "snippet": {
+                    "text": "exactin"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Container15.Gallery10_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Container15.Gallery10_2.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Container15.Gallery10_2.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 244,
+                  "snippet": {
+                    "text": "exactin"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Container15.Gallery10_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "AboutTechWeek.TipScreen_1.Gallery6_4.Items"
                 }
               ],
@@ -18908,6 +18988,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "HomeScreen.varspinner"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomeScreen.varspinner",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varspinner",
+                "module": "HomeScreen",
+                "type": "HomeScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Container15.Gallery10_2.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Container15.Gallery10_2.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "HomeScreen",
+                "type": "HomeScreen.MainContainer_1.BottomContainer_1.CommonContainer_1.Container5_1.Container6_1.Container9_1.Container12_1.Container15.Gallery10_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 14
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "AboutTechWeek.popupTexts"
                 }
               ],
@@ -19419,6 +19559,23 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Registration\" is 547, which exceeds the maximum threshold recommended (300)."
+              }
+            },
+            {
+              "id": "app-InefficientDelayLoading",
+              "messageStrings": {
+                "issue": {
+                  "text": "Inefficient delay loading"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Use variables, collections, and navigation context to share state across screens instead."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen."
               }
             }
           ],
