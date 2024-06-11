@@ -106,7 +106,6 @@ LandingPageOctalysis As screen:
                 height: 330px; 
                 border-radius: 30px'>
                 </div>"
-            Visible: =varLoginPopUp
             Width: =1016
             X: =63
             Y: =41
@@ -144,7 +143,6 @@ LandingPageOctalysis As screen:
                 ="Back
                 "
             Tooltip: ="New user! click to Register your avtar. "
-            Visible: =varLoginPopUp
             Width: =91
             X: =743
             Y: =298
@@ -235,7 +233,6 @@ LandingPageOctalysis As screen:
             Text: |-
                 ="Log In
                 "
-            Visible: =varLoginPopUp
             Width: =133
             X: =871
             Y: =298
@@ -256,7 +253,6 @@ LandingPageOctalysis As screen:
             HoverFill: =RGBA(186, 202, 226, 1)
             Size: =13
             Tooltip: ="User Name (Do not use your Microsoft alias or Id)"
-            Visible: =varLoginPopUp
             Width: =351
             X: =654
             Y: =148
@@ -281,7 +277,6 @@ LandingPageOctalysis As screen:
             Mode: =TextMode.Password
             Size: =13
             Tooltip: ="Numeric - maximum 6 digits. "
-            Visible: =varLoginPopUp
             Width: =351
             X: =654
             Y: =212
@@ -300,7 +295,6 @@ LandingPageOctalysis As screen:
             PaddingRight: =5
             PaddingTop: =5
             Tooltip: ="User Name"
-            Visible: =varLoginPopUp
             Width: =40
             X: =605
             Y: =148
@@ -319,7 +313,6 @@ LandingPageOctalysis As screen:
             PaddingRight: =5
             PaddingTop: =5
             Tooltip: ="Password"
-            Visible: =varLoginPopUp
             Width: =40
             X: =605
             Y: =216
@@ -334,7 +327,6 @@ LandingPageOctalysis As screen:
             Height: =78
             Size: =30
             Text: ="Log in with your SAIL Account"
-            Visible: =varLoginPopUp
             Width: =361
             X: =123
             Y: =167
@@ -349,7 +341,6 @@ LandingPageOctalysis As screen:
             Height: =44
             Size: =15
             Text: ="Start your engines!"
-            Visible: =varLoginPopUp
             Width: =361
             X: =123
             Y: =256
@@ -361,7 +352,6 @@ LandingPageOctalysis As screen:
             DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =50
             Image: =MSlogo
-            Visible: =varLoginPopUp
             Width: =50
             X: =123
             Y: =93
