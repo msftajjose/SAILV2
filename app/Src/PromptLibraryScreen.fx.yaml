@@ -561,7 +561,7 @@ PromptLibraryScreen As screen:
                                     BorderThickness: =1
                                     DelayItemLoading: =true
                                     Fill: =RGBA(255, 255, 255, 1)
-                                    Height: =336
+                                    Height: =347
                                     Items: =If(Gallery5_15.Selected.ID=2,FirstN(Sort(TipsandTricksCollaborations,NoOfLikes,SortOrder.Descending),50),FirstN(Sort(TipsandTricksCollaborations,'Created On',SortOrder.Descending),50))
                                     Layout: =Layout.Vertical
                                     LoadingSpinner: =LoadingSpinner.Data
@@ -808,28 +808,29 @@ PromptLibraryScreen As screen:
                                         Font: =Font.'Segoe UI'
                                         FontSize: =12
                                         FontWeight: =FontWeight.Normal
-                                        Height: =27
+                                        Height: =33
                                         Placeholder: |-
                                             ="Try: How to solve error 123 in powerapps"
                                         Width: =390
                                         X: =652
-                                        Y: =527
+                                        Y: =517
                                         ZIndex: =7
 
                                     ButtonCanvas1_7 As Button:
                                         BasePaletteColor: =RGBA(5, 102, 178, 1)
                                         DisplayMode: =DisplayMode.Edit
-                                        Height: =27
-                                        Icon: ="DocumentBulletList"
+                                        Font: =Font.'Segoe UI'
+                                        Height: =35
+                                        Icon: ="Add"
                                         OnSelect: |-
                                             =UpdateContext({varNewPrompt:true});
                                             
                                             Set(varAlreadySubmittedPrompt,First(Filter(TipsandTricksCollaborations,UserID.LoginName=varlgname && DateValue('Created On')=DateValue(Today()))));
                                         PaddingRight: =0
                                         Text: ="Create a Prompt"
-                                        Width: =150
-                                        X: =892
-                                        Y: =564
+                                        Width: =159
+                                        X: =885
+                                        Y: =560
                                         ZIndex: =8
 
                                     Icon27 As icon.Newspaper:
@@ -841,8 +842,36 @@ PromptLibraryScreen As screen:
                                         Icon: =Icon.Newspaper
                                         Width: =25
                                         X: =618
-                                        Y: =532
+                                        Y: =522
                                         ZIndex: =9
+
+                                "TextInputCanvas1_1 As 'Text input'":
+                                    AccessibleLabel: ="Search with title"
+                                    Appearance: ='TextInputCanvas.Appearance'.Outline
+                                    BasePaletteColor: =
+                                    DisplayMode: =DisplayMode.Edit
+                                    Font: =Font.'Segoe UI'
+                                    FontSize: =12
+                                    FontWeight: =FontWeight.Normal
+                                    Height: =33
+                                    Placeholder: ="Search with title"
+                                    Width: =390
+                                    X: =696
+                                    Y: =429
+                                    ZIndex: =11
+
+                                Icon28 As icon.Search:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =Color.Black
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =DisplayMode.View
+                                    Height: =30
+                                    Icon: =Icon.Search
+                                    Width: =30
+                                    X: =652
+                                    Y: =432
+                                    ZIndex: =12
 
     ContainerSpinner_1 As groupContainer:
         DropShadow: =DropShadow.Light
