@@ -175,6 +175,8 @@ LandingPageOctalysis As screen:
                 If(!IsBlank(varCrrUser.Name),Navigate(IntroScreenWhatIsSail,ScreenTransition.Fade),Notify("Invalid username or password!",NotificationType.Error) && Reset(TextInput4_9));
                 Set(varCrrUser,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)));
                 //Set(varCurUserIDD,varCrrUser.Registrations_Dv);
+                If(!IsBlank(varCrrUser.Name),Patch(tblUserLoginTrans,Defaults(tblUserLoginTrans),{Name:varCrrUser.LoginName,UserID:varCrrUser}));
+                
                 Concurrent(
                     Set(varUserAvtar,varCrrUser.UserAvtar),
                     Set(varTeamAvtar,varCrrUser.TeamID.TeamAvtar);

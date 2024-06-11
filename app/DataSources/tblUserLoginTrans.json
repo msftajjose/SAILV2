@@ -1,0 +1,97 @@
+[
+  {
+    "DisplayName": "tblUserLoginTrans (Views)",
+    "Name": "_sail23_tbluserlogintrans_views",
+    "RelatedEntityName": "tblUserLoginTrans",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1975842e-b1ae-4538-92a6-590cbb25641b": "tblUserLoginTrans Lookup View",
+      "309c6235-94d9-47ed-8870-a01e05711dd9": "Inactive tblUserLoginTrans",
+      "53e89aa4-e86c-4bd9-a3db-c9e3b26968e2": "tblUserLoginTrans Advanced Find View",
+      "5ed56223-b98b-4ecc-8603-c3c4f768a753": "tblUserLoginTrans Associated View",
+      "61f45e7b-c6be-40ea-90fd-2f25f90f9dbc": "Active tblUserLoginTrans"
+    }
+  },
+  {
+    "DisplayName": "Status (tblUserLoginTrans)",
+    "Name": "sail23_tbluserlogintrans_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "tblUserLoginTrans"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "tblUserLoginTrans",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (tblUserLoginTrans)",
+    "Name": "sail23_tbluserlogintrans_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "tblUserLoginTrans"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "tblUserLoginTrans",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "sail23_tbluserlogintranses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "sail23_tbluserlogintrans",
+    "Name": "tblUserLoginTrans",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "sail23_name": "Name",
+      "sail23_tbluserlogintrans_AsyncOperations": "System Jobs",
+      "sail23_tbluserlogintrans_BulkDeleteFailures": "Bulk Delete Failures",
+      "sail23_tbluserlogintrans_DuplicateBaseRecord": "Duplicate Records (sail23_tbluserlogintrans_DuplicateBaseRecord)",
+      "sail23_tbluserlogintrans_DuplicateMatchingRecord": "Duplicate Records (sail23_tbluserlogintrans_DuplicateMatchingRecord)",
+      "sail23_tbluserlogintrans_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "sail23_tbluserlogintrans_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "sail23_tbluserlogintrans_ProcessSession": "Process Sessions",
+      "sail23_tbluserlogintrans_SyncErrors": "Sync Errors",
+      "sail23_tbluserlogintransid": "tblUserLoginTrans",
+      "sail23_UserID": "UserID",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "tblUserLoginTrans",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]

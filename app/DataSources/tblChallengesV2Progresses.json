@@ -1,0 +1,99 @@
+[
+  {
+    "DisplayName": "tblChallengesV2Progresses (Views)",
+    "Name": "_sail23_tblchallengesv2progress_views",
+    "RelatedEntityName": "tblChallengesV2Progresses",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "21c6abf2-5947-4e0c-b0de-c733b90a9cf2": "Active tblChallengesV2Progresses",
+      "3f1d10c3-42d5-442c-97a1-860921e94445": "Inactive tblChallengesV2Progresses",
+      "7741d4b7-7bad-46fc-bd89-ccf0a3e829b4": "tblChallengesV2Progress Advanced Find View",
+      "f5848dbe-abc6-425a-9548-1edb42d0d2da": "tblChallengesV2Progress Associated View",
+      "fd48baf5-f27b-4f4e-bd57-3e09aae5b182": "tblChallengesV2Progress Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (tblChallengesV2Progresses)",
+    "Name": "sail23_tblchallengesv2progress_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "tblChallengesV2Progresses"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "tblChallengesV2Progresses",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (tblChallengesV2Progresses)",
+    "Name": "sail23_tblchallengesv2progress_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "tblChallengesV2Progresses"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "tblChallengesV2Progresses",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "sail23_tblchallengesv2progresses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "sail23_tblchallengesv2progress",
+    "Name": "tblChallengesV2Progresses",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "sail23_ChallengeID": "ChallengeID",
+      "sail23_name": "Name",
+      "sail23_progress": "Progress",
+      "sail23_tblchallengesv2progress_AsyncOperations": "System Jobs",
+      "sail23_tblchallengesv2progress_BulkDeleteFailures": "Bulk Delete Failures",
+      "sail23_tblchallengesv2progress_DuplicateBaseRecord": "Duplicate Records (sail23_tblchallengesv2progress_DuplicateBaseRecord)",
+      "sail23_tblchallengesv2progress_DuplicateMatchingRecord": "Duplicate Records (sail23_tblchallengesv2progress_DuplicateMatchingRecord)",
+      "sail23_tblchallengesv2progress_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "sail23_tblchallengesv2progress_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "sail23_tblchallengesv2progress_ProcessSession": "Process Sessions",
+      "sail23_tblchallengesv2progress_SyncErrors": "Sync Errors",
+      "sail23_tblchallengesv2progressid": "tblChallengesV2Progress",
+      "sail23_UserID": "UserID",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "tblChallengesV2Progresses",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]

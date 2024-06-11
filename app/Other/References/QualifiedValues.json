@@ -197,6 +197,27 @@
       "Values": {
         "Information": "6d5727ab-82d3-4b24-bc60-e6536c806a85"
       }
+    },
+    {
+      "Kind": "default.cds_sail23_tbluserlogintrans_forms",
+      "Namespace": "tblUserLoginTrans (Forms)",
+      "Values": {
+        "Information": "27fb6139-0dbe-4aa4-b466-b48184cc7a90"
+      }
+    },
+    {
+      "Kind": "default.cds_sail23_tblchallengesv2_forms",
+      "Namespace": "tblChallengesV2S (Forms)",
+      "Values": {
+        "Information": "f0ca9a68-b49b-467f-a53c-e3341552044a"
+      }
+    },
+    {
+      "Kind": "default.cds_sail23_tblchallengesv2progress_forms",
+      "Namespace": "tblChallengesV2Progresses (Forms)",
+      "Values": {
+        "Information": "0c0f3b21-8bdb-48fa-a1a2-9187f326b844"
+      }
     }
   ]
 }
