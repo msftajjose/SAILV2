@@ -340,7 +340,7 @@ PromptLibraryScreen As screen:
                                     TemplatePadding: =0
                                     TemplateSize: =148
                                     Width: =1090
-                                    X: =30
+                                    X: =33
                                     ZIndex: =3
 
                                     Button7_3 As button:
@@ -567,7 +567,7 @@ PromptLibraryScreen As screen:
                                     LoadingSpinner: =LoadingSpinner.Data
                                     TemplatePadding: =3
                                     TemplateSize: =45
-                                    Width: =Parent.Width-50
+                                    Width: =Parent.Width-75
                                     X: =30
                                     Y: =55
                                     ZIndex: =10
@@ -600,7 +600,7 @@ PromptLibraryScreen As screen:
                                         RadiusTopRight: =7
                                         Size: =15
                                         Text: =""
-                                        Width: =1047
+                                        Width: =1000
                                         X: =10
                                         Y: =9
                                         ZIndex: =1
@@ -629,7 +629,7 @@ PromptLibraryScreen As screen:
                                         OnSelect: =Copy(ThisItem.TipsTricks)
                                         Tooltip: ="Copy Prompt"
                                         Width: =15
-                                        X: =1077
+                                        X: =1025
                                         Y: =15
                                         ZIndex: =7
 
@@ -750,22 +750,22 @@ PromptLibraryScreen As screen:
                                     ZIndex: =10
 
                                     HtmlText1_25 As htmlViewer:
-                                        Height: =164
+                                        Height: =132
                                         HtmlText: |+
-                                            ="<div style='background-color:rgba(" & 131 & "," & 131 & "," & 131 &"," & .2 & ");   
+                                            ="<div style='background-color:rgba(" & 255 & "," & 255 & "," & 255 &"," & 1 & ");   
                                             
                                             border-style: solid;
                                             border-width: 1px;
                                             margin: 0px; 
                                             width: "& Parent.Width-60 &"px; 
-                                            height: 134px; 
+                                            height: 110px; 
                                             border-radius: 5px'>
                                             </div>"
                                             //box-shadow: 1px 2px 12px 0px rgba(" & 0 & "," & 0 & "," & 0 &"," & 1 & ");
                                             
-                                        Width: =1096
-                                        X: =23
-                                        Y: =467
+                                        Width: =1086
+                                        X: =33
+                                        Y: =492
                                         ZIndex: =1
 
                                     TextCanvas1_16 As Text:
@@ -773,31 +773,31 @@ PromptLibraryScreen As screen:
                                         DisplayMode: =DisplayMode.Edit
                                         Font: =Font.'Courier New'
                                         FontColor: =RGBA(0, 0, 0, 1)
-                                        Height: =30
+                                        Height: =25
                                         Size: =14
                                         Text: ="Create a Prompt"
                                         VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                                         Weight: ='TextCanvas.Weight'.Bold
                                         Width: =146
                                         Wrap: =true
-                                        X: =0
-                                        Y: =432
+                                        X: =30
+                                        Y: =462
                                         ZIndex: =5
 
                                     HtmlText7 As htmlViewer:
                                         Fill: =RGBA(255, 255, 255, 1)
                                         Font: =Font.'Segoe UI'
-                                        Height: =120
+                                        Height: =102
                                         HtmlText: |-
-                                            ="<h4>Create prompts and earn Hearts</h4><br>
+                                            ="<h4>Create prompts and earn Hearts</h4>
                                             Each time others 'like' or 'save' your prompt, you earn Hearts for the leaderboard, bringing you closer to earning the best SAIL rewards 🎁"
                                         PaddingBottom: =0
                                         PaddingLeft: =0
                                         PaddingRight: =0
                                         PaddingTop: =0
                                         Width: =569
-                                        X: =41
-                                        Y: =480
+                                        X: =56
+                                        Y: =503
                                         ZIndex: =6
 
                                     "TextInputCanvas1 As 'Text input'":
@@ -808,18 +808,18 @@ PromptLibraryScreen As screen:
                                         Font: =Font.'Segoe UI'
                                         FontSize: =12
                                         FontWeight: =FontWeight.Normal
-                                        Height: =32
+                                        Height: =27
                                         Placeholder: |-
                                             ="Try: How to solve error 123 in powerapps"
                                         Width: =390
                                         X: =692
-                                        Y: =508
+                                        Y: =527
                                         ZIndex: =7
 
                                     ButtonCanvas1_7 As Button:
                                         BasePaletteColor: =RGBA(5, 102, 178, 1)
                                         DisplayMode: =DisplayMode.Edit
-                                        Height: =32
+                                        Height: =27
                                         Icon: ="DocumentBulletList"
                                         OnSelect: |-
                                             =UpdateContext({varNewPrompt:true});
@@ -829,7 +829,7 @@ PromptLibraryScreen As screen:
                                         Text: ="Create a Prompt"
                                         Width: =150
                                         X: =932
-                                        Y: =552
+                                        Y: =564
                                         ZIndex: =8
 
                                     Icon27 As icon.Newspaper:
@@ -837,11 +837,11 @@ PromptLibraryScreen As screen:
                                         Color: =RGBA(13, 50, 61, 1)
                                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                         DisabledColor: =RGBA(244, 244, 244, 1)
-                                        Height: =25
+                                        Height: =21
                                         Icon: =Icon.Newspaper
                                         Width: =25
                                         X: =658
-                                        Y: =515
+                                        Y: =532
                                         ZIndex: =9
 
     ContainerSpinner_1 As groupContainer:
