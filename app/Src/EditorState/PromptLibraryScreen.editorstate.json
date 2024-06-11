@@ -9648,9 +9648,8 @@
         },
         {
           "Category": "Data",
-          "NameMap": "{\"ID\":\"ID\",\"Icon\":\"Icon\",\"Value\":\"Value\"}",
           "PropertyName": "VarMenuDefaultVal",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Design",

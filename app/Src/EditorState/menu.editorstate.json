@@ -1776,7 +1776,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "//{ ID:2,Icon:Icon.Home ,Value: \"Home\" }",
+          "AutoRuleBindingString": "{ ID:2,Icon:Icon.Home ,Value: \"Home\" }",
           "InvariantPropertyName": "VarMenuDefaultVal",
           "IsLockable": false,
           "NameMapSourceSchema": "?"

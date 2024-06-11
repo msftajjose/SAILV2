@@ -1422,7 +1422,7 @@
               },
               {
                 "Category": "Data",
-                "InvariantScript": "VarMenuDefaultVal",
+                "InvariantScript": "menu.VarMenuDefaultVal",
                 "Property": "Default",
                 "RuleProviderType": "Unknown"
               },
@@ -2823,13 +2823,13 @@
       {
         "AFDDataSourceName": "",
         "AutoRuleBindingEnabled": false,
-        "AutoRuleBindingString": "//{ ID:2,Icon:Icon.Home ,Value: \"Home\" }",
+        "AutoRuleBindingString": "{ ID:2,Icon:Icon.Home ,Value: \"Home\" }",
         "InvariantPropertyName": "VarMenuDefaultVal",
         "IsLockable": false,
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638536868094372011",
+    "LastModifiedTimestamp": "638536871910586356",
     "Name": "menu",
     "Rules": [
       {
@@ -2864,7 +2864,7 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "{ ID:2,Icon:Icon.Home ,Value: \"Home\" }",
+        "InvariantScript": "//{ ID:2,Icon:Icon.Home ,Value: \"Home\" }",
         "Property": "VarMenuDefaultVal",
         "RuleProviderType": "System"
       },
@@ -2974,7 +2974,7 @@
       "Name": "VarMenuDefaultVal",
       "PropertyDataTypeKey": "Record",
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"ID\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Icon\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+      "Type": "{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"ObjNull\",\"EnumString\":\"N\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -2985,7 +2985,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638536868094372011",
+  "LastModifiedTimestamp": "638536871910586356",
   "Name": "3dcb2ec1d1f74675969b80e7b1fbd350",
   "OverridableProperties": {},
   "Version": "1.0"
