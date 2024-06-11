@@ -508,7 +508,7 @@ HomeScreen As screen:
 
                 Container5_1 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
-                    Fill: =RGBA(130, 130, 130, 1)
+                    Fill: =RGBA(247, 247, 247, 1)
                     FillPortions: =2
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -542,7 +542,6 @@ HomeScreen As screen:
                             ZIndex: =1
 
                             Container11_1 As groupContainer.manualLayoutContainer:
-                                Fill: =RGBA(255, 255, 255, .95)
                                 LayoutMinHeight: =100
                                 LayoutMinWidth: =250
                                 RadiusBottomLeft: =4
@@ -551,12 +550,34 @@ HomeScreen As screen:
                                 RadiusTopRight: =4
                                 ZIndex: =1
 
-                                ChatScreen_3 As group:
-                                    Height: =5
-                                    Width: =5
-                                    X: =-678
-                                    Y: =-174
+                                TextCanvas1_10 As Text:
+                                    Align: ='TextCanvas.Align'.Start
+                                    DisplayMode: =DisplayMode.Edit
+                                    Font: =Font.'Courier New'
+                                    FontColor: =RGBA(0, 0, 0, 1)
+                                    Height: =30
+                                    Size: =14
+                                    Text: ="Squad Chat"
+                                    Weight: ='TextCanvas.Weight'.Bold
+                                    Width: =144
+                                    Wrap: =true
+                                    X: =14
+                                    Y: =0
                                     ZIndex: =1
+
+                                Container14 As groupContainer:
+                                    BorderThickness: =1
+                                    DropShadow: =DropShadow.Light
+                                    Fill: =RGBA(255, 255, 255, 1)
+                                    Height: =275
+                                    RadiusBottomLeft: =5
+                                    RadiusBottomRight: =5
+                                    RadiusTopLeft: =5
+                                    RadiusTopRight: =5
+                                    Width: =609
+                                    X: =14
+                                    Y: =27
+                                    ZIndex: =2
 
                                     "Gallery3_4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                                         '#CopilotOverlayLabel': ="Filtered"
@@ -569,10 +590,10 @@ HomeScreen As screen:
                                         TemplatePadding: =3
                                         TemplateSize: =70
                                         Visible: =!IsBlank(varCrrUser.TeamID)
-                                        Width: =620
-                                        X: =14
-                                        Y: =31
-                                        ZIndex: =2
+                                        Width: =599
+                                        X: =4
+                                        Y: =26
+                                        ZIndex: =1
 
                                         Button6_15 As button:
                                             BorderColor: =App.Theme.Colors.Primary
@@ -596,13 +617,14 @@ HomeScreen As screen:
                                             PressedBorderColor: =
                                             PressedColor: =Self.Color
                                             PressedFill: =App.Theme.Colors.Darker40
-                                            RadiusBottomLeft: =15
-                                            RadiusBottomRight: =15
-                                            RadiusTopLeft: =15
-                                            RadiusTopRight: =15
+                                            RadiusBottomLeft: =7
+                                            RadiusBottomRight: =7
+                                            RadiusTopLeft: =7
+                                            RadiusTopRight: =7
                                             Size: =15
                                             Text: =""
-                                            Width: =593
+                                            Width: =571
+                                            X: =10
                                             Y: =17
                                             ZIndex: =1
 
@@ -618,6 +640,7 @@ HomeScreen As screen:
                                             RadiusTopLeft: =15
                                             RadiusTopRight: =15
                                             Width: =50
+                                            X: =10
                                             Y: =17
                                             ZIndex: =2
 
@@ -638,7 +661,7 @@ HomeScreen As screen:
                                                 =First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)).LoginName & " Says:" 
                                             VerticalAlign: =VerticalAlign.Top
                                             Width: =154
-                                            X: =4
+                                            X: =14
                                             Y: =2
                                             ZIndex: =3
 
@@ -662,7 +685,7 @@ HomeScreen As screen:
                                             Text: =ThisItem.Msg
                                             VerticalAlign: =VerticalAlign.Top
                                             Width: =527
-                                            X: =56
+                                            X: =66
                                             Y: =20
                                             ZIndex: =4
 
@@ -703,16 +726,17 @@ HomeScreen As screen:
                                         HoverFill: =App.Theme.Colors.Lighter70
                                         Italic: =true
                                         Mode: =TextMode.MultiLine
-                                        RadiusBottomLeft: =25
-                                        RadiusBottomRight: =25
-                                        RadiusTopLeft: =25
-                                        RadiusTopRight: =25
+                                        PaddingRight: =10
+                                        RadiusBottomLeft: =7
+                                        RadiusBottomRight: =7
+                                        RadiusTopLeft: =7
+                                        RadiusTopRight: =7
                                         Size: =11
                                         Visible: =!IsBlank(varCrrUser.TeamID)
                                         Width: =578
-                                        X: =14
-                                        Y: =260
-                                        ZIndex: =3
+                                        X: =13
+                                        Y: =207
+                                        ZIndex: =2
 
                                     Icon7_9 As icon.Send:
                                         BorderColor: =App.Theme.Colors.Darker40
@@ -732,15 +756,16 @@ HomeScreen As screen:
                                         Tooltip: ="Send"
                                         Visible: =!IsBlank(varCrrUser.TeamID)
                                         Width: =28
-                                        X: =609
-                                        Y: =286
-                                        ZIndex: =4
+                                        X: =553
+                                        Y: =216
+                                        ZIndex: =3
 
                                     Icon7_8 As icon.Send:
                                         BorderColor: =App.Theme.Colors.Darker40
                                         Color: =RGBA(13, 50, 61, 1)
                                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                         DisabledColor: =RGBA(244, 244, 244, 1)
+                                        Fill: =RGBA(255, 255, 255, 1)
                                         Height: =27
                                         Icon: =Icon.Reload
                                         OnSelect: |
@@ -748,24 +773,9 @@ HomeScreen As screen:
                                         Tooltip: ="Refresh"
                                         Visible: =!IsBlank(varCrrUser.TeamID)
                                         Width: =23
-                                        X: =607
-                                        Y: =260
-                                        ZIndex: =5
-
-                                TextCanvas1_10 As Text:
-                                    Align: ='TextCanvas.Align'.Start
-                                    DisplayMode: =DisplayMode.Edit
-                                    Font: =Font.'Courier New'
-                                    FontColor: =RGBA(0, 0, 0, 1)
-                                    Height: =30
-                                    Size: =14
-                                    Text: ="Squad Chat"
-                                    Weight: ='TextCanvas.Weight'.Bold
-                                    Width: =144
-                                    Wrap: =true
-                                    X: =14
-                                    Y: =0
-                                    ZIndex: =6
+                                        X: =576
+                                        Y: =8
+                                        ZIndex: =4
 
                                 ButtonCanvas1_4 As Button:
                                     BasePaletteColor: =RGBA(156, 220, 79, 1)
@@ -780,7 +790,7 @@ HomeScreen As screen:
                                     Width: =221
                                     X: =213
                                     Y: =105
-                                    ZIndex: =9
+                                    ZIndex: =3
 
                                 ButtonCanvas1_5 As Button:
                                     BasePaletteColor: =RGBA(156, 220, 79, 1)
@@ -796,7 +806,7 @@ HomeScreen As screen:
                                     Width: =221
                                     X: =213
                                     Y: =182
-                                    ZIndex: =10
+                                    ZIndex: =4
 
                         Container9_1 As groupContainer.horizontalAutoLayoutContainer:
                             LayoutMinHeight: =100
