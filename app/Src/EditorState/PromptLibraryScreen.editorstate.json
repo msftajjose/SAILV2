@@ -12223,7 +12223,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon26_4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20847,7 +20847,7 @@
       "MetaDataIDKey": "",
       "Name": "TextCanvas4_15",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

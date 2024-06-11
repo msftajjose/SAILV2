@@ -754,7 +754,7 @@ PromptLibraryScreen As screen:
                                         Text: =DateValue(ThisItem.'Created On')
                                         Weight: ='TextCanvas.Weight'.Semibold
                                         Width: =70
-                                        X: =839
+                                        X: =884
                                         Y: =13
                                         ZIndex: =4
 
@@ -895,12 +895,12 @@ PromptLibraryScreen As screen:
                                             Patch(tblFavPrompts,First(Filter(tblFavPrompts,UserID.LoginName=varlgname && PromptID.TipsandTricksCollaboration=ThisItem.TipsandTricksCollaboration)), { IsActiveFav:0});
                                             Refresh(tblFavPrompts);
                                             UpdateContext({varSavedPrompts:Filter(tblFavPrompts,UserID.LoginName=varlgname && IsActiveFav=1)});
-                                            Reset(Gallery10_3);
+                                            Reset(Gallery5_11);
                                             Reset(Gallery10_5);
                                             UpdateContext({varspinner:false});
                                         Tooltip: ="Remove Bookmark"
                                         Width: =25
-                                        X: =909
+                                        X: =829
                                         Y: =13
                                         ZIndex: =17
 
@@ -1432,7 +1432,8 @@ PromptLibraryScreen As screen:
                 Set(varFavAlreadyExist,Filter(tblFavPrompts,UserID.LoginName=varlgname && PromptID.TipsandTricksCollaboration= varSelectedPromptLib.TipsandTricksCollaboration));
                 If(IsEmpty(varFavAlreadyExist),Patch(tblFavPrompts,Defaults(tblFavPrompts),{Name:"FavTips",UserID:varCrrUser,PromptID:varSelectedPromptLib,IsActiveFav:1,tipID:varSelectedPromptLib.TipsandTricksCollaboration}),Patch(First(varFavAlreadyExist), { IsActiveFav:0}));
                 Patch(TipsandTricksCollaborations,First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)),{NoOfLikes:varExtScore});
-                
+                UpdateContext({varShowExistingPrompt:false});
+                UpdateContext({varSelectedPromptLib:Blank()});
                 UpdateContext({varLoadingSpinner:false});
             Tooltip: ="Bookmark prompt"
             Width: =30
