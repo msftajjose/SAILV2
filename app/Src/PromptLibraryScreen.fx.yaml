@@ -329,181 +329,6 @@ PromptLibraryScreen As screen:
                                 Width: =Parent.Width
                                 ZIndex: =1
 
-                                "Gallery10_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-                                    BorderColor: =App.Theme.Colors.Darker40
-                                    DelayItemLoading: =true
-                                    Fill: =RGBA(255, 255, 255, 1)
-                                    Height: =387
-                                    Items: =If(Gallery5_15.Selected.ID=2,FirstN(Sort(TipsandTricksCollaborations,NoOfLikes,SortOrder.Descending),50),FirstN(TipsandTricksCollaborations,50))
-                                    Layout: =Layout.Vertical
-                                    TemplatePadding: =3
-                                    TemplateSize: =45
-                                    Width: =Parent.Width
-                                    Y: =45
-                                    ZIndex: =2
-
-                                    HtmlText1_23 As htmlViewer:
-                                        Height: =45
-                                        HtmlText: |+
-                                            ="<div style='background-color:rgba(" & 131 & "," & 131 & "," & 131 &"," & .2 & ");   
-                                            box-shadow: 1px 2px 12px 0px rgba(" & 0 & "," & 0 & "," & 0 &"," & 1 & ");
-                                            margin: 0px; 
-                                            width: "& Parent.TemplateWidth-45 &"px; 
-                                            height: "& Parent.TemplateHeight-13 &"px; 
-                                            border-radius: 10px'>
-                                            </div>"
-                                            
-                                        Width: =Parent.TemplateWidth
-                                        ZIndex: =1
-
-                                    Title1_8 As label:
-                                        Color: =RGBA(50, 49, 48, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        Font: =App.Theme.Font
-                                        FontWeight: = FontWeight.Semibold
-                                        Height: =20
-                                        OnSelect: =Select(Parent)
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Size: =8
-                                        Text: =ThisItem.Name
-                                        VerticalAlign: =VerticalAlign.Top
-                                        Width: =145
-                                        X: =18
-                                        Y: =12
-                                        ZIndex: =3
-
-                                    TextCanvas4_6 As Text:
-                                        Align: ='TextCanvas.Align'.Start
-                                        DisplayMode: =DisplayMode.Edit
-                                        Font: =Font.'Courier New'
-                                        FontColor: =RGBA(139, 154, 159, 1)
-                                        Height: =20
-                                        Size: =8
-                                        Text: =ThisItem.UserID.LoginName
-                                        Width: =70
-                                        X: =869
-                                        Y: =11
-                                        ZIndex: =6
-
-                                    Icon18_11 As icon.AddUser:
-                                        BorderColor: =App.Theme.Colors.Darker40
-                                        Color: =RGBA(106, 122, 127, 1)
-                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                        DisabledColor: =RGBA(244, 244, 244, 1)
-                                        Height: =15
-                                        Icon: =Icon.Person
-                                        OnSelect: =Select(Parent)
-                                        Width: =15
-                                        X: =846
-                                        Y: =14
-                                        ZIndex: =7
-
-                                    Title1_9 As label:
-                                        Color: =RGBA(106, 122, 127, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        Font: =App.Theme.Font
-                                        FontWeight: = FontWeight.Semibold
-                                        Height: =20
-                                        OnSelect: =Select(Parent)
-                                        Overflow: =Overflow.Scroll
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Size: =8
-                                        Text: =ThisItem.TipsTricks
-                                        VerticalAlign: =VerticalAlign.Top
-                                        Width: =619
-                                        X: =127
-                                        Y: =11
-                                        ZIndex: =10
-
-                                    Icon18_14 As icon.AddUser:
-                                        BorderColor: =App.Theme.Colors.Darker40
-                                        Color: =RGBA(9, 33, 98, 1)
-                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                        DisabledColor: =RGBA(244, 244, 244, 1)
-                                        Height: =15
-                                        Icon: =Icon.Copy
-                                        OnSelect: =Copy(ThisItem.TipsTricks)
-                                        Tooltip: ="Copy Prompt"
-                                        Width: =15
-                                        X: =1094
-                                        Y: =15
-                                        ZIndex: =11
-
-                                    TextCanvas4_7 As Text:
-                                        Align: ='TextCanvas.Align'.Start
-                                        DisplayMode: =DisplayMode.Edit
-                                        Font: =Font.'Courier New'
-                                        FontColor: =RGBA(139, 154, 159, 1)
-                                        Height: =20
-                                        Size: =8
-                                        Text: =ThisItem.NoOfLikes
-                                        Width: =30
-                                        X: =794
-                                        Y: =12
-                                        ZIndex: =12
-
-                                    Icon18_12 As icon.AddUser:
-                                        BorderColor: =App.Theme.Colors.Darker40
-                                        Color: =RGBA(106, 122, 127, 1)
-                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                        DisabledColor: =RGBA(244, 244, 244, 1)
-                                        Height: =15
-                                        Icon: =Icon.Heart
-                                        OnSelect: |
-                                            =UpdateContext({varLoadingSpinner:true});
-                                            Select(Parent);
-                                            Refresh(TipsLikes);
-                                            UpdateContext({varAlreadyLiked:First(Filter(TipsLikes,UserID.Registrations_Dv=varCrrUser.Registrations_Dv && ListItemID.TipsandTricksCollaboration=ThisItem.TipsandTricksCollaboration)).Likes});
-                                            If(IsBlank(varAlreadyLiked),Patch(TipsLikes,Defaults(TipsLikes),{Name:"TipsLikes",UserID:varCrrUser,ListItemID:ThisItem,Likes:1}));
-                                            Refresh(TipsLikes);
-                                            Refresh(TipsandTricksCollaborations);
-                                            UpdateContext({varLikedUser:First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv))});
-                                            If(IsBlank(varAlreadyLiked),Patch(AIUserScores,Defaults(AIUserScores),{Name:"UserScore",UserID:First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)),Processed:"No",Score:100,TeamID:First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)).TeamID}));
-                                            UpdateContext({varLoadingSpinner:false});
-                                        Width: =15
-                                        X: =779
-                                        Y: =14
-                                        ZIndex: =13
-
-                                    Icon18_13 As icon.AddUser:
-                                        BorderColor: =App.Theme.Colors.Darker40
-                                        Color: =RGBA(132, 40, 38, 1)
-                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                        DisabledColor: =RGBA(244, 244, 244, 1)
-                                        DisplayMode: =If(IsEmpty(Filter(tblFavPrompts,UserID.LoginName=varlgname && PromptID.TipsandTricksCollaboration=ThisItem.TipsandTricksCollaboration)),DisplayMode.Edit, DisplayMode.Disabled)
-                                        Height: =15
-                                        Icon: =Icon.BookmarkFilled
-                                        OnSelect: |-
-                                            =UpdateContext({varLoadingSpinner:true});
-                                            Select(Parent);
-                                            Refresh(tblFavPrompts);
-                                            Set(varFavAlreadyExist,Filter(tblFavPrompts,UserID.LoginName=varlgname && PromptID.TipsandTricksCollaboration=ThisItem.TipsandTricksCollaboration));
-                                            If(IsEmpty(varFavAlreadyExist),Patch(tblFavPrompts,Defaults(tblFavPrompts),{Name:"FavTips",UserID:varCrrUser,PromptID:ThisItem,IsActiveFav:1,tipID:ThisItem.TipsandTricksCollaboration}),Patch(First(varFavAlreadyExist), { IsActiveFav:0}));
-                                            UpdateContext({varLoadingSpinner:false});
-                                        Width: =15
-                                        X: =1030
-                                        Y: =14
-                                        ZIndex: =14
-
-                                    TextCanvas4_8 As Text:
-                                        Align: ='TextCanvas.Align'.Start
-                                        DisplayMode: =DisplayMode.Edit
-                                        Font: =Font.'Courier New'
-                                        FontColor: =RGBA(139, 154, 159, 1)
-                                        Height: =20
-                                        Size: =8
-                                        Text: =DateValue(ThisItem.'Created On')
-                                        Width: =70
-                                        X: =950
-                                        Y: =11
-                                        ZIndex: =15
-
                                 "Gallery5_15 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
                                     BorderColor: =App.Theme.Colors.Darker40
                                     DelayItemLoading: =true
@@ -726,6 +551,190 @@ PromptLibraryScreen As screen:
                                         X: =585
                                         Y: =11
                                         ZIndex: =15
+
+                                "Gallery10_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    BorderStyle: =BorderStyle.None
+                                    DelayItemLoading: =true
+                                    Height: =336
+                                    Items: =FirstN(Sort(TipsandTricksCollaborations,'Created On',SortOrder.Descending),50)
+                                    Layout: =Layout.Vertical
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    TemplatePadding: =3
+                                    TemplateSize: =45
+                                    Width: =1131
+                                    Y: =45
+                                    ZIndex: =10
+
+                                    Button6_18 As button:
+                                        BorderColor: =App.Theme.Colors.Primary
+                                        BorderThickness: =1
+                                        DisabledBorderColor: =RGBA(13, 50, 61, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        DisabledFill: =RGBA(255, 255, 255, 1)
+                                        DisplayMode: =DisplayMode.Disabled
+                                        Fill: =If(ThisItem.IsSelected,RGBA(255, 255, 255, 1),RGBA(255,255, 255, .95))
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =32
+                                        HoverBorderColor: =
+                                        HoverColor: =RGBA(255, 255, 255, 1)
+                                        HoverFill: =RGBA(255, 255, 255, 1)
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        PressedBorderColor: =
+                                        PressedColor: =Self.Color
+                                        PressedFill: =App.Theme.Colors.Darker40
+                                        RadiusBottomLeft: =7
+                                        RadiusBottomRight: =7
+                                        RadiusTopLeft: =7
+                                        RadiusTopRight: =7
+                                        Size: =15
+                                        Text: =""
+                                        Width: =1047
+                                        X: =10
+                                        Y: =9
+                                        ZIndex: =1
+
+                                    TextCanvas4_7 As Text:
+                                        Align: ='TextCanvas.Align'.Start
+                                        DisplayMode: =DisplayMode.Edit
+                                        Font: =Font.'Segoe UI'
+                                        FontColor: =RGBA(0, 0, 0, 1)
+                                        Height: =20
+                                        Size: =8
+                                        Text: =DateValue(ThisItem.'Created On')
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =70
+                                        X: =839
+                                        Y: =13
+                                        ZIndex: =4
+
+                                    Icon18_22 As icon.AddUser:
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(9, 33, 98, 1)
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledColor: =RGBA(244, 244, 244, 1)
+                                        Height: =15
+                                        Icon: =Icon.Copy
+                                        OnSelect: =Copy(ThisItem.TipsTricks)
+                                        Tooltip: ="Copy Prompt"
+                                        Width: =15
+                                        X: =1077
+                                        Y: =15
+                                        ZIndex: =7
+
+                                    TextCanvas4_8 As Text:
+                                        Align: ='TextCanvas.Align'.Start
+                                        DisplayMode: =DisplayMode.Edit
+                                        Font: =Font.'Courier New'
+                                        FontColor: =RGBA(0, 0, 0, 1)
+                                        Height: =20
+                                        Size: =9
+                                        Text: =ThisItem.NoOfLikes
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =30
+                                        X: =990
+                                        Y: =13
+                                        ZIndex: =8
+
+                                    Rectangle6_2 As rectangle:
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Fill: =If(ThisItem.Scenario="Other",Color.Gray,If(ThisItem.Scenario="Productivity",Color.Red,If(ThisItem.Scenario="Entertainment",Color.Green,If(ThisItem.Scenario="Cloud",Color.Blue,If(ThisItem.Scenario="Insights",Color.Orange)))))
+                                        Height: =20
+                                        OnSelect: =Select(Parent)
+                                        Width: =20
+                                        X: =721
+                                        Y: =13
+                                        ZIndex: =10
+
+                                    Image11_3 As image:
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledFill: =RGBA(244, 244, 244, 1)
+                                        Height: =20
+                                        Image: =DFM
+                                        OnSelect: =Select(Parent)
+                                        Visible: =If(First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=ThisItem.TipsandTricksCollaboration)).IsDFMCo=2,true,false)
+                                        Width: =20
+                                        X: =52
+                                        Y: =13
+                                        ZIndex: =11
+
+                                    HtmlText8_4 As htmlViewer:
+                                        Font: =Font.'Segoe UI'
+                                        Height: =28
+                                        HtmlText: =If(First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=ThisItem.TipsandTricksCollaboration)).IsDFMCo=2,"<font color=blue>(Dfm)</font>","") &"  " & If(Len(ThisItem.Subject)>60,Left(ThisItem.TipsTricks,60) & "...",ThisItem.Subject)
+                                        OnSelect: |-
+                                            =Select(Parent);
+                                            
+                                            UpdateContext({varShowExistingPrompt:true});
+                                            
+                                            UpdateContext({varSelectedPromptLib:ThisItem});
+                                            Refresh(tblFavPrompts);
+                                            Set(varFavAlreadyExist,Filter(tblFavPrompts,UserID.LoginName=varlgname && PromptID.TipsandTricksCollaboration=ThisItem.TipsandTricksCollaboration));
+                                        Size: =8
+                                        Width: =500
+                                        X: =82
+                                        Y: =9
+                                        ZIndex: =12
+
+                                    TextCanvas4_6 As Text:
+                                        Align: ='TextCanvas.Align'.Start
+                                        DisplayMode: =DisplayMode.Edit
+                                        Font: =Font.'Segoe UI'
+                                        FontColor: =RGBA(0, 0, 0, 1)
+                                        Height: =20
+                                        Size: =8
+                                        Text: =ThisItem.Scenario
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =70
+                                        X: =751
+                                        Y: =13
+                                        ZIndex: =13
+
+                                    Image11_4 As image:
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledFill: =RGBA(244, 244, 244, 1)
+                                        Height: =20
+                                        Image: =heart
+                                        OnSelect: =Select(Parent)
+                                        Width: =20
+                                        X: =966
+                                        Y: =14
+                                        ZIndex: =14
+
+                                    TextCanvas4_12 As Text:
+                                        Align: ='TextCanvas.Align'.Start
+                                        DisplayMode: =DisplayMode.Edit
+                                        Font: =Font.'Segoe UI'
+                                        FontColor: =RGBA(0, 0, 0, 1)
+                                        Height: =20
+                                        Size: =8
+                                        Text: =ThisItem.UserID.LoginName
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =70
+                                        X: =624
+                                        Y: =13
+                                        ZIndex: =15
+
+                                    Icon18_23 As icon.AddUser:
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(9, 33, 98, 1)
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledColor: =RGBA(244, 244, 244, 1)
+                                        Height: =15
+                                        Icon: =Icon.Person
+                                        OnSelect: =Copy(ThisItem.TipsTricks)
+                                        Tooltip: ="Copy Prompt"
+                                        Width: =15
+                                        X: =605
+                                        Y: =17
+                                        ZIndex: =16
 
                                 NewPrompt As group:
                                     Height: =5
