@@ -491,6 +491,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "PromptLibraryScreen.MainContainer_2.BottomContainer_2.CommonContainer_2.Container5_2.Container6_2.Container9_2.Container12_2.ButtonCanvas1_7.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PromptLibraryScreen.MainContainer_2.BottomContainer_2.CommonContainer_2.Container5_2.Container6_2.Container9_2.Container12_2.ButtonCanvas1_7.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 23,
+                  "charOffset": 140,
+                  "snippet": {
+                    "text": "DateValue('Created On')"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "PromptLibraryScreen",
+                "type": "PromptLibraryScreen.MainContainer_2.BottomContainer_2.CommonContainer_2.Container5_2.Container6_2.Container9_2.Container12_2.ButtonCanvas1_7"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DateValue"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PromptLibraryScreen.MainContainer_2.BottomContainer_2.CommonContainer_2.Container5_2.Container6_2.Container9_2.Container12_2.ButtonCanvas1_7.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PromptLibraryScreen.MainContainer_2.BottomContainer_2.CommonContainer_2.Container5_2.Container6_2.Container9_2.Container12_2.ButtonCanvas1_7.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 163,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "PromptLibraryScreen",
+                "type": "PromptLibraryScreen.MainContainer_2.BottomContainer_2.CommonContainer_2.Container5_2.Container6_2.Container9_2.Container12_2.ButtonCanvas1_7"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PromptLibraryScreen.MainContainer_2.BottomContainer_2.CommonContainer_2.Container5_2.Container6_2.Container9_2.Container12_2.ButtonCanvas1_7.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PromptLibraryScreen.MainContainer_2.BottomContainer_2.CommonContainer_2.Container5_2.Container6_2.Container9_2.Container12_2.ButtonCanvas1_7.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 137,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "PromptLibraryScreen",
+                "type": "PromptLibraryScreen.MainContainer_2.BottomContainer_2.CommonContainer_2.Container5_2.Container6_2.Container9_2.Container12_2.ButtonCanvas1_7"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "MySessions.TipScreen.Gallery6.Items"
                 }
               ],
@@ -4945,6 +5065,66 @@
                 "member": "AccessibleLabel",
                 "module": "PromptLibraryScreen",
                 "type": "PromptLibraryScreen.MainContainer_2.BottomContainer_2.CommonContainer_2.Container5_2.Container6_2.Container9_2.Container12_2.Gallery10_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PromptLibraryScreen.OpenExistingPrompt_1.Icon26_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PromptLibraryScreen.OpenExistingPrompt_1.Icon26_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "PromptLibraryScreen",
+                "type": "PromptLibraryScreen.OpenExistingPrompt_1.Icon26_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PromptLibraryScreen.OpenExistingPrompt_1.TextInputCanvas3_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PromptLibraryScreen.OpenExistingPrompt_1.TextInputCanvas3_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "PromptLibraryScreen",
+                "type": "PromptLibraryScreen.OpenExistingPrompt_1.TextInputCanvas3_2"
               }
             }
           ],
@@ -17322,6 +17502,156 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "PromptLibraryScreen.OpenExistingPrompt_1.Icon26_3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PromptLibraryScreen.OpenExistingPrompt_1.Icon26_3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "PromptLibraryScreen",
+                "type": "PromptLibraryScreen.OpenExistingPrompt_1.Icon26_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PromptLibraryScreen.NewPromptScreen.TextInputCanvas2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PromptLibraryScreen.NewPromptScreen.TextInputCanvas2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "PromptLibraryScreen",
+                "type": "PromptLibraryScreen.NewPromptScreen.TextInputCanvas2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PromptLibraryScreen.NewPromptScreen.ComboboxCanvas1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PromptLibraryScreen.NewPromptScreen.ComboboxCanvas1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "PromptLibraryScreen",
+                "type": "PromptLibraryScreen.NewPromptScreen.ComboboxCanvas1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PromptLibraryScreen.NewPromptScreen.CheckboxCanvas1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PromptLibraryScreen.NewPromptScreen.CheckboxCanvas1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "PromptLibraryScreen",
+                "type": "PromptLibraryScreen.NewPromptScreen.CheckboxCanvas1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PromptLibraryScreen.NewPromptScreen.TextInputCanvas3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PromptLibraryScreen.NewPromptScreen.TextInputCanvas3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "PromptLibraryScreen",
+                "type": "PromptLibraryScreen.NewPromptScreen.TextInputCanvas3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.AM"
                 }
               ],
@@ -18051,66 +18381,6 @@
               },
               "properties": {
                 "member": "varLoadingSpinner",
-                "module": "PromptLibraryScreen",
-                "type": "PromptLibraryScreen"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "PromptLibraryScreen.varSelectedPromptLib"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "PromptLibraryScreen.varSelectedPromptLib",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varSelectedPromptLib",
-                "module": "PromptLibraryScreen",
-                "type": "PromptLibraryScreen"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "PromptLibraryScreen.varShowExistingPrompt"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "PromptLibraryScreen.varShowExistingPrompt",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varShowExistingPrompt",
                 "module": "PromptLibraryScreen",
                 "type": "PromptLibraryScreen"
               }

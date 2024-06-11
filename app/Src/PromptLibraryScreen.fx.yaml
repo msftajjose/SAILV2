@@ -332,7 +332,6 @@ PromptLibraryScreen As screen:
                                 "Gallery5_15 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
                                     BorderColor: =App.Theme.Colors.Darker40
                                     DelayItemLoading: =true
-                                    Fill: =RGBA(214, 221, 224, 1)
                                     Height: =45
                                     Items: |-
                                         =//Table( {ID:1, Value: "Top Rated" }, { ID:2,Value: "Liked" },{ ID:3,Value: "Featured" },{ID:4, Value: "All" } )
@@ -340,12 +339,13 @@ PromptLibraryScreen As screen:
                                         Table( { ID:2,Value: "Liked" },{ID:4, Value: "All" } )
                                     TemplatePadding: =0
                                     TemplateSize: =148
-                                    Width: =Parent.Width
+                                    Width: =1090
+                                    X: =30
                                     ZIndex: =3
 
                                     Button7_3 As button:
-                                        BorderColor: =RGBA(0,0,0,0)
-                                        BorderThickness: =0
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
                                         Color: =If(ThisItem.IsSelected,  Color.White,Color.Black)
                                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -360,11 +360,15 @@ PromptLibraryScreen As screen:
                                         PressedBorderColor: =RGBA(0,0,0,0)
                                         PressedColor: =Self.Color
                                         PressedFill: =Self.Fill
+                                        RadiusBottomLeft: =5
+                                        RadiusBottomRight: =5
+                                        RadiusTopLeft: =5
+                                        RadiusTopRight: =5
                                         Size: =12
                                         Text: =ThisItem.Value
                                         Width: =131
                                         X: =10
-                                        Y: =9
+                                        Y: =14
                                         ZIndex: =1
 
                                 "Gallery10_4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -553,17 +557,19 @@ PromptLibraryScreen As screen:
                                         ZIndex: =15
 
                                 "Gallery10_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-                                    BorderColor: =App.Theme.Colors.Darker40
                                     BorderStyle: =BorderStyle.None
+                                    BorderThickness: =1
                                     DelayItemLoading: =true
+                                    Fill: =RGBA(255, 255, 255, 1)
                                     Height: =336
-                                    Items: =FirstN(Sort(TipsandTricksCollaborations,'Created On',SortOrder.Descending),50)
+                                    Items: =If(Gallery5_15.Selected.ID=2,FirstN(Sort(TipsandTricksCollaborations,NoOfLikes,SortOrder.Descending),50),FirstN(Sort(TipsandTricksCollaborations,'Created On',SortOrder.Descending),50))
                                     Layout: =Layout.Vertical
                                     LoadingSpinner: =LoadingSpinner.Data
                                     TemplatePadding: =3
                                     TemplateSize: =45
-                                    Width: =1131
-                                    Y: =45
+                                    Width: =Parent.Width-50
+                                    X: =30
+                                    Y: =55
                                     ZIndex: =10
 
                                     Button6_18 As button:
@@ -679,7 +685,7 @@ PromptLibraryScreen As screen:
                                         Size: =8
                                         Width: =500
                                         X: =82
-                                        Y: =9
+                                        Y: =12
                                         ZIndex: =12
 
                                     TextCanvas4_6 As Text:
@@ -747,16 +753,19 @@ PromptLibraryScreen As screen:
                                         Height: =164
                                         HtmlText: |+
                                             ="<div style='background-color:rgba(" & 131 & "," & 131 & "," & 131 &"," & .2 & ");   
-                                            box-shadow: 1px 2px 12px 0px rgba(" & 0 & "," & 0 & "," & 0 &"," & 1 & ");
+                                            
+                                            border-style: solid;
+                                            border-width: 1px;
                                             margin: 0px; 
                                             width: "& Parent.Width-60 &"px; 
                                             height: 134px; 
-                                            border-radius: 10px'>
+                                            border-radius: 5px'>
                                             </div>"
+                                            //box-shadow: 1px 2px 12px 0px rgba(" & 0 & "," & 0 & "," & 0 &"," & 1 & ");
                                             
-                                        Width: =1132
-                                        X: =8
-                                        Y: =462
+                                        Width: =1096
+                                        X: =23
+                                        Y: =467
                                         ZIndex: =1
 
                                     TextCanvas1_16 As Text:
@@ -787,22 +796,24 @@ PromptLibraryScreen As screen:
                                         PaddingRight: =0
                                         PaddingTop: =0
                                         Width: =569
-                                        X: =21
-                                        Y: =475
+                                        X: =41
+                                        Y: =480
                                         ZIndex: =6
 
                                     "TextInputCanvas1 As 'Text input'":
                                         AccessibleLabel: ="Prompt Title"
+                                        Appearance: ='TextInputCanvas.Appearance'.Outline
                                         BasePaletteColor: =
                                         DisplayMode: =DisplayMode.Edit
                                         Font: =Font.'Segoe UI'
                                         FontSize: =12
                                         FontWeight: =FontWeight.Normal
-                                        Height: =27
-                                        Placeholder: ="Prompt Title"
+                                        Height: =32
+                                        Placeholder: |-
+                                            ="Try: How to solve error 123 in powerapps"
                                         Width: =390
-                                        X: =655
-                                        Y: =505
+                                        X: =692
+                                        Y: =508
                                         ZIndex: =7
 
                                     ButtonCanvas1_7 As Button:
@@ -810,10 +821,14 @@ PromptLibraryScreen As screen:
                                         DisplayMode: =DisplayMode.Edit
                                         Height: =32
                                         Icon: ="DocumentBulletList"
+                                        OnSelect: |-
+                                            =UpdateContext({varNewPrompt:true});
+                                            
+                                            Set(varAlreadySubmittedPrompt,First(Filter(TipsandTricksCollaborations,UserID.LoginName=varlgname && DateValue('Created On')=DateValue(Today()))));
                                         PaddingRight: =0
                                         Text: ="Create a Prompt"
                                         Width: =150
-                                        X: =895
+                                        X: =932
                                         Y: =552
                                         ZIndex: =8
 
@@ -825,8 +840,8 @@ PromptLibraryScreen As screen:
                                         Height: =25
                                         Icon: =Icon.Newspaper
                                         Width: =25
-                                        X: =623
-                                        Y: =510
+                                        X: =658
+                                        Y: =515
                                         ZIndex: =9
 
     ContainerSpinner_1 As groupContainer:
@@ -1083,4 +1098,571 @@ PromptLibraryScreen As screen:
             X: =590
             Y: =224
             ZIndex: =10
+
+    OpenExistingPrompt_1 As groupContainer:
+        DropShadow: =DropShadow.Light
+        Height: =768
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =varShowExistingPrompt
+        Width: =1366
+        ZIndex: =4
+
+        Shadowed_Bck_11 As rectangle:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Width: =1366
+            ZIndex: =1
+
+        HtmlText1_29 As htmlViewer:
+            Height: =584
+            HtmlText: |
+                ="<div style='background-color: rgba(255,255,255,100%); 
+                margin: 20px; 
+                width: 1120px; 
+                height: 500px; 
+                border-radius: 30px'>
+                </div>"
+                
+                /*
+                "<div style='background-color: rgba(1,2,3,30%); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                "<div style='background-color: rgba(39,69,129,1); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                
+                */
+            Width: =1175
+            X: =110
+            Y: =92
+            ZIndex: =2
+
+        Label_SubHeading2_18 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            Height: =53
+            Size: =30
+            Text: |+
+                =
+                
+            Width: =839
+            X: =232
+            Y: =152
+            ZIndex: =3
+
+        HtmlText6_13 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =62
+            HtmlText: ="Make sure to input the Prompt in your DfM Copilot to ensure the best results🎁"
+            Size: =12
+            Width: =1041
+            X: =160
+            Y: =230
+            ZIndex: =4
+
+        btn_Start_70 As button:
+            BorderColor: =RGBA(141, 48, 128, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: = DisplayMode.Edit
+            Fill: =RGBA(15, 108, 189, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =Copy(TextInputCanvas3_2.Value);
+                
+                Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewPromptScore",Score:5,UserID:varCrrUser});
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="Copy Prompt"
+            Tooltip: ="Click here to copy prompt above"
+            Width: =145
+            X: =1075
+            Y: =555
+            ZIndex: =8
+
+        btn_Start_68 As button:
+            BorderColor: =RGBA(141, 48, 128, 1)
+            Color: =RGBA(141, 48, 128, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =UpdateContext({varShowExistingPrompt:false});
+                UpdateContext({varSelectedPromptLib:Blank()});
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="             Cancel"
+            Tooltip: ="New users click to Register"
+            Width: =165
+            X: =709
+            Y: =555
+            ZIndex: =9
+
+        Image21_5 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Image: =CopilotLogo
+            Width: =45
+            X: =162
+            Y: =150
+            ZIndex: =10
+
+        HtmlText6_21 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =34
+            HtmlText: =varSelectedPromptLib.Scenario
+            Size: =12
+            Width: =173
+            X: =187
+            Y: =272
+            ZIndex: =13
+
+        HtmlText6_24 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =39
+            HtmlText: =varSelectedPromptLib.Subject
+            Size: =12
+            Width: =909
+            X: =162
+            Y: =315
+            ZIndex: =15
+
+        "TextInputCanvas3_2 As 'Text input'":
+            Appearance: ='TextInputCanvas.Appearance'.Outline
+            DisplayMode: =DisplayMode.View
+            Font: =Font.'Segoe UI'
+            Height: =160
+            Mode: ='TextInputCanvas.Mode'.Multiline
+            Placeholder: ="Input your prompt here"
+            Value: =varSelectedPromptLib.TipsTricks
+            Visible: =true
+            Width: =1060
+            X: =160
+            Y: =365
+            ZIndex: =16
+
+        Image22_5 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =25
+            Image: =heart
+            Width: =25
+            X: =1150
+            Y: =318
+            ZIndex: =18
+
+        HtmlText6_25 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =31
+            HtmlText: =First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)).NoOfLikes
+            Size: =10
+            Width: =50
+            X: =1180
+            Y: =316
+            ZIndex: =19
+
+        btn_Start_69 As button:
+            Align: =Align.Right
+            BorderColor: =RGBA(141, 48, 128, 1)
+            Color: =RGBA(141, 48, 128, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: = DisplayMode.Edit
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |
+                =Launch("https://www.bing.com/business/chat");
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="Go to Copilot "
+            Tooltip: ="Click here to copy prompt above"
+            Width: =171
+            X: =890
+            Y: =555
+            ZIndex: =22
+
+        Image21_6 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Image: =CopilotLogo
+            Width: =45
+            X: =891
+            Y: =555
+            ZIndex: =23
+
+        Rectangle6_3 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =If(varSelectedPromptLib.Scenario="Other",Color.Gray,If(varSelectedPromptLib.Scenario="Productivity",Color.Red,If(varSelectedPromptLib.Scenario="Entertainment",Color.Green,If(varSelectedPromptLib.Scenario="Cloud",Color.Blue,If(varSelectedPromptLib.Scenario="Insights",Color.Orange)))))
+            Height: =22
+            OnSelect: =
+            Width: =22
+            X: =165
+            Y: =278
+            ZIndex: =24
+
+        HtmlText6_23 As htmlViewer:
+            Font: =Font.'Segoe UI'
+            Height: =115
+            HtmlText: ="<h2><b>" & If(First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)).IsDFMCo=2,"<font color = blue>(DFM)</font>  Prompt Details"," Prompt Details") & "</b></h2>"
+            Size: =16
+            Width: =766
+            X: =217
+            Y: =122
+            ZIndex: =25
+
+        Icon26_3 As icon.BookmarkFilled:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =Color.Brown
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(139, 154, 159, 1)
+            DisplayMode: =If(IsEmpty(varFavAlreadyExist),DisplayMode.Edit, DisplayMode.Disabled)
+            Height: =30
+            Icon: =Icon.BookmarkFilled
+            OnSelect: |-
+                =UpdateContext({varLoadingSpinner:true});
+                UpdateContext({varExtScore:varSelectedPromptLib.NoOfLikes});
+                UpdateContext({varExtScore:varExtScore+5});
+                Refresh(tblFavPrompts);
+                
+                Set(varFavAlreadyExist,Filter(tblFavPrompts,UserID.LoginName=varlgname && PromptID.TipsandTricksCollaboration= varSelectedPromptLib.TipsandTricksCollaboration));
+                If(IsEmpty(varFavAlreadyExist),Patch(tblFavPrompts,Defaults(tblFavPrompts),{Name:"FavTips",UserID:varCrrUser,PromptID:varSelectedPromptLib,IsActiveFav:1,tipID:varSelectedPromptLib.TipsandTricksCollaboration}),Patch(First(varFavAlreadyExist), { IsActiveFav:0}));
+                Patch(TipsandTricksCollaborations,First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)),{NoOfLikes:varExtScore});
+                
+                UpdateContext({varLoadingSpinner:false});
+            Tooltip: ="Bookmark prompt"
+            Width: =30
+            X: =1155
+            Y: =175
+            ZIndex: =26
+
+    NewPromptScreen As groupContainer:
+        DropShadow: =DropShadow.Light
+        Height: =768
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =varNewPrompt
+        Width: =1366
+        ZIndex: =5
+
+        Shadowed_Bck_9 As rectangle:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Width: =1366
+            ZIndex: =1
+
+        HtmlText1_22 As htmlViewer:
+            Height: =584
+            HtmlText: |
+                ="<div style='background-color: rgba(255,255,255,100%); 
+                margin: 20px; 
+                width: 1120px; 
+                height: 500px; 
+                border-radius: 30px'>
+                </div>"
+                
+                /*
+                "<div style='background-color: rgba(1,2,3,30%); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                "<div style='background-color: rgba(39,69,129,1); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                
+                */
+            Width: =1175
+            X: =110
+            Y: =92
+            ZIndex: =2
+
+        Label_SubHeading2_15 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            Height: =53
+            Size: =30
+            Text: ="Create a Copilot Prompt "
+            Width: =839
+            X: =232
+            Y: =152
+            ZIndex: =3
+
+        HtmlText6_8 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =87
+            HtmlText: |-
+                ="Make sure to test the Prompt in your DfM Copilot first to ensure the best results.<br><br>
+                
+                Every time others 'like' or 'save' your prompt, you earn Hearts for the leaderboard, bringing you closer to earning the best SAIL rewards 🎁.</b>"
+            Size: =12
+            Width: =1041
+            X: =160
+            Y: =205
+            ZIndex: =4
+
+        HtmlText6_11 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =34
+            HtmlText: ="<b></b>Title"
+            Size: =12
+            Width: =70
+            X: =160
+            Y: =292
+            ZIndex: =5
+
+        btn_Start_71 As button:
+            BorderColor: =RGBA(141, 48, 128, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =If(Len(TextInputCanvas2.Value)>0 && Len(TextInputCanvas3.Value)>0,   DisplayMode.Edit,DisplayMode.Disabled)
+            Fill: =RGBA(141, 48, 128, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |
+                =
+                UpdateContext({varspinner:true});
+                UpdateContext({varNewPrompt:false});
+                Set(varDataSubmitted,  Patch(TipsandTricksCollaborations,Defaults(TipsandTricksCollaborations),{Name:"PromptLibrary",UserID:varCrrUser,Subject:TextInputCanvas2.Value,TipsTricks:TextInputCanvas3.Value,IsDFMCo:If(CheckboxCanvas1.Checked,2,0),NoOfLikes:0,Scenario:ComboboxCanvas1.Selected.Value}));
+                
+                If(!IsBlank(varDataSubmitted),If(IsBlank(varAlreadySubmittedPrompt),Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewPromptScore",Score:If(Len(TextInputCanvas3.Value)>0 && !CheckboxCanvas1.Checked,100,If(Len(TextInputCanvas3.Value)>0 && CheckboxCanvas1.Checked,105,0) ),UserID:varCrrUser})),Notify("Error submitting prompt !!",NotificationType.Error));
+                
+                If(!IsBlank(varDataSubmitted),Notify("Prompt submitted succsfully !", NotificationType.Success));
+                
+                Reset(TextInputCanvas3);
+                Reset(TextInputCanvas2);
+                Reset(CheckboxCanvas1);
+                Reset(TextInputCanvas1);
+                Refresh(TipsandTricksCollaborations);
+                UpdateContext({varNewPrompt:false});
+                UpdateContext({varspinner:false});
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="Submit Prompt"
+            Tooltip: ="Click here to copy prompt above"
+            Width: =145
+            X: =930
+            Y: =555
+            ZIndex: =8
+
+        btn_Start_58 As button:
+            BorderColor: =RGBA(141, 48, 128, 1)
+            Color: =RGBA(141, 48, 128, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =UpdateContext({varNewPrompt:false})
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="             Cancel"
+            Tooltip: ="New users click to Register"
+            Width: =165
+            X: =745
+            Y: =555
+            ZIndex: =9
+
+        Image21_2 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Image: =CopilotLogo
+            Width: =45
+            X: =162
+            Y: =150
+            ZIndex: =10
+
+        "TextInputCanvas2 As 'Text input'":
+            Appearance: ='TextInputCanvas.Appearance'.Outline
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Placeholder: |-
+                ="3 Best practices for dealing with SharePoint issue #123"
+            Value: =TextInputCanvas1.Value
+            Visible: =true
+            Width: =565
+            X: =160
+            Y: =326
+            ZIndex: =12
+
+        HtmlText6_14 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =34
+            HtmlText: ="<b></b>Scenario"
+            Size: =12
+            Width: =90
+            X: =785
+            Y: =292
+            ZIndex: =13
+
+        ComboboxCanvas1 As Combobox.pcfdataset:
+            Appearance: ='ComboboxCanvas.Appearance'.Outline
+            DefaultSelectedItems: |-
+                ={Value:"Other"}
+            DisplayMode: =DisplayMode.Edit
+            Height: =34
+            Items: =["Other", "Productivity", "Entertainment", "Cloud", "Insights"]
+            Visible: =true
+            Width: =120
+            X: =787
+            Y: =326
+            ZIndex: =14
+
+        HtmlText6_15 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =34
+            HtmlText: ="<b></b>Prompt Template"
+            Size: =12
+            Width: =192
+            X: =160
+            Y: =370
+            ZIndex: =15
+
+        "TextInputCanvas3 As 'Text input'":
+            Appearance: ='TextInputCanvas.Appearance'.Outline
+            DisplayMode: =DisplayMode.Edit
+            Height: =131
+            Mode: ='TextInputCanvas.Mode'.Multiline
+            Placeholder: ="Input your prompt here"
+            Visible: =true
+            Width: =1060
+            X: =160
+            Y: =404
+            ZIndex: =16
+
+        CheckboxCanvas1 As Checkbox:
+            DisplayMode: =DisplayMode.Edit
+            Height: =30
+            Label: ="For DfM Copilot +5"
+            OnCheck: =false
+            OnUncheck: =false
+            Visible: =true
+            Width: =177
+            X: =1034
+            Y: =360
+            ZIndex: =17
+
+        Image22_2 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =25
+            Image: =heart
+            Width: =25
+            X: =1192
+            Y: =360
+            ZIndex: =18
+
+        HtmlText6_16 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =30
+            HtmlText: ="<b></b>Daily Reward"
+            Size: =10
+            Width: =122
+            X: =1095
+            Y: =550
+            ZIndex: =19
+
+        Image22_3 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: |+
+                =If(IsBlank(varAlreadySubmittedPrompt), DisplayMode.Edit,DisplayMode.Disabled)
+                
+            Height: =25
+            Image: =heart
+            Width: =25
+            X: =1100
+            Y: =580
+            ZIndex: =20
+
+        HtmlText6_17 As htmlViewer:
+            DisabledBorderColor: =RGBA(106, 122, 127, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            DisplayMode: |
+                =DisplayMode.Edit
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            Height: =31
+            HtmlText: |+
+                ="<b>"& If(!IsBlank(varAlreadySubmittedPrompt),"<s>") & If(Len(TextInputCanvas3.Value)>0 && !CheckboxCanvas1.Checked,"100/100",If(Len(TextInputCanvas3.Value)>0 && CheckboxCanvas1.Checked,"105/100","0/100") )  & If(!IsBlank(varAlreadySubmittedPrompt),"</s>") &"</b>"
+                
+            Size: =10
+            Width: =95
+            X: =1125
+            Y: =580
+            ZIndex: =21
 
