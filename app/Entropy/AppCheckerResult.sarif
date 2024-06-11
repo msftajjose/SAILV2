@@ -18630,36 +18630,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ChallengeScreen.MainContainer_3.BottomContainer_3.CommonContainer_3.Container3_3.Gallery5_18.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ChallengeScreen.MainContainer_3.BottomContainer_3.CommonContainer_3.Container3_3.Gallery5_18.Visible",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "ChallengeScreen",
-                "type": "ChallengeScreen.MainContainer_3.BottomContainer_3.CommonContainer_3.Container3_3.Gallery5_18"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 14
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "LandingPage.ResetImage"
                 }
               ],

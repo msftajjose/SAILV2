@@ -242,7 +242,7 @@ ChallengeScreen As screen:
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplatePadding: =0
                         TemplateSize: =200
-                        Visible: =If(menu_3.SelectedItem.ID=2,true,false)
+                        Visible: =If(menu_5.SelectedItem.ID=5,true,false)
                         Width: =447
                         X: =729
                         ZIndex: =2
