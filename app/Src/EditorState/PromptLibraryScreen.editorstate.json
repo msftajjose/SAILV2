@@ -9562,7 +9562,15 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "VarMenuDefaultVal"
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "//{ ID:2,Icon:Icon.Home ,Value: \"Home\" }",
+          "InvariantPropertyName": "VarMenuDefaultVal",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        "varID"
       ],
       "DynamicProperties": [
         {
@@ -9649,6 +9657,11 @@
         {
           "Category": "Data",
           "PropertyName": "VarMenuDefaultVal",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "varID",
           "RuleProviderType": "System"
         },
         {

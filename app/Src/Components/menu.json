@@ -2823,13 +2823,14 @@
       {
         "AFDDataSourceName": "",
         "AutoRuleBindingEnabled": false,
-        "AutoRuleBindingString": "{ ID:2,Icon:Icon.Home ,Value: \"Home\" }",
+        "AutoRuleBindingString": "//{ ID:2,Icon:Icon.Home ,Value: \"Home\" }\r\n\r\n//{ ID:1,Icon:\"\" ,Value: \"Discover\" }, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" },{ ID:4,Icon:\"\" ,Value: \"Play\" } ,{ ID:5,Icon:Icon.Signal ,Value: \"Challenges\" },{ ID:6,Icon:Icon.OptionsList ,Value: \"Leader Boards\" },{ ID:7,Icon:Icon.EmojiSmile ,Value: \"Squad\" },{ ID:8,Icon:\"\" ,Value: \"Adjust\" },{ ID:9,Icon:Icon.Settings ,Value: \"Settings\" },{ ID:10,Icon:Icon.Post ,Value: \"Feedback\" }\r\n\r\nIf(menu.varID=1,{ ID:1,Icon:\"\" ,Value: \"Discover\" }",
         "InvariantPropertyName": "VarMenuDefaultVal",
         "IsLockable": false,
         "NameMapSourceSchema": "?"
-      }
+      },
+      "varID"
     ],
-    "LastModifiedTimestamp": "638536871910586356",
+    "LastModifiedTimestamp": "638536874646502634",
     "Name": "menu",
     "Rules": [
       {
@@ -2864,8 +2865,15 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "//{ ID:2,Icon:Icon.Home ,Value: \"Home\" }",
+        "InvariantScript": "//{ ID:2,Icon:Icon.Home ,Value: \"Home\" }\r\n\r\n//{ ID:1,Icon:\"\" ,Value: \"Discover\" }, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" },{ ID:4,Icon:\"\" ,Value: \"Play\" } ,{ ID:5,Icon:Icon.Signal ,Value: \"Challenges\" },{ ID:6,Icon:Icon.OptionsList ,Value: \"Leader Boards\" },{ ID:7,Icon:Icon.EmojiSmile ,Value: \"Squad\" },{ ID:8,Icon:\"\" ,Value: \"Adjust\" },{ ID:9,Icon:Icon.Settings ,Value: \"Settings\" },{ ID:10,Icon:Icon.Post ,Value: \"Feedback\" }\r\n\r\nIf(menu.varID=12, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" })",
+        "NameMap": "{\"ID\":\"ID\",\"Icon\":\"Icon\",\"Value\":\"Value\"}",
         "Property": "VarMenuDefaultVal",
+        "RuleProviderType": "Unknown"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "100",
+        "Property": "varID",
         "RuleProviderType": "System"
       },
       {
@@ -2974,7 +2982,16 @@
       "Name": "VarMenuDefaultVal",
       "PropertyDataTypeKey": "Record",
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"ObjNull\",\"EnumString\":\"N\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"ID\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Icon\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "varID",
+      "Hidden": false,
+      "Name": "varID",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -2985,7 +3002,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638536871910586356",
+  "LastModifiedTimestamp": "638536874646502634",
   "Name": "3dcb2ec1d1f74675969b80e7b1fbd350",
   "OverridableProperties": {},
   "Version": "1.0"
