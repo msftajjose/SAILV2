@@ -184,6 +184,7 @@ HomeScreen As screen:
                 menu_3 As menu:
                     LayoutMinWidth: =640
                     score: =varCrrUser.Scores
+                    ScreenChallenge: =ChallengeScreen
                     ScreenNavHome: =HomeScreen
                     ScreenNavPrompt: =PromptLibraryScreen
                     varID: =2

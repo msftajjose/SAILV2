@@ -4,6 +4,7 @@ menu As CanvasComponent:
     Items: =
     OnReset: =Reset(Gallery7_3)
     score: ="Text"
+    ScreenChallenge: =App.ActiveScreen
     ScreenNavHome: =
     ScreenNavPrompt: =
     SelectedItem: =Gallery7_3.Selected
@@ -16,7 +17,8 @@ menu As CanvasComponent:
         
         Switch(menu.varID,
         2, { ID:2,Icon:Icon.Home ,Value: "Home" }, 
-        3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" }
+        3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" },
+        5, { ID:5,Icon:Icon.Signal ,Value: "Challenges" }
         )
     Width: =230
     X: =0
@@ -101,7 +103,11 @@ menu As CanvasComponent:
             Default: |-
                 =//menu.VarMenuDefaultVal
                 
-                If(menu.varID=2, { ID:2,Icon:Icon.Home ,Value: "Home" },menu.varID=3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" })
+                If(menu.varID=2, { ID:2,Icon:Icon.Home ,Value: "Home" },If(menu.varID=3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" },If(menu.varID=5, {ID:5,Icon:Icon.Signal ,Value: "Challenges" } )))
+                
+                /*
+                Table( { ID:1,Icon:"" ,Value: "Discover" }, { ID:2,Icon:Icon.Home ,Value: "Home" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" },{ ID:4,Icon:"" ,Value: "Play" } ,{ ID:5,Icon:Icon.Signal ,Value: "Challenges" },{ ID:6,Icon:Icon.OptionsList ,Value: "Leader Boards" },{ ID:7,Icon:Icon.EmojiSmile ,Value: "Squad" },{ ID:8,Icon:"" ,Value: "Adjust" },{ ID:9,Icon:Icon.Settings ,Value: "Settings" },{ ID:10,Icon:Icon.Post ,Value: "Feedback" })
+                */
                 
                 /*
                 Switch(menu.varID,
@@ -124,8 +130,8 @@ menu As CanvasComponent:
                 3, Navigate(menu.ScreenNavPrompt),
                 //2, Reset(menu); Navigate(menu.ScreenNavHome); Set(varMenuID,2) ,
                 //3, Reset(menu); Navigate(menu.ScreenNavPrompt); Set(varMenuID,3)  ,
-                4, false,
-                5, false,
+                //4, false,
+                5, Navigate(menu.ScreenChallenge),
                 6, false,
                 7, false,
                 8, false,

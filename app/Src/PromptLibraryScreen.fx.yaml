@@ -187,6 +187,7 @@ PromptLibraryScreen As screen:
                 menu_1 As menu:
                     LayoutMinWidth: =640
                     score: =varCrrUser.Scores
+                    ScreenChallenge: =ChallengeScreen
                     ScreenNavHome: =HomeScreen
                     ScreenNavPrompt: =PromptLibraryScreen
                     varID: =3

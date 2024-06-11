@@ -14,7 +14,8 @@ TestMenuHome As screen:
             
             Switch(menu_2.varID,
             2, { ID:2,Icon:Icon.Home ,Value: "Home" }, 
-            3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" }
+            3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" },
+            5, { ID:5,Icon:Icon.Signal ,Value: "Challenges" }
             )
 
     Label6 As label:

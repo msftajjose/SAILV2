@@ -18265,6 +18265,14 @@
           "InvariantPropertyName": "varID",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "App.ActiveScreen",
+          "InvariantPropertyName": "ScreenChallenge",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "DynamicProperties": [
@@ -18358,6 +18366,11 @@
         {
           "Category": "Data",
           "PropertyName": "varID",
+          "RuleProviderType": "User"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "ScreenChallenge",
           "RuleProviderType": "User"
         },
         {

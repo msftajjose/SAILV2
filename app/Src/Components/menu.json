@@ -88,7 +88,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "Container2_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1260,
+            "PublishOrderIndex": 1313,
             "Rules": [
               {
                 "Category": "Data",
@@ -225,7 +225,7 @@
                 "OptimizeForDevices": "Off",
                 "Parent": "Gallery7_3",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1262,
+                "PublishOrderIndex": 1315,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -235,7 +235,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "//If(ThisItem.ID=10, UpdateContext({_varAppFeedbackReg:true}),UpdateContext({_varAppFeedbackReg:false}))\nReset(Gallery7_3);\n\nSwitch(ThisItem.ID,\n1, false,\n2, Navigate(menu.ScreenNavHome),\n3, Navigate(menu.ScreenNavPrompt),\n//2, Reset(menu); Navigate(menu.ScreenNavHome); Set(varMenuID,2) ,\n//3, Reset(menu); Navigate(menu.ScreenNavPrompt); Set(varMenuID,3)  ,\n4, false,\n5, false,\n6, false,\n7, false,\n8, false,\n9, false,\n10, false)\n\n\n",
+                    "InvariantScript": "//If(ThisItem.ID=10, UpdateContext({_varAppFeedbackReg:true}),UpdateContext({_varAppFeedbackReg:false}))\nReset(Gallery7_3);\n\nSwitch(ThisItem.ID,\n1, false,\n2, Navigate(menu.ScreenNavHome),\n3, Navigate(menu.ScreenNavPrompt),\n//2, Reset(menu); Navigate(menu.ScreenNavHome); Set(varMenuID,2) ,\n//3, Reset(menu); Navigate(menu.ScreenNavPrompt); Set(varMenuID,3)  ,\n//4, false,\n5, Navigate(menu.ScreenChallenge),\n6, false,\n7, false,\n8, false,\n9, false,\n10, false)\n\n\n",
                     "Property": "OnSelect",
                     "RuleProviderType": "User"
                   }
@@ -369,7 +369,7 @@
                 "OptimizeForDevices": "Off",
                 "Parent": "Gallery7_3",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1263,
+                "PublishOrderIndex": 1316,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -583,7 +583,7 @@
                 "OptimizeForDevices": "Off",
                 "Parent": "Gallery7_3",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1264,
+                "PublishOrderIndex": 1317,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -800,7 +800,7 @@
                 "OptimizeForDevices": "Off",
                 "Parent": "Gallery7_3",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1265,
+                "PublishOrderIndex": 1318,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1165,7 +1165,7 @@
                 "OptimizeForDevices": "Off",
                 "Parent": "Gallery7_3",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1266,
+                "PublishOrderIndex": 1319,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -1399,7 +1399,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "Container2_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1261,
+            "PublishOrderIndex": 1314,
             "Rules": [
               {
                 "Category": "Data",
@@ -1415,7 +1415,7 @@
               },
               {
                 "Category": "Data",
-                "InvariantScript": "//menu.VarMenuDefaultVal\n\nIf(menu.varID=2, { ID:2,Icon:Icon.Home ,Value: \"Home\" },menu.varID=3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" })\n\n/*\nSwitch(menu.varID,\n2, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, \n3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" }\n)\n*/",
+                "InvariantScript": "//menu.VarMenuDefaultVal\n\nIf(menu.varID=2, { ID:2,Icon:Icon.Home ,Value: \"Home\" },If(menu.varID=3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" },If(menu.varID=5, {ID:5,Icon:Icon.Signal ,Value: \"Challenges\" } )))\n\n/*\nTable( { ID:1,Icon:\"\" ,Value: \"Discover\" }, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" },{ ID:4,Icon:\"\" ,Value: \"Play\" } ,{ ID:5,Icon:Icon.Signal ,Value: \"Challenges\" },{ ID:6,Icon:Icon.OptionsList ,Value: \"Leader Boards\" },{ ID:7,Icon:Icon.EmojiSmile ,Value: \"Squad\" },{ ID:8,Icon:\"\" ,Value: \"Adjust\" },{ ID:9,Icon:Icon.Settings ,Value: \"Settings\" },{ ID:10,Icon:Icon.Post ,Value: \"Feedback\" })\n*/\n\n/*\nSwitch(menu.varID,\n2, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, \n3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" }\n)\n*/",
                 "Property": "Default",
                 "RuleProviderType": "Unknown"
               },
@@ -1664,7 +1664,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "Container2_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1267,
+            "PublishOrderIndex": 1320,
             "Rules": [
               {
                 "Category": "Design",
@@ -1895,7 +1895,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "Container2_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1268,
+            "PublishOrderIndex": 1321,
             "Rules": [
               {
                 "Category": "Data",
@@ -2250,7 +2250,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "Container2_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1269,
+            "PublishOrderIndex": 1322,
             "Rules": [
               {
                 "Category": "Data",
@@ -2498,7 +2498,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "Container2_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1270,
+            "PublishOrderIndex": 1323,
             "Rules": [
               {
                 "Category": "Data",
@@ -2620,7 +2620,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "menu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1259,
+        "PublishOrderIndex": 1312,
         "Rules": [
           {
             "Category": "Design",
@@ -2842,9 +2842,10 @@
         "InvariantPropertyName": "varID",
         "IsLockable": false,
         "NameMapSourceSchema": "?"
-      }
+      },
+      "ScreenChallenge"
     ],
-    "LastModifiedTimestamp": "638537340356120236",
+    "LastModifiedTimestamp": "638537401815468543",
     "Name": "menu",
     "Rules": [
       {
@@ -2879,15 +2880,21 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "//vardefault\n//{ ID:2,Icon:Icon.Home ,Value: \"Home\" }\n\n//{ ID:1,Icon:\"\" ,Value: \"Discover\" }, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" },{ ID:4,Icon:\"\" ,Value: \"Play\" } ,{ ID:5,Icon:Icon.Signal ,Value: \"Challenges\" },{ ID:6,Icon:Icon.OptionsList ,Value: \"Leader Boards\" },{ ID:7,Icon:Icon.EmojiSmile ,Value: \"Squad\" },{ ID:8,Icon:\"\" ,Value: \"Adjust\" },{ ID:9,Icon:Icon.Settings ,Value: \"Settings\" },{ ID:10,Icon:Icon.Post ,Value: \"Feedback\" }\n\nSwitch(menu.varID,\n2, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, \n3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" }\n)",
+        "InvariantScript": "//vardefault\n//{ ID:2,Icon:Icon.Home ,Value: \"Home\" }\n\n//{ ID:1,Icon:\"\" ,Value: \"Discover\" }, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" },{ ID:4,Icon:\"\" ,Value: \"Play\" } ,{ ID:5,Icon:Icon.Signal ,Value: \"Challenges\" },{ ID:6,Icon:Icon.OptionsList ,Value: \"Leader Boards\" },{ ID:7,Icon:Icon.EmojiSmile ,Value: \"Squad\" },{ ID:8,Icon:\"\" ,Value: \"Adjust\" },{ ID:9,Icon:Icon.Settings ,Value: \"Settings\" },{ ID:10,Icon:Icon.Post ,Value: \"Feedback\" }\n\nSwitch(menu.varID,\n2, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, \n3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" },\n5, { ID:5,Icon:Icon.Signal ,Value: \"Challenges\" }\n)",
         "NameMap": "{\"ID\":\"ID\",\"Icon\":\"Icon\",\"Value\":\"Value\"}",
         "Property": "VarMenuDefaultVal",
-        "RuleProviderType": "System"
+        "RuleProviderType": "Unknown"
       },
       {
         "Category": "Data",
         "InvariantScript": "",
         "Property": "varID",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "App.ActiveScreen",
+        "Property": "ScreenChallenge",
         "RuleProviderType": "System"
       },
       {
@@ -3006,6 +3013,15 @@
       "PropertyDataTypeKey": "Number",
       "Tooltip": "A custom property",
       "Type": "{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "ScreenChallenge",
+      "Hidden": false,
+      "Name": "ScreenChallenge",
+      "PropertyDataTypeKey": "Screen",
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_LimPrimitive\",\"EnumString\":\"\",\"Template\":{\"TemplateName\":\"screen\",\"IsMetaLoc\":false,\"Intangible\":false,\"ExpandoType\":{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"BackgroundImage\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"ContentLanguage\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Fill\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Height\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"ImagePosition\",\"Kind\":\"Enum\",\"EnumString\":\"%s[Center:\\\"center\\\", Fill:\\\"fill\\\", Fit:\\\"fit\\\", Stretch:\\\"stretch\\\", Tile:\\\"tile\\\"]\",\"Type\":[{\"Name\":\"Center\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Fill\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Fit\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Stretch\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Tile\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"LoadingSpinner\",\"Kind\":\"Enum\",\"EnumString\":\"%n[Controls:0, Data:1, None:2]\",\"Type\":[{\"Name\":\"Controls\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Data\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"None\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"LoadingSpinnerColor\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Name\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Orientation\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Printing\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Size\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Width\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]}},\"Properties\":[{\"Name\":\"Fill\",\"InvariantType\":{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}},\"PropertyRuleCategory\":\"Design\",\"PropertyDisplayName\":\"Fill\"},{\"Name\":\"BackgroundImage\",\"InvariantType\":{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}},\"PropertyRuleCategory\":\"Data\",\"PropertyDisplayName\":\"Background image\"},{\"Name\":\"ImagePosition\",\"InvariantType\":{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Enum\",\"EnumString\":\"%s[Center:\\\"center\\\", Fill:\\\"fill\\\", Fit:\\\"fit\\\", Stretch:\\\"stretch\\\", Tile:\\\"tile\\\"]\",\"Type\":[{\"Name\":\"Center\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Fill\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Fit\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Stretch\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Tile\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}},\"PropertyRuleCategory\":\"Design\",\"PropertyDisplayName\":\"Image position\"},{\"Name\":\"Height\",\"InvariantType\":{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}},\"PropertyRuleCategory\":\"Design\",\"PropertyDisplayName\":\"Height\"},{\"Name\":\"Width\",\"InvariantType\":{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}},\"PropertyRuleCategory\":\"Design\",\"PropertyDisplayName\":\"Width\"},{\"Name\":\"Size\",\"InvariantType\":{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}},\"PropertyRuleCategory\":\"Design\",\"PropertyDisplayName\":\"Size\"},{\"Name\":\"Orientation\",\"InvariantType\":{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}},\"PropertyRuleCategory\":\"Design\",\"PropertyDisplayName\":\"Orientation\"},{\"Name\":\"LoadingSpinner\",\"InvariantType\":{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Enum\",\"EnumString\":\"%n[Controls:0, Data:1, None:2]\",\"Type\":[{\"Name\":\"Controls\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Data\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"None\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]}},\"PropertyRuleCategory\":\"Design\",\"PropertyDisplayName\":\"Loading spinner\"},{\"Name\":\"LoadingSpinnerColor\",\"InvariantType\":{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}},\"PropertyRuleCategory\":\"Design\",\"PropertyDisplayName\":\"Loading spinner color\"},{\"Name\":\"Name\",\"InvariantType\":{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}},\"PropertyRuleCategory\":\"Design\",\"PropertyDisplayName\":\"Name\"},{\"Name\":\"Printing\",\"InvariantType\":{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}},\"PropertyRuleCategory\":\"Data\",\"PropertyDisplayName\":\"Printing\"},{\"Name\":\"ContentLanguage\",\"InvariantType\":{\"Version\":\"1.342\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}},\"PropertyRuleCategory\":\"Data\",\"PropertyDisplayName\":\"Content language\"}]}}}"
     }
   ],
   "FirstParty": true,
@@ -3016,7 +3032,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638537340356120236",
+  "LastModifiedTimestamp": "638537401815468543",
   "Name": "3dcb2ec1d1f74675969b80e7b1fbd350",
   "OverridableProperties": {},
   "Version": "1.0"
