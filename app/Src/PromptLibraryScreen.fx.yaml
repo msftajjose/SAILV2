@@ -506,7 +506,7 @@ PromptLibraryScreen As screen:
                                             
                                             UpdateContext({varSelectedPromptLib:ThisItem});
                                             Refresh(tblFavPrompts);
-                                            Set(varFavAlreadyExist,Filter(tblFavPrompts,UserID.LoginName=varlgname && PromptID.TipsandTricksCollaboration=ThisItem.TipsandTricksCollaboration));
+                                            Set(varFavAlreadyExist,Filter(tblFavPrompts,IsActiveFav=1 && UserID.LoginName=varlgname && PromptID.TipsandTricksCollaboration=ThisItem.TipsandTricksCollaboration));
                                         Size: =8
                                         Width: =500
                                         X: =82
@@ -1321,9 +1321,10 @@ PromptLibraryScreen As screen:
             Height: =50
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(167, 182, 203, 1)
-            OnSelect: |-
+            OnSelect: |
                 =UpdateContext({varShowExistingPrompt:false});
                 UpdateContext({varSelectedPromptLib:Blank()});
+                Reset(Gallery10_3);
             PressedFill: =RGBA(0, 134, 208, 1)
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
@@ -1482,8 +1483,11 @@ PromptLibraryScreen As screen:
                 Refresh(tblFavPrompts);
                 
                 Set(varFavAlreadyExist,Filter(tblFavPrompts,UserID.LoginName=varlgname && PromptID.TipsandTricksCollaboration= varSelectedPromptLib.TipsandTricksCollaboration));
-                If(IsEmpty(varFavAlreadyExist),Patch(tblFavPrompts,Defaults(tblFavPrompts),{Name:"FavTips",UserID:varCrrUser,PromptID:varSelectedPromptLib,IsActiveFav:1,tipID:varSelectedPromptLib.TipsandTricksCollaboration}),Patch(First(varFavAlreadyExist), { IsActiveFav:0}));
+                If(IsEmpty(varFavAlreadyExist),Patch(tblFavPrompts,Defaults(tblFavPrompts),{Name:"FavTips",UserID:varCrrUser,PromptID:varSelectedPromptLib,IsActiveFav:1,tipID:varSelectedPromptLib.TipsandTricksCollaboration}),Patch(First(varFavAlreadyExist), { IsActiveFav:1}));
+                Patch(tblFavPrompts,First(varFavAlreadyExist), { IsActiveFav:1});
                 Patch(TipsandTricksCollaborations,First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)),{NoOfLikes:varExtScore});
+                Refresh(TipsandTricksCollaborations);
+                Reset(Gallery10_3);
                 UpdateContext({varShowExistingPrompt:false});
                 UpdateContext({varSelectedPromptLib:Blank()});
                 UpdateContext({varLoadingSpinner:false});
