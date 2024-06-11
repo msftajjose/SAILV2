@@ -272,6 +272,16 @@ ChallengeScreen As screen:
                             Y: =55
                             ZIndex: =2
 
+                Container19 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =2
+
     Container18_2 As groupContainer:
         DropShadow: =DropShadow.Light
         Height: =768
