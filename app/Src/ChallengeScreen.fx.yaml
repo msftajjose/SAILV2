@@ -185,7 +185,7 @@ ChallengeScreen As screen:
                     LayoutMinWidth: =640
                     score: =varCrrUser.Scores
                     ScreenChallenge: =ChallengeScreen
-                    ScreenNavHome: =ChallengeScreen
+                    ScreenNavHome: =HomeScreen
                     ScreenNavPrompt: =PromptLibraryScreen
                     varID: =5
                     VarMenuDefaultVal: |-
@@ -281,6 +281,20 @@ ChallengeScreen As screen:
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     ZIndex: =2
+
+                    Image13 As image:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        Height: =Parent.Height
+                        Image: =Challenge
+                        ImagePosition: =ImagePosition.Stretch
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Width: =Parent.Width
+                        ZIndex: =1
 
     Container18_2 As groupContainer:
         DropShadow: =DropShadow.Light
