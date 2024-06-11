@@ -179,8 +179,9 @@ HomeScreen As screen:
                 menu_3 As menu:
                     LayoutMinWidth: =640
                     score: =varCrrUser.Scores
+                    ScreenNavHome: =HomeScreen
                     ScreenNavPrompt: =PromptLibraryScreen
-                    varID: =varMenuID
+                    varID: =2
                     VarMenuDefaultVal: |-
                         =//vardefault
                         //{ ID:2,Icon:Icon.Home ,Value: "Home" }
