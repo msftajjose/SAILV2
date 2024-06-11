@@ -385,22 +385,8 @@
         "TemplatePadding",
         "Layout",
         "Transition",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "true",
-          "InvariantPropertyName": "DelayItemLoading",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "LoadingSpinner.Data",
-          "InvariantPropertyName": "LoadingSpinner",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "DelayItemLoading",
+        "LoadingSpinner",
         "LoadingSpinnerColor",
         "DisplayMode",
         "BorderColor",
