@@ -562,7 +562,7 @@ HomeScreen As screen:
                                     Width: =144
                                     Wrap: =true
                                     X: =14
-                                    Y: =0
+                                    Y: =5
                                     ZIndex: =1
 
                                 Container14 As groupContainer:
@@ -576,7 +576,7 @@ HomeScreen As screen:
                                     RadiusTopRight: =5
                                     Width: =609
                                     X: =14
-                                    Y: =27
+                                    Y: =42
                                     ZIndex: =2
 
                                     "Gallery3_4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -650,6 +650,7 @@ HomeScreen As screen:
                                             DisabledColor: =RGBA(166, 166, 166, 1)
                                             DisplayMode: =DisplayMode.View
                                             Font: =App.Theme.Font
+                                            FontWeight: =FontWeight.Semibold
                                             Height: =20
                                             OnSelect: =Select(Parent)
                                             PaddingBottom: =0
@@ -657,12 +658,10 @@ HomeScreen As screen:
                                             PaddingRight: =0
                                             PaddingTop: =0
                                             Size: =9
-                                            Text: |-
-                                                =First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)).LoginName & " Says:" 
+                                            Text: =First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)).LoginName
                                             VerticalAlign: =VerticalAlign.Top
                                             Width: =154
                                             X: =14
-                                            Y: =2
                                             ZIndex: =3
 
                                         Subtitle2_4 As label:
@@ -684,8 +683,8 @@ HomeScreen As screen:
                                             Size: =10
                                             Text: =ThisItem.Msg
                                             VerticalAlign: =VerticalAlign.Top
-                                            Width: =527
-                                            X: =66
+                                            Width: =477
+                                            X: =76
                                             Y: =20
                                             ZIndex: =4
 
@@ -720,7 +719,7 @@ HomeScreen As screen:
                                         FocusedBorderThickness: =4
                                         Font: =App.Theme.Font
                                         Height: =50
-                                        HintText: ="""Type your message"""
+                                        HintText: ="Message"
                                         HoverBorderColor: =App.Theme.Colors.Darker40
                                         HoverColor: =RGBA(0, 0, 0, 1)
                                         HoverFill: =App.Theme.Colors.Lighter70
@@ -773,7 +772,7 @@ HomeScreen As screen:
                                         Tooltip: ="Refresh"
                                         Visible: =!IsBlank(varCrrUser.TeamID)
                                         Width: =23
-                                        X: =576
+                                        X: =566
                                         Y: =8
                                         ZIndex: =4
 
@@ -819,7 +818,6 @@ HomeScreen As screen:
                             ZIndex: =2
 
                             Container12_1 As groupContainer.manualLayoutContainer:
-                                Fill: =RGBA(255, 255, 255, .95)
                                 LayoutMinHeight: =100
                                 LayoutMinWidth: =250
                                 ZIndex: =1
@@ -842,15 +840,17 @@ HomeScreen As screen:
 
                                 "Gallery10_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                                     BorderColor: =App.Theme.Colors.Darker40
+                                    BorderThickness: =1
                                     DelayItemLoading: =true
                                     Fill: =RGBA(255, 255, 255, 1)
-                                    Height: =275
+                                    Height: =253
                                     Items: =FirstN(Sort(TipsandTricksCollaborations,NoOfLikes,SortOrder.Descending),50)
                                     Layout: =Layout.Vertical
                                     LoadingSpinner: =LoadingSpinner.Data
                                     TemplatePadding: =3
                                     TemplateSize: =45
-                                    Width: =Parent.Width
+                                    Width: =611
+                                    X: =15
                                     Y: =45
                                     ZIndex: =2
 
@@ -943,7 +943,7 @@ HomeScreen As screen:
                                         OnSelect: =Copy(ThisItem.TipsTricks)
                                         Tooltip: ="Copy Prompt"
                                         Width: =15
-                                        X: =614
+                                        X: =554
                                         Y: =17
                                         ZIndex: =11
 
@@ -982,7 +982,7 @@ HomeScreen As screen:
                                         Icon: =Icon.BookmarkFilled
                                         OnSelect: =Select(Parent)
                                         Width: =15
-                                        X: =544
+                                        X: =524
                                         Y: =15
                                         ZIndex: =14
 
