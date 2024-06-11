@@ -1,7 +1,9 @@
 HomeScreen As screen:
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
-    OnVisible: =
+    OnVisible: |-
+        =//Reset(menu_1);
+        Set(varMenuID, 2)
 
     MainContainer_1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -179,12 +181,7 @@ HomeScreen As screen:
                     score: =varCrrUser.Scores
                     ScreenNavHome: =
                     ScreenNavPrompt: =PromptLibraryScreen
-                    VarMenuDefaultVal: |-
-                        =//{ ID:2,Icon:Icon.Home ,Value: "Home" }
-                        
-                        //{ ID:1,Icon:"" ,Value: "Discover" }, { ID:2,Icon:Icon.Home ,Value: "Home" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" },{ ID:4,Icon:"" ,Value: "Play" } ,{ ID:5,Icon:Icon.Signal ,Value: "Challenges" },{ ID:6,Icon:Icon.OptionsList ,Value: "Leader Boards" },{ ID:7,Icon:Icon.EmojiSmile ,Value: "Squad" },{ ID:8,Icon:"" ,Value: "Adjust" },{ ID:9,Icon:Icon.Settings ,Value: "Settings" },{ ID:10,Icon:Icon.Post ,Value: "Feedback" }
-                        
-                        If(menu_3.varID=12, { ID:2,Icon:Icon.Home ,Value: "Home" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" })
+                    varID: =varMenuID
 
             CommonContainer_1 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer

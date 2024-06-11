@@ -7,13 +7,13 @@ menu As CanvasComponent:
     ScreenNavHome: =App.ActiveScreen
     ScreenNavPrompt: =App.ActiveScreen
     SelectedItem: =Gallery7_3.Selected
-    varID: =100
+    varID: =2
     VarMenuDefaultVal: |-
         =//{ ID:2,Icon:Icon.Home ,Value: "Home" }
         
         //{ ID:1,Icon:"" ,Value: "Discover" }, { ID:2,Icon:Icon.Home ,Value: "Home" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" },{ ID:4,Icon:"" ,Value: "Play" } ,{ ID:5,Icon:Icon.Signal ,Value: "Challenges" },{ ID:6,Icon:Icon.OptionsList ,Value: "Leader Boards" },{ ID:7,Icon:Icon.EmojiSmile ,Value: "Squad" },{ ID:8,Icon:"" ,Value: "Adjust" },{ ID:9,Icon:Icon.Settings ,Value: "Settings" },{ ID:10,Icon:Icon.Post ,Value: "Feedback" }
         
-        If(menu.varID=12, { ID:2,Icon:Icon.Home ,Value: "Home" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" })
+        //If(menu.varID=12, { ID:2,Icon:Icon.Home ,Value: "Home" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" })
     Width: =230
     X: =0
     Y: =0
@@ -94,7 +94,10 @@ menu As CanvasComponent:
 
         Gallery7_3 As gallery.galleryVertical:
             BorderColor: =App.Theme.Colors.Darker40
-            Default: =menu.VarMenuDefaultVal
+            Default: |-
+                =//menu.VarMenuDefaultVal
+                
+                If(menu.varID=2, { ID:2,Icon:Icon.Home ,Value: "Home" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" })
             Height: =406
             Items: |-
                 =Table( { ID:1,Icon:"" ,Value: "Discover" }, { ID:2,Icon:Icon.Home ,Value: "Home" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: "Prompt Library" },{ ID:4,Icon:"" ,Value: "Play" } ,{ ID:5,Icon:Icon.Signal ,Value: "Challenges" },{ ID:6,Icon:Icon.OptionsList ,Value: "Leader Boards" },{ ID:7,Icon:Icon.EmojiSmile ,Value: "Squad" },{ ID:8,Icon:"" ,Value: "Adjust" },{ ID:9,Icon:Icon.Settings ,Value: "Settings" },{ ID:10,Icon:Icon.Post ,Value: "Feedback" })
@@ -106,8 +109,8 @@ menu As CanvasComponent:
                 
                 Switch(ThisItem.ID,
                 1, false,
-                2, Navigate(menu.ScreenNavHome) ,
-                3, Navigate(menu.ScreenNavPrompt) ,
+                2, Navigate(menu.ScreenNavHome); Set(varMenuID,2) ,
+                3, Navigate(menu.ScreenNavPrompt); Set(varMenuID,3)  ,
                 4, false,
                 5, false,
                 6, false,
