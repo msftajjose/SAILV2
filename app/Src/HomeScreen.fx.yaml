@@ -575,7 +575,7 @@ HomeScreen As screen:
                                     RadiusTopLeft: =7
                                     RadiusTopRight: =7
                                     Width: =609
-                                    X: =14
+                                    X: =28
                                     Y: =42
                                     ZIndex: =2
 
@@ -848,7 +848,7 @@ HomeScreen As screen:
                                     RadiusTopLeft: =7
                                     RadiusTopRight: =7
                                     Width: =609
-                                    X: =15
+                                    X: =29
                                     Y: =40
                                     ZIndex: =3
 
