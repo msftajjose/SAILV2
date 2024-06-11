@@ -703,7 +703,7 @@ PromptLibraryScreen As screen:
                                     Items: |-
                                         =
                                         
-                                        If(Gallery5_15.Selected.ID=2,FirstN(Sort(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration exactin varSavedPrompts.tipID),NoOfLikes,SortOrder.Descending),50),FirstN(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration exactin varSavedPrompts.tipID),50))
+                                        If(Gallery5_15.Selected.ID=2,FirstN(Sort(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration exactin varSavedPrompts.tipID),NoOfLikes,SortOrder.Descending),50),Sort(FirstN(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration exactin varSavedPrompts.tipID),50),'Created On',SortOrder.Descending))
                                     Layout: =Layout.Vertical
                                     LoadingSpinner: =LoadingSpinner.Data
                                     TemplatePadding: =3
