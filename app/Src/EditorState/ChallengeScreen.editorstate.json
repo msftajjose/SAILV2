@@ -7338,6 +7338,14 @@
           "InvariantPropertyName": "ScreenChallenge",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "ScreenLB",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "DynamicProperties": [
@@ -7436,6 +7444,11 @@
         {
           "Category": "Data",
           "PropertyName": "ScreenChallenge",
+          "RuleProviderType": "User"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "ScreenLB",
           "RuleProviderType": "User"
         },
         {

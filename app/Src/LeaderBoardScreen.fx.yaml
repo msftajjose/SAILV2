@@ -185,9 +185,10 @@ LeaderBoardScreen As screen:
                     LayoutMinWidth: =640
                     score: =First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores
                     ScreenChallenge: =ChallengeScreen
+                    ScreenLB: =LeaderBoardScreen
                     ScreenNavHome: =LeaderBoardScreen
                     ScreenNavPrompt: =PromptLibraryScreen
-                    varID: =2
+                    varID: =6
                     VarMenuDefaultVal: |-
                         =//vardefault
                         //{ ID:2,Icon:Icon.Home ,Value: "Home" }

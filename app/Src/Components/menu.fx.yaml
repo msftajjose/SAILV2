@@ -5,6 +5,7 @@ menu As CanvasComponent:
     OnReset: =Reset(Gallery7_3)
     score: ="Text"
     ScreenChallenge: =App.ActiveScreen
+    ScreenLB: =
     ScreenNavHome: =
     ScreenNavPrompt: =
     SelectedItem: =Gallery7_3.Selected
@@ -132,7 +133,7 @@ menu As CanvasComponent:
                 //3, Reset(menu); Navigate(menu.ScreenNavPrompt); Set(varMenuID,3)  ,
                 //4, false,
                 5, Navigate(menu.ScreenChallenge),
-                6, Navigate(menu.sc),
+                6, Navigate(menu.ScreenLB),
                 7, false,
                 8, false,
                 9, false,

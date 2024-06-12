@@ -185,6 +185,7 @@ HomeScreen As screen:
                     LayoutMinWidth: =640
                     score: =First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores
                     ScreenChallenge: =ChallengeScreen
+                    ScreenLB: =LeaderBoardScreen
                     ScreenNavHome: =HomeScreen
                     ScreenNavPrompt: =PromptLibraryScreen
                     varID: =2
