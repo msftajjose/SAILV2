@@ -298,46 +298,69 @@ FeedbackScreen As screen:
                         Width: =1366
                         ZIndex: =2
 
-                        Rectangle3_21 As rectangle:
-                            BorderColor: =RGBA(0, 0, 0, 1)
-                            BorderThickness: =1
-                            Fill: =RGBA(255, 255, 255, 1)
-                            Height: =412
-                            Width: =713
-                            X: =220
-                            Y: =105
+                        HtmlText1_36 As htmlViewer:
+                            Height: =584
+                            HtmlText: |
+                                ="<div style='background-color: rgba(255,255,255,100%); 
+                                margin: 20px; 
+                                width: 800px; 
+                                height: 500px; 
+                                border-radius: 30px'>
+                                </div>"
+                                
+                                /*
+                                "<div style='background-color: rgba(1,2,3,30%); 
+                                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                                "<div style='background-color: rgba(39,69,129,1); 
+                                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                                
+                                */
+                            Width: =903
+                            X: =129
+                            Y: =25
+                            ZIndex: =1
+
+                        HtmlText6_30 As htmlViewer:
+                            Color: =RGBA(128, 128, 128, 1)
+                            Font: =Font.'Segoe UI'
+                            Height: =30
+                            HtmlText: ="<b></b>Reward"
+                            Size: =10
+                            Width: =95
+                            X: =811
+                            Y: =128
                             ZIndex: =2
 
-                        Button8_38 As button:
-                            BorderColor: =App.Theme.Colors.Primary
-                            BorderThickness: =0
-                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
+                        Image22_9 As image:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
-                            Fill: =_theme.ColorPrimary
-                            FocusedBorderThickness: =1
-                            Font: =App.Theme.Font
-                            FontWeight: =FontWeight.Semibold
-                            HoverBorderColor: =App.Theme.Colors.Darker10
-                            HoverColor: =RGBA(255, 255, 255, 1)
-                            HoverFill: =App.Theme.Colors.Darker10
-                            OnSelect: |-
-                                =//UpdateContext({_varAppFeedbackReg:false});
-                                Reset(ComboBox1_9);
-                                Reset(Rating1_11);
-                                Reset(TextInput1_11);
-                            PressedBorderColor: =App.Theme.Colors.Darker40
-                            PressedColor: =Self.Color
-                            PressedFill: =App.Theme.Colors.Darker40
-                            RadiusBottomLeft: =20
-                            RadiusBottomRight: =20
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =20
-                            Size: =15
-                            Text: ="Cancel"
-                            X: =365
-                            Y: =438
+                            DisplayMode: |+
+                                =If(IsBlank(varAlreadySubmittedPrompt), DisplayMode.Edit,DisplayMode.Disabled)
+                                
+                            Height: =25
+                            Image: =heart
+                            Width: =25
+                            X: =816
+                            Y: =158
                             ZIndex: =3
+
+                        HtmlText6_31 As htmlViewer:
+                            DisabledBorderColor: =RGBA(106, 122, 127, 1)
+                            DisabledFill: =RGBA(255, 255, 255, 1)
+                            DisplayMode: |
+                                =DisplayMode.Edit
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Font: =Font.'Segoe UI'
+                            Height: =31
+                            HtmlText: |+
+                                ="<b>100</b>"
+                                
+                            Size: =10
+                            Width: =95
+                            X: =846
+                            Y: =158
+                            ZIndex: =4
 
                         Button8_39 As button:
                             BorderColor: =App.Theme.Colors.Primary
@@ -356,6 +379,9 @@ FeedbackScreen As screen:
                                 =Patch(AppFeedbacks_Dvs,Defaults(AppFeedbacks_Dvs),{Name:_myProfileUPN_V.UserPrincipalName,Comments:TextInput1_11.Text,Rating:Text(Rating1_11.Value),UserName:varCrrUser.LoginName,Category:First(ComboBox1_9.SelectedItems).Value});
                                 If(IsBlank(varCrrUser.ErD), Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{ErD:"Yes",NotificationST:"Yes"}));
                                 Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"You have submited a feedback !",UserID:varCrrUser,IsRead:"No"});
+                                
+                                Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewFeedbackScore",Score:100,UserID:varCrrUser,Processed:"No"});
+                                
                                 Reset(ComboBox1_9);
                                 Reset(Rating1_11);
                                 Reset(TextInput1_11);
@@ -371,7 +397,7 @@ FeedbackScreen As screen:
                             Text: ="Submit"
                             X: =603
                             Y: =438
-                            ZIndex: =4
+                            ZIndex: =7
 
                         Label8_32 As label:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -385,7 +411,7 @@ FeedbackScreen As screen:
                             Width: =167
                             X: =261
                             Y: =175
-                            ZIndex: =5
+                            ZIndex: =8
 
                         Label8_33 As label:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -399,7 +425,7 @@ FeedbackScreen As screen:
                             Width: =120
                             X: =259
                             Y: =215
-                            ZIndex: =6
+                            ZIndex: =9
 
                         Rating1_11 As rating:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -421,7 +447,7 @@ FeedbackScreen As screen:
                             Width: =200
                             X: =442
                             Y: =177
-                            ZIndex: =7
+                            ZIndex: =10
 
                         TextInput1_11 As text:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -441,7 +467,7 @@ FeedbackScreen As screen:
                             Width: =419
                             X: =446
                             Y: =224
-                            ZIndex: =8
+                            ZIndex: =11
 
                         Label8_31 As label:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -455,7 +481,7 @@ FeedbackScreen As screen:
                             Width: =167
                             X: =262
                             Y: =128
-                            ZIndex: =9
+                            ZIndex: =12
 
                         ComboBox1_9 As combobox:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -486,7 +512,7 @@ FeedbackScreen As screen:
                             Size: =13
                             X: =444
                             Y: =131
-                            ZIndex: =10
+                            ZIndex: =13
 
     ContainerSpinner_4 As groupContainer:
         DropShadow: =DropShadow.Light
