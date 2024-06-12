@@ -608,7 +608,7 @@ HomeScreen As screen:
                                         '#CopilotOverlayLabel': ="Filtered"
                                         BorderColor: =App.Theme.Colors.Darker40
                                         DelayItemLoading: =true
-                                        Height: =190
+                                        Height: =170
                                         Items: =Sort(Filter(TeamChats,TeamID.TeamRegistrationssN = varCrrUser.TeamID.TeamRegistrationssN),'Created On',SortOrder.Descending)
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data

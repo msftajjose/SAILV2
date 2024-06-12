@@ -4812,6 +4812,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "SquadScreen.MainContainer_7.BottomContainer_7.CommonContainer_7.Container20_4.Container26.Gallery13.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SquadScreen.MainContainer_7.BottomContainer_7.CommonContainer_7.Container20_4.Container26.Gallery13.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "SquadScreen",
+                "type": "SquadScreen.MainContainer_7.BottomContainer_7.CommonContainer_7.Container20_4.Container26.Gallery13"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SquadScreen.MainContainer_7.BottomContainer_7.CommonContainer_7.Container20_4.Container26.Gallery13.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SquadScreen.MainContainer_7.BottomContainer_7.CommonContainer_7.Container20_4.Container26.Gallery13.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "SquadScreen",
+                "type": "SquadScreen.MainContainer_7.BottomContainer_7.CommonContainer_7.Container20_4.Container26.Gallery13"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "SquadScreen.MainContainer_7.BottomContainer_7.CommonContainer_7.Container20_3.Container21_3.Container14_1.TextInput3_4.AccessibleLabel"
                 }
               ],
