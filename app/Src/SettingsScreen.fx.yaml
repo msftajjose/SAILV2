@@ -3,7 +3,7 @@ SettingsScreen As screen:
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
         =//Reset(menu_3);
-        UpdateContext({varspinner:true});
+        //UpdateContext({varspinner:true});
         Set(varMenuID,9);
         Reset(Gallery5_22);
         UpdateContext({varSavedPrompts:Filter(tblFavPrompts,UserID.LoginName=varlgname && IsActiveFav=1)});

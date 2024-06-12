@@ -834,10 +834,12 @@ PromptLibraryScreen As screen:
                                         DisabledColor: =RGBA(244, 244, 244, 1)
                                         Height: =15
                                         Icon: =Icon.Copy
-                                        OnSelect: =Copy(ThisItem.TipsTricks)
+                                        OnSelect: |-
+                                            =Copy(ThisItem.TipsTricks);
+                                            Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewCopyPromptScore",Score:1,UserID:varCrrUser,Processed:"No"});
                                         Tooltip: ="Copy Prompt"
                                         Width: =15
-                                        X: =1025
+                                        X: =1020
                                         Y: =15
                                         ZIndex: =7
 
@@ -1453,6 +1455,7 @@ PromptLibraryScreen As screen:
                 If(!IsBlank(varDataSubmitted),If(IsBlank(varAlreadySubmittedPrompt),Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewPromptScore",Processed:"No",Score:If(Len(TextInputCanvas3.Value)>0 && !CheckboxCanvas1.Checked,100,If(Len(TextInputCanvas3.Value)>0 && CheckboxCanvas1.Checked,105,0) ),UserID:varCrrUser})),Notify("Error submitting prompt !!",NotificationType.Error));
                 
                 If(!IsBlank(varDataSubmitted),Notify("Prompt submitted succsfully !", NotificationType.Success));
+                Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"You have submited a feedback !",UserID:varCrrUser,IsRead:"No"});
                 
                 Reset(TextInputCanvas3);
                 Reset(TextInputCanvas2);

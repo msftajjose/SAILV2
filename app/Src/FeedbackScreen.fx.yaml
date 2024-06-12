@@ -186,7 +186,7 @@ FeedbackScreen As screen:
                     LayoutMinWidth: =640
                     score: =First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores
                     ScreenChallenge: =ChallengeScreen
-                    ScreenLB: =FeedbackScreen
+                    ScreenLB: =LeaderBoardScreen
                     ScreenNavHome: =HomeScreen
                     ScreenNavPrompt: =PromptLibraryScreen
                     ScreenSettings: =SettingsScreen
@@ -327,8 +327,8 @@ FeedbackScreen As screen:
                             HtmlText: ="<b></b>Reward"
                             Size: =10
                             Width: =95
-                            X: =811
-                            Y: =128
+                            X: =801
+                            Y: =123
                             ZIndex: =2
 
                         Image22_9 As image:
@@ -341,8 +341,8 @@ FeedbackScreen As screen:
                             Height: =25
                             Image: =heart
                             Width: =25
-                            X: =816
-                            Y: =158
+                            X: =806
+                            Y: =153
                             ZIndex: =3
 
                         HtmlText6_31 As htmlViewer:
@@ -358,46 +358,9 @@ FeedbackScreen As screen:
                                 
                             Size: =10
                             Width: =95
-                            X: =846
-                            Y: =158
+                            X: =836
+                            Y: =153
                             ZIndex: =4
-
-                        Button8_39 As button:
-                            BorderColor: =App.Theme.Colors.Primary
-                            BorderThickness: =0
-                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            DisabledFill: =RGBA(244, 244, 244, 1)
-                            Fill: =_theme.ColorPrimary
-                            FocusedBorderThickness: =1
-                            Font: =App.Theme.Font
-                            FontWeight: =FontWeight.Semibold
-                            HoverBorderColor: =App.Theme.Colors.Darker10
-                            HoverColor: =RGBA(255, 255, 255, 1)
-                            HoverFill: =App.Theme.Colors.Darker10
-                            OnSelect: |-
-                                =Patch(AppFeedbacks_Dvs,Defaults(AppFeedbacks_Dvs),{Name:_myProfileUPN_V.UserPrincipalName,Comments:TextInput1_11.Text,Rating:Text(Rating1_11.Value),UserName:varCrrUser.LoginName,Category:First(ComboBox1_9.SelectedItems).Value});
-                                If(IsBlank(varCrrUser.ErD), Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{ErD:"Yes",NotificationST:"Yes"}));
-                                Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"You have submited a feedback !",UserID:varCrrUser,IsRead:"No"});
-                                
-                                Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewFeedbackScore",Score:100,UserID:varCrrUser,Processed:"No"});
-                                
-                                Reset(ComboBox1_9);
-                                Reset(Rating1_11);
-                                Reset(TextInput1_11);
-                                //UpdateContext({_varAppFeedbackReg:false});
-                            PressedBorderColor: =App.Theme.Colors.Darker40
-                            PressedColor: =Self.Color
-                            PressedFill: =App.Theme.Colors.Darker40
-                            RadiusBottomLeft: =20
-                            RadiusBottomRight: =20
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =20
-                            Size: =15
-                            Text: ="Submit"
-                            X: =603
-                            Y: =438
-                            ZIndex: =7
 
                         Label8_32 As label:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -513,6 +476,43 @@ FeedbackScreen As screen:
                             X: =444
                             Y: =131
                             ZIndex: =13
+
+                        btn_Start_63 As button:
+                            BorderColor: =RGBA(141, 48, 128, 1)
+                            Color: =RGBA(141, 48, 128, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            FocusedBorderThickness: =2
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =50
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =RGBA(167, 182, 203, 1)
+                            OnSelect: |-
+                                =Patch(AppFeedbacks_Dvs,Defaults(AppFeedbacks_Dvs),{Name:_myProfileUPN_V.UserPrincipalName,Comments:TextInput1_11.Text,Rating:Text(Rating1_11.Value),UserName:varCrrUser.LoginName,Category:First(ComboBox1_9.SelectedItems).Value});
+                                //If(IsBlank(varCrrUser.ErD), Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{ErD:"Yes",NotificationST:"Yes"}));
+                                Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"You have submited a feedback !",UserID:varCrrUser,IsRead:"No"});
+                                
+                                Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewFeedbackScore",Score:100,UserID:varCrrUser,Processed:"No"});
+                                
+                                Reset(ComboBox1_9);
+                                Reset(Rating1_11);
+                                Reset(TextInput1_11);
+                                //UpdateContext({_varAppFeedbackReg:false});
+                            PressedFill: =RGBA(0, 134, 208, 1)
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Size: =14
+                            Text: ="             Submit"
+                            Tooltip: ="New users click to Register"
+                            Width: =165
+                            X: =573
+                            Y: =433
+                            ZIndex: =14
 
     ContainerSpinner_4 As groupContainer:
         DropShadow: =DropShadow.Light
