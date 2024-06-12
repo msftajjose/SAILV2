@@ -542,6 +542,17 @@ ChallengeScreen As screen:
                             Y: =9
                             ZIndex: =5
 
+                        "Progress1 As 'Progress Bar'":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =27
+                            Indeterminate: =true
+                            ProgressColor: ='Progress.ProgressColor'.Success
+                            Thickness: ='Progress.Thickness'.Large
+                            Width: =275
+                            X: =15
+                            Y: =77
+                            ZIndex: =6
+
                     HtmlText1_35 As htmlViewer:
                         Height: =244
                         HtmlText: |+
