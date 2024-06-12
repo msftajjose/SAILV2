@@ -60,6 +60,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "sail23_tblchallengesv2progress",
+    "MaxGetRowsCount": 2000,
     "Name": "tblChallengesV2Progresses",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",

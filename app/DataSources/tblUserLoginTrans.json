@@ -60,6 +60,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "sail23_tbluserlogintrans",
+    "MaxGetRowsCount": 2000,
     "Name": "tblUserLoginTrans",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",

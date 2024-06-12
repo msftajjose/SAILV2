@@ -534,7 +534,26 @@ PromptLibraryScreen As screen:
                                         DisabledFill: =RGBA(244, 244, 244, 1)
                                         Height: =20
                                         Image: =heart
-                                        OnSelect: =Select(Parent)
+                                        OnSelect: |
+                                            =Select(Parent);
+                                            
+                                            UpdateContext({varspinner:true});
+                                            
+                                            Refresh(TipsLikes);
+                                            UpdateContext({varAlreadyLiked:First(Filter(TipsLikes,UserID.Registrations_Dv=varCrrUser.Registrations_Dv && ListItemID.TipsandTricksCollaboration=ThisItem.TipsandTricksCollaboration)).Likes});
+                                            If(IsBlank(varAlreadyLiked),Patch(TipsLikes,Defaults(TipsLikes),{Name:"TipsLikes",UserID:varCrrUser,ListItemID:ThisItem,Likes:1}));
+                                            Refresh(TipsLikes);
+                                            Refresh(TipsandTricksCollaborations);
+                                            UpdateContext({varLikedUser:First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv))});
+                                            
+                                            If(IsBlank(varAlreadyLiked),Notify("Thank you for adding hearts to this prompt!",NotificationType.Information,Notify("You have already liked this prompt!",NotificationType.Information)
+                                            
+                                            /*
+                                            If(IsBlank(varAlreadyLiked),Patch(AIUserScores,Defaults(AIUserScores),{Name:"UserScore",UserID:First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)),Processed:"No",Score:100,TeamID:First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)).TeamID}));
+                                            */
+                                            
+                                            
+                                            UpdateContext({varspinner:false});
                                         Width: =20
                                         X: =966
                                         Y: =14
@@ -1295,7 +1314,7 @@ PromptLibraryScreen As screen:
             OnSelect: |-
                 =Copy(TextInputCanvas3_2.Value);
                 
-                Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewPromptScore",Score:5,UserID:varCrrUser});
+                Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewPromptScore",Score:1,UserID:varCrrUser});
             PressedFill: =RGBA(0, 134, 208, 1)
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
