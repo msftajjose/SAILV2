@@ -8,7 +8,7 @@ HomeScreen As screen:
         Reset(Gallery5_4);
         
         UpdateContext({varSavedPrompts:Filter(tblFavPrompts,UserID.LoginName=varlgname && IsActiveFav=1)});
-        Reset(Gallery10_2);
+        //Reset(Gallery10_2);
 
     MainContainer_1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -876,7 +876,10 @@ HomeScreen As screen:
                                         BorderStyle: =BorderStyle.None
                                         DelayItemLoading: =true
                                         Height: =220
-                                        Items: =If(Gallery5_15.Selected.ID=2,FirstN(Sort(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration exactin varSavedPrompts.tipID),NoOfLikes,SortOrder.Descending),50),Sort(FirstN(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration exactin varSavedPrompts.tipID),50),'Created On',SortOrder.Descending))
+                                        Items: |-
+                                            =/*If(Gallery5_15.Selected.ID=2,FirstN(Sort(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration exactin varSavedPrompts.tipID),NoOfLikes,SortOrder.Descending),50),Sort(FirstN(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration exactin varSavedPrompts.tipID),50),'Created On',SortOrder.Descending)) */
+                                            
+                                            FirstN(Sort(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration exactin varSavedPrompts.tipID),NoOfLikes,SortOrder.Descending),50)
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =3
