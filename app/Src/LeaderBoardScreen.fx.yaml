@@ -6,6 +6,7 @@ LeaderBoardScreen As screen:
         //UpdateContext({varspinner:true});
         Set(varMenuID, 6);
         Reset(Gallery5_17);
+        Refresh(Registrations_Dvs);
         Set(varNewScore,First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores);
         //UpdateContext({varSavedPrompts:Filter(tblFavPrompts,UserID.LoginName=varlgname && IsActiveFav=1)});
 
@@ -297,34 +298,20 @@ LeaderBoardScreen As screen:
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =850
+                        Width: =750
                         ZIndex: =1
 
-                        Container18 As groupContainer.manualLayoutContainer:
+                        Container24 As groupContainer.manualLayoutContainer:
                             DropShadow: =DropShadow.Light
-                            LayoutMinHeight: =100
+                            FillPortions: =0
+                            Height: =50
+                            LayoutMinHeight: =50
                             LayoutMinWidth: =250
                             RadiusBottomLeft: =4
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
                             ZIndex: =1
-
-                            Image14 As image:
-                                BorderColor: =App.Theme.Colors.Darker40
-                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                DisabledFill: =RGBA(244, 244, 244, 1)
-                                Height: =Parent.Height-70
-                                Image: =Ld2
-                                ImagePosition: =ImagePosition.Stretch
-                                RadiusBottomLeft: =5
-                                RadiusBottomRight: =5
-                                RadiusTopLeft: =5
-                                RadiusTopRight: =5
-                                Width: =719
-                                X: =10
-                                Y: =60
-                                ZIndex: =1
 
                             "Gallery5_26 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
                                 BorderColor: =App.Theme.Colors.Darker40
@@ -336,8 +323,8 @@ LeaderBoardScreen As screen:
                                     Table( { ID:2,Value: "Solo Hearts" },{ID:4, Value: "Squard Hearts" })
                                 TemplatePadding: =0
                                 TemplateSize: =148
-                                Width: =850
-                                ZIndex: =2
+                                Width: =750
+                                ZIndex: =1
 
                                 Button7_7 As button:
                                     BorderColor: =RGBA(0, 0, 0, 1)
@@ -366,17 +353,44 @@ LeaderBoardScreen As screen:
                                     Y: =14
                                     ZIndex: =1
 
+                        Container18 As groupContainer.manualLayoutContainer:
+                            DropShadow: =DropShadow.Light
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =220
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Visible: =If(Gallery5_26.Selected.ID=2,true,false)
+                            ZIndex: =2
+
+                            Image14 As image:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                Height: =572
+                                Image: =Ld2
+                                ImagePosition: =ImagePosition.Stretch
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Width: =719
+                                X: =10
+                                Y: =11
+                                ZIndex: =1
+
                             "Gallery12 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                                 BorderColor: =App.Theme.Colors.Darker40
                                 DelayItemLoading: =true
-                                Height: =400
-                                Items: =FirstN(Sort(Registrations_Dvs,Scores,SortOrder.Descending),5)
+                                Height: =392
+                                Items: =FirstN(Sort(Registrations_Dvs,Scores,SortOrder.Descending),50)
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
                                 TemplatePadding: =0
                                 TemplateSize: =104
                                 X: =40
-                                Y: =215
+                                Y: =175
                                 ZIndex: =3
 
                                 HtmlText1_37 As htmlViewer:
@@ -478,7 +492,7 @@ LeaderBoardScreen As screen:
                                     
                                 Width: =640
                                 X: =45
-                                Y: =75
+                                Y: =35
                                 ZIndex: =4
 
                             Image16_1 As image:
@@ -494,7 +508,7 @@ LeaderBoardScreen As screen:
                                 RadiusTopRight: =8
                                 Width: =72
                                 X: =56
-                                Y: =88
+                                Y: =48
                                 ZIndex: =5
 
                             Title7_1 As label:
@@ -513,7 +527,7 @@ LeaderBoardScreen As screen:
                                 VerticalAlign: =VerticalAlign.Top
                                 Width: =90
                                 X: =148
-                                Y: =115
+                                Y: =75
                                 ZIndex: =6
 
                             Subtitle6_1 As label:
@@ -532,7 +546,7 @@ LeaderBoardScreen As screen:
                                 VerticalAlign: =VerticalAlign.Top
                                 Width: =Title7_1.Width
                                 X: =569
-                                Y: =115
+                                Y: =75
                                 ZIndex: =7
 
                             Image17_1 As image:
@@ -544,7 +558,7 @@ LeaderBoardScreen As screen:
                                 OnSelect: =
                                 Width: =25
                                 X: =538
-                                Y: =113
+                                Y: =73
                                 ZIndex: =8
 
                             TextCanvas1_25 As Text:
@@ -560,7 +574,7 @@ LeaderBoardScreen As screen:
                                 Width: =200
                                 Wrap: =true
                                 X: =51
-                                Y: =51
+                                Y: =11
                                 ZIndex: =9
 
                             TextCanvas1_26 As Text:
@@ -576,7 +590,247 @@ LeaderBoardScreen As screen:
                                 Width: =200
                                 Wrap: =true
                                 X: =45
-                                Y: =179
+                                Y: =139
+                                ZIndex: =10
+
+                        Container18_1 As groupContainer.manualLayoutContainer:
+                            DropShadow: =DropShadow.Light
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =220
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Visible: =If(Gallery5_26.Selected.ID=4,true,false)
+                            ZIndex: =3
+
+                            Image14_2 As image:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                Height: =572
+                                Image: =Ld2
+                                ImagePosition: =ImagePosition.Stretch
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Width: =719
+                                X: =10
+                                Y: =11
+                                ZIndex: =1
+
+                            "Gallery12_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                                BorderColor: =App.Theme.Colors.Darker40
+                                DelayItemLoading: =true
+                                Height: =392
+                                Items: =FirstN(Sort(TeamRegistrationss,Points,SortOrder.Descending),50)
+                                Layout: =Layout.Vertical
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplatePadding: =0
+                                TemplateSize: =104
+                                X: =40
+                                Y: =175
+                                ZIndex: =3
+
+                                HtmlText1_39 As htmlViewer:
+                                    Height: =104
+                                    HtmlText: |+
+                                        ="<div style='background-color:rgba(" & 255 & "," & 255 & "," & 255 &"," & If( ThisItem.IsSelected,1,.6) & ");   
+                                        
+                                        border-style: solid;
+                                        border-width: 1px;
+                                        margin: 0px; 
+                                        width: "& Parent.TemplateWidth-10 &"px; 
+                                        height:  "& Parent.TemplateHeight-18 &"px;
+                                        border-radius: 5px'>
+                                        </div>"
+                                        //box-shadow: 1px 2px 12px 0px rgba(" & 0 & "," & 0 & "," & 0 &"," & 1 & ");
+                                        
+                                    Width: =Parent.TemplateWidth
+                                    ZIndex: =1
+
+                                Image16_3 As image:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    Height: =72
+                                    Image: =If(IsBlank(ThisItem.TeamAvtar),User,ThisItem.TeamAvtar)
+                                    OnSelect: =Select(Parent)
+                                    RadiusBottomLeft: =8
+                                    RadiusBottomRight: =8
+                                    RadiusTopLeft: =8
+                                    RadiusTopRight: =8
+                                    Width: =72
+                                    X: =11
+                                    Y: =13
+                                    ZIndex: =2
+
+                                Title7_3 As label:
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =Font.'Courier New'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =Self.Size * 1.8
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =12
+                                    Text: =ThisItem.Name
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =90
+                                    X: =103
+                                    Y: =40
+                                    ZIndex: =3
+
+                                Subtitle6_3 As label:
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =Font.'Courier New'
+                                    FontWeight: = FontWeight.Semibold
+                                    Height: =Self.Size * 1.8
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =12
+                                    Text: =ThisItem.Points
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =Title7_3.Width
+                                    X: =524
+                                    Y: =40
+                                    ZIndex: =4
+
+                                Image17_3 As image:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    Height: =25
+                                    Image: =heart
+                                    OnSelect: =Select(Parent)
+                                    Width: =25
+                                    X: =493
+                                    Y: =38
+                                    ZIndex: =5
+
+                            HtmlText1_40 As htmlViewer:
+                                Height: =104
+                                HtmlText: |+
+                                    ="<div style='background-color:rgba(" & 255 & "," & 255 & "," & 255 &"," & .6 & ");   
+                                    
+                                    border-style: solid;
+                                    border-width: 1px;
+                                    margin: 0px; 
+                                    width: "& 640-10 &"px; 
+                                    height:  "& 104-18 &"px;
+                                    border-radius: 5px'>
+                                    </div>"
+                                    //box-shadow: 1px 2px 12px 0px rgba(" & 0 & "," & 0 & "," & 0 &"," & 1 & ");
+                                    
+                                Width: =640
+                                X: =45
+                                Y: =35
+                                ZIndex: =4
+
+                            Image16_4 As image:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                Height: =72
+                                Image: =If(IsBlank(First(Filter(Registrations_Dvs,LoginName=varlgname)).TeamID),User,First(Filter(Registrations_Dvs,LoginName=varlgname)).TeamID.TeamAvtar)
+                                OnSelect: =
+                                RadiusBottomLeft: =8
+                                RadiusBottomRight: =8
+                                RadiusTopLeft: =8
+                                RadiusTopRight: =8
+                                Width: =72
+                                X: =56
+                                Y: =48
+                                ZIndex: =5
+
+                            Title7_4 As label:
+                                Color: =RGBA(50, 49, 48, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =Font.'Courier New'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =Self.Size * 1.8
+                                OnSelect: =varlgname
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =12
+                                Text: =First(Filter(Registrations_Dvs,LoginName=varlgname)).TeamID.Name
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =90
+                                X: =148
+                                Y: =75
+                                ZIndex: =6
+
+                            Subtitle6_4 As label:
+                                Color: =RGBA(0, 0, 0, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =Font.'Courier New'
+                                FontWeight: = FontWeight.Semibold
+                                Height: =Self.Size * 1.8
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =12
+                                Text: =First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =Title7_4.Width
+                                X: =569
+                                Y: =75
+                                ZIndex: =7
+
+                            Image17_4 As image:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                Height: =25
+                                Image: =heart
+                                OnSelect: =
+                                Width: =25
+                                X: =538
+                                Y: =73
+                                ZIndex: =8
+
+                            TextCanvas1_27 As Text:
+                                Align: ='TextCanvas.Align'.Start
+                                DisplayMode: =DisplayMode.Edit
+                                Font: =Font.'Courier New'
+                                FontColor: =RGBA(255, 255, 255, 1)
+                                Height: =40
+                                Size: =14
+                                Text: ="My Team Score"
+                                VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                                Weight: ='TextCanvas.Weight'.Bold
+                                Width: =200
+                                Wrap: =true
+                                X: =51
+                                Y: =11
+                                ZIndex: =9
+
+                            TextCanvas1_28 As Text:
+                                Align: ='TextCanvas.Align'.Start
+                                DisplayMode: =DisplayMode.Edit
+                                Font: =Font.'Courier New'
+                                FontColor: =RGBA(255, 255, 255, 1)
+                                Height: =40
+                                Size: =14
+                                Text: ="Team Leader Board"
+                                VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                                Weight: ='TextCanvas.Weight'.Bold
+                                Width: =200
+                                Wrap: =true
+                                X: =45
+                                Y: =139
                                 ZIndex: =10
 
                     Container22 As groupContainer.verticalAutoLayoutContainer:
@@ -598,6 +852,7 @@ LeaderBoardScreen As screen:
                             RadiusBottomRight: =4
                             RadiusTopLeft: =4
                             RadiusTopRight: =4
+                            Visible: =If(Gallery5_26.Selected.ID=2,true,false)
                             ZIndex: =1
 
                             Image14_1 As image:
@@ -605,14 +860,15 @@ LeaderBoardScreen As screen:
                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                 DisabledFill: =RGBA(244, 244, 244, 1)
                                 Height: =Parent.Height-70
-                                Image: =LD1
+                                Image: |-
+                                    ='#1 Banner'
                                 ImagePosition: =ImagePosition.Stretch
                                 RadiusBottomLeft: =5
                                 RadiusBottomRight: =5
                                 RadiusTopLeft: =5
                                 RadiusTopRight: =5
-                                Width: =Parent.Width-20
-                                X: =10
+                                Width: =315
+                                X: =46
                                 Y: =60
                                 ZIndex: =1
 
@@ -628,9 +884,193 @@ LeaderBoardScreen As screen:
                                 Weight: ='TextCanvas.Weight'.Bold
                                 Width: =200
                                 Wrap: =true
-                                X: =45
+                                X: =90
                                 Y: =12
                                 ZIndex: =2
+
+                            Image16_2 As image:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                Height: =120
+                                Image: |+
+                                    =If(IsBlank(First(Sort(Registrations_Dvs,Scores,SortOrder.Descending)).UserAvtar),User,First(Sort(Registrations_Dvs,Scores,SortOrder.Descending)).UserAvtar)
+                                    
+                                    
+                                OnSelect: =
+                                RadiusBottomLeft: =8
+                                RadiusBottomRight: =8
+                                RadiusTopLeft: =8
+                                RadiusTopRight: =8
+                                Width: =120
+                                X: =143
+                                Y: =237
+                                ZIndex: =3
+
+                            Title7_2 As label:
+                                Color: =RGBA(255, 255, 255, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =Font.'Courier New'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =Self.Size * 1.8
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =18
+                                Text: =First(Sort(Registrations_Dvs,Scores,SortOrder.Descending)).LoginName
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =90
+                                X: =155
+                                Y: =87
+                                ZIndex: =4
+
+                            Subtitle6_2 As label:
+                                Color: =RGBA(255, 255, 255, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =Font.'Courier New'
+                                FontWeight: = FontWeight.Semibold
+                                Height: =Self.Size * 1.8
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =First(Sort(Registrations_Dvs,Scores,SortOrder.Descending)).Scores
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =Title7_2.Width
+                                X: =195
+                                Y: =150
+                                ZIndex: =5
+
+                            Image17_2 As image:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                Height: =25
+                                Image: =heart
+                                OnSelect: =
+                                Width: =25
+                                X: =162
+                                Y: =151
+                                ZIndex: =6
+
+                        Container23_1 As groupContainer.manualLayoutContainer:
+                            DropShadow: =DropShadow.Light
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Visible: =If(Gallery5_26.Selected.ID=4,true,false)
+                            ZIndex: =2
+
+                            Image14_3 As image:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                Height: =Parent.Height-70
+                                Image: |-
+                                    ='#1 Banner'
+                                ImagePosition: =ImagePosition.Stretch
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Width: =315
+                                X: =46
+                                Y: =60
+                                ZIndex: =1
+
+                            TextCanvas1_29 As Text:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Font: =Font.'Courier New'
+                                FontColor: =RGBA(0, 0, 0, 1)
+                                Height: =40
+                                Size: =14
+                                Text: ="Current Summer Champion"
+                                VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                                Weight: ='TextCanvas.Weight'.Bold
+                                Width: =200
+                                Wrap: =true
+                                X: =90
+                                Y: =12
+                                ZIndex: =2
+
+                            Image16_5 As image:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                Height: =120
+                                Image: |+
+                                    =If(IsBlank(First(Sort(TeamRegistrationss,Points,SortOrder.Descending)).TeamAvtar),User,First(Sort(TeamRegistrationss,Points,SortOrder.Descending)).TeamAvtar)
+                                    
+                                    
+                                    
+                                    
+                                    
+                                OnSelect: =
+                                RadiusBottomLeft: =8
+                                RadiusBottomRight: =8
+                                RadiusTopLeft: =8
+                                RadiusTopRight: =8
+                                Width: =120
+                                X: =143
+                                Y: =237
+                                ZIndex: =3
+
+                            Title7_5 As label:
+                                Align: =Align.Center
+                                Color: =RGBA(255, 255, 255, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =Font.'Courier New'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =33
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =18
+                                Text: =First(Sort(TeamRegistrationss,Points,SortOrder.Descending)).Name
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =169
+                                X: =121
+                                Y: =85
+                                ZIndex: =4
+
+                            Subtitle6_5 As label:
+                                Color: =RGBA(255, 255, 255, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =Font.'Courier New'
+                                FontWeight: = FontWeight.Semibold
+                                Height: =Self.Size * 1.8
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Text: =First(Sort(TeamRegistrationss,Points,SortOrder.Descending)).Points
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =Title7_5.Width
+                                X: =195
+                                Y: =150
+                                ZIndex: =5
+
+                            Image17_5 As image:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                Height: =25
+                                Image: =heart
+                                OnSelect: =
+                                Width: =25
+                                X: =162
+                                Y: =151
+                                ZIndex: =6
 
     ContainerSpinner_2 As groupContainer:
         DropShadow: =DropShadow.Light
