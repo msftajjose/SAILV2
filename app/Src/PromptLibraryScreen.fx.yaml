@@ -3,6 +3,7 @@ PromptLibraryScreen As screen:
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |
         =//Reset(menu_1);
+        UpdateContext({varspinner:true});
         Set(varMenuID, 3);
         
         Reset(Gallery5_3);
