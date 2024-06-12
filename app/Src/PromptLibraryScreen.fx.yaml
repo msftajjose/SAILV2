@@ -391,7 +391,6 @@ PromptLibraryScreen As screen:
                                         If(Len(TextInputCanvas1_1.Value)>0,Filter(TipsandTricksCollaborations,TextInputCanvas1_1.Value in Subject),
                                         If(Gallery5_15.Selected.ID=2,FirstN(Sort(TipsandTricksCollaborations,NoOfLikes,SortOrder.Descending),50),FirstN(Sort(TipsandTricksCollaborations,'Created On',SortOrder.Descending),50)))
                                     Layout: =Layout.Vertical
-                                    LoadingSpinner: =LoadingSpinner.Data
                                     TemplatePadding: =3
                                     TemplateSize: =45
                                     Visible: =If(menu_1.SelectedItem.ID=3 && Gallery5_11.Selected.ID=1 ,true,false)

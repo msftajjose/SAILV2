@@ -5,9 +5,11 @@ menu As CanvasComponent:
     OnReset: =Reset(Gallery7_3)
     score: ="Text"
     ScreenChallenge: =App.ActiveScreen
-    ScreenLB: =
+    ScreenFeedback: =App.ActiveScreen
     ScreenNavHome: =
     ScreenNavPrompt: =
+    ScreenSettings: =App.ActiveScreen
+    ScreenSquad: =App.ActiveScreen
     SelectedItem: =Gallery7_3.Selected
     varID: =
     VarMenuDefaultVal: |-
@@ -134,10 +136,10 @@ menu As CanvasComponent:
                 //4, false,
                 5, Navigate(menu.ScreenChallenge),
                 6, Navigate(menu.ScreenLB),
-                7, false,
+                7, Navigate(menu.ScreenSquad),
                 8, false,
-                9, false,
-                10, false)
+                9, Navigate(menu.ScreenSettings),
+                10, Navigate(menu.ScreenFeedback))
                 
                 
             TemplateFill: =If(ThisItem.IsSelected && !IsBlank(ThisItem.Icon), RGBA(214, 221, 224, 1),  RGBA(0, 0, 0, 0))

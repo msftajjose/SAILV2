@@ -6904,7 +6904,14 @@
         "Layout",
         "Transition",
         "DelayItemLoading",
-        "LoadingSpinner",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "LoadingSpinner.Data",
+          "InvariantPropertyName": "LoadingSpinner",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "LoadingSpinnerColor",
         "DisplayMode",
         {
@@ -7027,7 +7034,7 @@
         {
           "Category": "Design",
           "PropertyName": "LoadingSpinner",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -18503,7 +18510,10 @@
           "InvariantPropertyName": "ScreenLB",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "ScreenFeedback",
+        "ScreenSettings",
+        "ScreenSquad"
       ],
       "DynamicProperties": [
         {
@@ -18607,6 +18617,21 @@
           "Category": "Data",
           "PropertyName": "ScreenLB",
           "RuleProviderType": "User"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "ScreenFeedback",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "ScreenSettings",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "ScreenSquad",
+          "RuleProviderType": "System"
         },
         {
           "Category": "Design",

@@ -450,7 +450,6 @@ ChallengeScreen As screen:
                         Height: =255
                         Items: =tblChallengesV2S
                         Layout: =Layout.Vertical
-                        LoadingSpinner: =LoadingSpinner.Data
                         TemplatePadding: =10
                         TemplateSize: =130
                         Width: =694
