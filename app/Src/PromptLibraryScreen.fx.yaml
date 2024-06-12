@@ -194,6 +194,8 @@ PromptLibraryScreen As screen:
                     ScreenLB: =LeaderBoardScreen
                     ScreenNavHome: =HomeScreen
                     ScreenNavPrompt: =PromptLibraryScreen
+                    ScreenSettings: =SettingsScreen
+                    ScreenSquad: =SquadScreen
                     varID: =3
                     VarMenuDefaultVal: |-
                         =//vardefault
