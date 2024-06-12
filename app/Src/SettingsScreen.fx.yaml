@@ -1,12 +1,12 @@
 SettingsScreen As screen:
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
-    OnVisible: |-
+    OnVisible: |
         =//Reset(menu_3);
         //UpdateContext({varspinner:true});
         Set(varMenuID,9);
         Reset(Gallery5_22);
-        UpdateContext({varSavedPrompts:Filter(tblFavPrompts,UserID.LoginName=varlgname && IsActiveFav=1)});
+        Set(varNewScore,First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores);
 
     MainContainer_6 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -184,7 +184,7 @@ SettingsScreen As screen:
 
                 menu_8 As menu:
                     LayoutMinWidth: =640
-                    score: =First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores
+                    score: =varNewScore
                     ScreenChallenge: =ChallengeScreen
                     ScreenFeedback: =FeedbackScreen
                     ScreenLB: =SettingsScreen

@@ -6,6 +6,7 @@ LeaderBoardScreen As screen:
         //UpdateContext({varspinner:true});
         Set(varMenuID, 6);
         Reset(Gallery5_17);
+        Set(varNewScore,First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores);
         //UpdateContext({varSavedPrompts:Filter(tblFavPrompts,UserID.LoginName=varlgname && IsActiveFav=1)});
 
     MainContainer_4 As groupContainer.verticalAutoLayoutContainer:
@@ -184,7 +185,7 @@ LeaderBoardScreen As screen:
 
                 menu_6 As menu:
                     LayoutMinWidth: =640
-                    score: =First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores
+                    score: =varNewScore
                     ScreenChallenge: =ChallengeScreen
                     ScreenFeedback: =FeedbackScreen
                     ScreenLB: =LeaderBoardScreen

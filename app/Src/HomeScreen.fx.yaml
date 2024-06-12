@@ -4,10 +4,13 @@ HomeScreen As screen:
     OnVisible: |-
         =//Reset(menu_3);
         UpdateContext({varspinner:true});
+        Set(varNewScore,First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores);
         Set(varMenuID, 2);
         Reset(Gallery5_4);
         
         UpdateContext({varSavedPrompts:Filter(tblFavPrompts,UserID.LoginName=varlgname && IsActiveFav=1)});
+        
+        Set(varSavedprmpt,FirstN(Sort(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration exactin varSavedPrompts.tipID),NoOfLikes,SortOrder.Descending),50));
         //Reset(Gallery10_2);
 
     MainContainer_1 As groupContainer.verticalAutoLayoutContainer:
@@ -186,12 +189,14 @@ HomeScreen As screen:
 
                 menu_3 As menu:
                     LayoutMinWidth: =640
-                    score: =First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores
+                    score: =varNewScore
                     ScreenChallenge: =ChallengeScreen
                     ScreenFeedback: =FeedbackScreen
                     ScreenLB: =LeaderBoardScreen
                     ScreenNavHome: =App.ActiveScreen
                     ScreenNavPrompt: =PromptLibraryScreen
+                    ScreenSettings: =SettingsScreen
+                    ScreenSquad: =SquadScreen
                     varID: =2
                     VarMenuDefaultVal: |-
                         =//vardefault
@@ -878,9 +883,8 @@ HomeScreen As screen:
                                         DelayItemLoading: =true
                                         Height: =220
                                         Items: |-
-                                            =/*If(Gallery5_15.Selected.ID=2,FirstN(Sort(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration exactin varSavedPrompts.tipID),NoOfLikes,SortOrder.Descending),50),Sort(FirstN(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration exactin varSavedPrompts.tipID),50),'Created On',SortOrder.Descending)) */
-                                            
-                                            FirstN(Sort(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration exactin varSavedPrompts.tipID),NoOfLikes,SortOrder.Descending),50)
+                                            =varSavedprmpt
+                                            //FirstN(Sort(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration exactin varSavedPrompts.tipID),NoOfLikes,SortOrder.Descending),50)
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =3

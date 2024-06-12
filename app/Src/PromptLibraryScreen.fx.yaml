@@ -5,6 +5,7 @@ PromptLibraryScreen As screen:
         =//Reset(menu_1);
         UpdateContext({varspinner:true});
         Set(varMenuID, 3);
+        Set(varNewScore,First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores);
         
         Reset(Gallery5_3);
         Reset(TextInputCanvas1);
@@ -187,7 +188,7 @@ PromptLibraryScreen As screen:
 
                 menu_1 As menu:
                     LayoutMinWidth: =640
-                    score: =First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores
+                    score: =varNewScore
                     ScreenChallenge: =ChallengeScreen
                     ScreenFeedback: =FeedbackScreen
                     ScreenLB: =LeaderBoardScreen
