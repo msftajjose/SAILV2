@@ -3,7 +3,7 @@ LeaderBoardScreen As screen:
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
         =//Reset(menu_3);
-        Set(varMenuID, 2);
+        Set(varMenuID, 6);
         Reset(Gallery5_17);
         UpdateContext({varSavedPrompts:Filter(tblFavPrompts,UserID.LoginName=varlgname && IsActiveFav=1)});
 
@@ -186,7 +186,7 @@ LeaderBoardScreen As screen:
                     score: =First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores
                     ScreenChallenge: =ChallengeScreen
                     ScreenLB: =LeaderBoardScreen
-                    ScreenNavHome: =LeaderBoardScreen
+                    ScreenNavHome: =HomeScreen
                     ScreenNavPrompt: =PromptLibraryScreen
                     varID: =6
                     VarMenuDefaultVal: |-
