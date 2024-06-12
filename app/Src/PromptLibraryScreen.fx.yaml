@@ -546,7 +546,7 @@ PromptLibraryScreen As screen:
                                             Refresh(TipsandTricksCollaborations);
                                             UpdateContext({varLikedUser:First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv))});
                                             
-                                            If(IsBlank(varAlreadyLiked),Notify("Thank you for adding hearts to this prompt!",NotificationType.Information,Notify("You have already liked this prompt!",NotificationType.Information)
+                                            If(IsBlank(varAlreadyLiked),Notify("Thank you for adding hearts to this prompt!",NotificationType.Information),Notify("You have already liked this prompt!",NotificationType.Information));
                                             
                                             /*
                                             If(IsBlank(varAlreadyLiked),Patch(AIUserScores,Defaults(AIUserScores),{Name:"UserScore",UserID:First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)),Processed:"No",Score:100,TeamID:First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)).TeamID}));
@@ -586,6 +586,42 @@ PromptLibraryScreen As screen:
                                         X: =605
                                         Y: =17
                                         ZIndex: =16
+
+                                    Icon29 As icon.Blocked:
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(0,0,0,0)
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledColor: =RGBA(244, 244, 244, 1)
+                                        Height: =30
+                                        HoverColor: =RGBA(0,0,0,0)
+                                        Icon: =Icon.Blocked
+                                        OnSelect: |-
+                                            =Select(Parent);
+                                            
+                                            UpdateContext({varspinner:true});
+                                            
+                                            Refresh(TipsLikes);
+                                            UpdateContext({varAlreadyLiked:First(Filter(TipsLikes,UserID.LoginName=varlgname && ListItemID.TipsandTricksCollaboration=ThisItem.TipsandTricksCollaboration)).Likes});
+                                            If(IsBlank(varAlreadyLiked),Patch(TipsLikes,Defaults(TipsLikes),{Name:"TipsLikes",UserID:varCrrUser,ListItemID:ThisItem,Likes:1}));
+                                            Refresh(TipsLikes);
+                                            Refresh(TipsandTricksCollaborations);
+                                            
+                                            //UpdateContext({varLikedUser:First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv))});
+                                            
+                                            If(IsBlank(varAlreadyLiked),Notify("Thank you for adding hearts to this prompt!",NotificationType.Information),Notify("You have already liked this prompt!",NotificationType.Information));
+                                            
+                                            /*
+                                            If(IsBlank(varAlreadyLiked),Patch(AIUserScores,Defaults(AIUserScores),{Name:"UserScore",UserID:First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)),Processed:"No",Score:100,TeamID:First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)).TeamID}));
+                                            */
+                                            
+                                            
+                                            UpdateContext({varspinner:false});
+                                        PressedBorderColor: =RGBA(0,0,0,0)
+                                        PressedColor: =RGBA(0,0,0,0)
+                                        Width: =30
+                                        X: =960
+                                        Y: =10
+                                        ZIndex: =17
 
                                 NewPrompt As group:
                                     Height: =5
@@ -1498,14 +1534,14 @@ PromptLibraryScreen As screen:
             Icon: =Icon.BookmarkFilled
             OnSelect: |-
                 =UpdateContext({varLoadingSpinner:true});
-                UpdateContext({varExtScore:varSelectedPromptLib.NoOfLikes});
-                UpdateContext({varExtScore:varExtScore+5});
+                //UpdateContext({varExtScore:varSelectedPromptLib.NoOfLikes});
+                //UpdateContext({varExtScore:varExtScore+1});
                 Refresh(tblFavPrompts);
-                
+                Patch(TipsLikes,Defaults(TipsLikes),{Name:"TipsLikes",UserID:varCrrUser,ListItemID:varSelectedPromptLib,Likes:1});
                 Set(varFavAlreadyExist,Filter(tblFavPrompts,UserID.LoginName=varlgname && PromptID.TipsandTricksCollaboration= varSelectedPromptLib.TipsandTricksCollaboration));
                 If(IsEmpty(varFavAlreadyExist),Patch(tblFavPrompts,Defaults(tblFavPrompts),{Name:"FavTips",UserID:varCrrUser,PromptID:varSelectedPromptLib,IsActiveFav:1,tipID:varSelectedPromptLib.TipsandTricksCollaboration}),Patch(First(varFavAlreadyExist), { IsActiveFav:1}));
                 Patch(tblFavPrompts,First(varFavAlreadyExist), { IsActiveFav:1});
-                Patch(TipsandTricksCollaborations,First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)),{NoOfLikes:varExtScore});
+                //Patch(TipsandTricksCollaborations,First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)),{NoOfLikes:varExtScore});
                 Refresh(TipsandTricksCollaborations);
                 Reset(Gallery10_3);
                 UpdateContext({varShowExistingPrompt:false});
