@@ -1415,7 +1415,7 @@
               },
               {
                 "Category": "Data",
-                "InvariantScript": "//menu.VarMenuDefaultVal\n\nIf(menu.varID=2, { ID:2,Icon:Icon.Home ,Value: \"Home\" },If(menu.varID=3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" },If(menu.varID=5, {ID:5,Icon:Icon.Signal ,Value: \"Challenges\" },If(menu.varID=5,{ ID:6,Icon:Icon.OptionsList ,Value: \"Leader Boards\" }))))\n\n/*\nTable( { ID:1,Icon:\"\" ,Value: \"Discover\" }, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" },{ ID:4,Icon:\"\" ,Value: \"Play\" } ,{ ID:5,Icon:Icon.Signal ,Value: \"Challenges\" },{ ID:6,Icon:Icon.OptionsList ,Value: \"Leader Boards\" },{ ID:7,Icon:Icon.EmojiSmile ,Value: \"Squad\" },{ ID:8,Icon:\"\" ,Value: \"Adjust\" },{ ID:9,Icon:Icon.Settings ,Value: \"Settings\" },{ ID:10,Icon:Icon.Post ,Value: \"Feedback\" })\n*/\n\n/*\nSwitch(menu.varID,\n2, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, \n3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" }\n)\n*/",
+                "InvariantScript": "//menu.VarMenuDefaultVal\n\nIf(menu.varID=2, { ID:2,Icon:Icon.Home ,Value: \"Home\" },If(menu.varID=3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" },If(menu.varID=5, {ID:5,Icon:Icon.Signal ,Value: \"Challenges\" },If(menu.varID=6,{ ID:6,Icon:Icon.OptionsList ,Value: \"Leader Boards\" }))))\n\n/*\nTable( { ID:1,Icon:\"\" ,Value: \"Discover\" }, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" },{ ID:4,Icon:\"\" ,Value: \"Play\" } ,{ ID:5,Icon:Icon.Signal ,Value: \"Challenges\" },{ ID:6,Icon:Icon.OptionsList ,Value: \"Leader Boards\" },{ ID:7,Icon:Icon.EmojiSmile ,Value: \"Squad\" },{ ID:8,Icon:\"\" ,Value: \"Adjust\" },{ ID:9,Icon:Icon.Settings ,Value: \"Settings\" },{ ID:10,Icon:Icon.Post ,Value: \"Feedback\" })\n*/\n\n/*\nSwitch(menu.varID,\n2, { ID:2,Icon:Icon.Home ,Value: \"Home\" }, \n3, { ID:3,Icon:Icon.ListScrollWatchlist ,Value: \"Prompt Library\" }\n)\n*/",
                 "Property": "Default",
                 "RuleProviderType": "Unknown"
               },
@@ -2853,7 +2853,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638537720310739403",
+    "LastModifiedTimestamp": "638537721126116288",
     "Name": "menu",
     "Rules": [
       {
@@ -3055,7 +3055,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638537720310739403",
+  "LastModifiedTimestamp": "638537721126116288",
   "Name": "3dcb2ec1d1f74675969b80e7b1fbd350",
   "OverridableProperties": {},
   "Version": "1.0"
