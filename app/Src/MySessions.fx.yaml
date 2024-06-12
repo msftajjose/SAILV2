@@ -256,6 +256,210 @@ MySessions As screen:
                 Y: =22
                 ZIndex: =3
 
+    NewHalluScreen As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =83
+
+        HtmlText2_28 As htmlViewer:
+            Height: =474
+            HtmlText: |-
+                ="<div style='background-color:rgba(" & R & "," & G & "," & B &"," & A & ");  
+                box-shadow: 1px 2px 22px 0px rgba(255,255,255,1);
+                margin: 20px; 
+                width: 1000px; 
+                height: 400px; 
+                border-radius: 15px'>
+                </div>"
+            Visible: =varHalluScreen && varHalluNew
+            Width: =1114
+            X: =240
+            Y: =251
+            ZIndex: =32
+
+        btn_Start_22 As button:
+            BorderColor: =_theme.ColorPrimary
+            BorderThickness: =1
+            Color: =RGBA(50, 86, 160, 1)
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |
+                =UpdateContext({varHalluNew:false});
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =RGBA(0, 134, 208, 1)
+            Size: =14
+            Text: ="CANCEL"
+            Tooltip: ="New users click to Register"
+            Visible: =varHalluScreen && varHalluNew
+            X: =860
+            Y: =582
+            ZIndex: =33
+
+        btn_Start_27 As button:
+            BorderColor: =_theme.ColorPrimary
+            BorderThickness: =1
+            Color: =RGBA(50, 86, 160, 1)
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |
+                =UpdateContext({varLoadingSpinner:true});
+                If(!IsBlank(TextInput2_2.Text),Set(varHallData,Patch(AIhallucinations,Defaults(AIhallucinations),{UserID:varCrrUser,UserQuery:TextInput2_2.Text,AIResponse:TextInput2_3.Text,CommentsIfAny:TextInput2_4.Text,Name:"Hallucinations"})),Notify("Invalid Text",NotificationType.Error));
+                If(!IsBlank(varHallData),Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{ErR:"Yes"}));
+                Patch(AIUserScores,Defaults(AIUserScores),{Name:"Halluci",UserID:varCrrUser,Processed:"No",Score:800,TeamID:varCrrUser.TeamID});
+                UpdateContext({varHalluNew:false});
+                Refresh(Registrations_Dvs);
+                Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"You have submited a new Hallucination !",UserID:varCrrUser,IsRead:"No"});
+                Set(varCrrUser,First(Filter(Registrations_Dvs,LoginName=varlgname)));
+                Reset(TextInput2_2);
+                Reset(TextInput2_3);
+                Reset(TextInput2_4);
+                UpdateContext({varLoadingSpinner:false});
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =RGBA(0, 134, 208, 1)
+            Size: =14
+            Text: ="SUBMIT"
+            Visible: =varHalluScreen && varHalluNew
+            X: =608
+            Y: =582
+            ZIndex: =34
+
+        TextInput2_2 As text:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =88
+            HintText: ="Your Query"
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
+            Italic: =true
+            Mode: =TextMode.MultiLine
+            Size: =11
+            Visible: =varHalluScreen && varHalluNew
+            Width: =802
+            X: =419
+            Y: =290
+            ZIndex: =35
+
+        Label2_1 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =38
+            Size: =11
+            Text: ="User Query"
+            Visible: =varHalluScreen && varHalluNew
+            Width: =137
+            X: =282
+            Y: =310
+            ZIndex: =36
+
+        TextInput2_3 As text:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =88
+            HintText: ="AI Response"
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
+            Italic: =true
+            Mode: =TextMode.MultiLine
+            Size: =11
+            Visible: =varHalluScreen && varHalluNew
+            Width: =802
+            X: =420
+            Y: =394
+            ZIndex: =37
+
+        Label2_2 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =38
+            Size: =11
+            Text: ="Answer from AI"
+            Visible: =varHalluScreen && varHalluNew
+            Width: =137
+            X: =283
+            Y: =414
+            ZIndex: =38
+
+        TextInput2_4 As text:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =60
+            HintText: ="Comments"
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
+            Italic: =true
+            Mode: =TextMode.MultiLine
+            Size: =11
+            Visible: =varHalluScreen && varHalluNew
+            Width: =802
+            X: =420
+            Y: =495
+            ZIndex: =39
+
+        Label2_4 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =38
+            Size: =11
+            Text: ="Comments If Any"
+            Visible: =varHalluScreen && varHalluNew
+            Width: =137
+            X: =283
+            Y: =508
+            ZIndex: =40
+
     DocSuggestionsMain As group:
         Height: =5
         Width: =5
@@ -819,210 +1023,6 @@ MySessions As screen:
                 X: =10
                 Y: =37
                 ZIndex: =16
-
-    NewHalluScreen As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =83
-
-        HtmlText2_28 As htmlViewer:
-            Height: =474
-            HtmlText: |-
-                ="<div style='background-color:rgba(" & R & "," & G & "," & B &"," & A & ");  
-                box-shadow: 1px 2px 22px 0px rgba(255,255,255,1);
-                margin: 20px; 
-                width: 1000px; 
-                height: 400px; 
-                border-radius: 15px'>
-                </div>"
-            Visible: =varHalluScreen && varHalluNew
-            Width: =1114
-            X: =240
-            Y: =251
-            ZIndex: =32
-
-        btn_Start_22 As button:
-            BorderColor: =_theme.ColorPrimary
-            BorderThickness: =1
-            Color: =RGBA(50, 86, 160, 1)
-            DisabledBorderColor: =RGBA(244, 244, 244, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =2
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            HoverBorderColor: =App.Theme.Colors.Darker10
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(167, 182, 203, 1)
-            OnSelect: |
-                =UpdateContext({varHalluNew:false});
-            PressedBorderColor: =App.Theme.Colors.Darker40
-            PressedColor: =Self.Color
-            PressedFill: =RGBA(0, 134, 208, 1)
-            Size: =14
-            Text: ="CANCEL"
-            Tooltip: ="New users click to Register"
-            Visible: =varHalluScreen && varHalluNew
-            X: =860
-            Y: =582
-            ZIndex: =33
-
-        btn_Start_27 As button:
-            BorderColor: =_theme.ColorPrimary
-            BorderThickness: =1
-            Color: =RGBA(50, 86, 160, 1)
-            DisabledBorderColor: =RGBA(244, 244, 244, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =2
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            HoverBorderColor: =App.Theme.Colors.Darker10
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(167, 182, 203, 1)
-            OnSelect: |
-                =UpdateContext({varLoadingSpinner:true});
-                If(!IsBlank(TextInput2_2.Text),Set(varHallData,Patch(AIhallucinations,Defaults(AIhallucinations),{UserID:varCrrUser,UserQuery:TextInput2_2.Text,AIResponse:TextInput2_3.Text,CommentsIfAny:TextInput2_4.Text,Name:"Hallucinations"})),Notify("Invalid Text",NotificationType.Error));
-                If(!IsBlank(varHallData),Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{ErR:"Yes"}));
-                Patch(AIUserScores,Defaults(AIUserScores),{Name:"Halluci",UserID:varCrrUser,Processed:"No",Score:800,TeamID:varCrrUser.TeamID});
-                UpdateContext({varHalluNew:false});
-                Refresh(Registrations_Dvs);
-                Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"You have submited a new Hallucination !",UserID:varCrrUser,IsRead:"No"});
-                Set(varCrrUser,First(Filter(Registrations_Dvs,LoginName=varlgname)));
-                Reset(TextInput2_2);
-                Reset(TextInput2_3);
-                Reset(TextInput2_4);
-                UpdateContext({varLoadingSpinner:false});
-            PressedBorderColor: =App.Theme.Colors.Darker40
-            PressedColor: =Self.Color
-            PressedFill: =RGBA(0, 134, 208, 1)
-            Size: =14
-            Text: ="SUBMIT"
-            Visible: =varHalluScreen && varHalluNew
-            X: =608
-            Y: =582
-            ZIndex: =34
-
-        TextInput2_2 As text:
-            BorderColor: =App.Theme.Colors.Darker40
-            BorderThickness: =2
-            Color: =RGBA(0, 0, 0, 1)
-            Default: =""
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =88
-            HintText: ="Your Query"
-            HoverBorderColor: =App.Theme.Colors.Darker40
-            HoverColor: =RGBA(0, 0, 0, 1)
-            HoverFill: =App.Theme.Colors.Lighter70
-            Italic: =true
-            Mode: =TextMode.MultiLine
-            Size: =11
-            Visible: =varHalluScreen && varHalluNew
-            Width: =802
-            X: =419
-            Y: =290
-            ZIndex: =35
-
-        Label2_1 As label:
-            BorderColor: =App.Theme.Colors.Darker40
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =38
-            Size: =11
-            Text: ="User Query"
-            Visible: =varHalluScreen && varHalluNew
-            Width: =137
-            X: =282
-            Y: =310
-            ZIndex: =36
-
-        TextInput2_3 As text:
-            BorderColor: =App.Theme.Colors.Darker40
-            BorderThickness: =2
-            Color: =RGBA(0, 0, 0, 1)
-            Default: =""
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =88
-            HintText: ="AI Response"
-            HoverBorderColor: =App.Theme.Colors.Darker40
-            HoverColor: =RGBA(0, 0, 0, 1)
-            HoverFill: =App.Theme.Colors.Lighter70
-            Italic: =true
-            Mode: =TextMode.MultiLine
-            Size: =11
-            Visible: =varHalluScreen && varHalluNew
-            Width: =802
-            X: =420
-            Y: =394
-            ZIndex: =37
-
-        Label2_2 As label:
-            BorderColor: =App.Theme.Colors.Darker40
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =38
-            Size: =11
-            Text: ="Answer from AI"
-            Visible: =varHalluScreen && varHalluNew
-            Width: =137
-            X: =283
-            Y: =414
-            ZIndex: =38
-
-        TextInput2_4 As text:
-            BorderColor: =App.Theme.Colors.Darker40
-            BorderThickness: =2
-            Color: =RGBA(0, 0, 0, 1)
-            Default: =""
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =60
-            HintText: ="Comments"
-            HoverBorderColor: =App.Theme.Colors.Darker40
-            HoverColor: =RGBA(0, 0, 0, 1)
-            HoverFill: =App.Theme.Colors.Lighter70
-            Italic: =true
-            Mode: =TextMode.MultiLine
-            Size: =11
-            Visible: =varHalluScreen && varHalluNew
-            Width: =802
-            X: =420
-            Y: =495
-            ZIndex: =39
-
-        Label2_4 As label:
-            BorderColor: =App.Theme.Colors.Darker40
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =38
-            Size: =11
-            Text: ="Comments If Any"
-            Visible: =varHalluScreen && varHalluNew
-            Width: =137
-            X: =283
-            Y: =508
-            ZIndex: =40
 
     PostAQuery As group:
         Height: =5

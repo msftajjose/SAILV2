@@ -664,7 +664,7 @@
       "MetaDataIDKey": "",
       "Name": "BadgeScreen",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 181,
+      "ParentIndex": 189,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17462,7 +17462,7 @@
       "MetaDataIDKey": "",
       "Name": "ButtonGroup",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 183,
+      "ParentIndex": 193,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17514,7 +17514,7 @@
       "MetaDataIDKey": "",
       "Name": "ChallengeList",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 184,
+      "ParentIndex": 186,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17566,7 +17566,7 @@
       "MetaDataIDKey": "",
       "Name": "ChallengeWelcomeNotify",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 177,
+      "ParentIndex": 185,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25115,7 +25115,7 @@
       "MetaDataIDKey": "",
       "Name": "DocSuggestionsMain",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 170,
+      "ParentIndex": 181,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25167,7 +25167,7 @@
       "MetaDataIDKey": "",
       "Name": "DocSuggestionsNew",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 186,
+      "ParentIndex": 178,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -33923,7 +33923,7 @@
       "MetaDataIDKey": "",
       "Name": "Group_LeftPanel_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 169,
+      "ParentIndex": 175,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -33975,7 +33975,7 @@
       "MetaDataIDKey": "",
       "Name": "HallucinationMain",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 171,
+      "ParentIndex": 182,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -39109,7 +39109,7 @@
       "MetaDataIDKey": "",
       "Name": "HumanMain",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 179,
+      "ParentIndex": 187,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -65529,7 +65529,7 @@
       "MetaDataIDKey": "",
       "Name": "LearingCorner",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 175,
+      "ParentIndex": 183,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -66037,7 +66037,7 @@
       "MetaDataIDKey": "",
       "Name": "NewBadgeScreen",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 188,
+      "ParentIndex": 190,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -66089,7 +66089,7 @@
       "MetaDataIDKey": "",
       "Name": "NewHalluScreen",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 193,
+      "ParentIndex": 170,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -66141,7 +66141,7 @@
       "MetaDataIDKey": "",
       "Name": "NewHuman",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 191,
+      "ParentIndex": 177,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -66193,7 +66193,7 @@
       "MetaDataIDKey": "",
       "Name": "NewLearnings",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 187,
+      "ParentIndex": 180,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -66245,7 +66245,7 @@
       "MetaDataIDKey": "",
       "Name": "NewTip",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 190,
+      "ParentIndex": 176,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -66297,7 +66297,7 @@
       "MetaDataIDKey": "",
       "Name": "NewWishesScreen",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 185,
+      "ParentIndex": 192,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -66349,7 +66349,7 @@
       "MetaDataIDKey": "",
       "Name": "OpoUpSessionTips",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 192,
+      "ParentIndex": 171,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -66401,7 +66401,7 @@
       "MetaDataIDKey": "",
       "Name": "PostAQuery",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 189,
+      "ParentIndex": 169,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -66743,7 +66743,7 @@
       "MetaDataIDKey": "",
       "Name": "QuizScreen",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 174,
+      "ParentIndex": 179,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -66795,7 +66795,7 @@
       "MetaDataIDKey": "",
       "Name": "QuizWelcome",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 178,
+      "ParentIndex": 174,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -78463,7 +78463,7 @@
       "MetaDataIDKey": "",
       "Name": "TipsScreen",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 180,
+      "ParentIndex": 188,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -90994,7 +90994,7 @@
       "MetaDataIDKey": "",
       "Name": "WeeklyChallengeScreen",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 176,
+      "ParentIndex": 184,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -91046,7 +91046,7 @@
       "MetaDataIDKey": "",
       "Name": "WishesScreen",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 182,
+      "ParentIndex": 191,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
