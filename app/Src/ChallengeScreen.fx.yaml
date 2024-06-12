@@ -442,6 +442,106 @@ ChallengeScreen As screen:
                         Y: =331
                         ZIndex: =9
 
+                    "Gallery11 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                        BorderColor: =App.Theme.Colors.Darker40
+                        DelayItemLoading: =true
+                        Height: =255
+                        Items: =tblChallengesV2S
+                        Layout: =Layout.Vertical
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplatePadding: =10
+                        TemplateSize: =130
+                        Width: =694
+                        WrapCount: =2
+                        X: =28
+                        Y: =50
+                        ZIndex: =10
+
+                        HtmlText1_34 As htmlViewer:
+                            Height: =Parent.TemplateHeight
+                            HtmlText: |+
+                                ="<div style='background-color:rgba(" & 255 & "," & 255 & "," & 255 &"," & 1 & ");   
+                                
+                                border-style: solid;
+                                border-width: 1px;
+                                margin: 0px; 
+                                width: "& Parent.TemplateWidth-10 &"px; 
+                                height:  "& Parent.TemplateHeight-18 &"px;
+                                border-radius: 5px'>
+                                </div>"
+                                //box-shadow: 1px 2px 12px 0px rgba(" & 0 & "," & 0 & "," & 0 &"," & 1 & ");
+                                
+                            Width: =Parent.TemplateWidth
+                            ZIndex: =1
+
+                        Title6 As label:
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =Self.Size * 1.8
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =12
+                            Text: =ThisItem.Name
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Parent.TemplateWidth - 173
+                            X: =15
+                            Y: =10
+                            ZIndex: =2
+
+                        Subtitle5 As label:
+                            Color: =RGBA(79, 90, 94, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            Height: =45
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =8
+                            Text: =ThisItem.Description
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =275
+                            X: =15
+                            Y: =37
+                            ZIndex: =3
+
+                        Image22_7 As image:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: |+
+                                =If(IsBlank(varAlreadySubmittedPrompt), DisplayMode.Edit,DisplayMode.Disabled)
+                                
+                            Height: =25
+                            Image: =heart
+                            Width: =25
+                            X: =241
+                            Y: =9
+                            ZIndex: =4
+
+                        HtmlText6_28 As htmlViewer:
+                            AutoHeight: =true
+                            DisabledBorderColor: =RGBA(106, 122, 127, 1)
+                            DisabledFill: =RGBA(255, 255, 255, 1)
+                            DisplayMode: |
+                                =DisplayMode.Edit
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Font: =Font.'Segoe UI'
+                            Height: =31
+                            HtmlText: |
+                                =ThisItem.NoOfHearts
+                            Size: =10
+                            Width: =50
+                            X: =271
+                            Y: =9
+                            ZIndex: =5
+
     Container18_2 As groupContainer:
         DropShadow: =DropShadow.Light
         Height: =768

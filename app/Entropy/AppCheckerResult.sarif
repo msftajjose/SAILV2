@@ -18152,6 +18152,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ChallengeScreen.MainContainer_3.BottomContainer_3.CommonContainer_3.Container19.Gallery11.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ChallengeScreen.MainContainer_3.BottomContainer_3.CommonContainer_3.Container19.Gallery11.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ChallengeScreen",
+                "type": "ChallengeScreen.MainContainer_3.BottomContainer_3.CommonContainer_3.Container19.Gallery11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ChallengeScreen.MainContainer_3.BottomContainer_3.CommonContainer_3.Container19.Gallery11.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ChallengeScreen.MainContainer_3.BottomContainer_3.CommonContainer_3.Container19.Gallery11.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ChallengeScreen",
+                "type": "ChallengeScreen.MainContainer_3.BottomContainer_3.CommonContainer_3.Container19.Gallery11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.AM"
                 }
               ],
