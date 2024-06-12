@@ -772,7 +772,7 @@ HomeScreen As screen:
                                         OnSelect: |-
                                             =UpdateContext({varLoadingSpinner:true});
                                             If(!IsBlank(TextInput3_3.Text),Patch(TeamChats,Defaults(TeamChats),{Name:"TeamChat", TeamID:varCrrUser.TeamID,UserID:varCrrUser,Msg:TextInput3_3.Text}));
-                                            If(!IsBlank(TextInput3_3.Text),If(IsBlank(varCrrUser.ErE), Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{ErE:"Yes"})));
+                                            //If(!IsBlank(TextInput3_3.Text),If(IsBlank(varCrrUser.ErE), Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{ErE:"Yes"})));
                                             Refresh(Registrations_Dvs);
                                             Refresh(TeamChats);
                                             Reset(TextInput3_3);

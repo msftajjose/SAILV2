@@ -1,12 +1,12 @@
 SquadScreen As screen:
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
-    OnVisible: |-
+    OnVisible: |
         =//Reset(menu_3);
         //UpdateContext({varspinner:true});
         Set(varMenuID, 7);
         Reset(Gallery5_24);
-        UpdateContext({varSavedPrompts:Filter(tblFavPrompts,UserID.LoginName=varlgname && IsActiveFav=1)});
+        Reset(Gallery5_25);
 
     MainContainer_7 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -240,12 +240,12 @@ SquadScreen As screen:
                         Fill: =RGBA(255, 255, 255, 1)
                         Height: =60
                         Items: |-
-                            =Table( { ID:1,Value: "Home" }, { ID:2,Value: "Rewards" })
+                            =Table( { ID:1,Value: "Squad" }, { ID:2,Value: "Members" })
                         LayoutMinHeight: =287
                         LayoutMinWidth: =320
                         TemplatePadding: =0
                         TemplateSize: =148
-                        Visible: =If(menu_9.SelectedItem.ID=6,true,false)
+                        Visible: =If(menu_9.SelectedItem.ID=7,true,false)
                         Width: =447
                         X: =729
                         ZIndex: =1
@@ -300,6 +300,234 @@ SquadScreen As screen:
                         Width: =850
                         ZIndex: =1
 
+                        Container14_1 As groupContainer:
+                            BorderThickness: =1
+                            DropShadow: =DropShadow.Semilight
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Height: =275
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            RadiusBottomLeft: =7
+                            RadiusBottomRight: =7
+                            RadiusTopLeft: =7
+                            RadiusTopRight: =7
+                            Width: =609
+                            X: =28
+                            Y: =42
+                            ZIndex: =1
+
+                            "Gallery3_5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                                '#CopilotOverlayLabel': ="Filtered"
+                                BorderColor: =App.Theme.Colors.Darker40
+                                DelayItemLoading: =true
+                                Height: =504
+                                Items: =Sort(Filter(TeamChats,TeamID.TeamRegistrationssN = varCrrUser.TeamID.TeamRegistrationssN),'Created On',SortOrder.Descending)
+                                Layout: =Layout.Vertical
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplatePadding: =3
+                                TemplateSize: =70
+                                Visible: =!IsBlank(varCrrUser.TeamID)
+                                Width: =823
+                                X: =4
+                                Y: =53
+                                ZIndex: =1
+
+                                Button6_16 As button:
+                                    BorderColor: =App.Theme.Colors.Primary
+                                    BorderThickness: =1
+                                    DisabledBorderColor: =RGBA(13, 50, 61, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =DisplayMode.Disabled
+                                    Fill: =If(ThisItem.IsSelected,RGBA(255, 255, 255, 1),RGBA(255,255, 255, .95))
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =50
+                                    HoverBorderColor: =
+                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                    HoverFill: =RGBA(255, 255, 255, 1)
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    PressedBorderColor: =
+                                    PressedColor: =Self.Color
+                                    PressedFill: =App.Theme.Colors.Darker40
+                                    RadiusBottomLeft: =7
+                                    RadiusBottomRight: =7
+                                    RadiusTopLeft: =7
+                                    RadiusTopRight: =7
+                                    Size: =15
+                                    Text: =""
+                                    Width: =798
+                                    X: =10
+                                    Y: =17
+                                    ZIndex: =1
+
+                                Image5_11 As image:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    Height: =50
+                                    Image: =First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)).UserAvtar
+                                    OnSelect: =Select(Parent)
+                                    RadiusBottomLeft: =15
+                                    RadiusBottomRight: =15
+                                    RadiusTopLeft: =15
+                                    RadiusTopRight: =15
+                                    Width: =50
+                                    X: =10
+                                    Y: =17
+                                    ZIndex: =2
+
+                                Title4_7 As label:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(0, 13, 75, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisplayMode: =DisplayMode.View
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =20
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =9
+                                    Text: =First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)).LoginName
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =154
+                                    X: =14
+                                    ZIndex: =3
+
+                                Subtitle2_5 As label:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(116, 116, 116, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Height: =44
+                                    Italic: =true
+                                    OnSelect: |
+                                        =Select(Parent);
+                                        UpdateContext({popupText:ThisItem.Msg});
+                                        
+                                        UpdateContext({varShowmoreNew:true});
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =10
+                                    Text: =ThisItem.Msg
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =718
+                                    X: =76
+                                    Y: =20
+                                    ZIndex: =4
+
+                                Title4_9 As label:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(0, 13, 75, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisplayMode: =DisplayMode.View
+                                    Font: =App.Theme.Font
+                                    Height: =12
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =7
+                                    Text: =ThisItem.'Created On'
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Visible: =false
+                                    Width: =89
+                                    X: =504
+                                    Y: =8
+                                    ZIndex: =7
+
+                            TextInput3_4 As text:
+                                Color: =RGBA(0, 0, 0, 1)
+                                Default: =""
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                FocusedBorderThickness: =4
+                                Font: =App.Theme.Font
+                                Height: =50
+                                HintText: ="Message"
+                                HoverBorderColor: =App.Theme.Colors.Darker40
+                                HoverColor: =RGBA(0, 0, 0, 1)
+                                HoverFill: =App.Theme.Colors.Lighter70
+                                Italic: =true
+                                Mode: =TextMode.MultiLine
+                                PaddingRight: =10
+                                RadiusBottomLeft: =7
+                                RadiusBottomRight: =7
+                                RadiusTopLeft: =7
+                                RadiusTopRight: =7
+                                Size: =11
+                                Visible: =!IsBlank(varCrrUser.TeamID)
+                                Width: =816
+                                X: =11
+                                Y: =579
+                                ZIndex: =2
+
+                            Icon7_11 As icon.Send:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(13, 50, 61, 1)
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledColor: =RGBA(244, 244, 244, 1)
+                                Height: =32
+                                Icon: =Icon.Send
+                                OnSelect: |-
+                                    =UpdateContext({varLoadingSpinner:true});
+                                    If(!IsBlank(TextInput3_4.Text),Patch(TeamChats,Defaults(TeamChats),{Name:"TeamChat", TeamID:varCrrUser.TeamID,UserID:varCrrUser,Msg:TextInput3_4.Text}));
+                                    //If(!IsBlank(TextInput3_3.Text),If(IsBlank(varCrrUser.ErE), Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{ErE:"Yes"})));
+                                    Refresh(Registrations_Dvs);
+                                    Refresh(TeamChats);
+                                    Reset(TextInput3_4);
+                                    UpdateContext({varLoadingSpinner:false});
+                                Tooltip: ="Send"
+                                Visible: =!IsBlank(varCrrUser.TeamID)
+                                Width: =39
+                                X: =775
+                                Y: =588
+                                ZIndex: =3
+
+                            Icon7_10 As icon.Send:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(13, 50, 61, 1)
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledColor: =RGBA(244, 244, 244, 1)
+                                Fill: =RGBA(255, 255, 255, 0.2)
+                                Height: =27
+                                Icon: =Icon.Reload
+                                OnSelect: |
+                                    =Refresh(TeamChats);
+                                Tooltip: ="Refresh"
+                                Visible: =!IsBlank(varCrrUser.TeamID)
+                                Width: =23
+                                X: =814
+                                Y: =13
+                                ZIndex: =4
+
+                            TextCanvas1_30 As Text:
+                                Align: ='TextCanvas.Align'.Start
+                                DisplayMode: =DisplayMode.Edit
+                                Font: =Font.'Courier New'
+                                FontColor: =RGBA(0, 0, 0, 1)
+                                Height: =40
+                                Size: =14
+                                Text: ="Squad Chat"
+                                VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                                Weight: ='TextCanvas.Weight'.Bold
+                                Width: =200
+                                Wrap: =true
+                                X: =16
+                                Y: =6
+                                ZIndex: =5
+
                     Container22_3 As groupContainer.verticalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
                         LayoutDirection: =LayoutDirection.Vertical
@@ -311,6 +539,59 @@ SquadScreen As screen:
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
                         ZIndex: =2
+
+                        Container25 As groupContainer.manualLayoutContainer:
+                            DropShadow: =DropShadow.Light
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            ZIndex: =1
+
+                            Image16_6 As image:
+                                BorderColor: =RGBA(255, 255, 255, 1)
+                                BorderThickness: =1
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                Height: =120
+                                Image: |+
+                                    =If(IsBlank(First(Filter(Registrations_Dvs,LoginName=varlgname)).TeamID.TeamAvtar),User,First(Filter(Registrations_Dvs,LoginName=varlgname)).TeamID.TeamAvtar)
+                                    
+                                    
+                                    
+                                    
+                                    
+                                OnSelect: =
+                                RadiusBottomLeft: =60
+                                RadiusBottomRight: =60
+                                RadiusTopLeft: =60
+                                RadiusTopRight: =60
+                                Width: =120
+                                X: =85
+                                Y: =405
+                                ZIndex: =1
+
+                            Title7_6 As label:
+                                Align: =Align.Center
+                                Color: =RGBA(53, 61, 63, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =Font.'Courier New'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =33
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =18
+                                Text: ="Team " & First(Filter(Registrations_Dvs,LoginName=varlgname)).TeamID.Name
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =205
+                                X: =25
+                                Y: =545
+                                ZIndex: =2
 
     ContainerSpinner_6 As groupContainer:
         DropShadow: =DropShadow.Light

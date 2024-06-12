@@ -299,6 +299,22 @@ FeedbackScreen As screen:
                         Width: =1366
                         ZIndex: =2
 
+                        Image26 As image:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Height: =Parent.Height-20
+                            Image: =Ld2
+                            ImagePosition: =ImagePosition.Stretch
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Width: =Parent.Width-20
+                            X: =11
+                            Y: =10
+                            ZIndex: =1
+
                         HtmlText1_36 As htmlViewer:
                             Height: =584
                             HtmlText: |
@@ -319,7 +335,7 @@ FeedbackScreen As screen:
                             Width: =903
                             X: =129
                             Y: =25
-                            ZIndex: =1
+                            ZIndex: =2
 
                         HtmlText6_30 As htmlViewer:
                             Color: =RGBA(128, 128, 128, 1)
@@ -330,7 +346,7 @@ FeedbackScreen As screen:
                             Width: =95
                             X: =801
                             Y: =123
-                            ZIndex: =2
+                            ZIndex: =3
 
                         Image22_9 As image:
                             BorderColor: =RGBA(0, 18, 107, 1)
@@ -342,9 +358,9 @@ FeedbackScreen As screen:
                             Height: =25
                             Image: =heart
                             Width: =25
-                            X: =806
+                            X: =796
                             Y: =153
-                            ZIndex: =3
+                            ZIndex: =4
 
                         HtmlText6_31 As htmlViewer:
                             DisabledBorderColor: =RGBA(106, 122, 127, 1)
@@ -359,9 +375,9 @@ FeedbackScreen As screen:
                                 
                             Size: =10
                             Width: =95
-                            X: =836
+                            X: =826
                             Y: =153
-                            ZIndex: =4
+                            ZIndex: =5
 
                         Label8_32 As label:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -375,7 +391,7 @@ FeedbackScreen As screen:
                             Width: =167
                             X: =261
                             Y: =175
-                            ZIndex: =8
+                            ZIndex: =6
 
                         Label8_33 As label:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -389,7 +405,7 @@ FeedbackScreen As screen:
                             Width: =120
                             X: =259
                             Y: =215
-                            ZIndex: =9
+                            ZIndex: =7
 
                         Rating1_11 As rating:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -411,7 +427,7 @@ FeedbackScreen As screen:
                             Width: =200
                             X: =442
                             Y: =177
-                            ZIndex: =10
+                            ZIndex: =8
 
                         TextInput1_11 As text:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -431,7 +447,7 @@ FeedbackScreen As screen:
                             Width: =419
                             X: =446
                             Y: =224
-                            ZIndex: =11
+                            ZIndex: =9
 
                         Label8_31 As label:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -445,7 +461,7 @@ FeedbackScreen As screen:
                             Width: =167
                             X: =262
                             Y: =128
-                            ZIndex: =12
+                            ZIndex: =10
 
                         ComboBox1_9 As combobox:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -476,7 +492,7 @@ FeedbackScreen As screen:
                             Size: =13
                             X: =444
                             Y: =131
-                            ZIndex: =13
+                            ZIndex: =11
 
                         btn_Start_63 As button:
                             BorderColor: =RGBA(141, 48, 128, 1)
@@ -513,7 +529,7 @@ FeedbackScreen As screen:
                             Width: =165
                             X: =573
                             Y: =433
-                            ZIndex: =14
+                            ZIndex: =12
 
     ContainerSpinner_4 As groupContainer:
         DropShadow: =DropShadow.Light

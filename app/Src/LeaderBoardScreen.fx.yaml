@@ -302,7 +302,6 @@ LeaderBoardScreen As screen:
                         ZIndex: =1
 
                         Container24 As groupContainer.manualLayoutContainer:
-                            DropShadow: =DropShadow.Light
                             FillPortions: =0
                             Height: =50
                             LayoutMinHeight: =50
@@ -411,16 +410,17 @@ LeaderBoardScreen As screen:
                                     ZIndex: =1
 
                                 Image16 As image:
-                                    BorderColor: =App.Theme.Colors.Darker40
+                                    BorderColor: =RGBA(79, 90, 94, 1)
+                                    BorderThickness: =1
                                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                     DisabledFill: =RGBA(244, 244, 244, 1)
                                     Height: =72
                                     Image: =If(IsBlank(ThisItem.UserAvtar),User,ThisItem.UserAvtar)
                                     OnSelect: =Select(Parent)
-                                    RadiusBottomLeft: =8
-                                    RadiusBottomRight: =8
-                                    RadiusTopLeft: =8
-                                    RadiusTopRight: =8
+                                    RadiusBottomLeft: =5
+                                    RadiusBottomRight: =5
+                                    RadiusTopLeft: =5
+                                    RadiusTopRight: =5
                                     Width: =72
                                     X: =11
                                     Y: =13
@@ -476,6 +476,18 @@ LeaderBoardScreen As screen:
                                     Y: =38
                                     ZIndex: =5
 
+                                Image25_4 As image:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    Height: =25
+                                    Image: =MSlogo_resized
+                                    ImagePosition: =ImagePosition.Fill
+                                    Width: =25
+                                    X: =60
+                                    Y: =61
+                                    ZIndex: =6
+
                             HtmlText1_38 As htmlViewer:
                                 Height: =104
                                 HtmlText: |+
@@ -496,16 +508,17 @@ LeaderBoardScreen As screen:
                                 ZIndex: =4
 
                             Image16_1 As image:
-                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderColor: =RGBA(79, 90, 94, 1)
+                                BorderThickness: =1
                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                 DisabledFill: =RGBA(244, 244, 244, 1)
                                 Height: =72
                                 Image: =If(IsBlank(varUserAvtar),User,varUserAvtar)
                                 OnSelect: =
-                                RadiusBottomLeft: =8
-                                RadiusBottomRight: =8
-                                RadiusTopLeft: =8
-                                RadiusTopRight: =8
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
                                 Width: =72
                                 X: =56
                                 Y: =48
@@ -593,8 +606,22 @@ LeaderBoardScreen As screen:
                                 Y: =139
                                 ZIndex: =10
 
+                            Image25_5 As image:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                Height: =25
+                                Image: =MSlogo_resized
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Width: =25
+                                X: =103
+                                Y: =95
+                                ZIndex: =11
+
                         Container18_1 As groupContainer.manualLayoutContainer:
-                            DropShadow: =DropShadow.Light
                             LayoutMinHeight: =100
                             LayoutMinWidth: =220
                             RadiusBottomLeft: =4
@@ -716,6 +743,17 @@ LeaderBoardScreen As screen:
                                     Y: =38
                                     ZIndex: =5
 
+                                Image25_1 As image:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    Height: =25
+                                    Image: =MSlogo_resized
+                                    Width: =25
+                                    X: =60
+                                    Y: =60
+                                    ZIndex: =6
+
                             HtmlText1_40 As htmlViewer:
                                 Height: =104
                                 HtmlText: |+
@@ -736,16 +774,17 @@ LeaderBoardScreen As screen:
                                 ZIndex: =4
 
                             Image16_4 As image:
-                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderColor: =RGBA(106, 122, 127, 1)
+                                BorderThickness: =1
                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                 DisabledFill: =RGBA(244, 244, 244, 1)
                                 Height: =72
                                 Image: =If(IsBlank(First(Filter(Registrations_Dvs,LoginName=varlgname)).TeamID),User,First(Filter(Registrations_Dvs,LoginName=varlgname)).TeamID.TeamAvtar)
                                 OnSelect: =
-                                RadiusBottomLeft: =8
-                                RadiusBottomRight: =8
-                                RadiusTopLeft: =8
-                                RadiusTopRight: =8
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
                                 Width: =72
                                 X: =56
                                 Y: =48
@@ -782,7 +821,7 @@ LeaderBoardScreen As screen:
                                 PaddingRight: =0
                                 PaddingTop: =0
                                 Size: =12
-                                Text: =First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores
+                                Text: =First(Filter(Registrations_Dvs,LoginName=varlgname)).TeamID.Points
                                 VerticalAlign: =VerticalAlign.Top
                                 Width: =Title7_4.Width
                                 X: =569
@@ -832,6 +871,21 @@ LeaderBoardScreen As screen:
                                 X: =45
                                 Y: =139
                                 ZIndex: =10
+
+                            Image25 As image:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                Height: =25
+                                Image: =MSlogo_resized
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Width: =25
+                                X: =103
+                                Y: =95
+                                ZIndex: =11
 
                     Container22 As groupContainer.verticalAutoLayoutContainer:
                         LayoutDirection: =LayoutDirection.Vertical
@@ -956,6 +1010,22 @@ LeaderBoardScreen As screen:
                                 Y: =151
                                 ZIndex: =6
 
+                            Image25_3 As image:
+                                BorderColor: =RGBA(255, 255, 255, 1)
+                                BorderThickness: =1
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                Height: =25
+                                Image: =MSlogo_resized
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Width: =25
+                                X: =238
+                                Y: =332
+                                ZIndex: =7
+
                         Container23_1 As groupContainer.manualLayoutContainer:
                             DropShadow: =DropShadow.Light
                             LayoutMinHeight: =100
@@ -1001,7 +1071,8 @@ LeaderBoardScreen As screen:
                                 ZIndex: =2
 
                             Image16_5 As image:
-                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderColor: =RGBA(255, 255, 255, 1)
+                                BorderThickness: =1
                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                 DisabledFill: =RGBA(244, 244, 244, 1)
                                 Height: =120
@@ -1013,10 +1084,10 @@ LeaderBoardScreen As screen:
                                     
                                     
                                 OnSelect: =
-                                RadiusBottomLeft: =8
-                                RadiusBottomRight: =8
-                                RadiusTopLeft: =8
-                                RadiusTopRight: =8
+                                RadiusBottomLeft: =60
+                                RadiusBottomRight: =60
+                                RadiusTopLeft: =60
+                                RadiusTopRight: =60
                                 Width: =120
                                 X: =143
                                 Y: =237
