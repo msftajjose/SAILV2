@@ -319,7 +319,7 @@ LeaderBoardScreen As screen:
                                 Items: |-
                                     =//Table( {ID:1, Value: "Top Rated" }, { ID:2,Value: "Liked" },{ ID:3,Value: "Featured" },{ID:4, Value: "All" } )
                                     
-                                    Table( { ID:2,Value: "Solo Hearts" },{ID:4, Value: "Squard Hearts" })
+                                    Table( { ID:2,Value: "Solo Hearts" },{ID:4, Value: "Squad Hearts" })
                                 TemplatePadding: =0
                                 TemplateSize: =148
                                 Width: =750
@@ -388,6 +388,7 @@ LeaderBoardScreen As screen:
                                 LoadingSpinner: =LoadingSpinner.Data
                                 TemplatePadding: =0
                                 TemplateSize: =104
+                                Width: =645
                                 X: =40
                                 Y: =175
                                 ZIndex: =3
@@ -400,7 +401,7 @@ LeaderBoardScreen As screen:
                                         border-style: solid;
                                         border-width: 1px;
                                         margin: 0px; 
-                                        width: "& Parent.TemplateWidth-10 &"px; 
+                                        width: "& Parent.TemplateWidth-18 &"px; 
                                         height:  "& Parent.TemplateHeight-18 &"px;
                                         border-radius: 5px'>
                                         </div>"
@@ -496,7 +497,7 @@ LeaderBoardScreen As screen:
                                     border-style: solid;
                                     border-width: 1px;
                                     margin: 0px; 
-                                    width: "& 640-10 &"px; 
+                                    width: "& 640-18 &"px; 
                                     height:  "& 104-18 &"px;
                                     border-radius: 5px'>
                                     </div>"
