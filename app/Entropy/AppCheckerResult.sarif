@@ -21168,36 +21168,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "FeedbackScreen.varSavedPrompts"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "FeedbackScreen.varSavedPrompts",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varSavedPrompts",
-                "module": "FeedbackScreen",
-                "type": "FeedbackScreen"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "SettingsScreen.varSavedPrompts"
                 }
               ],

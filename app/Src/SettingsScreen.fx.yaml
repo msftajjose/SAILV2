@@ -4,7 +4,7 @@ SettingsScreen As screen:
     OnVisible: |-
         =//Reset(menu_3);
         UpdateContext({varspinner:true});
-        Set(varMenuID, 6);
+        Set(varMenuID,9);
         Reset(Gallery5_22);
         UpdateContext({varSavedPrompts:Filter(tblFavPrompts,UserID.LoginName=varlgname && IsActiveFav=1)});
 
@@ -186,10 +186,12 @@ SettingsScreen As screen:
                     LayoutMinWidth: =640
                     score: =First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores
                     ScreenChallenge: =ChallengeScreen
+                    ScreenFeedback: =FeedbackScreen
                     ScreenLB: =SettingsScreen
                     ScreenNavHome: =HomeScreen
                     ScreenNavPrompt: =PromptLibraryScreen
-                    varID: =6
+                    ScreenSquad: =SquadScreen
+                    varID: =9
                     VarMenuDefaultVal: |-
                         =//vardefault
                         //{ ID:2,Icon:Icon.Home ,Value: "Home" }

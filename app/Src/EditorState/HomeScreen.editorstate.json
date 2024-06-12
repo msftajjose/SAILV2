@@ -23550,14 +23550,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "App.ActiveScreen",
-          "InvariantPropertyName": "ScreenNavHome",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "ScreenNavHome",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -23598,7 +23591,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "ScreenFeedback",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "App.ActiveScreen",
+          "InvariantPropertyName": "ScreenFeedback",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ScreenSettings",
         "ScreenSquad"
       ],
@@ -23708,7 +23708,7 @@
         {
           "Category": "Data",
           "PropertyName": "ScreenFeedback",
-          "RuleProviderType": "System"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",

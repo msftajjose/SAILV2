@@ -7338,14 +7338,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "App.ActiveScreen",
-          "InvariantPropertyName": "ScreenChallenge",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "ScreenChallenge",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -7354,9 +7347,30 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "ScreenFeedback",
-        "ScreenSettings",
-        "ScreenSquad"
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "App.ActiveScreen",
+          "InvariantPropertyName": "ScreenFeedback",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "App.ActiveScreen",
+          "InvariantPropertyName": "ScreenSettings",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "App.ActiveScreen",
+          "InvariantPropertyName": "ScreenSquad",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "DynamicProperties": [
         {
@@ -7464,17 +7478,17 @@
         {
           "Category": "Data",
           "PropertyName": "ScreenFeedback",
-          "RuleProviderType": "System"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
           "PropertyName": "ScreenSettings",
-          "RuleProviderType": "System"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
           "PropertyName": "ScreenSquad",
-          "RuleProviderType": "System"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",

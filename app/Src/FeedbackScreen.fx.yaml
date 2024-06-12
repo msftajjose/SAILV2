@@ -4,9 +4,9 @@ FeedbackScreen As screen:
     OnVisible: |-
         =//Reset(menu_3);
         UpdateContext({varspinner:true});
-        Set(varMenuID, 6);
+        Set(varMenuID, 10);
         Reset(Gallery5_20);
-        UpdateContext({varSavedPrompts:Filter(tblFavPrompts,UserID.LoginName=varlgname && IsActiveFav=1)});
+        //UpdateContext({varSavedPrompts:Filter(tblFavPrompts,UserID.LoginName=varlgname && IsActiveFav=1)});
 
     MainContainer_5 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -189,7 +189,9 @@ FeedbackScreen As screen:
                     ScreenLB: =FeedbackScreen
                     ScreenNavHome: =HomeScreen
                     ScreenNavPrompt: =PromptLibraryScreen
-                    varID: =6
+                    ScreenSettings: =SettingsScreen
+                    ScreenSquad: =SquadScreen
+                    varID: =10
                     VarMenuDefaultVal: |-
                         =//vardefault
                         //{ ID:2,Icon:Icon.Home ,Value: "Home" }

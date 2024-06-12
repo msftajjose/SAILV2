@@ -185,10 +185,12 @@ ChallengeScreen As screen:
                 menu_5 As menu:
                     LayoutMinWidth: =640
                     score: =First(Filter(Registrations_Dvs,LoginName=varlgname)).Scores
-                    ScreenChallenge: =ChallengeScreen
+                    ScreenFeedback: =FeedbackScreen
                     ScreenLB: =LeaderBoardScreen
                     ScreenNavHome: =HomeScreen
                     ScreenNavPrompt: =PromptLibraryScreen
+                    ScreenSettings: =SettingsScreen
+                    ScreenSquad: =SquadScreen
                     varID: =5
                     VarMenuDefaultVal: |-
                         =//vardefault
