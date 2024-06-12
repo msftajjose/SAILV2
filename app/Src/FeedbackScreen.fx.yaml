@@ -3,7 +3,7 @@ FeedbackScreen As screen:
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
         =//Reset(menu_3);
-        UpdateContext({varspinner:true});
+        //UpdateContext({varspinner:true});
         Set(varMenuID, 10);
         Reset(Gallery5_20);
         //UpdateContext({varSavedPrompts:Filter(tblFavPrompts,UserID.LoginName=varlgname && IsActiveFav=1)});
@@ -356,9 +356,9 @@ FeedbackScreen As screen:
                                 =Patch(AppFeedbacks_Dvs,Defaults(AppFeedbacks_Dvs),{Name:_myProfileUPN_V.UserPrincipalName,Comments:TextInput1_11.Text,Rating:Text(Rating1_11.Value),UserName:varCrrUser.LoginName,Category:First(ComboBox1_9.SelectedItems).Value});
                                 If(IsBlank(varCrrUser.ErD), Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{ErD:"Yes",NotificationST:"Yes"}));
                                 Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"You have submited a feedback !",UserID:varCrrUser,IsRead:"No"});
-                                Reset(menu_7);
-                                Reset(TextInput1_11);
+                                Reset(ComboBox1_9);
                                 Reset(Rating1_11);
+                                Reset(TextInput1_11);
                                 //UpdateContext({_varAppFeedbackReg:false});
                             PressedBorderColor: =App.Theme.Colors.Darker40
                             PressedColor: =Self.Color
