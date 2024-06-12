@@ -542,6 +542,93 @@ ChallengeScreen As screen:
                             Y: =9
                             ZIndex: =5
 
+                    HtmlText1_35 As htmlViewer:
+                        Height: =244
+                        HtmlText: |+
+                            ="<div style='background-color:rgba(" & 255 & "," & 255 & "," & 255 &"," & 1 & ");   
+                            
+                            border-style: solid;
+                            border-width: 1px;
+                            margin: 0px; 
+                            width: "& 320 &"px; 
+                            height:  "& 230 &"px;
+                            border-radius: 5px'>
+                            </div>"
+                            //box-shadow: 1px 2px 12px 0px rgba(" & 0 & "," & 0 & "," & 0 &"," & 1 & ");
+                            
+                        Width: =334
+                        X: =768
+                        Y: =55
+                        ZIndex: =11
+
+                    Title6_2 As label:
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =25
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =12
+                        Text: ="Daily Secret Code"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =156
+                        X: =783
+                        Y: =67
+                        ZIndex: =12
+
+                    Subtitle5_1 As label:
+                        Color: =RGBA(79, 90, 94, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =Font.'Segoe UI'
+                        Height: =51
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =8
+                        Text: ="Input this code into your DfM Copilot and bring back its reply."
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =285
+                        X: =781
+                        Y: =102
+                        ZIndex: =13
+
+                    Image22_8 As image:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DisplayMode: |+
+                            =If(IsBlank(varAlreadySubmittedPrompt), DisplayMode.Edit,DisplayMode.Disabled)
+                            
+                        Height: =25
+                        Image: =heart
+                        Width: =25
+                        X: =1002
+                        Y: =67
+                        ZIndex: =14
+
+                    HtmlText6_29 As htmlViewer:
+                        AutoHeight: =true
+                        DisabledBorderColor: =RGBA(106, 122, 127, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: |
+                            =DisplayMode.Edit
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Font: =Font.'Segoe UI'
+                        Height: =31
+                        HtmlText: |
+                            ="100"
+                        Size: =10
+                        Width: =50
+                        X: =1027
+                        Y: =64
+                        ZIndex: =15
+
     Container18_2 As groupContainer:
         DropShadow: =DropShadow.Light
         Height: =768
