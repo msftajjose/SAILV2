@@ -1460,7 +1460,7 @@ PromptLibraryScreen As screen:
                 If(!IsBlank(varDataSubmitted),If(IsBlank(varAlreadySubmittedPrompt),Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewPromptScore",Processed:"No",Score:If(Len(TextInputCanvas3.Value)>0 && !CheckboxCanvas1.Checked,100,If(Len(TextInputCanvas3.Value)>0 && CheckboxCanvas1.Checked,105,0) ),UserID:varCrrUser})),Notify("Error submitting prompt !!",NotificationType.Error));
                 
                 If(!IsBlank(varDataSubmitted),Notify("Prompt submitted succsfully !", NotificationType.Success));
-                Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"You have submited a feedback !",UserID:varCrrUser,IsRead:"No"});
+                Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"You have submited a new prompt !",UserID:varCrrUser,IsRead:"No"});
                 
                 Reset(TextInputCanvas3);
                 Reset(TextInputCanvas2);

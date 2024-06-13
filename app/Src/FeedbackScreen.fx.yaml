@@ -352,15 +352,21 @@ FeedbackScreen As screen:
                             HoverColor: =RGBA(255, 255, 255, 1)
                             HoverFill: =RGBA(167, 182, 203, 1)
                             OnSelect: |-
-                                =Patch(AppFeedbacks_Dvs,Defaults(AppFeedbacks_Dvs),{Name:_myProfileUPN_V.UserPrincipalName,Comments:TextInput1_11.Text,Rating:Text(Rating1_11.Value),UserName:varCrrUser.LoginName,Category:First(ComboBox1_9.SelectedItems).Value});
+                                =
+                                
+                                If(IsBlank(First(Filter(AppFeedbacks_Dvs,UserName=varlgname)).UserName),Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewFeedbackScore",Score:500,UserID:varCrrUser,Processed:"No"}));
+                                
+                                Patch(AppFeedbacks_Dvs,Defaults(AppFeedbacks_Dvs),{Name:_myProfileUPN_V.UserPrincipalName,Comments:TextInput1_11.Text,Rating:Text(Rating1_11.Value),UserName:varCrrUser.LoginName,Category:First(ComboBox1_9.SelectedItems).Value});
                                 //If(IsBlank(varCrrUser.ErD), Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{ErD:"Yes",NotificationST:"Yes"}));
                                 Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"You have submited a feedback !",UserID:varCrrUser,IsRead:"No"});
                                 
-                                Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewFeedbackScore",Score:100,UserID:varCrrUser,Processed:"No"});
+                                
+                                
+                                
                                 
                                 Reset(ComboBox1_9);
                                 Reset(Rating1_11);
-                                Reset(TextInput1_11);
+                                Reset(TextInput1_11)
                                 //UpdateContext({_varAppFeedbackReg:false});
                             PressedFill: =RGBA(0, 134, 208, 1)
                             RadiusBottomLeft: =5
@@ -389,12 +395,12 @@ FeedbackScreen As screen:
                         HtmlText6_30 As htmlViewer:
                             Color: =RGBA(128, 128, 128, 1)
                             Font: =Font.'Segoe UI'
-                            Height: =30
-                            HtmlText: ="<b></b>Reward"
+                            Height: =35
+                            HtmlText: ="<b></b>One Time Reward"
                             Size: =10
-                            Width: =95
-                            X: =643
-                            Y: =435
+                            Width: =146
+                            X: =591
+                            Y: =430
                             ZIndex: =5
 
                         Image22_9 As image:
@@ -407,7 +413,7 @@ FeedbackScreen As screen:
                             Height: =25
                             Image: =heart
                             Width: =25
-                            X: =638
+                            X: =610
                             Y: =465
                             ZIndex: =6
 
@@ -420,11 +426,11 @@ FeedbackScreen As screen:
                             Font: =Font.'Segoe UI'
                             Height: =31
                             HtmlText: |+
-                                ="<b>100</b>"
+                                ="<b>" & If(!IsBlank(First(Filter(AppFeedbacks_Dvs,UserName=varlgname)).UserName),"<s>500</s></b>","500</b>" )
                                 
                             Size: =10
                             Width: =60
-                            X: =668
+                            X: =640
                             Y: =465
                             ZIndex: =7
 
