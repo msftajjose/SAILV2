@@ -1348,6 +1348,9 @@ PromptLibraryScreen As screen:
                 If(IsEmpty(varFavAlreadyExist),Patch(tblFavPrompts,Defaults(tblFavPrompts),{Name:"FavTips",UserID:varCrrUser,PromptID:varSelectedPromptLib,IsActiveFav:1,tipID:varSelectedPromptLib.TipsandTricksCollaboration}),Patch(First(varFavAlreadyExist), { IsActiveFav:1}));
                 Patch(tblFavPrompts,First(varFavAlreadyExist), { IsActiveFav:1});
                 //Patch(TipsandTricksCollaborations,First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)),{NoOfLikes:varExtScore});
+                
+                If(!IsBlank(varRecordT),Patch(AIUserScores,Defaults(AIUserScores),{Name:"BookMarking",UserID:varCrrUser,Processed:"No",Score:If(varUserFirstBookmark=1,105,5),TeamID:varCrrUser.TeamID}));
+                Set(varUserFirstBookmark,0);
                 Refresh(TipsandTricksCollaborations);
                 Reset(Gallery10_3);
                 UpdateContext({varShowExistingPrompt:false});

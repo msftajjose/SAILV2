@@ -19002,36 +19002,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.varUserFirstBookmark"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varUserFirstBookmark",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varUserFirstBookmark",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.heartempty"
                 }
               ],
