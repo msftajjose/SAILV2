@@ -1911,12 +1911,16 @@ HomeScreen As screen:
             Y: =363
             ZIndex: =3
 
-    NewTeam_Reg_2 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =14
+    CreateSqadContainer As groupContainer:
+        DropShadow: =DropShadow.Light
+        Height: =768
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =varNewTeamScreen
+        Width: =1366
+        ZIndex: =11
 
         Rectangle1_11 As rectangle:
             BorderColor: =App.Theme.Colors.Darker40
@@ -1924,12 +1928,11 @@ HomeScreen As screen:
                 =//RGBA(56, 96, 178, 20%)
                 RGBA(0, 0, 0, 0.6)
             Height: =768
-            Visible: =varNewTeamScreen
             Width: =1366
-            ZIndex: =2
+            ZIndex: =1
 
         HtmlText1_31 As htmlViewer:
-            Height: =422
+            Height: =492
             HtmlText: |+
                 ="<div style='background-color: rgba(255,255,255,100%); 
                 margin: 20px; 
@@ -1940,22 +1943,21 @@ HomeScreen As screen:
                 
                 
                 
-            Visible: =varNewTeamScreen
             Width: =560
-            X: =467
-            Y: =250
-            ZIndex: =3
+            X: =507
+            Y: =220
+            ZIndex: =2
 
         Form2_3 As form:
-            BorderColor: =App.Theme.Colors.Darker40
+            BorderColor: =RGBA(214, 221, 224, 1)
+            BorderThickness: =1
             DataSource: =TeamRegistrationss
             Height: =193
             NumberOfColumns: =1
-            Visible: =varNewTeamScreen
             Width: =478
-            X: =498
-            Y: =341
-            ZIndex: =4
+            X: =538
+            Y: =312
+            ZIndex: =3
 
             Name_DataCard1_2 As typedDataCard.textualEditCard:
                 BorderColor: =App.Theme.Colors.Darker40
@@ -1969,7 +1971,7 @@ HomeScreen As screen:
                 MaxLength: =DataSourceInfo([@TeamRegistrationss], DataSourceInfo.MaxLength, crc74_name)
                 Required: =true
                 Update: =DataCardValue12_2.Text
-                Width: =478
+                Width: =477
                 X: =0
                 Y: =0
                 ZIndex: =1
@@ -2063,7 +2065,7 @@ HomeScreen As screen:
                 Height: =111
                 Required: =false
                 Update: =Image7_7.Image
-                Width: =478
+                Width: =477
                 X: =0
                 Y: =1
                 ZIndex: =1
@@ -2151,7 +2153,7 @@ HomeScreen As screen:
                 Required: =false
                 Update: =DataCardValue13_2.Selected
                 Visible: =false
-                Width: =478
+                Width: =477
                 X: =0
                 Y: =2
                 ZIndex: =1
@@ -2273,87 +2275,9 @@ HomeScreen As screen:
             PressedFill: =RGBA(0, 134, 208, 1)
             Size: =14
             Text: ="CREATE TEAM"
-            Visible: =varNewTeamScreen
-            X: =667
-            Y: =538
-            ZIndex: =5
-
-        "Gallery2_6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-            '#CopilotOverlayLabel': ="Filtered"
-            BorderColor: =App.Theme.Colors.Darker40
-            BorderStyle: =BorderStyle.Dotted
-            BorderThickness: =1
-            DelayItemLoading: =true
-            Fill: =RGBA(1,2,3,10%) //RGBA(50, 86, 160, 1)
-            Height: =539
-            Items: =Filter(Avtars,TeamsImg=1)
-            Layout: =Layout.Vertical
-            LoadingSpinner: =LoadingSpinner.Data
-            OnSelect: |-
-                =UpdateContext({varShowTeamAvtars:false})
-            TemplatePadding: =0
-            TemplateSize: =97
-            Visible: |
-                =varNewTeamScreen && varShowTeamAvtars
-            Width: =108
-            X: =988
-            Y: =165
-            ZIndex: =6
-
-            Image2_6 As image:
-                BorderColor: =App.Theme.Colors.Darker40
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Height: =72
-                Image: =ThisItem.Pic
-                OnSelect: =Select(Parent)
-                RadiusBottomLeft: =8
-                RadiusBottomRight: =8
-                RadiusTopLeft: =8
-                RadiusTopRight: =8
-                Width: =72
-                X: =9
-                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-                ZIndex: =1
-
-            NextArrow2_6 As icon.ChevronRight:
-                AccessibleLabel: =Self.Tooltip
-                BorderColor: =App.Theme.Colors.Darker40
-                Color: =RGBA(166, 166, 166, 1)
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(244, 244, 244, 1)
-                Height: =50
-                Icon: =Icon.ChevronRight
-                OnSelect: |-
-                    =Select(Parent);
-                    UpdateContext({varShowTeamAvtars:false})
-                PaddingBottom: =2
-                PaddingLeft: =2
-                PaddingRight: =2
-                PaddingTop: =2
-                Tooltip: ="View item details"
-                Width: =27
-                X: =81
-                Y: =23
-                ZIndex: =4
-
-            Separator2_6 As rectangle:
-                BorderColor: =App.Theme.Colors.Darker40
-                Fill: =RGBA(255, 255, 255, 1)
-                Height: =2
-                OnSelect: =Select(Parent)
-                Width: =Parent.TemplateWidth
-                Y: =Parent.TemplateHeight - Self.Height
-                ZIndex: =5
-
-            Rectangle2_6 As rectangle:
-                BorderColor: =App.Theme.Colors.Darker40
-                Fill: =App.Theme.Colors.Darker30
-                Height: =Parent.TemplateHeight - Separator2_6.Height
-                OnSelect: =Select(Parent)
-                Visible: =ThisItem.IsSelected
-                Width: =4
-                ZIndex: =6
+            X: =707
+            Y: =519
+            ZIndex: =4
 
         NextArrow1_9 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
@@ -2371,9 +2295,8 @@ HomeScreen As screen:
             PaddingRight: =5
             PaddingTop: =5
             Tooltip: ="Cancel"
-            Visible: =varNewTeamScreen
             Width: =50
-            X: =926
-            Y: =291
-            ZIndex: =7
+            X: =973
+            Y: =254
+            ZIndex: =6
 
