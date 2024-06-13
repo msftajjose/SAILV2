@@ -1930,14 +1930,16 @@ HomeScreen As screen:
 
         HtmlText1_31 As htmlViewer:
             Height: =422
-            HtmlText: |-
-                ="<div style=' background-color:rgba(" & R & "," & G & "," & B &"," & A & "); 
-                box-shadow: 1px 2px 22px 0px rgba(139,147,232,1);
+            HtmlText: |+
+                ="<div style='background-color: rgba(255,255,255,100%); 
                 margin: 20px; 
                 width: 500px; 
                 height: 330px; 
                 border-radius: 30px'>
                 </div>"
+                
+                
+                
             Visible: =varNewTeamScreen
             Width: =560
             X: =467
@@ -1947,12 +1949,12 @@ HomeScreen As screen:
         Form2_3 As form:
             BorderColor: =App.Theme.Colors.Darker40
             DataSource: =TeamRegistrationss
-            Height: =172
+            Height: =193
             NumberOfColumns: =1
             Visible: =varNewTeamScreen
             Width: =478
             X: =498
-            Y: =353
+            Y: =341
             ZIndex: =4
 
             Name_DataCard1_2 As typedDataCard.textualEditCard:
@@ -1962,7 +1964,7 @@ HomeScreen As screen:
                 Default: =ThisItem.Name
                 DisplayMode: =Parent.DisplayMode
                 DisplayName: =DataSourceInfo([@TeamRegistrationss],DataSourceInfo.DisplayName,crc74_name)
-                Fill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(255, 255, 255, 1)
                 Height: =50
                 MaxLength: =DataSourceInfo([@TeamRegistrationss], DataSourceInfo.MaxLength, crc74_name)
                 Required: =true
@@ -1974,12 +1976,11 @@ HomeScreen As screen:
 
                 DataCardKey15_2 As label:
                     AutoHeight: =true
-                    Color: =RGBA(255, 255, 255, 1)
+                    Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
+                    Font: =Font.'Courier New'
                     FontWeight: =FontWeight.Semibold
-                    Height: =34
-                    Size: =13
+                    Height: =35
                     Text: |-
                         =//Parent.DisplayName
                         "Team Name"
@@ -2001,6 +2002,7 @@ HomeScreen As screen:
                     DisplayMode: =Parent.DisplayMode
                     FocusedBorderThickness: =4
                     Font: =App.Theme.Font
+                    Height: =35
                     HoverBorderColor: =App.Theme.Colors.Darker40
                     HoverColor: =RGBA(0, 0, 0, 1)
                     HoverFill: =App.Theme.Colors.Lighter70
@@ -2012,9 +2014,9 @@ HomeScreen As screen:
                     RadiusTopRight: =0
                     Size: =13
                     Tooltip: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.6
+                    Width: =266
                     X: =DataCardKey15_2.X + DataCardKey15_2.Width
-                    Y: =10
+                    Y: =11.5
                     ZIndex: =2
 
                 ErrorMessage13_2 As label:
@@ -2058,7 +2060,7 @@ HomeScreen As screen:
                 DisplayMode: =Parent.DisplayMode
                 DisplayName: =DataSourceInfo([@TeamRegistrationss],DataSourceInfo.DisplayName,crc74_teamavtar)
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
+                Height: =111
                 Required: =false
                 Update: =Image7_7.Image
                 Width: =478
@@ -2098,10 +2100,10 @@ HomeScreen As screen:
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(0, 0, 0, 1)
                     Fill: =RGBA(255, 255, 255, 1)
-                    Height: =91
+                    Height: =103
                     Width: =159
-                    X: =197
-                    Y: =10
+                    X: =158
+                    Y: =8
                     ZIndex: =3
 
                 ErrorMessage14_2 As label:
@@ -2356,7 +2358,7 @@ HomeScreen As screen:
         NextArrow1_9 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             BorderColor: =App.Theme.Colors.Darker40
-            Color: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(12, 59, 94, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =50
@@ -2371,7 +2373,7 @@ HomeScreen As screen:
             Tooltip: ="Cancel"
             Visible: =varNewTeamScreen
             Width: =50
-            X: =904
+            X: =926
             Y: =291
             ZIndex: =7
 
