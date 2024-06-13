@@ -343,6 +343,7 @@ FeedbackScreen As screen:
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =If(Len(TextInput1_11.Text)<5,DisplayMode.Disabled,  DisplayMode.Edit)
                             Fill: =RGBA(255, 255, 255, 1)
                             FocusedBorderThickness: =2
                             Font: =Font.'Segoe UI'
@@ -367,11 +368,11 @@ FeedbackScreen As screen:
                             RadiusTopLeft: =5
                             RadiusTopRight: =5
                             Size: =14
-                            Text: ="Change Avatar"
+                            Text: ="Submit Feedback"
                             Tooltip: ="New users click to Register"
-                            Width: =158
-                            X: =781
-                            Y: =434
+                            Width: =195
+                            X: =743
+                            Y: =441
                             ZIndex: =3
 
                         Image23_4 As image:
@@ -379,10 +380,10 @@ FeedbackScreen As screen:
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             Height: =50
-                            Image: =MSlogo
+                            Image: =Feedback
                             Width: =50
                             X: =149
-                            Y: =124
+                            Y: =110
                             ZIndex: =4
 
                         HtmlText6_30 As htmlViewer:
@@ -392,8 +393,8 @@ FeedbackScreen As screen:
                             HtmlText: ="<b></b>Reward"
                             Size: =10
                             Width: =95
-                            X: =801
-                            Y: =165
+                            X: =643
+                            Y: =435
                             ZIndex: =5
 
                         Image22_9 As image:
@@ -406,8 +407,8 @@ FeedbackScreen As screen:
                             Height: =25
                             Image: =heart
                             Width: =25
-                            X: =796
-                            Y: =195
+                            X: =638
+                            Y: =465
                             ZIndex: =6
 
                         HtmlText6_31 As htmlViewer:
@@ -422,9 +423,9 @@ FeedbackScreen As screen:
                                 ="<b>100</b>"
                                 
                             Size: =10
-                            Width: =95
-                            X: =826
-                            Y: =195
+                            Width: =60
+                            X: =668
+                            Y: =465
                             ZIndex: =7
 
                         Label8_32 As label:
@@ -437,8 +438,8 @@ FeedbackScreen As screen:
                             Text: |-
                                 ="Rate the App:"
                             Width: =167
-                            X: =261
-                            Y: =217
+                            X: =170
+                            Y: =280
                             ZIndex: =8
 
                         Label8_33 As label:
@@ -451,8 +452,8 @@ FeedbackScreen As screen:
                             Text: |-
                                 ="Comments :"
                             Width: =120
-                            X: =259
-                            Y: =257
+                            X: =168
+                            Y: =320
                             ZIndex: =9
 
                         Rating1_11 As rating:
@@ -473,8 +474,8 @@ FeedbackScreen As screen:
                             RatingFill: =App.Theme.Colors.Darker30
                             Visible: =true
                             Width: =200
-                            X: =442
-                            Y: =219
+                            X: =351
+                            Y: =282
                             ZIndex: =10
 
                         TextInput1_11 As text:
@@ -486,15 +487,15 @@ FeedbackScreen As screen:
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             FocusedBorderThickness: =1
                             Font: =Font.'Segoe UI'
-                            Height: =153
+                            Height: =101
                             HoverBorderColor: =App.Theme.Colors.Darker40
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =App.Theme.Colors.Lighter70
                             Mode: =TextMode.MultiLine
                             Size: =13
-                            Width: =419
-                            X: =446
-                            Y: =266
+                            Width: =584
+                            X: =355
+                            Y: =329
                             ZIndex: =11
 
                         Label8_31 As label:
@@ -507,8 +508,8 @@ FeedbackScreen As screen:
                             Text: |-
                                 ="Feedback Category:"
                             Width: =167
-                            X: =262
-                            Y: =170
+                            X: =171
+                            Y: =233
                             ZIndex: =12
 
                         ComboBox1_9 As combobox:
@@ -538,9 +539,27 @@ FeedbackScreen As screen:
                             SelectionFill: =App.Theme.Colors.Primary
                             SelectMultiple: =false
                             Size: =13
-                            X: =444
-                            Y: =173
+                            X: =353
+                            Y: =236
                             ZIndex: =13
+
+                        HtmlText12 As htmlViewer:
+                            Font: =Font.'Courier New'
+                            Height: =74
+                            HtmlText: ="Let us know what you like about SAIL so far, if you found an issue that needs to be addressed, or if there’s a new functionality you would like us to implement in the future."
+                            Width: =759
+                            X: =210
+                            Y: =159
+                            ZIndex: =14
+
+                        HtmlText13 As htmlViewer:
+                            Font: =Font.'Courier New'
+                            Height: =87
+                            HtmlText: ="<h1>Submit Feedback</h1>"
+                            Width: =471
+                            X: =210
+                            Y: =91
+                            ZIndex: =15
 
     ContainerSpinner_4 As groupContainer:
         DropShadow: =DropShadow.Light
