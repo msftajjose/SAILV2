@@ -566,10 +566,10 @@ SettingsScreen As screen:
                                         
                                         If(IsBlank(AddMediaButton1_2.Media), If(IsBlank(First(Filter(Registrations_Dvs,LoginName=varlgname)).UserAvtar),User,First(Filter(Registrations_Dvs,LoginName=varlgname)).UserAvtar ), AddMediaButton1_2.Media)
                                     ImagePosition: =ImagePosition.Fill
-                                    RadiusBottomLeft: =20
-                                    RadiusBottomRight: =20
-                                    RadiusTopLeft: =20
-                                    RadiusTopRight: =20
+                                    RadiusBottomLeft: =5
+                                    RadiusBottomRight: =5
+                                    RadiusTopLeft: =5
+                                    RadiusTopRight: =5
                                     Tooltip: ="Do not use your picture"
                                     Width: =233
                                     X: =540
