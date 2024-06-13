@@ -304,7 +304,7 @@ FeedbackScreen As screen:
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             Height: =Parent.Height-20
-                            Image: =Ld2
+                            Image: =SAIL_background1_reduced
                             ImagePosition: =ImagePosition.Stretch
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
@@ -315,13 +315,13 @@ FeedbackScreen As screen:
                             Y: =10
                             ZIndex: =1
 
-                        HtmlText1_36 As htmlViewer:
-                            Height: =584
+                        HtmlText1_43 As htmlViewer:
+                            Height: =453
                             HtmlText: |
                                 ="<div style='background-color: rgba(255,255,255,100%); 
                                 margin: 20px; 
-                                width: 800px; 
-                                height: 500px; 
+                                width: 900px; 
+                                height: 400px; 
                                 border-radius: 30px'>
                                 </div>"
                                 
@@ -332,10 +332,58 @@ FeedbackScreen As screen:
                                 box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
                                 
                                 */
-                            Width: =903
-                            X: =129
-                            Y: =25
+                            Width: =950
+                            X: =89
+                            Y: =75
                             ZIndex: =2
+
+                        btn_Start_73 As button:
+                            BorderColor: =RGBA(30, 81, 238, 1)
+                            Color: =RGBA(30, 81, 238, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            FocusedBorderThickness: =2
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =50
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =RGBA(167, 182, 203, 1)
+                            OnSelect: |-
+                                =Patch(AppFeedbacks_Dvs,Defaults(AppFeedbacks_Dvs),{Name:_myProfileUPN_V.UserPrincipalName,Comments:TextInput1_11.Text,Rating:Text(Rating1_11.Value),UserName:varCrrUser.LoginName,Category:First(ComboBox1_9.SelectedItems).Value});
+                                //If(IsBlank(varCrrUser.ErD), Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{ErD:"Yes",NotificationST:"Yes"}));
+                                Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"You have submited a feedback !",UserID:varCrrUser,IsRead:"No"});
+                                
+                                Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewFeedbackScore",Score:100,UserID:varCrrUser,Processed:"No"});
+                                
+                                Reset(ComboBox1_9);
+                                Reset(Rating1_11);
+                                Reset(TextInput1_11);
+                                //UpdateContext({_varAppFeedbackReg:false});
+                            PressedFill: =RGBA(0, 134, 208, 1)
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Size: =14
+                            Text: ="Change Avatar"
+                            Tooltip: ="New users click to Register"
+                            Width: =158
+                            X: =781
+                            Y: =434
+                            ZIndex: =3
+
+                        Image23_4 As image:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Height: =50
+                            Image: =MSlogo
+                            Width: =50
+                            X: =149
+                            Y: =124
+                            ZIndex: =4
 
                         HtmlText6_30 As htmlViewer:
                             Color: =RGBA(128, 128, 128, 1)
@@ -345,8 +393,8 @@ FeedbackScreen As screen:
                             Size: =10
                             Width: =95
                             X: =801
-                            Y: =123
-                            ZIndex: =3
+                            Y: =165
+                            ZIndex: =5
 
                         Image22_9 As image:
                             BorderColor: =RGBA(0, 18, 107, 1)
@@ -359,8 +407,8 @@ FeedbackScreen As screen:
                             Image: =heart
                             Width: =25
                             X: =796
-                            Y: =153
-                            ZIndex: =4
+                            Y: =195
+                            ZIndex: =6
 
                         HtmlText6_31 As htmlViewer:
                             DisabledBorderColor: =RGBA(106, 122, 127, 1)
@@ -376,8 +424,8 @@ FeedbackScreen As screen:
                             Size: =10
                             Width: =95
                             X: =826
-                            Y: =153
-                            ZIndex: =5
+                            Y: =195
+                            ZIndex: =7
 
                         Label8_32 As label:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -390,8 +438,8 @@ FeedbackScreen As screen:
                                 ="Rate the App:"
                             Width: =167
                             X: =261
-                            Y: =175
-                            ZIndex: =6
+                            Y: =217
+                            ZIndex: =8
 
                         Label8_33 As label:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -404,8 +452,8 @@ FeedbackScreen As screen:
                                 ="Comments :"
                             Width: =120
                             X: =259
-                            Y: =215
-                            ZIndex: =7
+                            Y: =257
+                            ZIndex: =9
 
                         Rating1_11 As rating:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -426,8 +474,8 @@ FeedbackScreen As screen:
                             Visible: =true
                             Width: =200
                             X: =442
-                            Y: =177
-                            ZIndex: =8
+                            Y: =219
+                            ZIndex: =10
 
                         TextInput1_11 As text:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -438,7 +486,7 @@ FeedbackScreen As screen:
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             FocusedBorderThickness: =1
                             Font: =Font.'Segoe UI'
-                            Height: =187
+                            Height: =153
                             HoverBorderColor: =App.Theme.Colors.Darker40
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =App.Theme.Colors.Lighter70
@@ -446,8 +494,8 @@ FeedbackScreen As screen:
                             Size: =13
                             Width: =419
                             X: =446
-                            Y: =224
-                            ZIndex: =9
+                            Y: =266
+                            ZIndex: =11
 
                         Label8_31 As label:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -460,8 +508,8 @@ FeedbackScreen As screen:
                                 ="Feedback Category:"
                             Width: =167
                             X: =262
-                            Y: =128
-                            ZIndex: =10
+                            Y: =170
+                            ZIndex: =12
 
                         ComboBox1_9 As combobox:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -491,45 +539,8 @@ FeedbackScreen As screen:
                             SelectMultiple: =false
                             Size: =13
                             X: =444
-                            Y: =131
-                            ZIndex: =11
-
-                        btn_Start_63 As button:
-                            BorderColor: =RGBA(141, 48, 128, 1)
-                            Color: =RGBA(141, 48, 128, 1)
-                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            DisabledFill: =RGBA(244, 244, 244, 1)
-                            Fill: =RGBA(255, 255, 255, 1)
-                            FocusedBorderThickness: =2
-                            Font: =Font.'Segoe UI'
-                            FontWeight: =FontWeight.Semibold
-                            Height: =50
-                            HoverColor: =RGBA(255, 255, 255, 1)
-                            HoverFill: =RGBA(167, 182, 203, 1)
-                            OnSelect: |-
-                                =Patch(AppFeedbacks_Dvs,Defaults(AppFeedbacks_Dvs),{Name:_myProfileUPN_V.UserPrincipalName,Comments:TextInput1_11.Text,Rating:Text(Rating1_11.Value),UserName:varCrrUser.LoginName,Category:First(ComboBox1_9.SelectedItems).Value});
-                                //If(IsBlank(varCrrUser.ErD), Patch(Registrations_Dvs,First(Filter(Registrations_Dvs,Registrations_Dv=varCrrUser.Registrations_Dv)),{ErD:"Yes",NotificationST:"Yes"}));
-                                Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"You have submited a feedback !",UserID:varCrrUser,IsRead:"No"});
-                                
-                                Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewFeedbackScore",Score:100,UserID:varCrrUser,Processed:"No"});
-                                
-                                Reset(ComboBox1_9);
-                                Reset(Rating1_11);
-                                Reset(TextInput1_11);
-                                //UpdateContext({_varAppFeedbackReg:false});
-                            PressedFill: =RGBA(0, 134, 208, 1)
-                            RadiusBottomLeft: =5
-                            RadiusBottomRight: =5
-                            RadiusTopLeft: =5
-                            RadiusTopRight: =5
-                            Size: =14
-                            Text: ="             Submit"
-                            Tooltip: ="New users click to Register"
-                            Width: =165
-                            X: =573
-                            Y: =433
-                            ZIndex: =12
+                            Y: =173
+                            ZIndex: =13
 
     ContainerSpinner_4 As groupContainer:
         DropShadow: =DropShadow.Light

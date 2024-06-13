@@ -243,7 +243,7 @@
       "StyleName": "defaultGroupContainerStyle",
       "Type": "ControlInfo"
     },
-    "btn_Start_63": {
+    "btn_Start_73": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -321,16 +321,23 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
+        "VerticalAlign",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "",
-          "InvariantPropertyName": "VerticalAlign",
+          "InvariantPropertyName": "X",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "X",
-        "Y",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Y",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -435,9 +442,9 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "btn_Start_63",
+      "Name": "btn_Start_73",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3002,7 +3009,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "HtmlText1_36": {
+    "HtmlText1_43": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "DisplayMode",
@@ -3039,7 +3046,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "HtmlText1_36",
+      "Name": "HtmlText1_43",
       "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
@@ -3047,7 +3054,7 @@
         {
           "Category": "Data",
           "PropertyName": "HtmlText",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -3394,7 +3401,7 @@
       "MetaDataIDKey": "",
       "Name": "HtmlText6_31",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3571,7 +3578,7 @@
       "MetaDataIDKey": "",
       "Name": "Image22_9",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3663,6 +3670,243 @@
           "Category": "Design",
           "PropertyName": "DisplayMode",
           "RuleProviderType": "User"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "ZIndex",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusTopLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusTopRight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusBottomLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusBottomRight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "BorderThickness",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "FocusedBorderThickness",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "PaddingTop",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "PaddingRight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "PaddingBottom",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "PaddingLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Visible",
+          "RuleProviderType": "User"
+        }
+      ],
+      "StyleName": "defaultImageStyle",
+      "Type": "ControlInfo"
+    },
+    "Image23_4": {
+      "AllowAccessToGlobals": true,
+      "ControlPropertyState": [
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "SampleImage",
+          "InvariantPropertyName": "Image",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        "ImagePosition",
+        "ImageRotation",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Y",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Width",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Height",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        "Fill",
+        "DisabledFill",
+        "PressedFill",
+        "HoverFill",
+        "BorderColor",
+        "DisabledBorderColor",
+        "PressedBorderColor",
+        "HoverBorderColor",
+        "FocusedBorderColor",
+        "BorderStyle",
+        "DisplayMode",
+        "ZIndex",
+        "RadiusTopLeft",
+        "RadiusTopRight",
+        "RadiusBottomLeft",
+        "RadiusBottomRight",
+        "BorderThickness",
+        "FocusedBorderThickness",
+        "PaddingTop",
+        "PaddingRight",
+        "PaddingBottom",
+        "PaddingLeft",
+        "Visible"
+      ],
+      "HasDynamicProperties": false,
+      "IsAutoGenerated": false,
+      "IsComponentDefinition": false,
+      "IsDataControl": false,
+      "IsFromScreenLayout": false,
+      "IsGroupControl": false,
+      "IsLocked": false,
+      "LayoutName": "",
+      "MetaDataIDKey": "",
+      "Name": "Image23_4",
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 5,
+      "PersistMetaDataIDKey": false,
+      "Properties": [
+        {
+          "Category": "Data",
+          "PropertyName": "Image",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "ImagePosition",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "ImageRotation",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Fill",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "DisabledFill",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "PressedFill",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "HoverFill",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "BorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "DisabledBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "PressedBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "HoverBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "FocusedBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "DisplayMode",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -4829,7 +5073,7 @@
       "MetaDataIDKey": "",
       "Name": "Label8_32",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5125,7 +5369,7 @@
       "MetaDataIDKey": "",
       "Name": "Label8_33",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6136,7 +6380,7 @@
       "MetaDataIDKey": "",
       "Name": "Rating1_11",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 8,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7094,7 +7338,7 @@
       "MetaDataIDKey": "",
       "Name": "TextInput1_11",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
