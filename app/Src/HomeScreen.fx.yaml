@@ -1265,12 +1265,299 @@ HomeScreen As screen:
                                             Y: =12
                                             ZIndex: =4
 
-    JoinATeam_Reg_2 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =7
+    OpenExistingPrompt As groupContainer:
+        DropShadow: =DropShadow.Light
+        Height: =768
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =varShowExistingPrompt
+        Width: =1366
+        ZIndex: =8
+
+        Shadowed_Bck_10 As rectangle:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Width: =1366
+            ZIndex: =1
+
+        HtmlText1_26 As htmlViewer:
+            Height: =584
+            HtmlText: |
+                ="<div style='background-color: rgba(255,255,255,100%); 
+                margin: 20px; 
+                width: 1120px; 
+                height: 500px; 
+                border-radius: 30px'>
+                </div>"
+                
+                /*
+                "<div style='background-color: rgba(1,2,3,30%); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                "<div style='background-color: rgba(39,69,129,1); 
+                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
+                
+                */
+            Width: =1175
+            X: =110
+            Y: =92
+            ZIndex: =2
+
+        Label_SubHeading2_17 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            Height: =53
+            Size: =30
+            Text: |+
+                =
+                
+            Width: =839
+            X: =232
+            Y: =152
+            ZIndex: =3
+
+        HtmlText6_12 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =62
+            HtmlText: ="Make sure to input the Prompt in your DfM Copilot to ensure the best results🎁"
+            Size: =12
+            Width: =1041
+            X: =160
+            Y: =230
+            ZIndex: =4
+
+        btn_Start_66 As button:
+            BorderColor: =RGBA(141, 48, 128, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: = DisplayMode.Edit
+            Fill: =RGBA(15, 108, 189, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =Copy(TextInputCanvas3_1.Value);
+                
+                Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewPromptScore",Score:5,UserID:varCrrUser});
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="Copy Prompt"
+            Tooltip: ="Click here to copy prompt above"
+            Width: =145
+            X: =1075
+            Y: =555
+            ZIndex: =8
+
+        btn_Start_65 As button:
+            BorderColor: =RGBA(141, 48, 128, 1)
+            Color: =RGBA(141, 48, 128, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |-
+                =UpdateContext({varShowExistingPrompt:false});
+                UpdateContext({varSelectedPromptLib:Blank()});
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="             Cancel"
+            Tooltip: ="New users click to Register"
+            Width: =165
+            X: =709
+            Y: =555
+            ZIndex: =9
+
+        Image21_3 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Image: =CopilotLogo
+            Width: =45
+            X: =162
+            Y: =150
+            ZIndex: =10
+
+        HtmlText6_18 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =34
+            HtmlText: =varSelectedPromptLib.Scenario
+            Size: =12
+            Width: =173
+            X: =187
+            Y: =272
+            ZIndex: =13
+
+        HtmlText6_19 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =39
+            HtmlText: =varSelectedPromptLib.Subject
+            Size: =12
+            Width: =909
+            X: =162
+            Y: =315
+            ZIndex: =15
+
+        "TextInputCanvas3_1 As 'Text input'":
+            Appearance: ='TextInputCanvas.Appearance'.Outline
+            DisplayMode: =DisplayMode.View
+            Font: =Font.'Segoe UI'
+            Height: =160
+            Mode: ='TextInputCanvas.Mode'.Multiline
+            Placeholder: ="Input your prompt here"
+            Value: =varSelectedPromptLib.TipsTricks
+            Visible: =true
+            Width: =1060
+            X: =160
+            Y: =365
+            ZIndex: =16
+
+        Image22_4 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =25
+            Image: =heart
+            Width: =25
+            X: =1150
+            Y: =318
+            ZIndex: =18
+
+        HtmlText6_20 As htmlViewer:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =31
+            HtmlText: =First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)).NoOfLikes
+            Size: =10
+            Width: =50
+            X: =1180
+            Y: =316
+            ZIndex: =19
+
+        btn_Start_67 As button:
+            Align: =Align.Right
+            BorderColor: =RGBA(141, 48, 128, 1)
+            Color: =RGBA(141, 48, 128, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: = DisplayMode.Edit
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(167, 182, 203, 1)
+            OnSelect: |
+                =Launch("https://www.bing.com/business/chat");
+            PressedFill: =RGBA(0, 134, 208, 1)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =14
+            Text: ="Go to Copilot "
+            Tooltip: ="Click here to copy prompt above"
+            Width: =171
+            X: =890
+            Y: =555
+            ZIndex: =22
+
+        Image21_4 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Image: =CopilotLogo
+            Width: =45
+            X: =891
+            Y: =555
+            ZIndex: =23
+
+        Rectangle6_1 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =If(varSelectedPromptLib.Scenario="Other",Color.Gray,If(varSelectedPromptLib.Scenario="Productivity",Color.Red,If(varSelectedPromptLib.Scenario="Entertainment",Color.Green,If(varSelectedPromptLib.Scenario="Cloud",Color.Blue,If(varSelectedPromptLib.Scenario="Insights",Color.Orange)))))
+            Height: =22
+            OnSelect: =
+            Width: =22
+            X: =165
+            Y: =278
+            ZIndex: =24
+
+        HtmlText6_22 As htmlViewer:
+            Font: =Font.'Segoe UI'
+            Height: =115
+            HtmlText: ="<h2><b>" & If(First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)).IsDFMCo=2,"<font color = blue>(DFM)</font>  Prompt Details"," Prompt Details") & "</b></h2>"
+            Size: =16
+            Width: =766
+            X: =217
+            Y: =122
+            ZIndex: =25
+
+        Icon26_2 As icon.BookmarkFilled:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =Color.Brown
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(139, 154, 159, 1)
+            Height: =30
+            Icon: =Icon.BookmarkFilled
+            OnSelect: |+
+                =UpdateContext({varspinner:true});
+                
+                Refresh(tblFavPrompts);
+                Patch(tblFavPrompts,First(Filter(tblFavPrompts,UserID.LoginName=varlgname && PromptID.TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)), { IsActiveFav:0});
+                Refresh(tblFavPrompts);
+                UpdateContext({varSavedPrompts:Filter(tblFavPrompts,UserID.LoginName=varlgname && IsActiveFav=1)});
+                Reset(Gallery5_11);
+                Reset(Gallery10_5);
+                UpdateContext({varShowExistingPrompt:false});
+                UpdateContext({varSelectedPromptLib:Blank()});
+                UpdateContext({varspinner:false});
+                
+            Tooltip: ="Bookmark prompt"
+            Visible: =false
+            Width: =30
+            X: =1155
+            Y: =175
+            ZIndex: =26
+
+    JoinNewTeamContainer As groupContainer:
+        DropShadow: =DropShadow.Light
+        Height: =768
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =varJointeam
+        Width: =1366
+        ZIndex: =9
 
         Rectangle1_10 As rectangle:
             BorderColor: =App.Theme.Colors.Darker40
@@ -1278,47 +1565,43 @@ HomeScreen As screen:
                 =//RGBA(56, 96, 178, 20%)
                 RGBA(0, 0, 0, 0.6)
             Height: =768
-            Visible: =varJointeam
             Width: =1366
-            ZIndex: =2
+            ZIndex: =1
 
         HtmlText1_28 As htmlViewer:
-            Height: =676
+            Height: =711
             HtmlText: |-
-                ="<div style=' background-color:rgba(" & R & "," & G & "," & B &"," & A & "); 
-                box-shadow: 1px 2px 22px 0px rgba(139,147,232,1);
+                ="<div style='background-color: rgba(255,255,255,100%); 
                 margin: 20px; 
-                width: 565px; 
-                height: 620px; 
+                width: 700px; 
+                height: 650px; 
                 border-radius: 30px'>
                 </div>"
-            Visible: =varJointeam
-            Width: =627
-            X: =448
-            Y: =84
-            ZIndex: =3
+            Width: =750
+            X: =412
+            Y: =56
+            ZIndex: =2
 
         "Gallery1_8 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             '#CopilotOverlayLabel': ="Filtered"
-            BorderColor: =App.Theme.Colors.Darker40
+            BorderColor: =RGBA(53, 61, 63, 1)
             DelayItemLoading: =true
-            Height: =445
+            Height: =521
             Items: =If(!IsBlank(TextInput5_3.Text), Filter(Filter(TeamRegistrationss,MemberCount<20),TextInput5_3.Text in Name ), Filter(TeamRegistrationss,MemberCount<20))
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0
             TemplateSize: =52
-            Visible: =varJointeam
             Width: =550
-            X: =477
-            Y: =227
-            ZIndex: =4
+            X: =517
+            Y: =192
+            ZIndex: =3
 
             Title1_6 As label:
                 BorderColor: =App.Theme.Colors.Darker40
-                Color: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =App.Theme.Font
+                Font: =Font.'Courier New'
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =24
                 OnSelect: =Select(Parent)
@@ -1335,9 +1618,9 @@ HomeScreen As screen:
 
             Subtitle1_3 As label:
                 BorderColor: =App.Theme.Colors.Darker40
-                Color: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(255, 255, 255, 1)
-                Font: =App.Theme.Font
+                Font: =Font.'Courier New'
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =25
                 OnSelect: =Select(Parent)
@@ -1349,14 +1632,13 @@ HomeScreen As screen:
                 Text: =First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.OwnerID.Registrations_Dv)).LoginName
                 VerticalAlign: =VerticalAlign.Top
                 Width: =135
-                X: =323
+                X: =337
                 Y: =13
                 ZIndex: =3
 
             NextArrow1_7 As icon.ChevronRight:
                 AccessibleLabel: =Self.Tooltip
                 BorderColor: =App.Theme.Colors.Darker40
-                Color: =RGBA(255, 255, 255, 1)
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =45
@@ -1404,9 +1686,9 @@ HomeScreen As screen:
 
             Title1_7 As label:
                 BorderColor: =App.Theme.Colors.Darker40
-                Color: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =App.Theme.Font
+                Font: =Font.'Courier New'
                 Height: =25
                 OnSelect: =Select(Parent)
                 Size: =12
@@ -1419,7 +1701,6 @@ HomeScreen As screen:
 
             Icon8_4 As icon.Information:
                 BorderColor: =App.Theme.Colors.Darker40
-                Color: =RGBA(255, 255, 255, 1)
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =30
@@ -1517,7 +1798,6 @@ HomeScreen As screen:
         NextArrow1_8 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             BorderColor: =App.Theme.Colors.Darker40
-            Color: =RGBA(255, 255, 255, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =50
@@ -1531,37 +1811,105 @@ HomeScreen As screen:
             PaddingRight: =5
             PaddingTop: =5
             Tooltip: ="Cancel"
-            Visible: =varJointeam
             Width: =50
-            X: =946
-            Y: =125
-            ZIndex: =5
+            X: =1017
+            Y: =104
+            ZIndex: =4
 
         TextInput5_3 As text:
             BorderColor: =App.Theme.Colors.Darker40
-            BorderThickness: =2
             Color: =RGBA(0, 0, 0, 1)
             Default: =""
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
             Height: =35
             HintText: ="Type Team name to search"
             HoverBorderColor: =App.Theme.Colors.Darker40
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =App.Theme.Colors.Lighter70
             Italic: =true
-            RadiusBottomLeft: =30
-            RadiusBottomRight: =30
-            RadiusTopLeft: =30
-            RadiusTopRight: =30
             Size: =12
-            Visible: =varJointeam
             Width: =336
-            X: =512
-            Y: =148
+            X: =538
+            Y: =111
+            ZIndex: =5
+
+        Search As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(12, 59, 94, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =35
+            Icon: =Icon.Search
+            OnSelect: |-
+                =UpdateContext({varJointeam:false});
+                UpdateContext({VarShowMemberLookup:false});
+                Refresh(TeamRegistrationss);
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Tooltip: ="Cancel"
+            Width: =50
+            X: =881
+            Y: =111
             ZIndex: =6
+
+    ContainerSpinner_3 As groupContainer:
+        DropShadow: =DropShadow.Light
+        Height: =768
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =varspinner
+        Width: =1366
+        ZIndex: =10
+
+        Timer1_5 As timer:
+            AutoStart: =true
+            Duration: =3000
+            Fill: =RGBA(56, 96, 178, 1)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnTimerEnd: |-
+                =UpdateContext({varspinner:false})
+            Visible: =false
+            X: =118
+            Y: =699
+            ZIndex: =1
+
+        Shadowed_Bck_12 As rectangle:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =706
+            Visible: =varspinner
+            Width: =1132
+            X: =234
+            Y: =60
+            ZIndex: =2
+
+        Spinner_7 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Image: |
+                ="data:image/svg+xml;utf8, " & EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; background: none; display: block; shape-rendering: auto;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'>
+                <circle cx='50' cy='50' r='32' stroke-width='8' stroke='#00aab4' stroke-dasharray='50.26548245743669 50.26548245743669' fill='none' stroke-linecap='round'>
+                  <animateTransform attributeName='transform' type='rotate' dur='1s' repeatCount='indefinite' keyTimes='0;1' values='0 50 50;360 50 50'></animateTransform>
+                </circle>
+                <circle cx='50' cy='50' r='23' stroke-width='8' stroke='#f4f4f4' stroke-dasharray='36.12831551628262 36.12831551628262' stroke-dashoffset='36.12831551628262' fill='none' stroke-linecap='round'>
+                  <animateTransform attributeName='transform' type='rotate' dur='1s' repeatCount='indefinite' keyTimes='0;1' values='0 50 50;-360 50 50'></animateTransform>
+                </circle>
+                <!-- [ldio] generated by https://loading.io/ --></svg>")
+            Visible: =varspinner
+            X: =750
+            Y: =363
+            ZIndex: =3
 
     NewTeam_Reg_2 As group:
         Height: =5
@@ -1578,7 +1926,7 @@ HomeScreen As screen:
             Height: =768
             Visible: =varNewTeamScreen
             Width: =1366
-            ZIndex: =8
+            ZIndex: =2
 
         HtmlText1_31 As htmlViewer:
             Height: =422
@@ -1594,7 +1942,7 @@ HomeScreen As screen:
             Width: =560
             X: =467
             Y: =250
-            ZIndex: =9
+            ZIndex: =3
 
         Form2_3 As form:
             BorderColor: =App.Theme.Colors.Darker40
@@ -1605,7 +1953,7 @@ HomeScreen As screen:
             Width: =478
             X: =498
             Y: =353
-            ZIndex: =10
+            ZIndex: =4
 
             Name_DataCard1_2 As typedDataCard.textualEditCard:
                 BorderColor: =App.Theme.Colors.Darker40
@@ -1926,7 +2274,7 @@ HomeScreen As screen:
             Visible: =varNewTeamScreen
             X: =667
             Y: =538
-            ZIndex: =11
+            ZIndex: =5
 
         "Gallery2_6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             '#CopilotOverlayLabel': ="Filtered"
@@ -1948,7 +2296,7 @@ HomeScreen As screen:
             Width: =108
             X: =988
             Y: =165
-            ZIndex: =12
+            ZIndex: =6
 
             Image2_6 As image:
                 BorderColor: =App.Theme.Colors.Darker40
@@ -2025,340 +2373,5 @@ HomeScreen As screen:
             Width: =50
             X: =904
             Y: =291
-            ZIndex: =13
-
-    OpenExistingPrompt As groupContainer:
-        DropShadow: =DropShadow.Light
-        Height: =768
-        RadiusBottomLeft: =4
-        RadiusBottomRight: =4
-        RadiusTopLeft: =4
-        RadiusTopRight: =4
-        Visible: =varShowExistingPrompt
-        Width: =1366
-        ZIndex: =26
-
-        Shadowed_Bck_10 As rectangle:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            Fill: =RGBA(0, 0, 0, 0.6)
-            Height: =768
-            Width: =1366
-            ZIndex: =1
-
-        HtmlText1_26 As htmlViewer:
-            Height: =584
-            HtmlText: |
-                ="<div style='background-color: rgba(255,255,255,100%); 
-                margin: 20px; 
-                width: 1120px; 
-                height: 500px; 
-                border-radius: 30px'>
-                </div>"
-                
-                /*
-                "<div style='background-color: rgba(1,2,3,30%); 
-                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
-                "<div style='background-color: rgba(39,69,129,1); 
-                box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); 
-                
-                */
-            Width: =1175
-            X: =110
-            Y: =92
-            ZIndex: =2
-
-        Label_SubHeading2_17 As label:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.Arial
-            FontWeight: =FontWeight.Bold
-            Height: =53
-            Size: =30
-            Text: |+
-                =
-                
-            Width: =839
-            X: =232
-            Y: =152
-            ZIndex: =3
-
-        HtmlText6_12 As htmlViewer:
-            Color: =RGBA(128, 128, 128, 1)
-            Font: =Font.'Segoe UI'
-            Height: =62
-            HtmlText: ="Make sure to input the Prompt in your DfM Copilot to ensure the best results🎁"
-            Size: =12
-            Width: =1041
-            X: =160
-            Y: =230
-            ZIndex: =4
-
-        btn_Start_66 As button:
-            BorderColor: =RGBA(141, 48, 128, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayMode: = DisplayMode.Edit
-            Fill: =RGBA(15, 108, 189, 1)
-            FocusedBorderThickness: =2
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =50
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(167, 182, 203, 1)
-            OnSelect: |-
-                =Copy(TextInputCanvas3_1.Value);
-                
-                Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewPromptScore",Score:5,UserID:varCrrUser});
-            PressedFill: =RGBA(0, 134, 208, 1)
-            RadiusBottomLeft: =5
-            RadiusBottomRight: =5
-            RadiusTopLeft: =5
-            RadiusTopRight: =5
-            Size: =14
-            Text: ="Copy Prompt"
-            Tooltip: ="Click here to copy prompt above"
-            Width: =145
-            X: =1075
-            Y: =555
-            ZIndex: =8
-
-        btn_Start_65 As button:
-            BorderColor: =RGBA(141, 48, 128, 1)
-            Color: =RGBA(141, 48, 128, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =2
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =50
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(167, 182, 203, 1)
-            OnSelect: |-
-                =UpdateContext({varShowExistingPrompt:false});
-                UpdateContext({varSelectedPromptLib:Blank()});
-            PressedFill: =RGBA(0, 134, 208, 1)
-            RadiusBottomLeft: =5
-            RadiusBottomRight: =5
-            RadiusTopLeft: =5
-            RadiusTopRight: =5
-            Size: =14
-            Text: ="             Cancel"
-            Tooltip: ="New users click to Register"
-            Width: =165
-            X: =709
-            Y: =555
-            ZIndex: =9
-
-        Image21_3 As image:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =50
-            Image: =CopilotLogo
-            Width: =45
-            X: =162
-            Y: =150
-            ZIndex: =10
-
-        HtmlText6_18 As htmlViewer:
-            Color: =RGBA(128, 128, 128, 1)
-            Font: =Font.'Segoe UI'
-            Height: =34
-            HtmlText: =varSelectedPromptLib.Scenario
-            Size: =12
-            Width: =173
-            X: =187
-            Y: =272
-            ZIndex: =13
-
-        HtmlText6_19 As htmlViewer:
-            Color: =RGBA(128, 128, 128, 1)
-            Font: =Font.'Segoe UI'
-            Height: =39
-            HtmlText: =varSelectedPromptLib.Subject
-            Size: =12
-            Width: =909
-            X: =162
-            Y: =315
-            ZIndex: =15
-
-        "TextInputCanvas3_1 As 'Text input'":
-            Appearance: ='TextInputCanvas.Appearance'.Outline
-            DisplayMode: =DisplayMode.View
-            Font: =Font.'Segoe UI'
-            Height: =160
-            Mode: ='TextInputCanvas.Mode'.Multiline
-            Placeholder: ="Input your prompt here"
-            Value: =varSelectedPromptLib.TipsTricks
-            Visible: =true
-            Width: =1060
-            X: =160
-            Y: =365
-            ZIndex: =16
-
-        Image22_4 As image:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =25
-            Image: =heart
-            Width: =25
-            X: =1150
-            Y: =318
-            ZIndex: =18
-
-        HtmlText6_20 As htmlViewer:
-            Color: =RGBA(128, 128, 128, 1)
-            Font: =Font.'Segoe UI'
-            Height: =31
-            HtmlText: =First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)).NoOfLikes
-            Size: =10
-            Width: =50
-            X: =1180
-            Y: =316
-            ZIndex: =19
-
-        btn_Start_67 As button:
-            Align: =Align.Right
-            BorderColor: =RGBA(141, 48, 128, 1)
-            Color: =RGBA(141, 48, 128, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayMode: = DisplayMode.Edit
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =2
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =50
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(167, 182, 203, 1)
-            OnSelect: |
-                =Launch("https://www.bing.com/business/chat");
-            PressedFill: =RGBA(0, 134, 208, 1)
-            RadiusBottomLeft: =5
-            RadiusBottomRight: =5
-            RadiusTopLeft: =5
-            RadiusTopRight: =5
-            Size: =14
-            Text: ="Go to Copilot "
-            Tooltip: ="Click here to copy prompt above"
-            Width: =171
-            X: =890
-            Y: =555
-            ZIndex: =22
-
-        Image21_4 As image:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =50
-            Image: =CopilotLogo
-            Width: =45
-            X: =891
-            Y: =555
-            ZIndex: =23
-
-        Rectangle6_1 As rectangle:
-            BorderColor: =App.Theme.Colors.Darker40
-            Fill: =If(varSelectedPromptLib.Scenario="Other",Color.Gray,If(varSelectedPromptLib.Scenario="Productivity",Color.Red,If(varSelectedPromptLib.Scenario="Entertainment",Color.Green,If(varSelectedPromptLib.Scenario="Cloud",Color.Blue,If(varSelectedPromptLib.Scenario="Insights",Color.Orange)))))
-            Height: =22
-            OnSelect: =
-            Width: =22
-            X: =165
-            Y: =278
-            ZIndex: =24
-
-        HtmlText6_22 As htmlViewer:
-            Font: =Font.'Segoe UI'
-            Height: =115
-            HtmlText: ="<h2><b>" & If(First(Filter(TipsandTricksCollaborations,TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)).IsDFMCo=2,"<font color = blue>(DFM)</font>  Prompt Details"," Prompt Details") & "</b></h2>"
-            Size: =16
-            Width: =766
-            X: =217
-            Y: =122
-            ZIndex: =25
-
-        Icon26_2 As icon.BookmarkFilled:
-            BorderColor: =App.Theme.Colors.Darker40
-            Color: =Color.Brown
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(139, 154, 159, 1)
-            Height: =30
-            Icon: =Icon.BookmarkFilled
-            OnSelect: |+
-                =UpdateContext({varspinner:true});
-                
-                Refresh(tblFavPrompts);
-                Patch(tblFavPrompts,First(Filter(tblFavPrompts,UserID.LoginName=varlgname && PromptID.TipsandTricksCollaboration=varSelectedPromptLib.TipsandTricksCollaboration)), { IsActiveFav:0});
-                Refresh(tblFavPrompts);
-                UpdateContext({varSavedPrompts:Filter(tblFavPrompts,UserID.LoginName=varlgname && IsActiveFav=1)});
-                Reset(Gallery5_11);
-                Reset(Gallery10_5);
-                UpdateContext({varShowExistingPrompt:false});
-                UpdateContext({varSelectedPromptLib:Blank()});
-                UpdateContext({varspinner:false});
-                
-            Tooltip: ="Bookmark prompt"
-            Visible: =false
-            Width: =30
-            X: =1155
-            Y: =175
-            ZIndex: =26
-
-    ContainerSpinner_3 As groupContainer:
-        DropShadow: =DropShadow.Light
-        Height: =768
-        RadiusBottomLeft: =4
-        RadiusBottomRight: =4
-        RadiusTopLeft: =4
-        RadiusTopRight: =4
-        Visible: =varspinner
-        Width: =1366
-        ZIndex: =27
-
-        Timer1_5 As timer:
-            AutoStart: =true
-            Duration: =3000
-            Fill: =RGBA(56, 96, 178, 1)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
-            OnTimerEnd: |-
-                =UpdateContext({varspinner:false})
-            Visible: =false
-            X: =118
-            Y: =699
-            ZIndex: =1
-
-        Shadowed_Bck_12 As rectangle:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            Fill: =RGBA(0, 0, 0, 0.6)
-            Height: =706
-            Visible: =varspinner
-            Width: =1132
-            X: =234
-            Y: =60
-            ZIndex: =2
-
-        Spinner_7 As image:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Image: |
-                ="data:image/svg+xml;utf8, " & EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; background: none; display: block; shape-rendering: auto;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'>
-                <circle cx='50' cy='50' r='32' stroke-width='8' stroke='#00aab4' stroke-dasharray='50.26548245743669 50.26548245743669' fill='none' stroke-linecap='round'>
-                  <animateTransform attributeName='transform' type='rotate' dur='1s' repeatCount='indefinite' keyTimes='0;1' values='0 50 50;360 50 50'></animateTransform>
-                </circle>
-                <circle cx='50' cy='50' r='23' stroke-width='8' stroke='#f4f4f4' stroke-dasharray='36.12831551628262 36.12831551628262' stroke-dashoffset='36.12831551628262' fill='none' stroke-linecap='round'>
-                  <animateTransform attributeName='transform' type='rotate' dur='1s' repeatCount='indefinite' keyTimes='0;1' values='0 50 50;-360 50 50'></animateTransform>
-                </circle>
-                <!-- [ldio] generated by https://loading.io/ --></svg>")
-            Visible: =varspinner
-            X: =750
-            Y: =363
-            ZIndex: =3
+            ZIndex: =7
 
