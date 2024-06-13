@@ -240,7 +240,7 @@ FeedbackScreen As screen:
                         Fill: =RGBA(255, 255, 255, 1)
                         Height: =60
                         Items: |-
-                            =Table( { ID:1,Value: "Home" }, { ID:2,Value: "Saved" })
+                            =Table( { ID:1,Value: "Home" })
                         LayoutMinHeight: =287
                         LayoutMinWidth: =320
                         TemplatePadding: =0
@@ -304,7 +304,7 @@ FeedbackScreen As screen:
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             Height: =Parent.Height-20
-                            Image: =SAIL_background1_reduced
+                            Image: =SAIL_background2_reduced
                             ImagePosition: =ImagePosition.Stretch
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
