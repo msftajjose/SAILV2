@@ -187,7 +187,7 @@ SettingsScreen As screen:
                     score: =varNewScore
                     ScreenChallenge: =ChallengeScreen
                     ScreenFeedback: =FeedbackScreen
-                    ScreenLB: =SettingsScreen
+                    ScreenLB: =LeaderBoardScreen
                     ScreenNavHome: =HomeScreen
                     ScreenNavPrompt: =PromptLibraryScreen
                     ScreenSquad: =SquadScreen

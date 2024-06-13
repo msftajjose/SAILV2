@@ -3564,7 +3564,7 @@
         {
           "Category": "Data",
           "PropertyName": "ScreenLB",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
