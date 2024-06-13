@@ -863,6 +863,50 @@ HomeScreen As screen:
                                     Y: =182
                                     ZIndex: =4
 
+                                HtmlText6_34 As htmlViewer:
+                                    Color: =RGBA(128, 128, 128, 1)
+                                    Font: =Font.'Segoe UI'
+                                    Height: =30
+                                    HtmlText: ="<b></b>First Time Reward"
+                                    Size: =10
+                                    Visible: =IsBlank(varCrrUser.TeamID)
+                                    Width: =122
+                                    X: =255
+                                    Y: =240
+                                    ZIndex: =5
+
+                                Image22_11 As image:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: |+
+                                        =If(IsBlank(varAlreadySubmittedPrompt), DisplayMode.Edit,DisplayMode.Disabled)
+                                        
+                                    Height: =25
+                                    Image: =heart
+                                    Visible: =IsBlank(varCrrUser.TeamID)
+                                    Width: =25
+                                    X: =267
+                                    Y: =270
+                                    ZIndex: =6
+
+                                HtmlText6_35 As htmlViewer:
+                                    AutoHeight: =true
+                                    DisabledBorderColor: =RGBA(106, 122, 127, 1)
+                                    DisabledFill: =RGBA(255, 255, 255, 1)
+                                    DisplayMode: |
+                                        =DisplayMode.Edit
+                                    Fill: =RGBA(255, 255, 255, 1)
+                                    Font: =Font.'Segoe UI'
+                                    Height: =31
+                                    HtmlText: ="1000"
+                                    Size: =10
+                                    Visible: =IsBlank(varCrrUser.TeamID)
+                                    Width: =95
+                                    X: =297
+                                    Y: =270
+                                    ZIndex: =7
+
                         Container9_1 As groupContainer.horizontalAutoLayoutContainer:
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
@@ -920,6 +964,7 @@ HomeScreen As screen:
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =3
                                         TemplateSize: =45
+                                        Visible: =If(!IsEmpty(varSavedprmpt),true,false)
                                         Width: =599
                                         X: =5
                                         Y: =5
@@ -1066,6 +1111,68 @@ HomeScreen As screen:
                                             X: =495
                                             Y: =12
                                             ZIndex: =14
+
+                                    ButtonCanvas1_13 As Button:
+                                        BasePaletteColor: =RGBA(23, 74, 228, 1)
+                                        DisplayMode: =DisplayMode.Edit
+                                        Height: =45
+                                        Icon: ="Save"
+                                        OnSelect: |
+                                            =Set(varUserFirstBookmark,1);
+                                            Navigate(PromptLibraryScreen);
+                                        PaddingRight: =0
+                                        Text: ="Save your first Prompt"
+                                        Visible: =If(IsEmpty(varSavedprmpt),true,false)
+                                        Width: =221
+                                        X: =180
+                                        Y: =84
+                                        ZIndex: =2
+
+                                    HtmlText6_32 As htmlViewer:
+                                        Color: =RGBA(128, 128, 128, 1)
+                                        Font: =Font.'Segoe UI'
+                                        Height: =30
+                                        HtmlText: ="<b></b>First Time Reward"
+                                        Size: =10
+                                        Visible: =If(IsEmpty(varSavedprmpt),true,false)
+                                        Width: =122
+                                        X: =225
+                                        Y: =146
+                                        ZIndex: =3
+
+                                    Image22_10 As image:
+                                        BorderColor: =RGBA(0, 18, 107, 1)
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledFill: =RGBA(244, 244, 244, 1)
+                                        DisplayMode: |+
+                                            =If(IsBlank(varAlreadySubmittedPrompt), DisplayMode.Edit,DisplayMode.Disabled)
+                                            
+                                        Height: =25
+                                        Image: =heart
+                                        Visible: =If(IsEmpty(varSavedprmpt),true,false)
+                                        Width: =25
+                                        X: =237
+                                        Y: =176
+                                        ZIndex: =4
+
+                                    HtmlText6_33 As htmlViewer:
+                                        AutoHeight: =true
+                                        DisabledBorderColor: =RGBA(106, 122, 127, 1)
+                                        DisabledFill: =RGBA(255, 255, 255, 1)
+                                        DisplayMode: |
+                                            =DisplayMode.Edit
+                                        Fill: =RGBA(255, 255, 255, 1)
+                                        Font: =Font.'Segoe UI'
+                                        Height: =31
+                                        HtmlText: |+
+                                            ="100"
+                                            
+                                        Size: =10
+                                        Visible: =If(IsEmpty(varSavedprmpt),true,false)
+                                        Width: =95
+                                        X: =267
+                                        Y: =176
+                                        ZIndex: =5
 
                     Container7_1 As groupContainer.verticalAutoLayoutContainer:
                         LayoutDirection: =LayoutDirection.Vertical
@@ -1659,7 +1766,7 @@ HomeScreen As screen:
                     UpdateContext({varJointeam:false});
                     Refresh(TeamRegistrationss);
                     Set(varTeamAvtar,varCrrUser.TeamID.TeamAvtar);
-                    If(!IsBlank(varRecordT),Patch(AIUserScores,Defaults(AIUserScores),{Name:"UserScore",UserID:varCrrUser,Processed:"No",Score:1000,TeamID:varCrrUser.TeamID}));
+                    If(!IsBlank(varRecordT),Patch(AIUserScores,Defaults(AIUserScores),{Name:"JoiningTeam",UserID:varCrrUser,Processed:"No",Score:1000,TeamID:varCrrUser.TeamID}));
                     
                     If(!IsBlank(varRecordT),Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"Congratulations! You have joined a team !",UserID:varCrrUser,IsRead:"No"}));
                     
@@ -2264,7 +2371,7 @@ HomeScreen As screen:
                 Set(varCrrUser,First(Filter(Registrations_Dvs,LoginName=varlgname)));
                 If(!IsBlank(varRecordDK),UpdateContext({varNewTeamScreen:false}));
                 If(!IsBlank(varRecordDK),UpdateContext({varShowTeamAvtars:false}));
-                If(!IsBlank(varRecordDK),Patch(AIUserScores,Defaults(AIUserScores),{Name:"UserScore",UserID:varCrrUser,Processed:"No",Score:1000,TeamID:varCrrUser.TeamID}));
+                If(!IsBlank(varRecordDK),Patch(AIUserScores,Defaults(AIUserScores),{Name:"NewTeamjoiningReward",UserID:varCrrUser,Processed:"No",Score:1000,TeamID:varCrrUser.TeamID}));
                 If(!IsBlank(varRecordDK),Patch(tblUserNotifications,Defaults(tblUserNotifications),{Name:"Congratulations! You have joined a team !",UserID:varCrrUser,IsRead:"No"}));
                 Set(varRecordDK,Blank());
                 Set(varTeamAvtar,varCrrUser.TeamID.TeamAvtar);
