@@ -18612,6 +18612,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "SettingsScreen.MainContainer_6.BottomContainer_6.CommonContainer_6.Container3_6.Gallery5_27.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SettingsScreen.MainContainer_6.BottomContainer_6.CommonContainer_6.Container3_6.Gallery5_27.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "SettingsScreen",
+                "type": "SettingsScreen.MainContainer_6.BottomContainer_6.CommonContainer_6.Container3_6.Gallery5_27"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SettingsScreen.MainContainer_6.BottomContainer_6.CommonContainer_6.Container3_6.Gallery5_27.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SettingsScreen.MainContainer_6.BottomContainer_6.CommonContainer_6.Container3_6.Gallery5_27.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "SettingsScreen",
+                "type": "SettingsScreen.MainContainer_6.BottomContainer_6.CommonContainer_6.Container3_6.Gallery5_27"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SettingsScreen.MainContainer_6.BottomContainer_6.CommonContainer_6.Container3_6.Gallery5_27.ButtonCanvas3_16.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SettingsScreen.MainContainer_6.BottomContainer_6.CommonContainer_6.Container3_6.Gallery5_27.ButtonCanvas3_16.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "SettingsScreen",
+                "type": "SettingsScreen.MainContainer_6.BottomContainer_6.CommonContainer_6.Container3_6.Gallery5_27.ButtonCanvas3_16"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SettingsScreen.MainContainer_6.BottomContainer_6.CommonContainer_6.Container20_2.Container21_2.Container1.ContainerAvatar_1.AddMediaButton1_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SettingsScreen.MainContainer_6.BottomContainer_6.CommonContainer_6.Container20_2.Container21_2.Container1.ContainerAvatar_1.AddMediaButton1_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "SettingsScreen",
+                "type": "SettingsScreen.MainContainer_6.BottomContainer_6.CommonContainer_6.Container20_2.Container21_2.Container1.ContainerAvatar_1.AddMediaButton1_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.AM"
                 }
               ],
@@ -18882,6 +19002,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.varAvatar"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varAvatar",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varAvatar",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.heartempty"
                 }
               ],
@@ -18965,6 +19115,36 @@
           },
           "ruleId": "app-DataSourceDefaultMaxRowsLimit",
           "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SettingsScreen.varPromptPopUp"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SettingsScreen.varPromptPopUp",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varPromptPopUp",
+                "module": "SettingsScreen",
+                "type": "SettingsScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -20252,6 +20432,36 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SettingsScreen.MainContainer_6.BottomContainer_6.CommonContainer_6.Container3_6.Gallery5_27.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SettingsScreen.MainContainer_6.BottomContainer_6.CommonContainer_6.Container3_6.Gallery5_27.Visible",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "SettingsScreen",
+                "type": "SettingsScreen.MainContainer_6.BottomContainer_6.CommonContainer_6.Container3_6.Gallery5_27"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 14
         }
       ],
       "tool": {
@@ -20499,6 +20709,23 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Registration\" is 547, which exceeds the maximum threshold recommended (300)."
+              }
+            },
+            {
+              "id": "app-InefficientDelayLoading",
+              "messageStrings": {
+                "issue": {
+                  "text": "Inefficient delay loading"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Use variables, collections, and navigation context to share state across screens instead."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen."
               }
             }
           ],

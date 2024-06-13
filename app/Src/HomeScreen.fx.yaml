@@ -129,7 +129,7 @@ HomeScreen As screen:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
                     Height: =50
-                    Image: =varUserAvtar
+                    Image: =First(Filter(Registrations_Dvs,LoginName=varlgname)).UserAvtar
                     RadiusBottomLeft: =50
                     RadiusBottomRight: =50
                     RadiusTopLeft: =50
