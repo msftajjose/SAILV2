@@ -626,7 +626,7 @@ HomeScreen As screen:
                                             BorderThickness: =1
                                             DisabledBorderColor: =RGBA(13, 50, 61, 1)
                                             DisabledColor: =RGBA(166, 166, 166, 1)
-                                            DisabledFill: =RGBA(244, 244, 244, 1)
+                                            DisabledFill: =If(varlgname=ThisItem.UserID.LoginName,RGBA(23, 74, 228, 0.1),RGBA(244, 244, 244, 1)) 
                                             DisplayMode: =DisplayMode.Disabled
                                             Fill: =If(ThisItem.IsSelected,RGBA(255, 255, 255, 1),RGBA(255,255, 255, .95))
                                             Font: =Font.'Segoe UI'
@@ -649,8 +649,11 @@ HomeScreen As screen:
                                             RadiusTopRight: =7
                                             Size: =15
                                             Text: =""
-                                            Width: =571
-                                            X: =10
+                                            Width: |-
+                                                =If(varlgname=ThisItem.UserID.LoginName,270+Self.X,571-130)
+                                                
+                                                //571
+                                            X: =If(varlgname=ThisItem.UserID.LoginName,150,10)
                                             Y: =17
                                             ZIndex: =1
 
@@ -661,12 +664,12 @@ HomeScreen As screen:
                                             Height: =50
                                             Image: =First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)).UserAvtar
                                             OnSelect: =Select(Parent)
-                                            RadiusBottomLeft: =15
-                                            RadiusBottomRight: =15
-                                            RadiusTopLeft: =15
-                                            RadiusTopRight: =15
+                                            RadiusBottomLeft: =7
+                                            RadiusBottomRight: =7
+                                            RadiusTopLeft: =7
+                                            RadiusTopRight: =7
                                             Width: =50
-                                            X: =10
+                                            X: =If(varlgname=ThisItem.UserID.LoginName,Button6_15.Width+Button6_15.X-Self.Width,10)
                                             Y: =17
                                             ZIndex: =2
 
@@ -684,15 +687,18 @@ HomeScreen As screen:
                                             PaddingRight: =0
                                             PaddingTop: =0
                                             Size: =9
-                                            Text: =First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)).LoginName
+                                            Text: |-
+                                                =If(varlgname=ThisItem.UserID.LoginName,"",First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)).LoginName)
+                                                //First(Filter(Registrations_Dvs,Registrations_Dv=ThisItem.UserID.Registrations_Dv)).LoginName
                                             VerticalAlign: =VerticalAlign.Top
                                             Width: =154
                                             X: =14
                                             ZIndex: =3
 
                                         Subtitle2_4 As label:
+                                            Align: =If(varlgname=ThisItem.UserID.LoginName,Align.Right,Align.Left) 
                                             BorderColor: =App.Theme.Colors.Darker40
-                                            Color: =RGBA(116, 116, 116, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
                                             DisabledColor: =RGBA(166, 166, 166, 1)
                                             Font: =App.Theme.Font
                                             Height: =44
@@ -709,8 +715,10 @@ HomeScreen As screen:
                                             Size: =10
                                             Text: =ThisItem.Msg
                                             VerticalAlign: =VerticalAlign.Top
-                                            Width: =477
-                                            X: =76
+                                            Width: |-
+                                                =If(varlgname=ThisItem.UserID.LoginName,Button6_15.Width-75,345)
+                                                //428
+                                            X: =If(varlgname=ThisItem.UserID.LoginName,Button6_15.X+10,76)
                                             Y: =20
                                             ZIndex: =4
 
@@ -802,7 +810,7 @@ HomeScreen As screen:
                                         ZIndex: =4
 
                                 ButtonCanvas1_4 As Button:
-                                    BasePaletteColor: =RGBA(156, 220, 79, 1)
+                                    BasePaletteColor: =RGBA(23, 74, 228, 1)
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =45
                                     Icon: ="People"
@@ -817,7 +825,7 @@ HomeScreen As screen:
                                     ZIndex: =3
 
                                 ButtonCanvas1_5 As Button:
-                                    BasePaletteColor: =RGBA(156, 220, 79, 1)
+                                    BasePaletteColor: =RGBA(23, 74, 228, 1)
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =45
                                     Icon: ="PeopleAdd"
